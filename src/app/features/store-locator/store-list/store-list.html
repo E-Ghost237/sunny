@@ -1,0 +1,54 @@
+<div class="locator-hero">
+  <h1>Find a Sunnyside* Dispensary</h1>
+  @if (storesResource.value(); as stores) {
+    <p>{{ stores.length }} dispensary locations{{ states().length ? ' across ' + states().join(', ') : '' }}.</p>
+  }
+</div>
+
+@if (states().length > 1) {
+  <div class="state-filter">
+    <div class="sfilt" [class.on]="activeState() === null" (click)="setState(null)">All States</div>
+    @for (state of states(); track state) {
+      <div class="sfilt" [class.on]="activeState() === state" (click)="setState(state)">{{ state }}</div>
+    }
+  </div>
+}
+
+<div class="store-list-page">
+  @if (storesResource.isLoading()) {
+    <p class="status">Loading stores&hellip;</p>
+  } @else if (storesResource.error()) {
+    <p class="status error">Couldn't load stores. Is the mock API running? (npm run mock-api)</p>
+  } @else {
+    <div class="store-cards">
+      @for (store of filteredStores(); track store.slug) {
+        <div class="store-card">
+          <div class="sc-head">
+            <div class="sc-name">{{ store.name }}</div>
+            @if (store.capabilities.recComingSoon || store.capabilities.medComingSoon) {
+              <span class="coming-soon-pill">Coming Soon</span>
+            } @else if (store.aggregateRating) {
+              <span class="rating-pill">★ {{ store.aggregateRating.ratingValue }}</span>
+            }
+          </div>
+          <div class="sc-addr">
+            📍 {{ store.address.streetAddress }}, {{ store.address.addressLocality }},
+            {{ store.address.addressRegion }} {{ store.address.postalCode }}
+          </div>
+          @if (summarizeHours(store.openingHours); as hours) {
+            <div class="sc-hours">{{ hours }}</div>
+          }
+          <div class="sc-tags">
+            @if (store.capabilities.recPickup || store.capabilities.medPickup) {
+              <span class="sc-tag">Pickup</span>
+            }
+            @if (store.capabilities.recDelivery || store.capabilities.medDelivery) {
+              <span class="sc-tag">Delivery</span>
+            }
+          </div>
+          <button class="btn-orange" [routerLink]="['/stores', store.slug]">Shop This Store &rarr;</button>
+        </div>
+      }
+    </div>
+  }
+</div>

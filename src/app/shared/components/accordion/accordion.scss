@@ -1,0 +1,64 @@
+// Default (filter) variant -- ported from sunny2's .filt-acc-h/.filt-acc-body.
+.acc-h {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--g800);
+  padding: 16px 0;
+  border-bottom: 1px solid var(--g200);
+
+  &.detail {
+    // ported from sunny2's .pd-acc-h
+    font-size: 18px;
+    padding: 18px 0 14px;
+    border-bottom: none;
+    border-top: 1px solid var(--g200);
+    margin-top: 6px;
+  }
+}
+
+.acc-chev {
+  font-size: 12px;
+  color: var(--g500);
+  transition: 0.2s;
+
+  &.closed {
+    transform: rotate(-90deg);
+  }
+
+  &.detail {
+    color: var(--orange);
+    font-size: 16px;
+
+    &.closed {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.acc-body {
+  margin-top: 12px;
+  margin-bottom: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  overflow: hidden;
+
+  &.closed {
+    display: none;
+  }
+
+  &.detail {
+    font-size: 14px;
+    color: var(--g600);
+    line-height: 1.7;
+    margin-top: 0;
+
+    ::ng-deep p {
+      margin-bottom: 12px;
+    }
+  }
+}

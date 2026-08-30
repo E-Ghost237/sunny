@@ -1,0 +1,55 @@
+<footer class="footer-orange">
+  <div class="footer-top-btn">
+    <button class="back-top" (click)="scrollToTop()"><span>&and;</span>TOP</button>
+  </div>
+
+  <div class="footer-cols">
+    <div>
+      <div class="ft-col-title">Quick Links</div>
+      <div class="ft-sub-label">GENERAL</div>
+      <div class="ft-links-row">
+        <div>
+          <a class="ft-link" routerLink="/about">About Us</a>
+          <a class="ft-link" routerLink="/shop">Deals</a>
+          <a class="ft-link" routerLink="/faq">Frequently Asked Questions</a>
+          <a class="ft-link" routerLink="/stores">Find a Dispensary</a>
+        </div>
+        <div>
+          <a class="ft-link" routerLink="/learn">News</a>
+          <a class="ft-link" routerLink="/rewards">Sunnyside Rewards</a>
+          <a class="ft-link" routerLink="/medical">Medical Program</a>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="ft-col-title">Shop</div>
+      <div class="ft-sub-label">FORMS</div>
+      <div class="ft-links-row">
+        <div>
+          @for (cat of shopCategoriesColA; track cat.slug) {
+            <a class="ft-link-icon" [routerLink]="['/shop', cat.slug]"><span class="ic">{{ cat.icon }}</span>{{ cat.label }}</a>
+          }
+        </div>
+        <div>
+          @for (cat of shopCategoriesColB; track cat.slug) {
+            <a class="ft-link-icon" [routerLink]="['/shop', cat.slug]"><span class="ic">{{ cat.icon }}</span>{{ cat.label }}</a>
+          }
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="ft-col-title">Learn</div>
+      <div class="ft-sub-label">ARTICLES</div>
+      <a class="ft-link" routerLink="/learn">All Articles &rarr;</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="ft-copy">&copy; {{ year }} Sunnyside clone &mdash; personal/learning project, not affiliated with Sunnyside*.</div>
+    <div class="ft-legal-links">
+      <a routerLink="/terms">Terms of Service</a>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,932 @@
+[
+  {
+    "slug": "about",
+    "title": "About",
+    "blocks": [
+      {
+        "type": "heading",
+        "data": {
+          "level": 4,
+          "text": "Our Roots"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Sunnyside* strives to be the brightest part of your day, providing education and a judgement-free place to shop for cannabis. From our small beginnings, Sunnyside* has grown to over 70 dispensaries nationwide and counting\u2014while remaining focused on giving people access to consistent high-quality cannabis that can help improve their everyday lives."
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "src": "/assets/placeholder/content.svg",
+          "alt": "Prismic Content"
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 4,
+          "text": "Our Mission"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Sunnyside* is your home for judgement-free cannabis shopping. A place where all are welcome to explore, discover and purchase a wide array of high-quality products. No matter where you are on your cannabis journey, we're here to guide, educate, and support your shopping experience."
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "src": "/assets/placeholder/content.svg",
+          "alt": "Prismic Content"
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 4,
+          "text": "Our Dispensaries"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Sunnyside* is the destination to explore and enjoy the benefits of cannabis. We do this by translating our passion into welcoming, positive, and judgement-free spaces for anyone at any point in their cannabis journey. Place your order online from our menu updated in real-time and it'll be ready when you arrive."
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Click here for a list of all our dispensaries in Illinois, Pennsylvania, New York, Ohio, Massachusetts, and Florida."
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "src": "/assets/placeholder/content.svg",
+          "alt": "Prismic Content"
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 4,
+          "text": "Our Products"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "We're proud to carry one of the largest selections of cannabis on the market\u2014including premium flower, vapes, edibles, concentrates and medicinal products from the most trusted brands in the cannabis industry. Naturally, we carry products from the ever-growing Cresco Labs family of brands including Cresco, High Supply, FloraCal, Mindy\u2019s, Good News, Wonder, and Remedi, and remain dedicated to bringing our customers the best products from the best cultivators."
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "src": "/assets/placeholder/content.svg",
+          "alt": "Prismic Content"
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 4,
+          "text": "Our People"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Sunnyside* wellness advisors are ready to help everyone find the best cannabis products that fit their lifestyle. Our industry-trained professionals are true believers of cannabis and its everyday benefits to your wellness. They provide an outstanding customer experience from check-in to check-out, with plenty of complimentary smiles along the way."
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Interested in joining our team?"
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "src": "/assets/placeholder/content.svg",
+          "alt": "Prismic Content"
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 4,
+          "text": "Planting a SEED"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "At Sunnyside*, we believe the future of cannabis looks brighter than ever. Purchases from Sunnyside* help support the SEED initiative, which is designed to ensure that all members of our society have the skills, knowledge and opportunity to work in and own businesses in this industry. SEED collaborates with universities to develop cannabis-focused curriculum and works with local agencies and community organizations to sponsor expungement events. These impactful programs and actionable solutions-based approaches serve to help make the cannabis industry a highly inclusive force for job creation."
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Learn more at crescolabs.com/seed"
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "src": "/assets/placeholder/content.svg",
+          "alt": "Prismic Content"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "faq",
+    "title": "Faq",
+    "blocks": [
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "Frequently Asked Questions"
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 4,
+          "text": "Have questions? We've got answers."
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "src": "/assets/placeholder/content.svg",
+          "alt": ""
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 2,
+          "text": "Common Questions"
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 4,
+          "text": "What do I need to shop at Sunnyside's Illinois Dispensaries?"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Be sure to bring your valid ID, medical card (if applicable) and your order confirmation email\u2014you\u2019ll need them to check in. We prefer debit card payment, but also accept cash and have ATMs for your convenience. We don\u2019t accept credit cards. If for some reason you can\u2019t make it in, let us know by contacting us here , or just cancel your order by simply scrolling to the bottom of your order and clicking \u2018cancel order\u2019. You can also navigate to the \u2018 Order History \u2019 tab at the top right of the screen, (next to the cart icon), and select \u2018cancel order\u2019."
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Lastly, if you\u2019re not feeling well, please stay home for everyone\u2019s wellness."
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Accepted forms of ID:"
+        }
+      },
+      {
+        "type": "list",
+        "data": {
+          "ordered": false,
+          "items": [
+            "A valid driver\u2019s license from any US state",
+            "A valid ID from any US state",
+            "A valid US Passport or International Passport",
+            "A valid US Military ID or VA Card with photo & barcode",
+            "A valid Native American Tribe ID"
+          ]
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 4,
+          "text": "Where do I park?"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Each Sunnyside location has a different setup. Click a location map below to get a lay of the land."
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Sunnyside Chicago - Wrigleyville/Lakeview: Street parking may be available and there are parking garages nearby. Sunnyside Chicago - River North Sunnyside Elmwood Park Sunnyside South Beloit"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Sunnyside Naperville Sunnyside Rockford Sunnyside Champaign Sunnyside Danville Sunnyside Schaumburg Sunnyside Buffalo Grove"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "All medical customers in Illinois have access to reserved parking (at stores that offer parking) and dedicated express lanes at Sunnyside."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 4,
+          "text": "What taxes are charged for adult-use customers?"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "On average, about 25% of your final bill is attributed to taxes. Getting a more accurate number depends on the THC percentage. In Illinois, you\u2019ll pay a state tax based on the products you buy. Here\u2019s how state taxes break down:"
+        }
+      },
+      {
+        "type": "list",
+        "data": {
+          "ordered": false,
+          "items": [
+            "10% tax on cannabis products with 35% THC or less",
+            "25% tax on cannabis products with 35% THC or more",
+            "20% tax on THC-infused cannabis products (edibles, tonics, liquids)",
+            "8-11% tax on all cannabis products, set by each town and county a store is in",
+            "Want to save up to 40% on taxes? Here\u2019s how to get a medical card. Medical customers pay only 1% in taxes!"
+          ]
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 4,
+          "text": "How do I place an online order?"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Ordering online is easy at Sunnyside! If it\u2019s your first time, you\u2019ll need to register with us first. Then select your store and customer type, then add products to your cart from our live inventory. Once you\u2019re done, hit submit and you\u2019re all set! We\u2019ll shoot you an email confirming that your order is ready for pickup."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 4,
+          "text": "How do I cancel an online order?"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "After submitting your order online simply scroll to the bottom of your order and click \u2018cancel order\u2019. You can also navigate to the \u2018 Order History \u2019 tab at the top right of the screen, (next to the cart icon), and select \u2018cancel order\u2019."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 4,
+          "text": "Can you help me shop for products?"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Of course! We\u2019d be happy to help you find products to fit your lifestyle. You can call us during normal business hours, email us anytime, or ask one of our Wellness Advisors in-store."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 4,
+          "text": "Why am I unable to place an order?"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "If its after business hours, online ordering will resume the following morning. Otherwise, we may be experiencing high demand and will resume at the top of the hour."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 4,
+          "text": "When do I need to pick up my order?"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "We\u2019ll send you a confirmation via email letting you know your order is ready for pick-up. When you arrive at the store, please show your order confirmation email to the security guard at the door. We fulfill orders on a first-come, first-served basis. After a two-hour hold time, your product may be released to other customers. If you pick-up by the end of the business day, we will do our best to fulfill your request, but some products may not be available."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 4,
+          "text": "Do you have a loyalty program?"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Yes, we do! Click here to learn more."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 4,
+          "text": "Who can join Sunnyside Rewards?"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "All patients and customers shopping in Illinois. Medical patients in Florida, Ohio, New York and Massachusetts can join Sunnyside Rewards to earn points on eligible purchases."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 4,
+          "text": "How do I redeem my points?"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "You can redeem your points for rewards in any whole dollar amount up to $100 by applying them to your cart on Sunnyside.shop, or by asking a Wellness Advisor in-store. Massachusetts Adult-Use and Ohio medical shoppers can only redeem rewards on non-medicated products."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 4,
+          "text": "What if I apply loyalty points and then cancel my order?"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Worry not! Online rewards redemptions that aren\u2019t applied in-store at the register will be returned to your Sunnyside account. This will reflect on your account within 72 hours."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 4,
+          "text": "I\u2019ve recently made a purchase and my rewards points aren\u2019t updated yet."
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Worry not! All Sunnyside* Rewards purchase points are typically added within 72 hours of your purchase. Occasionally, our system may need additional time to process bonus points\u2014which may take longer to appear in your account. Note: online reward redemptions not applied in-store at the register will be returned to your Sunnyside account within 72 hours."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 4,
+          "text": "You said my order was ready, but now there\u2019s a wait. What\u2019s up?"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Typically, we can fulfill orders very quickly, but during peak shopping times, there may be a bit of a wait as you come pick-up your order."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 4,
+          "text": "How often is your online menu updated?"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Our live menu is constantly being updated to reflect the current inventory available at our stores."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 4,
+          "text": "Is what is on your menu what you have available?"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Yes. Be sure to check which location you\u2019re shopping at in the right-hand corner of your screen. Inventory is different based on the store you\u2019re shopping at. If you have specific questions or product requests, please contact us here ."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 4,
+          "text": "When do you expect to have more product on shelves?"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Our goal at Sunnyside is to bring our customers as many options as possible. Our menu will be updated as more products become available."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 4,
+          "text": "Are there purchase limits for (adult-use) cannabis products at Sunnyside?"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Illinois residents 21+ may buy up to 30 grams (a little over 1 ounce of flower), 500mg of THC-infused products (like edibles), and 5 grams of concentrate products (like vape carts or concentrates). Non-residents may purchase half of these daily cumulative amounts."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 4,
+          "text": "What is the purchase limit for medical customers?"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Unlike recreational customers, medical customers at Sunnyside can purchase products up to the state-mandated limits. In Illinois, medical customers and caregivers can purchase up to 2 ounces of usable cannabis per 14-day period."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 4,
+          "text": "How do I get a medical card?"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Follow the links below to see if you qualify for a medical card in your state. Illinois , Pennsylvania , Massachusetts, New York , Ohio , Florida"
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 4,
+          "text": "Do medical customers need to go to a medical dispensary to get tax breaks?"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Yes. If you want to purchase cannabis at the medical tax rate, you must shop at a medical dispensary. Click here to find a Sunnyside medical dispensary near you."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 4,
+          "text": "Can I return or exchange a defective product at Sunnyside?"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Return and exchange policies vary due to state regulations. Please contact us here to understand how returns or exchanges work in your state."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 4,
+          "text": "What deals or promotions are offered at Sunnyside shops?"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "We\u2019re always rolling out new offers for our customers. Be sure to sign up for text or email updates by clicking here to learn about deals, events, shop updates and more. To learn about our current promotions and evergreen discounts at a dispensary near you, click here ."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 4,
+          "text": "Can I purchase cannabis at Sunnyside dispensaries as a recreational tourist from outside Illinois?"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Yes! You can shop freely in Illinois if you have a valid government issued photo ID from any state or country showing you are 21+. Adults 21+ from out-of-state can possess half those amounts:"
+        }
+      },
+      {
+        "type": "list",
+        "data": {
+          "ordered": false,
+          "items": [
+            "15 grams of cannabis flower",
+            "2.5 grams of cannabis concentrate",
+            "250mg of cannabis-infused products (edibles, capsules, topicals, etc.)"
+          ]
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 4,
+          "text": "Can I travel with cannabis?"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Since cannabis is not legal at the federal level, you cannot take product outside of the state in which it was purchased."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 4,
+          "text": "What different forms of cannabis are there?"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "These days cannabis comes in a wide variety of formats, to better fit a wider variety of lifestyles. Flower (dried and cured cannabis buds) may still be the most popular form out there, but alternatives like edibles, vapes, and topicals can offer you different experiences. Check out our article on Basic Forms of Cannabis to learn more."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 4,
+          "text": "What are some common ways to use cannabis?"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "There are lots of different ways to consume cannabis, such as smoking, vaping, or eating it. Each has its advantages, depending on the effect you\u2019re after. To learn more about all your options, check out our article on Common Ways to Consume Cannabis ."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 4,
+          "text": "What are THC and CBD?"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "These two three-letter acronyms are key to unlocking the world of cannabis. Knowing what they mean will help you make the most of your cannabis experience. It\u2019s good knowledge to have before you start shopping for cannabis. You can read our full article to learn more about THC and CBD here ."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 4,
+          "text": "Are there smoke-free cannabis options?"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Edibles are a great option for those who would like to try cannabis but aren\u2019t fans of smoke. Everything from gummies to edibles to chocolates to chews to beverages \u2013 all kinds of ways to enjoy cannabis, smoke-free style. Just know that edible products take effect differently than products you inhale. Check out our Intro to Edibles article to learn more."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 4,
+          "text": "What are indica and sativa?"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Maybe you\u2019ve seen these terms before, but what they mean can tell you about the cannabis you\u2019re enjoying. Check out our article on Indica vs. Sativa to learn more about these common cannabis strain types."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 4,
+          "text": "What do you do with people's private information?"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "We take your privacy very seriously. When you provide us with your email or phone number, we protect it and use it only for internal purposes, to contact you about your orders or for marketing purposes\u2014if you\u2019ve opted-in to receive those."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 4,
+          "text": "Beware of impostor websites!"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Our products can only be purchased through licensed cannabis dispensaries, and our only official website is Sunnyside.shop. Don\u2019t fall for scams\u2014be sure to only place your Sunnyside online orders directly at Sunnyside.shop. It\u2019s illegal to ship cannabis products across state lines, so don\u2019t place orders with companies who claim to ship cannabis products directly from Sunnyside via mail/fedex/UPS. If you come across a website that appears to be shipping our products, please contact our Customer Support here to report the scam."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 4,
+          "text": "What is Cresco Labs' House of Brands?"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Brands owned by Cresco include Good News, Mindy's, Cresco, High Supply (aka Supply), FloraCal, Wonder, and Remedi."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "askusanything",
+    "title": "Askusanything",
+    "blocks": [
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "So, how can we help?"
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "src": "/assets/placeholder/content.svg",
+          "alt": "icon"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "You can call us at 833-653-6583 from 9am-8pm CDT."
+        }
+      },
+      {
+        "type": "cta-banner",
+        "data": {
+          "label": "Call"
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "src": "/assets/placeholder/content.svg",
+          "alt": "icon"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Leave us a note and we'll respond within 24-48 hours."
+        }
+      },
+      {
+        "type": "cta-banner",
+        "data": {
+          "label": "Email"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Do you have questions about a product, our shop or an online order? Visit our Support\u00a0page or browse through some of our frequently asked questions below. Please access and review our privacy policy and terms of service . If you are experiencing a medical crisis, please call 911 or contact your local emergency assistance immediately."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 2,
+          "text": "Some Common Questions"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Click a category below to see what people are asking."
+        }
+      },
+      {
+        "type": "cta-banner",
+        "data": {
+          "label": "Cannabis 101"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Cannabis 101"
+        }
+      },
+      {
+        "type": "cta-banner",
+        "data": {
+          "label": "Online Ordering"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Online Ordering"
+        }
+      },
+      {
+        "type": "cta-banner",
+        "data": {
+          "label": "Visiting Sunnyside"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Visiting Sunnyside"
+        }
+      },
+      {
+        "type": "cta-banner",
+        "data": {
+          "label": "Other Questions"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Other Questions"
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "How do I place an online order?"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Ordering online is easy at Sunnyside! If it\u2019s your first time, you\u2019ll need to register with us first. Then select your store and customer type, then add products to your cart from our live inventory. Once you\u2019re done, hit submit and you\u2019re all set! We\u2019ll shoot you an email confirming that your order is ready for pickup."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "Can you help me shop for products?"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Of course! We\u2019d be happy to help you find products to fit your lifestyle. You can call us during normal business hours, email us anytime, or ask one of our Wellness Advisors in-store."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "Do you have a loyalty program?"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Yes, we do! Click here to learn more."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "What if I apply loyalty points and then cancel my order?"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Worry not! Online rewards redemptions that aren\u2019t applied in-store at the register will be returned to your Sunnyside account. This will reflect on your account within 72 hours."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "I\u2019ve recently made a purchase and my rewards points aren\u2019t updated yet."
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Worry not! All Sunnyside* Rewards purchase points are typically added within 72 hours of your purchase. Occasionally, our system may need additional time to process bonus points\u2014which may take longer to appear in your account. Note: online reward redemptions not applied in-store at the register will be returned to your Sunnyside account within 72 hours."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "How often is your online menu updated?"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Our live menu is constantly being updated to reflect the current inventory available at our stores."
+        }
+      },
+      {
+        "type": "cta-banner",
+        "data": {
+          "label": "View all FAQs"
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 4,
+          "text": "Ready to place an order? Here's how it works:"
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "src": "/assets/placeholder/content.svg",
+          "alt": "icon"
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 4,
+          "text": "1. Order Online"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Browse our live menu and submit your order."
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "src": "/assets/placeholder/content.svg",
+          "alt": "icon"
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 4,
+          "text": "2. Pick up in-store"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Have your order confirmation and valid state ID ready when you arrive."
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "src": "/assets/placeholder/content.svg",
+          "alt": "Sunnyside Dispensary associate smiling while on the phone behind the check in counter"
+        }
+      }
+    ]
+  }
+]

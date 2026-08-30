@@ -1,0 +1,178 @@
+// Ported from sunny2's .acct-* / .pts-* / .stats-row / .tbl rules.
+
+.acct-wrap {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.acct-nav {
+  background: var(--white);
+  border-right: 1px solid var(--g200);
+  padding: 24px 0;
+}
+
+.acct-nav-title {
+  padding: 0 20px 16px;
+  font-size: 17px;
+  font-weight: 900;
+}
+
+.acct-nav a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  font-size: 13px;
+  color: var(--g600);
+  cursor: pointer;
+  border-left: 3px solid transparent;
+  transition: 0.12s;
+  text-decoration: none;
+
+  &:hover {
+    background: var(--g100);
+    color: var(--g800);
+  }
+
+  &.on {
+    background: var(--orange-lt);
+    color: var(--orange);
+    font-weight: 700;
+    border-left-color: var(--orange);
+  }
+
+  &.sign-out {
+    color: var(--red);
+    margin-top: 16px;
+  }
+}
+
+.acct-main {
+  padding: 32px;
+  background: var(--g50);
+}
+
+.pts-card {
+  background: var(--g800);
+  color: var(--white);
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 24px;
+}
+
+.pts-lbl {
+  font-size: 11px;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.pts-val {
+  font-size: 56px;
+  font-weight: 900;
+  color: var(--orange);
+  line-height: 1;
+}
+
+.pts-eq {
+  font-size: 13px;
+  color: #888;
+  margin-top: 4px;
+  margin-bottom: 18px;
+
+  .worth {
+    color: var(--orange);
+  }
+}
+
+.pts-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  background: var(--white);
+  border: 1px solid var(--g200);
+  border-radius: 10px;
+  padding: 18px;
+  text-align: center;
+}
+
+.stat-n {
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--orange);
+  margin-bottom: 4px;
+}
+
+.stat-l {
+  font-size: 12px;
+  color: var(--g400);
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+.tbl-wrap {
+  background: var(--white);
+  border: 1px solid var(--g200);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 24px;
+
+  &.empty {
+    padding: 32px;
+    text-align: center;
+
+    p {
+      margin-bottom: 12px;
+      color: var(--g500);
+    }
+  }
+}
+
+.tbl {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+
+  th {
+    background: var(--g50);
+    padding: 10px 14px;
+    text-align: left;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--g400);
+  }
+
+  td {
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--g200);
+  }
+
+  tr:last-child td {
+    border-bottom: none;
+  }
+}
+
+.points-cell {
+  color: var(--green);
+  font-weight: 700;
+}

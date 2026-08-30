@@ -1,0 +1,397 @@
+// Ported from sunny2/sunnyside_v14(12).html's .topnav / .logo / .nav-link / .login-btn rules.
+
+.topnav {
+  background: var(--white);
+  border-bottom: 1px solid var(--g200);
+  position: sticky;
+  top: 0;
+  z-index: 300;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  padding: 0 28px;
+  justify-content: space-between;
+  gap: 16px;
+
+  @media (max-width: 700px) {
+    padding: 0 16px;
+    gap: 8px;
+  }
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 900;
+  color: var(--orange);
+  cursor: pointer;
+  white-space: nowrap;
+  letter-spacing: -0.5px;
+  text-decoration: none;
+  flex-shrink: 0;
+
+  .logo-mark {
+    color: var(--orange);
+  }
+
+  @media (max-width: 700px) {
+    font-size: 20px;
+  }
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+  margin-left: 20px;
+
+  @media (max-width: 700px) {
+    overflow-x: auto;
+    scrollbar-width: none;
+    margin-left: 8px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--g700);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.15s;
+  white-space: nowrap;
+  text-decoration: none;
+
+  &:hover {
+    background: var(--g100);
+  }
+
+  &.active {
+    color: var(--orange);
+  }
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.icon-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: 0.15s;
+  color: var(--g700);
+  text-decoration: none;
+
+  &:hover {
+    background: var(--g100);
+  }
+
+  &.active {
+    color: var(--orange);
+  }
+}
+
+.cart-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 4px;
+  margin-left: 2px;
+  border-radius: 999px;
+  background: var(--orange);
+  color: var(--white);
+  font-size: 11px;
+}
+
+.login-btn {
+  background: var(--orange);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 13px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: 0.15s;
+  white-space: nowrap;
+  text-decoration: none;
+
+  &:hover {
+    background: var(--orange-dark);
+  }
+
+  @media (max-width: 700px) {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}
+
+// Ported from sunny2's .nav-item / .nav-dropdown / .dd-* mega-menu rules.
+
+.nav-item {
+  position: relative;
+}
+
+.caret {
+  font-size: 10px;
+  color: var(--g400);
+  margin-top: 1px;
+}
+
+.nav-dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 0;
+  background: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+  padding: 24px;
+  z-index: 400;
+  border: 1px solid var(--g200);
+
+  &.open {
+    display: block;
+  }
+}
+
+.dd-shop.open {
+  display: grid;
+}
+
+.nav-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  // Must stay below .topnav's z-index (300): .topnav is its own stacking
+  // context (position: sticky + z-index), so nav items/dropdowns inside it can
+  // only out-stack this sibling overlay if the header itself already wins that
+  // comparison. At 399 the overlay covered the whole header and blocked
+  // clicking a different nav item while a dropdown was open.
+  z-index: 250;
+  background: rgba(0, 0, 0, 0.02);
+
+  &.open {
+    display: block;
+  }
+}
+
+.dd-shop {
+  width: 640px;
+  grid-template-columns: 1fr 340px;
+  gap: 28px;
+
+  @media (max-width: 700px) {
+    width: calc(100vw - 32px);
+    grid-template-columns: 1fr;
+  }
+}
+
+.dd-col-title {
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--g200);
+}
+
+.dd-products-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px 24px;
+}
+
+.dd-prod-link {
+  padding: 8px 0;
+  font-size: 14px;
+  color: var(--g700);
+  cursor: pointer;
+  transition: 0.15s;
+  text-decoration: none;
+  display: block;
+
+  &:hover {
+    color: var(--orange);
+  }
+}
+
+.dd-collections-box {
+  background: var(--g50);
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 16px;
+}
+
+.dd-collections-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px 20px;
+}
+
+.dd-store-panel {
+  background: var(--g50);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.dd-store-label {
+  font-size: 12px;
+  color: var(--green);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.dd-store-name {
+  font-size: 17px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.dd-store-addr {
+  font-size: 13px;
+  color: var(--g600);
+  line-height: 1.5;
+
+  a {
+    color: var(--orange);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 12px;
+  }
+}
+
+.dd-store-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 12px;
+}
+
+.dd-store-action {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--orange);
+  padding: 8px 0;
+  cursor: pointer;
+  text-decoration: none;
+
+  .ic {
+    width: 24px;
+    height: 24px;
+    background: var(--orange-lt);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    color: var(--orange);
+  }
+}
+
+.dd-deals,
+.dd-learn {
+  width: 640px;
+
+  @media (max-width: 700px) {
+    width: calc(100vw - 32px);
+  }
+}
+
+.dd-deals-grid,
+.dd-articles-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.dd-deal-card,
+.dd-article-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.15s;
+  text-decoration: none;
+
+  &:hover {
+    background: var(--g50);
+  }
+}
+
+.dd-deal-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  background: var(--orange);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 900;
+  text-align: center;
+  line-height: 1.2;
+  flex-shrink: 0;
+  padding: 4px;
+}
+
+.dd-deal-text,
+.dd-article-text {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--g800);
+  line-height: 1.35;
+}
+
+.dd-article-img {
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  background-color: var(--g100);
+  background-size: cover;
+  background-position: center;
+}
+
+.dd-learn-title {
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.dd-view-all {
+  text-align: right;
+  margin-top: 16px;
+
+  a {
+    color: var(--orange);
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}

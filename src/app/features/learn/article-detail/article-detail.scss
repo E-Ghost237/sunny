@@ -1,0 +1,21 @@
+.status {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.breadcrumb {
+  display: block;
+  max-width: 720px;
+  margin: 24px auto 0;
+  padding: 0 24px;
+  color: var(--g600);
+  opacity: 0.7;
+  text-decoration: none;
+  font-size: 13px;
+
+  &:hover {
+    opacity: 1;
+  }
+}

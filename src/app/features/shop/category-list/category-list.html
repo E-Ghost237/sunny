@@ -1,0 +1,84 @@
+<div class="shop-wrap">
+  <div class="shop-side">
+    <div class="filt-results-label">Filter results by:</div>
+
+    @for (section of sections(); track section.title) {
+      <app-accordion [title]="section.title" [startOpen]="$first">
+        @switch (section.type) {
+          @case ('pills') {
+            <div class="filt-pills-row">
+              @for (opt of section.options; track opt) {
+                @if (wireKindFor(section) === 'strain') {
+                  <div class="filt-pill-btn" [class.on]="isSelected('strains', opt)" (click)="toggle('strains', opt)">{{ opt }}</div>
+                } @else {
+                  <div class="filt-pill-btn readonly">{{ opt }}</div>
+                }
+              }
+            </div>
+          }
+          @case ('checkboxes') {
+            <div class="filt-acc-body two-col">
+              @for (opt of section.options; track opt) {
+                @if (wireKindFor(section) === 'brand') {
+                  <label class="filt-check"><input type="checkbox" [checked]="isSelected('brands', opt)" (change)="toggle('brands', opt)" />{{ opt }}</label>
+                } @else if (wireKindFor(section) === 'size') {
+                  <label class="filt-check"><input type="checkbox" [checked]="isSelected('sizes', opt)" (change)="toggle('sizes', opt)" />{{ opt }}</label>
+                } @else if (wireKindFor(section) === 'featured') {
+                  <label class="filt-check"><input type="checkbox" [checked]="isSelected('featured', opt)" (change)="toggle('featured', opt)" />{{ opt }}</label>
+                } @else {
+                  <label class="filt-check readonly"><input type="checkbox" disabled />{{ opt }}</label>
+                }
+              }
+            </div>
+          }
+          @case ('range') {
+            @if (wireKindFor(section) === 'thc-range' && effectiveThcBounds(); as b) {
+              <app-range-slider [boundMin]="b.min" [boundMax]="b.max" [unit]="section.unit!" [unitPrefix]="!!section.unitPrefix" [note]="section.note!" (rangeChange)="thcFilter.set($event)" />
+            } @else if (wireKindFor(section) === 'cbd-range' && effectiveCbdBounds(); as b) {
+              <app-range-slider [boundMin]="b.min" [boundMax]="b.max" [unit]="section.unit!" [unitPrefix]="!!section.unitPrefix" [note]="section.note!" (rangeChange)="cbdFilter.set($event)" />
+            } @else if (wireKindFor(section) === 'price-range' && effectivePriceBounds(); as b) {
+              <app-range-slider [boundMin]="b.min" [boundMax]="b.max" [unit]="section.unit!" [unitPrefix]="!!section.unitPrefix" [note]="section.note!" (rangeChange)="priceFilter.set($event)" />
+            } @else {
+              <app-range-slider [boundMin]="section.min!" [boundMax]="section.max!" [unit]="section.unit!" [unitPrefix]="!!section.unitPrefix" [note]="section.note!" />
+            }
+          }
+        }
+      </app-accordion>
+    }
+
+    @if (hasActiveFilters()) {
+      <button class="clear-filters-btn" type="button" (click)="clearFilters()">Clear All Filters</button>
+    }
+  </div>
+
+  <div class="shop-main">
+    <div class="shop-search-row">
+      <h1>{{ categoryLabel() }}</h1>
+      <div class="shop-results-txt">
+        @if (!productsResource.isLoading()) {
+          Showing {{ filteredProducts().length }} of {{ products().length }} results
+        }
+      </div>
+    </div>
+
+    <div class="pills">
+      @for (c of allCategories; track c) {
+        <a class="pill" [class.on]="c === category()" [routerLink]="['/shop', c]">{{ labelFor(c) }}</a>
+      }
+    </div>
+
+    @if (productsResource.isLoading()) {
+      <p class="status">Loading {{ categoryLabel() }}&hellip;</p>
+    } @else if (productsResource.error()) {
+      <p class="status error">Couldn't load products. Is the mock API running? (npm run mock-api)</p>
+    } @else if (filteredProducts().length === 0) {
+      <p class="status">No products match your filters.</p>
+    } @else {
+      <div class="prod-grid-shop">
+        @for (product of filteredProducts(); track product.id) {
+          <app-product-card [product]="product" />
+        }
+      </div>
+    }
+  </div>
+</div>

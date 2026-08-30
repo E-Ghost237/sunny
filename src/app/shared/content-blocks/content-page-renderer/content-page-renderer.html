@@ -1,0 +1,25 @@
+@for (block of blocks(); track $index) {
+  @switch (block.type) {
+    @case ('heading') {
+      <app-heading-block [data]="asHeading(block)" />
+    }
+    @case ('paragraph') {
+      <app-paragraph-block [data]="asParagraph(block)" />
+    }
+    @case ('image') {
+      <app-image-block [data]="asImage(block)" />
+    }
+    @case ('quote') {
+      <app-quote-block [data]="asQuote(block)" />
+    }
+    @case ('cta-banner') {
+      <app-cta-banner-block [data]="asCta(block)" />
+    }
+    @case ('list') {
+      <app-list-block [data]="asList(block)" />
+    }
+    @default {
+      <app-unknown-block [data]="asUnknown(block)" />
+    }
+  }
+}

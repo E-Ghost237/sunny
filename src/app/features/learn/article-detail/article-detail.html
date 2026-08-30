@@ -1,0 +1,11 @@
+@if (articleResource.isLoading()) {
+  <p class="status">Loading&hellip;</p>
+} @else if (!article()) {
+  <div class="status">
+    <p>Article not found.</p>
+    <a routerLink="/learn">Back to Learn</a>
+  </div>
+} @else {
+  <a class="breadcrumb" routerLink="/learn">&larr; Learn</a>
+  <app-content-page-renderer [blocks]="article()!.blocks" />
+}

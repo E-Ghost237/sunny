@@ -1,0 +1,194 @@
+// Ported from sunny2/sunnyside_v14(12).html's .shop-wrap / .shop-side / .filt-* / .shop-main / .pills / .prod-grid-shop rules.
+
+.shop-wrap {
+  display: flex;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
+}
+
+.shop-side {
+  width: 330px;
+  min-width: 330px;
+  padding: 24px 20px;
+  border-right: 1px solid var(--g200);
+  position: sticky;
+  top: 64px;
+  height: calc(100vh - 64px);
+  overflow-y: auto;
+  background: var(--white);
+
+  @media (max-width: 900px) {
+    width: 100%;
+    min-width: 0;
+    position: static;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--g200);
+  }
+}
+
+.filt-results-label {
+  font-size: 12px;
+  color: var(--g500);
+  margin-bottom: 4px;
+}
+
+.filt-pills-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.filt-pill-btn {
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: 1.5px solid var(--g300);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  color: var(--g700);
+  background: var(--white);
+  transition: 0.15s;
+
+  &:hover {
+    border-color: var(--orange);
+    color: var(--orange);
+  }
+
+  &.on {
+    background: var(--orange);
+    color: var(--white);
+    border-color: var(--orange);
+  }
+
+  // Sections with no matching real product field to filter by (Terpenes, Flower
+  // Type, Extraction Method, etc.) render as real content without being clickable,
+  // rather than toggling visually and silently doing nothing.
+  &.readonly {
+    cursor: default;
+    color: var(--g500);
+
+    &:hover {
+      border-color: var(--g300);
+      color: var(--g500);
+    }
+  }
+}
+
+.filt-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--g700);
+  cursor: pointer;
+
+  input {
+    accent-color: var(--orange);
+  }
+
+  &.readonly {
+    cursor: default;
+    color: var(--g500);
+  }
+}
+
+.filt-acc-body.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 10px;
+}
+
+.clear-filters-btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  background: none;
+  border: 1.5px solid var(--g300);
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--g600);
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--orange);
+    color: var(--orange);
+  }
+}
+
+.shop-main {
+  flex: 1;
+  padding: 28px 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.shop-search-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+
+  h1 {
+    margin: 0;
+  }
+}
+
+.shop-results-txt {
+  font-size: 13px;
+  color: var(--g600);
+  white-space: nowrap;
+}
+
+.pills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.pill {
+  padding: 7px 18px;
+  border-radius: 20px;
+  border: 1.5px solid var(--g200);
+  background: var(--white);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--g600);
+  cursor: pointer;
+  transition: 0.15s;
+  text-decoration: none;
+  white-space: nowrap;
+
+  &:hover {
+    border-color: var(--orange);
+    color: var(--orange);
+  }
+
+  &.on {
+    background: var(--orange);
+    color: var(--white);
+    border-color: var(--orange);
+  }
+}
+
+.status {
+  color: var(--g600);
+  opacity: 0.8;
+
+  &.error {
+    color: var(--red);
+    opacity: 1;
+  }
+}
+
+.prod-grid-shop {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 16px;
+}

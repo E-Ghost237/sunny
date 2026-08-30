@@ -1,0 +1,43 @@
+<div class="rew-hero">
+  <h1>Sunnyside* <b>Rewards</b></h1>
+  <p>Earn points on every purchase. Redeem anytime. Stack with most discounts.</p>
+  <div class="hero-actions">
+    @if (authService.isAuthenticated()) {
+      <a class="hbtn hbtn-wh" routerLink="/account">View My Points ({{ authService.user()?.rewardsPoints ?? 0 }})</a>
+    } @else {
+      <a class="hbtn hbtn-wh" routerLink="/register">Join Free</a>
+      <a class="hbtn hbtn-ol" routerLink="/login">Sign In to Redeem</a>
+    }
+  </div>
+</div>
+
+<div class="section white">
+  <div class="section-title">How You Earn Points</div>
+  <div class="earn-grid">
+    <div class="earn-card">
+      <div class="earn-n">1pt</div>
+      <div class="earn-l">per $1 spent &mdash; after discounts, before tax</div>
+    </div>
+    <div class="earn-card">
+      <div class="earn-n">$0.025</div>
+      <div class="earn-l">value per point earned</div>
+    </div>
+    <div class="earn-card">
+      <div class="earn-n">200 pts</div>
+      <div class="earn-l">= $5 in Sunnyside Rewards</div>
+    </div>
+  </div>
+</div>
+
+<div class="section gray">
+  <div class="section-title">Membership Tiers</div>
+  <div class="tier-grid">
+    @for (tier of tiers; track tier.name) {
+      <div class="tier-card" [class.hl]="tier.highlight">
+        <div class="tier-ic">{{ tier.icon }}</div>
+        <div class="tier-nm">{{ tier.name }}</div>
+        <div class="tier-p">{{ tier.desc }}</div>
+      </div>
+    }
+  </div>
+</div>

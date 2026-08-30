@@ -1,0 +1,29 @@
+.not-found {
+  max-width: 400px;
+  margin: 100px auto;
+  text-align: center;
+  padding: 0 24px;
+}
+
+.asterisk {
+  font-size: 48px;
+  color: var(--orange);
+  margin-bottom: 8px;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 900;
+  margin: 0 0 8px;
+}
+
+p {
+  color: var(--g500);
+  margin: 0 0 24px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}

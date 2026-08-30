@@ -1,0 +1,7 @@
+@if (pageResource.isLoading()) {
+  <p class="status">Loading&hellip;</p>
+} @else if (!page()) {
+  <p class="status">Content unavailable.</p>
+} @else {
+  <app-content-page-renderer [blocks]="page()!.blocks" />
+}

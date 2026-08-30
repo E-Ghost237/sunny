@@ -1,0 +1,70 @@
+// Ported from sunny2's .confirm-* rules.
+
+.confirm-wrap {
+  max-width: 580px;
+  margin: 0 auto;
+  padding: 60px 24px;
+  text-align: center;
+}
+
+.confirm-icon {
+  font-size: 64px;
+  margin-bottom: 16px;
+}
+
+.confirm-h {
+  font-size: 30px;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.confirm-sub {
+  font-size: 15px;
+  color: var(--g600);
+  margin-bottom: 28px;
+  line-height: 1.6;
+}
+
+.confirm-card {
+  background: var(--white);
+  border: 1px solid var(--g200);
+  border-radius: 12px;
+  padding: 28px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.confirm-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--g200);
+  font-size: 13px;
+
+  &.total {
+    font-weight: 900;
+    font-size: 16px;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.green-strong {
+  color: var(--green);
+  font-weight: 700;
+}
+
+.orange-strong {
+  color: var(--orange);
+  font-weight: 700;
+}
+
+.confirm-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}

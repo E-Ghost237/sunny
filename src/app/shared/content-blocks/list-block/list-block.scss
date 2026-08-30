@@ -1,0 +1,16 @@
+:host {
+  display: block;
+  margin: 0 0 16px;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding-left: 22px;
+  color: var(--g700);
+  line-height: 1.7;
+}
+
+li {
+  margin-bottom: 6px;
+}

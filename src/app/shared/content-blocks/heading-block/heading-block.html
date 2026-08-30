@@ -1,0 +1,8 @@
+@switch (data().level) {
+  @case (1) { <h1>{{ data().text }}</h1> }
+  @case (2) { <h2>{{ data().text }}</h2> }
+  @case (3) { <h3>{{ data().text }}</h3> }
+  @case (4) { <h4>{{ data().text }}</h4> }
+  @case (5) { <h5>{{ data().text }}</h5> }
+  @default { <h6>{{ data().text }}</h6> }
+}

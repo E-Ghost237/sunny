@@ -1,0 +1,152 @@
+// Ported from sunny2's .rew-hero / .hbtn / .earn-* / .tier-* rules.
+
+.rew-hero {
+  background: var(--g800);
+  color: var(--white);
+  padding: 60px 40px;
+  text-align: center;
+
+  h1 {
+    font-size: 46px;
+    font-weight: 900;
+    margin: 0 0 10px;
+
+    b {
+      color: var(--orange);
+    }
+  }
+
+  p {
+    font-size: 16px;
+    color: #aaa;
+    max-width: 460px;
+    margin: 0 auto 28px;
+    line-height: 1.6;
+  }
+}
+
+.hero-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hbtn {
+  padding: 13px 26px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.15s;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+}
+
+.hbtn-wh {
+  background: var(--white);
+  color: var(--orange);
+  border-color: var(--white);
+
+  &:hover {
+    background: #f0f0f0;
+  }
+}
+
+.hbtn-ol {
+  background: transparent;
+  color: var(--white);
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.12);
+  }
+}
+
+.section {
+  padding: 48px 32px;
+
+  &.white {
+    background: var(--white);
+  }
+
+  &.gray {
+    background: var(--g50);
+  }
+}
+
+.section-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.earn-grid,
+.tier-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  max-width: 900px;
+  margin: 0 auto;
+
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.earn-grid {
+  margin-top: 24px;
+}
+
+.earn-card {
+  background: var(--white);
+  border: 1px solid var(--g200);
+  border-radius: 10px;
+  padding: 28px;
+  text-align: center;
+}
+
+.earn-n {
+  font-size: 42px;
+  font-weight: 900;
+  color: var(--orange);
+  margin-bottom: 6px;
+}
+
+.earn-l {
+  font-size: 13px;
+  color: var(--g600);
+  line-height: 1.5;
+}
+
+.tier-card {
+  background: var(--white);
+  border: 2px solid var(--g200);
+  border-radius: 10px;
+  padding: 26px;
+  text-align: center;
+  transition: 0.2s;
+
+  &:hover,
+  &.hl {
+    border-color: var(--orange);
+    background: var(--orange-lt);
+  }
+}
+
+.tier-ic {
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.tier-nm {
+  font-size: 17px;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.tier-p {
+  font-size: 13px;
+  color: var(--g600);
+  line-height: 1.5;
+}

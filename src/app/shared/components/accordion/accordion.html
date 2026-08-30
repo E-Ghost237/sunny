@@ -1,0 +1,7 @@
+<div class="acc-h" [class.detail]="variant() === 'detail'" (click)="toggle()">
+  <span>{{ title() }}</span>
+  <span class="acc-chev" [class.detail]="variant() === 'detail'" [class.closed]="!open()">▾</span>
+</div>
+<div class="acc-body" [class.detail]="variant() === 'detail'" [class.closed]="!open()">
+  <ng-content />
+</div>

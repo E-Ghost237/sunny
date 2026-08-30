@@ -1,0 +1,10 @@
+@if (pageResource.isLoading()) {
+  <p class="status">Loading&hellip;</p>
+} @else if (!page()) {
+  <div class="status">
+    <p>Page not found.</p>
+    <a routerLink="/">Back home</a>
+  </div>
+} @else {
+  <app-content-page-renderer [blocks]="page()!.blocks" />
+}

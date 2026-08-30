@@ -1,0 +1,35 @@
+<div class="auth-bg">
+  <div class="auth-card">
+    <h2>Create Your Account</h2>
+    <p>Join Sunnyside* to earn rewards, track orders, and shop online.</p>
+
+    <div class="form-2">
+      <div class="fg"><label for="reg-first-name">First Name</label><input id="reg-first-name" type="text" [(ngModel)]="firstName" placeholder="Jane" /></div>
+      <div class="fg"><label for="reg-last-name">Last Name</label><input id="reg-last-name" type="text" [(ngModel)]="lastName" placeholder="Doe" /></div>
+    </div>
+    <div class="fg">
+      <label for="reg-email">Email Address</label>
+      <input id="reg-email" type="email" [(ngModel)]="email" placeholder="jane&#64;example.com" />
+    </div>
+    <div class="fg">
+      <label for="reg-phone">Phone Number</label>
+      <input id="reg-phone" type="tel" [(ngModel)]="phone" placeholder="+1 (555) 000-0000" />
+      <div class="fg-note">📱 Required for Sunnyside Rewards. SMS verification will be sent.</div>
+    </div>
+    <div class="fg"><label for="reg-password">Password</label><input id="reg-password" type="password" placeholder="Minimum 8 characters" /></div>
+    <div class="fg"><label for="reg-password-confirm">Confirm Password</label><input id="reg-password-confirm" type="password" placeholder="Re-enter password" /></div>
+
+    <label class="age-row">
+      <input type="checkbox" />
+      <span>I confirm I am 21+ or 18+ with a valid medical marijuana card.</span>
+    </label>
+    <label class="age-row">
+      <input type="checkbox" />
+      <span>I agree to receive SMS/email updates from Sunnyside*. Opt out anytime.</span>
+    </label>
+
+    <button class="form-submit" type="button" (click)="submit()">Create Account</button>
+    <div class="auth-or">or</div>
+    <div class="auth-switch">Already have an account? <a routerLink="/login">Sign in here</a></div>
+  </div>
+</div>

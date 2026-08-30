@@ -1,0 +1,57 @@
+<div class="auth-bg">
+  @if (step() === 'email') {
+    <div class="auth-card">
+      <h2>Enter your email</h2>
+      <p>If you're new here, we'll create an account for you.</p>
+      <div class="fg">
+        <label for="login-email">Email Address</label>
+        <input id="login-email" type="email" [(ngModel)]="email" placeholder="Email Address" (keyup.enter)="continueFromEmail()" />
+      </div>
+      <button class="form-submit" type="button" [disabled]="checking()" (click)="continueFromEmail()">
+        {{ checking() ? 'Checking…' : 'Continue' }}
+      </button>
+      <div class="fine-print">
+        This site is protected by reCAPTCHA and the Google
+        <a>Privacy Policy</a> and <a>Terms of Service</a> apply.
+      </div>
+    </div>
+  }
+
+  @if (step() === 'signin') {
+    <div class="auth-card">
+      <div class="back-link" (click)="back()">&lsaquo; Back</div>
+      <h2>Welcome Back</h2>
+      <p>Sign in to {{ email }}.</p>
+      @if (error()) {
+        <div class="alert-info error">{{ error() }}</div>
+      }
+      <div class="fg">
+        <label for="login-password">Password</label>
+        <input id="login-password" type="password" [(ngModel)]="password" placeholder="Password" />
+      </div>
+      <button class="form-submit" type="button" (click)="submitSignIn()">Sign In</button>
+    </div>
+  }
+
+  @if (step() === 'create') {
+    <div class="auth-card wide">
+      <div class="back-link" (click)="back()">&lsaquo; Back</div>
+      <h2>Create an Account</h2>
+      <p>Please ensure your information matches the ID you'll be using to pickup your order.</p>
+      <div class="email-display">{{ email }}</div>
+      <div class="not-your-email">Not your email? <a (click)="back()">Enter a different email</a></div>
+
+      <div class="form-2">
+        <div class="fg"><input type="text" [(ngModel)]="firstName" placeholder="First Name" aria-label="First Name" /></div>
+        <div class="fg"><input type="text" [(ngModel)]="lastName" placeholder="Last Name" aria-label="Last Name" /></div>
+      </div>
+      <div class="fg"><input type="tel" [(ngModel)]="phone" placeholder="Phone Number" aria-label="Phone Number" /></div>
+
+      <label class="age-row">
+        <input type="checkbox" />
+        <span>By checking this box and clicking Next, you acknowledge that you have read and agree to the <a>Terms of Service</a> and <a>Privacy Policy</a>.</span>
+      </label>
+      <button class="form-submit" type="button" (click)="submitCreate()">Next</button>
+    </div>
+  }
+</div>

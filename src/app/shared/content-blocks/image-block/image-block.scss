@@ -1,0 +1,11 @@
+:host {
+  display: block;
+  margin: 20px 0;
+}
+
+img {
+  width: 100%;
+  border-radius: var(--radius-card);
+  background: var(--g100);
+  display: block;
+}

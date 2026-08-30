@@ -1,0 +1,5 @@
+<div class="cat-bar">
+  @for (cat of categories; track cat.slug) {
+    <a class="cat-tab" [routerLink]="['/shop', cat.slug]" routerLinkActive="on">{{ cat.label }}</a>
+  }
+</div>

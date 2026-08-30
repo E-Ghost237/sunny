@@ -1,0 +1,91 @@
+@if (storeResource.isLoading()) {
+  <p class="status">Loading&hellip;</p>
+} @else if (!store()) {
+  <div class="status">
+    <p>Store not found.</p>
+    <a routerLink="/stores">Back to all stores</a>
+  </div>
+} @else {
+  <div class="breadcrumb">
+    <a routerLink="/stores">Find a Dispensary</a> &rsaquo; <strong>{{ store()!.name }}</strong>
+  </div>
+
+  <div class="store-body">
+    <div class="store-main">
+      <div class="eyebrow">You're Shopping At:</div>
+      <div class="store-title">{{ store()!.name }}</div>
+      <div class="addr-line">{{ store()!.address.streetAddress }}</div>
+      <div class="addr-line">
+        {{ store()!.address.addressLocality }}, {{ store()!.address.addressRegion }} {{ store()!.address.postalCode }}
+      </div>
+
+      <div class="store-img-mock">{{ thumbs[activeThumb()] }}</div>
+      <div class="store-thumb-row">
+        @for (thumb of thumbs; track $index) {
+          <div class="store-thumb" [class.on]="$index === activeThumb()" (click)="activeThumb.set($index)">{{ thumb }}</div>
+        }
+      </div>
+
+      <div class="store-info-grid">
+        @if (store()!.phone) {
+          <a class="store-info-btn" [href]="'tel:' + store()!.phone">📞 {{ store()!.phone }}</a>
+        }
+        <a class="store-info-btn" [href]="directionsUrl()" target="_blank" rel="noopener">📍 Get Directions</a>
+        @if (store()!.aggregateRating) {
+          <div class="store-info-btn">★ {{ store()!.aggregateRating!.ratingValue }} ({{ store()!.aggregateRating!.reviewCount }})</div>
+        }
+      </div>
+
+      <div class="divider"></div>
+      <div class="sec-h2">Your Visit, Step by Step</div>
+      @for (step of visitSteps; track step.n) {
+        <div class="vstep">
+          <div class="vstep-n">{{ step.n }}</div>
+          <p class="vstep-t"><b>{{ step.title }}</b> {{ step.body }}</p>
+        </div>
+      }
+
+      @if (store()!.reviews.length > 0) {
+        <div class="divider"></div>
+        <div class="sec-h2">Reviews</div>
+        @for (r of store()!.reviews; track $index) {
+          <div class="review">
+            <div class="review-head">
+              <span class="review-author">{{ r.author }}</span>
+              @if (r.rating) {
+                <span class="review-rating">★ {{ r.rating }}</span>
+              }
+            </div>
+            @if (r.text) {
+              <p class="review-text">{{ r.text }}</p>
+            }
+          </div>
+        }
+      }
+    </div>
+
+    <div class="store-aside">
+      <div class="info-box">
+        <div class="info-box-h">Store Hours</div>
+        @for (h of store()!.openingHours; track h.day) {
+          <div class="hours-row" [class.today]="h.day === todayName">
+            <span>{{ h.day === todayName ? 'Today (' + h.day + ')' : h.day }}</span>
+            <span>{{ h.opens }}&ndash;{{ h.closes }}</span>
+          </div>
+        }
+      </div>
+
+      <button class="btn-orange full" [routerLink]="['/shop']">Shop Online for Pickup &rarr;</button>
+
+      <div class="info-box">
+        <div class="info-box-h">Important Notes</div>
+        <div class="notes">
+          ✅ Valid non-expired photo ID required<br />
+          ✅ Medical card for medical purchases<br />
+          ❌ No credit cards<br />
+          ❌ No weapons on premises
+        </div>
+      </div>
+    </div>
+  </div>
+}

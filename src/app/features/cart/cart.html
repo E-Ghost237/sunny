@@ -1,0 +1,53 @@
+@if (cartService.items().length === 0) {
+  <div class="empty-cart">
+    <div class="empty-icon">🛒</div>
+    <p>Your cart is empty.</p>
+    <a class="btn-orange" routerLink="/shop">Start Shopping</a>
+  </div>
+} @else {
+  <div class="cart-wrap">
+    <div class="cart-main">
+      <div class="cart-h">
+        Your Cart
+        <span class="cart-count-lbl">({{ cartService.totalItems() }} {{ cartService.totalItems() === 1 ? 'item' : 'items' }})</span>
+      </div>
+
+      @for (item of cartService.items(); track item.productId) {
+        <div class="cart-item">
+          <img class="ci-img" [src]="item.image" [alt]="item.name" />
+          <div class="ci-info">
+            @if (item.brand) {
+              <div class="ci-brand">{{ item.brand }}</div>
+            }
+            <div class="ci-name">{{ item.name }}</div>
+            @if (item.meta) {
+              <div class="ci-meta">{{ item.meta }}</div>
+            }
+            <div class="ci-foot">
+              <app-quantity-stepper
+                [quantity]="item.quantity"
+                (quantityChange)="cartService.updateQuantity(item.productId, $event)"
+              />
+              <div class="ci-price">${{ (item.priceAtAdd * item.quantity).toFixed(2) }}</div>
+            </div>
+            <div class="ci-remove" (click)="cartService.remove(item.productId)">Remove</div>
+          </div>
+        </div>
+      }
+
+      <div style="margin-top: 20px">
+        <a class="btn-outline" routerLink="/shop">&larr; Continue Shopping</a>
+      </div>
+    </div>
+
+    <div class="cart-side">
+      <div class="cs-h">Order Summary</div>
+      <div class="cs-row"><span>Subtotal ({{ cartService.totalItems() }} items)</span><span>${{ cartService.subtotal().toFixed(2) }}</span></div>
+      <div class="cs-row"><span>Pickup</span><span class="free">Free</span></div>
+      <div class="cs-row tax-note"><span>Tax collected at dispensary</span><span>&mdash;</span></div>
+      <div class="cs-total"><span>Estimated Total</span><span>${{ cartService.subtotal().toFixed(2) }}</span></div>
+      <a class="btn-orange checkout-btn" routerLink="/checkout">Checkout &rarr;</a>
+      <div class="fine-print">Payment collected at the dispensary. Valid ID required at pickup.</div>
+    </div>
+  </div>
+}

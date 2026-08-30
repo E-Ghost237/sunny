@@ -1,0 +1,46 @@
+.age-gate-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(17, 17, 17, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.age-gate-card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 40px;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+}
+
+.asterisk {
+  font-size: 40px;
+  color: var(--orange);
+  margin-bottom: 12px;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: 900;
+  margin: 0 0 12px;
+}
+
+p {
+  font-size: 14px;
+  color: var(--g600);
+  line-height: 1.6;
+  margin: 0 0 24px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}

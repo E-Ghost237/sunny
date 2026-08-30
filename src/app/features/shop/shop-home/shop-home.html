@@ -1,0 +1,11 @@
+<div class="shop-home">
+  <h1>Shop</h1>
+  <div class="grid">
+    @for (cat of categories; track cat.slug) {
+      <a class="cat-tile" [routerLink]="['/shop', cat.slug]">
+        <span class="icon">{{ cat.icon }}</span>
+        <span class="label">{{ cat.label }}</span>
+      </a>
+    }
+  </div>
+</div>

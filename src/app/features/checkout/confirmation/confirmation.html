@@ -1,0 +1,29 @@
+@if (!placedOrder()) {
+  <div class="confirm-wrap">
+    <p>No recent order found.</p>
+    <a class="btn-orange" routerLink="/shop">Continue Shopping</a>
+  </div>
+} @else {
+  <div class="confirm-wrap">
+    <div class="confirm-icon">✅</div>
+    <div class="confirm-h">Order Confirmed!</div>
+    <div class="confirm-sub">
+      Your order is being prepared at {{ placedOrder()!.pickupStoreName }}. You'll receive a text when it's ready.
+    </div>
+
+    <div class="confirm-card">
+      <div class="confirm-row"><span>Order #</span><strong>{{ placedOrder()!.id }}</strong></div>
+      <div class="confirm-row"><span>Pickup Store</span><span>{{ placedOrder()!.pickupStoreName }}</span></div>
+      <div class="confirm-row"><span>Estimated Ready</span><span class="green-strong">~30 minutes</span></div>
+      <div class="confirm-row total"><span>Total Due at Pickup</span><span>${{ placedOrder()!.subtotal.toFixed(2) }} + tax</span></div>
+      <div class="confirm-row"><span>Points Earned</span><span class="orange-strong">+{{ placedOrder()!.pointsEarned }} pts</span></div>
+    </div>
+
+    <div class="alert-info">🪪 Bring your valid government-issued ID. Medical patients must also bring their cannabis card.</div>
+
+    <div class="confirm-actions">
+      <a class="btn-dark" routerLink="/account">View My Orders</a>
+      <a class="btn-outline" routerLink="/shop">Continue Shopping</a>
+    </div>
+  </div>
+}

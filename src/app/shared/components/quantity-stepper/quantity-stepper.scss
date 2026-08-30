@@ -1,0 +1,26 @@
+// Ported from sunny2's .ci-qty / .ci-qbtn / .ci-qval rules.
+
+.ci-qty {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid var(--g200);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.ci-qbtn {
+  width: 30px;
+  height: 30px;
+  background: var(--g100);
+  border: none;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.ci-qval {
+  width: 36px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+}

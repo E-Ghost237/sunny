@@ -1,0 +1,5 @@
+@if (isPlaceholder()) {
+  <div class="pcard-img-inner">{{ emoji() }}</div>
+} @else {
+  <img [src]="src()" [alt]="alt()" loading="lazy" />
+}

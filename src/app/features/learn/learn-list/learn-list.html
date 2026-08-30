@@ -1,0 +1,28 @@
+<div class="learn-list-page">
+  <div class="learn-hero">
+    <h1>Learn</h1>
+    <p>Cannabis education, strain guides, and stories from Sunnyside.</p>
+  </div>
+
+  @if (articlesResource.isLoading()) {
+    <p class="status">Loading articles&hellip;</p>
+  } @else if (articlesResource.error()) {
+    <p class="status error">Couldn't load articles. Is the mock API running? (npm run mock-api)</p>
+  } @else {
+    <div class="grid">
+      @for (article of articlesResource.value(); track article.slug) {
+        <a class="article-card" [routerLink]="['/learn', article.slug]">
+          @if (article.heroImage) {
+            <img [src]="article.heroImage" [alt]="article.title" loading="lazy" />
+          }
+          <div class="card-body">
+            <div class="title">{{ article.title }}</div>
+            @if (article.description) {
+              <div class="desc">{{ article.description }}</div>
+            }
+          </div>
+        </a>
+      }
+    </div>
+  }
+</div>

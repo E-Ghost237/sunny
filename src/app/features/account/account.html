@@ -1,0 +1,71 @@
+<div class="acct-wrap">
+  <div class="acct-nav">
+    <div class="acct-nav-title">My Account</div>
+    <a class="on">📊 Dashboard</a>
+    <a routerLink="/rewards">⭐ My Rewards</a>
+    <a>📦 Order History</a>
+    <a>👤 Profile Settings</a>
+    <a routerLink="/rewards">🏆 Rewards Program</a>
+    <a class="sign-out" (click)="signOut()">⬅️ Sign Out</a>
+  </div>
+
+  <div class="acct-main">
+    <div class="pts-card">
+      <div class="pts-lbl">Sunnyside* Rewards Balance</div>
+      <div class="pts-val">{{ authService.user()?.rewardsPoints ?? 0 }}</div>
+      <div class="pts-eq">points &middot; Worth <strong class="worth">${{ ((authService.user()?.rewardsPoints ?? 0) * 0.025).toFixed(2) }}</strong> in rewards</div>
+      <div class="pts-actions">
+        <a class="btn-orange" routerLink="/shop">Redeem in Cart</a>
+      </div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-n">{{ orderService.orders().length }}</div>
+        <div class="stat-l">Total Orders</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-n">${{ totalSpent().toFixed(0) }}</div>
+        <div class="stat-l">Total Spent</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-n">{{ totalPoints() }}</div>
+        <div class="stat-l">Points Earned</div>
+      </div>
+    </div>
+
+    <div class="section-title">Recent Orders</div>
+
+    @if (orderService.orders().length === 0) {
+      <div class="tbl-wrap empty">
+        <p>No orders yet.</p>
+        <a class="btn-outline" routerLink="/shop">Start Shopping</a>
+      </div>
+    } @else {
+      <div class="tbl-wrap">
+        <table class="tbl">
+          <thead>
+            <tr>
+              <th>Order #</th>
+              <th>Store</th>
+              <th>Items</th>
+              <th>Total</th>
+              <th>Points</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (order of orderService.orders(); track order.id) {
+              <tr>
+                <td><strong>{{ order.id }}</strong></td>
+                <td>{{ order.pickupStoreName }}</td>
+                <td>{{ order.items.length }}</td>
+                <td>${{ order.subtotal.toFixed(2) }}</td>
+                <td class="points-cell">+{{ order.pointsEarned }} pts</td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    }
+  </div>
+</div>

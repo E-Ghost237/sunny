@@ -1,0 +1,98 @@
+<header class="topnav">
+  <a class="logo" routerLink="/">Sunnyside <span class="logo-mark">✳</span></a>
+
+  <nav class="nav-menu">
+    <div class="nav-item">
+      <div class="nav-link" (click)="toggleDropdown('shop')">Shop <span class="caret">▾</span></div>
+      <div class="nav-dropdown dd-shop" [class.open]="openDropdown() === 'shop'">
+        <div>
+          <div class="dd-col-title">Products</div>
+          <div class="dd-products-grid">
+            @for (cat of shopCategories; track cat.slug) {
+              <a class="dd-prod-link" [routerLink]="['/shop', cat.slug]" (click)="closeDropdown()">{{ cat.label }}</a>
+            }
+          </div>
+          <div class="dd-collections-box">
+            <div class="dd-col-title" style="border:none;margin-bottom:10px;font-size:13px;">Collections</div>
+            <div class="dd-collections-grid">
+              @for (c of collections; track c) {
+                <a class="dd-prod-link" routerLink="/shop" (click)="closeDropdown()">{{ c }}</a>
+              }
+            </div>
+          </div>
+        </div>
+        @if (currentStore(); as store) {
+          <div class="dd-store-panel">
+            <div class="dd-store-label">You're Shopping Adult Use at:</div>
+            <div class="dd-store-name">{{ store.name }}</div>
+            <div class="dd-store-addr">
+              {{ store.address.streetAddress }}<br />
+              {{ store.address.addressLocality }}, {{ store.address.addressRegion }} {{ store.address.postalCode }}
+              &nbsp;<a routerLink="/stores" (click)="closeDropdown()">Change Store</a>
+            </div>
+            <div class="dd-store-actions">
+              <a class="dd-store-action" [routerLink]="['/stores', store.slug]" (click)="closeDropdown()">
+                <span class="ic">🏪</span>Store Details
+              </a>
+              @if (store.phone) {
+                <a class="dd-store-action" [href]="'tel:' + store.phone"><span class="ic">📞</span>{{ store.phone }}</a>
+              }
+              <a class="dd-store-action" [routerLink]="['/stores', store.slug]" (click)="closeDropdown()">
+                <span class="ic">📍</span>Get Directions
+              </a>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+
+    <div class="nav-item">
+      <div class="nav-link" (click)="toggleDropdown('deals')">Deals <span class="caret">▾</span></div>
+      <div class="nav-dropdown dd-deals" [class.open]="openDropdown() === 'deals'">
+        <div class="dd-deals-grid">
+          @for (product of dealProducts(); track product.id) {
+            <a class="dd-deal-card" [routerLink]="['/shop', product.category, product.slug]" (click)="closeDropdown()">
+              <div class="dd-deal-icon">{{ product.badge }}</div>
+              <div class="dd-deal-text">{{ product.name }}</div>
+            </a>
+          }
+        </div>
+        <div class="dd-view-all"><a routerLink="/shop" (click)="closeDropdown()">View All Deals</a></div>
+      </div>
+    </div>
+
+    <div class="nav-item">
+      <div class="nav-link" (click)="toggleDropdown('learn')">Learn <span class="caret">▾</span></div>
+      <div class="nav-dropdown dd-learn" [class.open]="openDropdown() === 'learn'">
+        <div class="dd-learn-title">Featured Articles</div>
+        <div class="dd-articles-grid">
+          @for (article of featuredArticles(); track article.slug) {
+            <a class="dd-article-card" [routerLink]="['/learn', article.slug]" (click)="closeDropdown()">
+              <div class="dd-article-img" [style.background-image]="'url(' + article.heroImage + ')'"></div>
+              <div class="dd-article-text">{{ article.title }}</div>
+            </a>
+          }
+        </div>
+        <div class="dd-view-all"><a routerLink="/learn" (click)="closeDropdown()">View All Articles</a></div>
+      </div>
+    </div>
+
+    <a class="nav-link" routerLink="/stores" routerLinkActive="active">Find a Dispensary</a>
+  </nav>
+
+  <div class="nav-right">
+    <a class="icon-link" routerLink="/cart" routerLinkActive="active">
+      Cart
+      @if (cartService.totalItems() > 0) {
+        <span class="cart-count">{{ cartService.totalItems() }}</span>
+      }
+    </a>
+    @if (authService.isAuthenticated()) {
+      <a class="login-btn" routerLink="/account">{{ authService.user()!.firstName }}</a>
+    } @else {
+      <a class="login-btn" routerLink="/login">Login/Register</a>
+    }
+  </div>
+</header>
+
+<div class="nav-overlay" [class.open]="openDropdown() !== null" (click)="closeDropdown()"></div>

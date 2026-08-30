@@ -1,0 +1,92 @@
+@if (cartService.items().length === 0) {
+  <div class="empty-cart">
+    <p>Your cart is empty.</p>
+    <a class="btn-orange" routerLink="/shop">Start Shopping</a>
+  </div>
+} @else {
+  <div class="checkout-wrap">
+    <div class="co-main">
+      <div class="co-h">Checkout</div>
+
+      <div class="co-step">
+        <div class="co-step-h"><div class="step-badge">1</div>Your Information</div>
+        <div class="form-2">
+          <div class="fg"><label for="co-first-name">First Name</label><input id="co-first-name" type="text" [value]="authService.user()?.firstName ?? ''" placeholder="Jane" /></div>
+          <div class="fg"><label for="co-last-name">Last Name</label><input id="co-last-name" type="text" [value]="authService.user()?.lastName ?? ''" placeholder="Doe" /></div>
+        </div>
+        <div class="fg"><label for="co-email">Email</label><input id="co-email" type="email" [value]="authService.user()?.email ?? ''" placeholder="jane@example.com" /></div>
+        <div class="fg"><label for="co-phone">Phone</label><input id="co-phone" type="tel" [value]="authService.user()?.phone ?? ''" placeholder="+1 (555) 000-0000" /></div>
+      </div>
+
+      <div class="co-step">
+        <div class="co-step-h"><div class="step-badge">2</div>Pickup Location</div>
+        <div class="pickup-cards">
+          @for (store of storesResource.value()?.slice(0, 4); track store.slug) {
+            <div class="pickup-card" [class.on]="store.slug === selectedStoreSlug()" (click)="selectStore(store.slug)">
+              <h4>📍 {{ store.name }}</h4>
+              <p>{{ store.address.streetAddress }}, {{ store.address.addressLocality }}, {{ store.address.addressRegion }}</p>
+            </div>
+          }
+        </div>
+      </div>
+
+      <div class="co-step">
+        <div class="co-step-h"><div class="step-badge">3</div>ID Verification</div>
+        <div class="alert-info">🪪 Present a valid, non-expired government-issued ID at pickup. Medical patients must also bring their cannabis card.</div>
+        <div class="fg">
+          <label for="co-customer-type">Customer Type</label>
+          <select id="co-customer-type" [(ngModel)]="customerType">
+            <option value="recreational">Adult-Use / Recreational (21+)</option>
+            <option value="medical">Medical Patient (18+)</option>
+          </select>
+        </div>
+        <label class="age-row inline">
+          <input type="checkbox" [(ngModel)]="ageConfirmed" />
+          <span>I confirm I am 21+ or 18+ with a valid medical card.</span>
+        </label>
+      </div>
+
+      <div class="co-step">
+        <div class="co-step-h"><div class="step-badge">4</div>Payment Method</div>
+        <div class="alert-info">💳 Payment collected in-store at pickup. We do not process payments online.</div>
+        <div class="pay-list">
+          <label class="pay-opt"><input type="radio" name="pay" value="cash" [(ngModel)]="paymentMethod" /> 💵 Cash (on-site ATM available)</label>
+          <label class="pay-opt"><input type="radio" name="pay" value="debit" [(ngModel)]="paymentMethod" /> 💳 Debit Card ($3 fee per $500)</label>
+          <label class="pay-opt"><input type="radio" name="pay" value="canpay" [(ngModel)]="paymentMethod" /> 📱 CanPay (select locations)</label>
+        </div>
+      </div>
+
+      @if (authService.isAuthenticated()) {
+        <div class="co-step">
+          <div class="co-step-h"><div class="step-badge">5</div>Rewards</div>
+          <div class="rew-box">
+            <p>⭐ You'll earn {{ cartService.subtotal() | number: '1.0-0' }} points on this order.</p>
+          </div>
+        </div>
+      }
+
+      <button class="form-submit place-order-btn" type="button" [disabled]="!ageConfirmed" (click)="placeOrder()">Place Order &rarr;</button>
+      <div class="fine-print">By placing this order you confirm you are of legal age and agree to our Terms of Use.</div>
+    </div>
+
+    <div class="co-side">
+      <div class="cs-h">Your Order ({{ cartService.totalItems() }} items)</div>
+      <div class="order-lines">
+        @for (item of cartService.items(); track item.productId) {
+          <div class="order-line">
+            <img [src]="item.image" [alt]="item.name" />
+            <div class="line-info">
+              {{ item.name }}<br />
+              <span class="line-meta">{{ item.brand }} &middot; x{{ item.quantity }}</span>
+            </div>
+            <b>${{ (item.priceAtAdd * item.quantity).toFixed(2) }}</b>
+          </div>
+        }
+      </div>
+      <div class="divider"></div>
+      <div class="cs-row"><span>Subtotal</span><span>${{ cartService.subtotal().toFixed(2) }}</span></div>
+      <div class="cs-total"><span>Total</span><span>${{ cartService.subtotal().toFixed(2) }}</span></div>
+      <div class="tax-note">+ tax collected at dispensary</div>
+    </div>
+  </div>
+}

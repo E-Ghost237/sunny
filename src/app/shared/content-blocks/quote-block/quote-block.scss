@@ -1,0 +1,15 @@
+:host {
+  display: block;
+  margin: 20px 0;
+}
+
+blockquote {
+  margin: 0;
+  padding: 16px 20px;
+  border-left: 4px solid var(--orange);
+  background: var(--g50);
+  font-size: 17px;
+  font-style: italic;
+  color: var(--g700);
+  line-height: 1.6;
+}

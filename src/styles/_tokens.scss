@@ -1,0 +1,51 @@
+// Design tokens ported directly from sunny2/sunnyside_v14(12).html's :root block --
+// that prototype already has a deliberate, complete design system, so we mirror it
+// exactly rather than re-deriving one from the live site's computed styles.
+
+:root {
+  // Typography
+  --font-family-base: 'Montserrat', 'Gotham', Arial, sans-serif;
+  --font-size-base: 14px;
+  --font-weight-base: 400;
+
+  // Brand
+  --orange: #ff9800;
+  --orange-dark: #e68900;
+  --orange-lt: #fff4e0;
+  --white: #fff;
+  --black: #111;
+
+  // Grayscale
+  --g50: #f4f4f4;
+  --g100: #efefef;
+  --g200: #e5e5e5;
+  --g300: #ccc;
+  --g400: #979797;
+  --g500: #8a8a8a;
+  --g600: #5b5d62;
+  --g700: #444;
+  --g800: #333;
+
+  // Accent colors
+  --green: #6ba53a;
+  --green-lt: #eef6e5;
+  --blue-bg: #d6eaf8;
+  --blue-border: #aed6f1;
+  --blue-text: #1a5276;
+  --red: #d32f2f;
+  --red-lt: #ffebee;
+  --navy: #1a2e4a;
+
+  // Semantic aliases used across components
+  --color-text: var(--g600);
+  --color-bg: var(--g50);
+  --color-surface: var(--white);
+  --color-border: var(--g200);
+  --color-border-strong: var(--g300);
+  --color-accent: var(--orange);
+  --color-accent-contrast: var(--white);
+  --color-secondary: var(--green);
+  --color-sale: var(--red);
+  --radius-card: 10px;
+  --radius-control: 8px;
+}

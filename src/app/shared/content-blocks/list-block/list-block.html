@@ -1,0 +1,13 @@
+@if (data().ordered) {
+  <ol>
+    @for (item of data().items; track $index) {
+      <li>{{ item }}</li>
+    }
+  </ol>
+} @else {
+  <ul>
+    @for (item of data().items; track $index) {
+      <li>{{ item }}</li>
+    }
+  </ul>
+}

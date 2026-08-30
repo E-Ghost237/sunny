@@ -1,0 +1,19 @@
+@if (!confirmed()) {
+  <div class="age-gate-overlay">
+    <div class="age-gate-card">
+      <div class="asterisk">✳</div>
+
+      @if (!declined()) {
+        <h2>Welcome to Sunnyside*</h2>
+        <p>You must be 21 years of age or older to enter this site (or 18+ with a valid medical card).</p>
+        <div class="actions">
+          <button class="btn-orange" type="button" (click)="confirm()">I am 21+</button>
+          <button class="btn-outline" type="button" (click)="decline()">I am under 21</button>
+        </div>
+      } @else {
+        <h2>Come Back Soon</h2>
+        <p>You must be 21 years of age or older (or 18+ with a valid medical card) to view this site.</p>
+      }
+    </div>
+  </div>
+}

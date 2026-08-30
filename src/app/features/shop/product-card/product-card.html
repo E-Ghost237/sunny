@@ -1,0 +1,42 @@
+<a class="pcard" [routerLink]="['/shop', product().category, product().slug]">
+  <div class="pcard-img">
+    @if (product().badge) {
+      <div class="sale-badge-multi">{{ product().badge }}</div>
+    }
+    @if (product().onlyAtSunnyside) {
+      <div class="only-badge">ONLY AT SUNNYSIDE</div>
+    }
+    <app-product-image [src]="product().images[0]" [alt]="product().name" [category]="product().category" />
+  </div>
+
+  <div class="pcard-body">
+    @if (product().brand) {
+      <div class="pcard-brand">{{ product().brand }}</div>
+    }
+    <div class="pcard-name">{{ product().name }}</div>
+
+    @if (showSize()) {
+      <div class="pcard-weight">{{ product().size }}</div>
+    }
+
+    <div class="pcard-prices">
+      @if (onSale()) {
+        <span class="pcard-sale-price">${{ product().discountedPrice!.toFixed(2) }}</span>
+        <span class="pcard-orig-price">${{ product().price.toFixed(2) }}</span>
+      } @else {
+        <span class="pcard-reg-price">${{ product().price.toFixed(2) }}</span>
+      }
+    </div>
+
+    @if (showTags()) {
+      <div class="pcard-tags">
+        @if (product().strain) {
+          <span class="strain-tag" [class]="strainTagClass()">{{ product().strain }}</span>
+        }
+        @if (potencyLabel()) {
+          <span class="thc-label">{{ potencyLabel() }}</span>
+        }
+      </div>
+    }
+  </div>
+</a>

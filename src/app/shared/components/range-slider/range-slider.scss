@@ -1,0 +1,82 @@
+// Ported from sunny2's .filt-range-* rules.
+
+.filt-range-wrap {
+  padding-top: 4px;
+}
+
+.filt-range-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--g800);
+  margin-bottom: 14px;
+}
+
+.filt-range-track {
+  position: relative;
+  height: 4px;
+  background: var(--g200);
+  border-radius: 2px;
+  margin: 0 8px;
+}
+
+.filt-range-fill {
+  position: absolute;
+  height: 4px;
+  background: var(--orange);
+  border-radius: 2px;
+}
+
+input[type='range'] {
+  position: absolute;
+  left: -8px;
+  right: -8px;
+  top: -10px;
+  width: calc(100% + 16px);
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  pointer-events: none;
+  height: 24px;
+
+  &::-webkit-slider-runnable-track {
+    background: transparent;
+    height: 24px;
+  }
+  &::-moz-range-track {
+    background: transparent;
+    height: 24px;
+  }
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    pointer-events: auto;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--white);
+    border: 2px solid var(--orange);
+    cursor: pointer;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+    margin-top: 0;
+  }
+  &::-moz-range-thumb {
+    pointer-events: auto;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--white);
+    border: 2px solid var(--orange);
+    cursor: pointer;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.filt-range-note {
+  font-size: 11px;
+  color: var(--g400);
+  margin-top: 16px;
+  line-height: 1.6;
+}

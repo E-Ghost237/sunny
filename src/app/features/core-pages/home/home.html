@@ -1,0 +1,139 @@
+<div class="hero-wrap">
+  <button class="slide-arr left" type="button" (click)="prevSlide()">&lsaquo;</button>
+  <button class="slide-arr right" type="button" (click)="nextSlide()">&rsaquo;</button>
+
+  @for (slide of heroSlides; track $index) {
+    <div class="hero-slide" [class.on]="$index === activeSlide()" [style.background]="'linear-gradient(90deg,rgba(0,0,0,.55),rgba(0,0,0,.15) 60%),' + slide.background + (slide.background.startsWith('url') ? ' center/cover' : '')">
+      <div class="hero-left">
+        <h1>{{ slide.title }}</h1>
+        <p>{{ slide.body }}</p>
+        <div class="hero-btns">
+          @if (slide.secondaryCta) {
+            <a class="hbtn hbtn-ol" [routerLink]="slide.secondaryCta.link">{{ slide.secondaryCta.label }}</a>
+          }
+          <a class="hbtn hbtn-wh" [routerLink]="slide.primaryCta.link">{{ slide.primaryCta.label }}</a>
+        </div>
+      </div>
+      <div class="hero-dots">
+        @for (s of heroSlides; track $index) {
+          <div class="hero-dot" [class.on]="$index === activeSlide()" (click)="activeSlide.set($index)"></div>
+        }
+      </div>
+    </div>
+  }
+</div>
+
+<div class="promo-sec">
+  <div class="promo-sec-title">Quality Cannabis Products &amp; Dispensaries</div>
+  <div class="promo-carousel-wrap">
+    <button class="carousel-arr left" type="button" (click)="promoTrack.scrollBy({ left: -320, behavior: 'smooth' })">&lsaquo;</button>
+    <div class="promo-cards" #promoTrack>
+      @for (card of promoCards; track card.title) {
+        <a class="promo-card" [routerLink]="card.link">
+          <div class="promo-card-img" [style.background-image]="'url(' + card.image + ')'"></div>
+          <div class="promo-card-body">
+            <h3>{{ card.title }}</h3>
+            <p>{{ card.body }}</p>
+            <span class="learn-btn">{{ card.ctaLabel }}</span>
+          </div>
+        </a>
+      }
+    </div>
+    <button class="carousel-arr right" type="button" (click)="promoTrack.scrollBy({ left: 320, behavior: 'smooth' })">&rsaquo;</button>
+  </div>
+</div>
+
+<div class="inv-sec">
+  <div class="inv-sec-title">Shop Our Live Inventory</div>
+  <div class="inv-carousel-wrap">
+    <button class="carousel-arr orange left" type="button" (click)="invTrack.scrollBy({ left: -300, behavior: 'smooth' })">&lsaquo;</button>
+    <div class="inv-cards" #invTrack>
+      @for (cat of inventoryCategories; track cat.slug) {
+        <a class="inv-card" [routerLink]="['/shop', cat.slug]">
+          <div class="inv-card-bg" [style.background]="cat.color"></div>
+          <div class="inv-card-label">{{ cat.label }}</div>
+          <div class="inv-card-emoji">{{ cat.icon }}</div>
+        </a>
+      }
+    </div>
+    <button class="carousel-arr orange right" type="button" (click)="invTrack.scrollBy({ left: 300, behavior: 'smooth' })">&rsaquo;</button>
+  </div>
+</div>
+
+<div class="prod-row-sec">
+  <div class="prod-row-head">
+    <div class="prod-row-title">Flower</div>
+    <a class="view-all-link" routerLink="/shop/flower">View All ({{ featuredTotal() }}) <span class="view-all-circle">&rsaquo;</span></a>
+  </div>
+  @if (featuredResource.isLoading()) {
+    <p class="status">Loading&hellip;</p>
+  } @else {
+    <div class="prod-grid-4">
+      @for (product of featuredResource.value()?.slice(0, 4); track product.id) {
+        <app-product-card [product]="product" />
+      }
+    </div>
+  }
+</div>
+
+@if (localStore(); as store) {
+  <div class="store-strip-sec">
+    <div class="store-strip-body">
+      <div class="store-strip-left">
+        <div class="store-strip-main-img">🏪</div>
+      </div>
+      <div class="store-strip-right">
+        <div class="strip-eyebrow">You're Shopping Adult Use at:</div>
+        <div class="strip-name">{{ store.name }}</div>
+        <div class="strip-addr">
+          {{ store.address.streetAddress }}<br />
+          {{ store.address.addressLocality }}, {{ store.address.addressRegion }} {{ store.address.postalCode }}
+        </div>
+        <div class="strip-actions">
+          <a class="btn-orange" [routerLink]="['/stores', store.slug]">Store Details</a>
+          <a class="btn-outline" routerLink="/stores">Change Store</a>
+        </div>
+        <div class="strip-info-grid">
+          @if (store.phone) {
+            <a class="store-info-btn" [href]="'tel:' + store.phone">📞 {{ store.phone }}</a>
+          }
+          <a class="store-info-btn" [routerLink]="['/stores', store.slug]">📍 Get Directions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+}
+
+@if (faqItems().length > 0) {
+  <div class="faq-sec">
+    <div class="faq-wrap">
+      <div class="faq-title">Frequently Asked Questions</div>
+      <div class="faq-list">
+        @for (item of faqItems(); track $index) {
+          <div class="faq-item">
+            <div class="faq-q" (click)="toggleFaq($index)">
+              <div class="faq-q-text">{{ item.question }}</div>
+              <div class="faq-caret" [class.open]="openFaq() === $index">{{ openFaq() === $index ? '∧' : '∨' }}</div>
+            </div>
+            @if (openFaq() === $index) {
+              <div class="faq-a open">
+                @for (block of item.answerBlocks; track $index) {
+                  @if (block.type === 'paragraph') {
+                    <p>{{ $any(block.data).text }}</p>
+                  } @else if (block.type === 'list') {
+                    <ul>
+                      @for (li of $any(block.data).items; track $index) {
+                        <li>{{ li }}</li>
+                      }
+                    </ul>
+                  }
+                }
+              </div>
+            }
+          </div>
+        }
+      </div>
+      <a class="faq-view-all" routerLink="/faq">View All FAQs &rarr;</a>
+    </div>
+  </div>
+}

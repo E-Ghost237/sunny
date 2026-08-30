@@ -1,0 +1,28 @@
+<div class="filt-range-wrap">
+  <div class="filt-range-labels">
+    <span>{{ label(currentMin()) }}</span>
+    <span>{{ label(currentMax()) }}</span>
+  </div>
+  <div class="filt-range-track">
+    <div class="filt-range-fill" [style.left.%]="fillLeft()" [style.right.%]="fillRight()"></div>
+    <input
+      class="range-min"
+      type="range"
+      [min]="boundMin()"
+      [max]="boundMax()"
+      [value]="currentMin()"
+      (input)="onMinInput($any($event.target).value)"
+    />
+    <input
+      class="range-max"
+      type="range"
+      [min]="boundMin()"
+      [max]="boundMax()"
+      [value]="currentMax()"
+      (input)="onMaxInput($any($event.target).value)"
+    />
+  </div>
+  @if (note()) {
+    <div class="filt-range-note">{{ note() }}</div>
+  }
+</div>

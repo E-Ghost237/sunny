@@ -1,0 +1,19 @@
+// Ported from sunny2's global .info-banner rule (persistent chrome, not page-specific).
+.info-banner {
+  background: var(--blue-bg);
+  border-bottom: 1px solid var(--blue-border);
+  padding: 11px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  font-size: 13px;
+  color: var(--g700);
+  text-align: center;
+
+  a {
+    color: var(--g700);
+    font-weight: 700;
+    text-decoration: underline;
+  }
+}
