@@ -2,14 +2,16 @@
 
 <app-header />
 
-<div class="info-banner">
-  New legislation just doubled your purchase limits! &mdash;
-  <a routerLink="/medical">Learn More</a>
-</div>
+@if (announcement(); as a) {
+  <div class="announcement">
+    <span>{{ a.text }}</span>
+    <a [routerLink]="a.link">{{ a.linkLabel }}</a>
+  </div>
+}
 
 <app-cat-bar />
 
-<main>
+<main id="main-content">
   <router-outlet />
 </main>
 

@@ -44,7 +44,7 @@ export class Checkout {
 
     const stores = this.storesResource.value() ?? [];
     const store = stores.find((s) => s.slug === this.selectedStoreSlug());
-    const pickupStoreName = store?.name ?? 'Sunnyside*';
+    const pickupStoreName = store?.name ?? 'Evergreen';
 
     const order = this.orderService.placeOrder(items, pickupStoreName);
     if (this.authService.isAuthenticated()) {

@@ -1,46 +1,46 @@
 .age-gate-overlay {
   position: fixed;
   inset: 0;
-  z-index: 1000;
-  background: rgba(17, 17, 17, 0.9);
+  z-index: var(--z-age-gate);
+  background: color-mix(in srgb, var(--brand-ink) 92%, transparent);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 24px;
+  padding: var(--space-6);
 }
 
 .age-gate-card {
-  background: var(--white);
-  border-radius: 12px;
-  padding: 40px;
-  max-width: 420px;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: var(--space-10);
+  max-width: 440px;
   width: 100%;
   text-align: center;
-  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow-lg);
 }
 
-.asterisk {
-  font-size: 40px;
-  color: var(--orange);
-  margin-bottom: 12px;
+.brand-mark {
+  font-size: var(--text-3xl);
+  color: var(--color-brand);
+  margin-bottom: var(--space-3);
 }
 
 h2 {
-  font-size: 22px;
-  font-weight: 900;
-  margin: 0 0 12px;
+  font-size: var(--text-2xl);
+  font-weight: var(--fw-extrabold);
+  letter-spacing: var(--tracking-tight);
+  margin: 0 0 var(--space-3);
 }
 
 p {
-  font-size: 14px;
-  color: var(--g600);
-  line-height: 1.6;
-  margin: 0 0 24px;
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: var(--lh-normal);
+  margin: 0 0 var(--space-6);
 }
 
 .actions {
   display: flex;
-  gap: 10px;
-  justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: var(--space-2);
 }

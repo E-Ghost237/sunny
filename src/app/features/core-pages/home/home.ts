@@ -13,39 +13,38 @@ interface HeroSlide {
   body: string;
   primaryCta: { label: string; link: string };
   secondaryCta?: { label: string; link: string };
+  /** CSS background value — gradient or `url(...) center/cover`. Placeholder art. */
   background: string;
 }
 
-// Real slide copy ported from sunny2's #slide-0..3; images swapped for the real
-// campaign photos the user downloaded locally (SummerStash/FlowerJar) where
-// available, CSS gradients (same technique sunny2's own slide-3 uses) otherwise.
+// Placeholder merchandising copy — swap for the client's campaigns.
 const HERO_SLIDES: HeroSlide[] = [
   {
-    title: '710 deals: Up to 50% off',
-    body: 'Save on Cresco, High Supply, FloraCal, Rythm & more!',
-    primaryCta: { label: 'Shop Now', link: '/shop' },
-    secondaryCta: { label: 'View Deals', link: '/shop' },
-    background: "url('/assets/images/ag8zJ6YofJOwHggv_SUNS26020_2026_SummerStash_Launch_Rec_HPTO_Desktop_2560x936.jpg')",
+    title: 'Weekly deals, refreshed every Monday',
+    body: 'Up to 25% off select flower, vapes, and edibles across the menu.',
+    primaryCta: { label: 'Shop Deals', link: '/shop' },
+    secondaryCta: { label: 'How it works', link: '/page/weekly-deals' },
+    background: "url('/assets/placeholder/hero.svg') center/cover",
   },
   {
-    title: 'Your purchase limits just doubled!',
-    body: 'New legislation means in-state residents and visitors can purchase more cannabis.',
-    primaryCta: { label: 'Shop Now', link: '/shop' },
-    secondaryCta: { label: 'Learn More', link: '/medical' },
-    background: "url('/assets/images/aicdvweQX7-eW_De_CRES26005_FlowerJar_SS_IL_HPTO_Desktop_2560x936.jpg')",
+    title: 'Order online, pick up in store',
+    body: 'Reserve your order and skip the browse. Pay at the counter when you collect.',
+    primaryCta: { label: 'Start an order', link: '/shop' },
+    secondaryCta: { label: 'Pickup details', link: '/page/pickup-how-it-works' },
+    background: 'linear-gradient(120deg, #1f6f3f, #124524)',
   },
   {
-    title: 'Your favorite flower: now in 7g',
-    body: 'Get more of the same quality flower, in all the strains you love.',
-    primaryCta: { label: 'Shop Now', link: '/shop/flower' },
-    background: 'linear-gradient(120deg, #1a2e4a, #2e7d4f)',
+    title: 'New to cannabis? Start here',
+    body: 'Plain-language guides to formats, dosing, and reading a label.',
+    primaryCta: { label: 'Read the guides', link: '/learn' },
+    background: 'linear-gradient(120deg, #2b2b27, #42423d)',
   },
   {
-    title: 'Get rewarded with Sunnyside Rewards.',
-    body: 'Shop, collect points, unlock bigger rewards.',
-    primaryCta: { label: 'Shop Now', link: '/shop' },
-    secondaryCta: { label: 'Learn More', link: '/rewards' },
-    background: 'linear-gradient(120deg, #154360, #2E86C1)',
+    title: 'Earn points on every pickup',
+    body: 'Join rewards to collect points and unlock member pricing.',
+    primaryCta: { label: 'Join rewards', link: '/rewards' },
+    secondaryCta: { label: 'Learn more', link: '/page/summer-rewards-bonus' },
+    background: 'linear-gradient(120deg, #1a5276, #2e86c1)',
   },
 ];
 
@@ -59,46 +58,46 @@ interface PromoCard {
 
 const PROMO_CARDS: PromoCard[] = [
   {
-    title: 'The Summer Collection',
-    body: 'Handpicked heat sure to turn up your summer.',
-    ctaLabel: 'Shop Now',
+    title: 'New arrivals',
+    body: 'Fresh drops from the brands on our shelves this week.',
+    ctaLabel: 'Shop new',
     link: '/shop',
-    image: '/assets/images/ag8pf6YofJOwHgan_SUNS26020_2026_SummerCollection_Launch_IL_WebModule_680x325.jpg',
+    image: '/assets/placeholder/content.svg',
   },
   {
-    title: 'Sunnyside Celebrates Pride',
-    body: "We're donating to help make a positive impact in the LGBTQ+ community.",
-    ctaLabel: 'Learn More',
-    link: '/learn',
-    image: '/assets/images/ahnfUAeQX7-eWcVX_SUNS26002_Pride_WebModule_680x325.jpg',
+    title: 'House brand',
+    body: 'Our own line — small batches, honest pricing.',
+    ctaLabel: 'Explore',
+    link: '/shop',
+    image: '/assets/placeholder/content.svg',
   },
   {
-    title: 'Say "high" to our loyalty program.',
-    body: 'Join now to start earning points that you can use towards future purchases.',
-    ctaLabel: 'Learn More',
+    title: 'Rewards program',
+    body: 'Points on every order, redeemable on your next visit.',
+    ctaLabel: 'Learn more',
     link: '/rewards',
-    image: '/assets/images/Z6KsVZbqstJ9-Owr_SUNS22062_Loyalty_Web_Module_B.jpg',
+    image: '/assets/placeholder/content.svg',
   },
   {
-    title: 'Want to save on taxes?',
-    body: 'Pay less in taxes with a Medical Cannabis Card. Get it in 3 simple steps.',
-    ctaLabel: 'Learn More',
+    title: 'Medical program',
+    body: 'Higher limits and reduced tax with a valid medical card.',
+    ctaLabel: 'Learn more',
     link: '/medical',
-    image: '/assets/images/15be35dc-2b2c-4e93-a55d-811a2db23924_SUNS23066_IL_MedCard_Wed_Module_680x325.jpg',
+    image: '/assets/placeholder/content.svg',
   },
 ];
 
 const INVENTORY_CATEGORIES = [
-  { icon: '🌿', label: 'Flower', slug: 'flower', color: '#8DC8E8' },
-  { icon: '💨', label: 'Vapes', slug: 'vapes', color: '#7BB8D8' },
-  { icon: '🍊', label: 'Edibles', slug: 'edibles', color: '#8DCAE0' },
-  { icon: '🌀', label: 'Pre-Rolls', slug: 'prerolls', color: '#7AB5D5' },
-  { icon: '🔥', label: 'Concentrates', slug: 'concentrates', color: '#6AAAC8' },
-  { icon: '🧴', label: 'Topicals', slug: 'topicals', color: '#8DC8E8' },
-  { icon: '💊', label: 'Capsules', slug: 'capsules', color: '#7BB8D8' },
-  { icon: '💧', label: 'Tinctures', slug: 'tinctures', color: '#8DCAE0' },
-  { icon: '🥤', label: 'Beverages', slug: 'beverages', color: '#7AB5D5' },
-  { icon: '🪴', label: 'Accessories', slug: 'accessories', color: '#6AAAC8' },
+  { icon: '🌿', label: 'Flower', slug: 'flower' },
+  { icon: '💨', label: 'Vapes', slug: 'vapes' },
+  { icon: '🍬', label: 'Edibles', slug: 'edibles' },
+  { icon: '🌀', label: 'Pre-Rolls', slug: 'prerolls' },
+  { icon: '🍯', label: 'Concentrates', slug: 'concentrates' },
+  { icon: '🧴', label: 'Topicals', slug: 'topicals' },
+  { icon: '💊', label: 'Capsules', slug: 'capsules' },
+  { icon: '💧', label: 'Tinctures', slug: 'tinctures' },
+  { icon: '🥤', label: 'Beverages', slug: 'beverages' },
+  { icon: '🎁', label: 'Accessories', slug: 'accessories' },
 ];
 
 interface FaqItem {
@@ -117,7 +116,7 @@ function groupFaqBlocks(blocks: ContentBlock[]): FaqItem[] {
         items.push(current);
         continue;
       }
-      current = null; // section header (h2/h3) -- not a question, stop collecting
+      current = null; // section header (h2/h3) — not a question
       continue;
     }
     current?.answerBlocks.push(block);

@@ -1,55 +1,60 @@
-// Ported from sunny2/sunnyside_v14(12).html's .topnav / .logo / .nav-link / .login-btn rules.
-
 .topnav {
-  background: var(--white);
-  border-bottom: 1px solid var(--g200);
   position: sticky;
   top: 0;
-  z-index: 300;
-  height: 64px;
+  z-index: var(--z-header);
   display: flex;
   align-items: center;
-  padding: 0 28px;
   justify-content: space-between;
-  gap: 16px;
+  gap: var(--space-4);
+  height: var(--header-height);
+  padding: 0 var(--space-6);
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
 
   @media (max-width: 700px) {
-    padding: 0 16px;
-    gap: 8px;
+    padding: 0 var(--space-4);
+    gap: var(--space-2);
   }
 }
 
 .logo {
-  font-size: 26px;
-  font-weight: 900;
-  color: var(--orange);
-  cursor: pointer;
-  white-space: nowrap;
-  letter-spacing: -0.5px;
-  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
   flex-shrink: 0;
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: var(--fw-extrabold);
+  letter-spacing: var(--tracking-tight);
+  white-space: nowrap;
+
+  &:hover {
+    text-decoration: none;
+    color: var(--color-text);
+  }
 
   .logo-mark {
-    color: var(--orange);
+    color: var(--color-brand);
   }
 
   @media (max-width: 700px) {
-    font-size: 20px;
+    font-size: var(--text-lg);
   }
 }
 
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 2px;
+  gap: var(--space-1);
   flex: 1;
   min-width: 0;
-  margin-left: 20px;
+  margin-left: var(--space-5);
 
-  @media (max-width: 700px) {
+  @media (max-width: 900px) {
     overflow-x: auto;
     scrollbar-width: none;
-    margin-left: 8px;
+    margin-left: var(--space-2);
 
     &::-webkit-scrollbar {
       display: none;
@@ -60,30 +65,38 @@
 .nav-link {
   display: flex;
   align-items: center;
-  gap: 4px;
-  padding: 8px 14px;
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--g700);
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.15s;
+  gap: var(--space-1);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--color-text-muted);
   white-space: nowrap;
-  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color var(--dur-fast) var(--ease-standard),
+    color var(--dur-fast) var(--ease-standard);
 
   &:hover {
-    background: var(--g100);
+    background: var(--color-surface-sunken);
+    color: var(--color-text);
+    text-decoration: none;
   }
 
   &.active {
-    color: var(--orange);
+    color: var(--color-brand);
   }
+}
+
+.caret {
+  font-size: 0.625rem;
+  color: var(--color-text-subtle);
 }
 
 .nav-right {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: var(--space-2);
   flex-shrink: 0;
 }
 
@@ -91,20 +104,25 @@
   position: relative;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  font-weight: var(--fw-semibold);
   cursor: pointer;
-  padding: 6px 10px;
-  border-radius: 6px;
-  transition: 0.15s;
-  color: var(--g700);
-  text-decoration: none;
+  transition:
+    background-color var(--dur-fast) var(--ease-standard),
+    color var(--dur-fast) var(--ease-standard);
 
   &:hover {
-    background: var(--g100);
+    background: var(--color-surface-sunken);
+    color: var(--color-text);
+    text-decoration: none;
   }
 
   &.active {
-    color: var(--orange);
+    color: var(--color-brand);
   }
 }
 
@@ -112,62 +130,54 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 16px;
-  height: 16px;
-  padding: 0 4px;
-  margin-left: 2px;
-  border-radius: 999px;
-  background: var(--orange);
-  color: var(--white);
-  font-size: 11px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 var(--space-1);
+  border-radius: var(--radius-pill);
+  background: var(--color-brand);
+  color: var(--color-text-on-brand);
+  font-size: var(--text-2xs);
+  font-weight: var(--fw-bold);
 }
 
 .login-btn {
-  background: var(--orange);
-  color: var(--white);
-  font-weight: 700;
-  font-size: 13px;
-  padding: 10px 20px;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-  transition: 0.15s;
+  padding: var(--space-2) var(--space-5);
+  border-radius: var(--radius-sm);
+  background: var(--color-brand);
+  color: var(--color-text-on-brand);
+  font-size: var(--text-xs);
+  font-weight: var(--fw-bold);
   white-space: nowrap;
-  text-decoration: none;
+  transition: background-color var(--dur-fast) var(--ease-standard);
 
   &:hover {
-    background: var(--orange-dark);
+    background: var(--color-brand-hover);
+    color: var(--color-text-on-brand);
+    text-decoration: none;
   }
 
   @media (max-width: 700px) {
-    padding: 8px 12px;
-    font-size: 12px;
+    padding: var(--space-2) var(--space-3);
   }
 }
 
-// Ported from sunny2's .nav-item / .nav-dropdown / .dd-* mega-menu rules.
+// ---- mega-menu ------------------------------------------------------------
 
 .nav-item {
   position: relative;
 }
 
-.caret {
-  font-size: 10px;
-  color: var(--g400);
-  margin-top: 1px;
-}
-
 .nav-dropdown {
   display: none;
   position: absolute;
-  top: calc(100% + 12px);
+  top: calc(100% + var(--space-3));
   left: 0;
-  background: var(--white);
-  border-radius: 10px;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
-  padding: 24px;
-  z-index: 400;
-  border: 1px solid var(--g200);
+  z-index: var(--z-modal);
+  padding: var(--space-6);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
 
   &.open {
     display: block;
@@ -182,13 +192,8 @@
   display: none;
   position: fixed;
   inset: 0;
-  // Must stay below .topnav's z-index (300): .topnav is its own stacking
-  // context (position: sticky + z-index), so nav items/dropdowns inside it can
-  // only out-stack this sibling overlay if the header itself already wins that
-  // comparison. At 399 the overlay covered the whole header and blocked
-  // clicking a different nav item while a dropdown was open.
-  z-index: 250;
-  background: rgba(0, 0, 0, 0.02);
+  z-index: calc(var(--z-header) - 1);
+  background: transparent;
 
   &.open {
     display: block;
@@ -196,202 +201,188 @@
 }
 
 .dd-shop {
-  width: 640px;
-  grid-template-columns: 1fr 340px;
-  gap: 28px;
+  width: min(640px, calc(100vw - 32px));
+  grid-template-columns: 1fr 320px;
+  gap: var(--space-8);
 
-  @media (max-width: 700px) {
-    width: calc(100vw - 32px);
+  @media (max-width: 760px) {
     grid-template-columns: 1fr;
   }
 }
 
 .dd-col-title {
-  font-size: 16px;
-  font-weight: 800;
-  margin-bottom: 14px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid var(--g200);
+  font-size: var(--text-base);
+  font-weight: var(--fw-bold);
+  margin-bottom: var(--space-3);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--color-border);
 }
 
-.dd-products-grid {
+.dd-products-grid,
+.dd-collections-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4px 24px;
+  gap: var(--space-1) var(--space-6);
 }
 
 .dd-prod-link {
-  padding: 8px 0;
-  font-size: 14px;
-  color: var(--g700);
-  cursor: pointer;
-  transition: 0.15s;
-  text-decoration: none;
   display: block;
+  padding: var(--space-2) 0;
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
 
   &:hover {
-    color: var(--orange);
+    color: var(--color-brand);
+    text-decoration: none;
   }
 }
 
 .dd-collections-box {
-  background: var(--g50);
-  border-radius: 8px;
-  padding: 16px;
-  margin-top: 16px;
-}
-
-.dd-collections-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4px 20px;
+  margin-top: var(--space-4);
+  padding: var(--space-4);
+  background: var(--color-surface-sunken);
+  border-radius: var(--radius-sm);
 }
 
 .dd-store-panel {
-  background: var(--g50);
-  border-radius: 8px;
-  padding: 20px;
+  padding: var(--space-5);
+  background: var(--color-surface-sunken);
+  border-radius: var(--radius-sm);
 }
 
 .dd-store-label {
-  font-size: 12px;
-  color: var(--green);
-  font-weight: 700;
-  margin-bottom: 6px;
+  font-size: var(--text-xs);
+  font-weight: var(--fw-bold);
+  color: var(--color-brand);
+  margin-bottom: var(--space-2);
 }
 
 .dd-store-name {
-  font-size: 17px;
-  font-weight: 800;
-  margin-bottom: 8px;
+  font-size: var(--text-lg);
+  font-weight: var(--fw-bold);
+  margin-bottom: var(--space-2);
 }
 
 .dd-store-addr {
-  font-size: 13px;
-  color: var(--g600);
-  line-height: 1.5;
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: var(--lh-snug);
 
   a {
-    color: var(--orange);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 12px;
+    font-size: var(--text-xs);
+    font-weight: var(--fw-semibold);
   }
 }
 
 .dd-store-actions {
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  margin-top: 12px;
+  margin-top: var(--space-3);
 }
 
 .dd-store-action {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--orange);
-  padding: 8px 0;
-  cursor: pointer;
-  text-decoration: none;
+  gap: var(--space-3);
+  padding: var(--space-2) 0;
+  font-size: var(--text-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--color-brand);
+
+  &:hover {
+    text-decoration: none;
+    color: var(--color-brand-hover);
+  }
 
   .ic {
-    width: 24px;
-    height: 24px;
-    background: var(--orange-lt);
-    border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 13px;
-    color: var(--orange);
+    width: 24px;
+    height: 24px;
+    border-radius: var(--radius-xs);
+    background: color-mix(in srgb, var(--color-brand) 12%, transparent);
+    font-size: var(--text-xs);
   }
 }
 
 .dd-deals,
 .dd-learn {
-  width: 640px;
-
-  @media (max-width: 700px) {
-    width: calc(100vw - 32px);
-  }
+  width: min(640px, calc(100vw - 32px));
 }
 
 .dd-deals-grid,
 .dd-articles-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 12px;
+  gap: var(--space-3);
+
+  @media (max-width: 560px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .dd-deal-card,
 .dd-article-card {
   display: flex;
   align-items: center;
-  gap: 14px;
-  padding: 10px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.15s;
-  text-decoration: none;
+  gap: var(--space-4);
+  padding: var(--space-2);
+  border-radius: var(--radius-sm);
 
   &:hover {
-    background: var(--g50);
+    background: var(--color-surface-sunken);
+    text-decoration: none;
   }
 }
 
 .dd-deal-icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 8px;
-  background: var(--orange);
-  color: var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 12px;
-  font-weight: 900;
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  padding: var(--space-1);
+  border-radius: var(--radius-sm);
+  background: var(--color-brand);
+  color: var(--color-text-on-brand);
+  font-size: var(--text-2xs);
+  font-weight: var(--fw-extrabold);
   text-align: center;
   line-height: 1.2;
-  flex-shrink: 0;
-  padding: 4px;
-}
-
-.dd-deal-text,
-.dd-article-text {
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--g800);
-  line-height: 1.35;
 }
 
 .dd-article-img {
+  flex-shrink: 0;
   width: 56px;
   height: 56px;
-  border-radius: 8px;
-  flex-shrink: 0;
-  background-color: var(--g100);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface-sunken);
   background-size: cover;
   background-position: center;
 }
 
+.dd-deal-text,
+.dd-article-text {
+  font-size: var(--text-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--color-text);
+  line-height: var(--lh-snug);
+}
+
 .dd-learn-title {
-  font-size: 18px;
-  font-weight: 800;
-  margin-bottom: 16px;
+  font-size: var(--text-lg);
+  font-weight: var(--fw-bold);
+  margin-bottom: var(--space-4);
 }
 
 .dd-view-all {
+  margin-top: var(--space-4);
   text-align: right;
-  margin-top: 16px;
 
   a {
-    color: var(--orange);
-    font-weight: 700;
-    font-size: 14px;
-    cursor: pointer;
-    text-decoration: underline;
+    font-size: var(--text-sm);
+    font-weight: var(--fw-bold);
   }
 }

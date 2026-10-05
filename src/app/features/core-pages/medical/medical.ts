@@ -14,7 +14,7 @@ export class Medical {
     { n: 1, title: 'Check Eligibility', body: 'Review Illinois qualifying conditions — PTSD, cancer, epilepsy, chronic pain, and 50+ others.' },
     { n: 2, title: 'Get Certified', body: 'See a licensed physician online through our trusted partners. From $22. Approved or refund.' },
     { n: 3, title: 'Apply via MCPP', body: 'Submit your application through the Illinois Medical Cannabis Patient Program portal. Digital approval only.' },
-    { n: 4, title: 'Visit Sunnyside*', body: 'Show your digital card at the door. Enjoy dedicated medical lines, reserved inventory, and exclusive benefits.' },
+    { n: 4, title: 'Visit Evergreen', body: 'Show your digital card at the door. Enjoy dedicated medical lines, reserved inventory, and exclusive benefits.' },
   ];
 
   protected readonly partners = [

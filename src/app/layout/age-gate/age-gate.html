@@ -1,18 +1,25 @@
 @if (!confirmed()) {
-  <div class="age-gate-overlay">
+  <div class="age-gate-overlay" role="dialog" aria-modal="true" aria-labelledby="age-gate-title">
     <div class="age-gate-card">
-      <div class="asterisk">✳</div>
+      <div class="brand-mark" aria-hidden="true">◆</div>
 
       @if (!declined()) {
-        <h2>Welcome to Sunnyside*</h2>
-        <p>You must be 21 years of age or older to enter this site (or 18+ with a valid medical card).</p>
+        <h2 id="age-gate-title">Are you 21 or older?</h2>
+        <p>
+          You must be 21+ to enter this site, or 18+ with a valid medical card in a
+          state where that applies.
+        </p>
         <div class="actions">
-          <button class="btn-orange" type="button" (click)="confirm()">I am 21+</button>
-          <button class="btn-outline" type="button" (click)="decline()">I am under 21</button>
+          <button class="btn-primary btn-block" type="button" (click)="confirm()">
+            Yes, I'm 21 or older
+          </button>
+          <button class="btn-ghost btn-block" type="button" (click)="decline()">
+            No, I'm under 21
+          </button>
         </div>
       } @else {
-        <h2>Come Back Soon</h2>
-        <p>You must be 21 years of age or older (or 18+ with a valid medical card) to view this site.</p>
+        <h2 id="age-gate-title">Come back when you're 21</h2>
+        <p>You must be 21 or older (or 18+ with a valid medical card) to view this site.</p>
       }
     </div>
   </div>

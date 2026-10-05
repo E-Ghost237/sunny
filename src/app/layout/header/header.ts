@@ -7,7 +7,6 @@ import { AuthService } from '../../core/services/auth.service';
 import { ProductService } from '../../core/services/product.service';
 import { StoreService } from '../../core/services/store.service';
 import { ContentService } from '../../core/services/content.service';
-import { CATEGORY_EMOJI } from '../../shared/constants/category-emoji';
 
 type DropdownKey = 'shop' | 'deals' | 'learn' | null;
 
@@ -24,9 +23,17 @@ const SHOP_CATEGORIES = [
   { label: 'Accessories', slug: 'accessories' },
 ];
 
-// Sunny2's own "Collections" links mostly just go to the general shop page too --
-// these aren't backed by real filterable collection data, so all point to /shop.
-const COLLECTIONS = ['Summer Collection', 'High THC Collection', 'New Arrivals', 'Best for Beginners', 'Staff Picks', 'Best Sellers', 'Only At Sunnyside'];
+// Merchandising collections. Not backed by real filter data yet — all route to
+// /shop until collection pages land.
+const COLLECTIONS = [
+  'New Arrivals',
+  'High THC',
+  'Best for Beginners',
+  'Staff Picks',
+  'Best Sellers',
+  'On Sale',
+  'House Brand',
+];
 
 @Component({
   selector: 'app-header',
@@ -43,7 +50,6 @@ export class Header {
 
   protected readonly shopCategories = SHOP_CATEGORIES;
   protected readonly collections = COLLECTIONS;
-  protected readonly categoryEmoji = CATEGORY_EMOJI;
 
   protected readonly openDropdown = signal<DropdownKey>(null);
 
@@ -55,9 +61,8 @@ export class Header {
     this.openDropdown.set(null);
   }
 
-  // "Current store" -- there's no real store-selection/geolocation state, so this
-  // shows the first real store as a stand-in, same as sunny2's own hardcoded
-  // "Buffalo Grove, IL" in its dropdown mockup.
+  // No store-selection / geolocation state yet — show the first store as a
+  // stand-in for the "shopping at" indicator.
   private readonly storesResource = rxResource({
     stream: () => this.storeService.getStores(),
   });
@@ -69,12 +74,14 @@ export class Header {
   protected readonly dealProducts = computed(() =>
     (this.productsResource.value() ?? [])
       .filter((p) => p.badge && p.discountedPrice != null)
-      .sort((a, b) => (b.price - b.discountedPrice! - (a.price - a.discountedPrice!)))
+      .sort((a, b) => b.price - b.discountedPrice! - (a.price - a.discountedPrice!))
       .slice(0, 4),
   );
 
   private readonly articlesResource = rxResource({
     stream: () => this.contentService.getArticles(),
   });
-  protected readonly featuredArticles = computed(() => (this.articlesResource.value() ?? []).slice(0, 4));
+  protected readonly featuredArticles = computed(() =>
+    (this.articlesResource.value() ?? []).slice(0, 4),
+  );
 }

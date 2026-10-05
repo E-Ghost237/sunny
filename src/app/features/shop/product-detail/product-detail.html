@@ -15,8 +15,8 @@
   <div class="pd-wrap3">
     <div class="pd-left">
       <div class="pd-img-box">
-        @if (product()!.onlyAtSunnyside) {
-          <div class="pd-only-badge">ONLY AT<br />SUNNYSIDE</div>
+        @if (product()!.isExclusive) {
+          <div class="pd-only-badge">EVERGREEN<br />EXCLUSIVE</div>
         }
         @if (product()!.size) {
           <div class="pd-weight-sticker">{{ product()!.size }}</div>

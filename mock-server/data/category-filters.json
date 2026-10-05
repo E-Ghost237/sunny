@@ -15,37 +15,15 @@
         "title": "Brand",
         "type": "checkboxes",
         "options": [
-          "& Shine",
-          "93 Boyz",
-          "Aeriz",
-          "Cresco",
-          "Daze Off",
-          "Fig Farms",
-          "Find",
-          "FloraCal",
-          "Good Green",
-          "Graffiti",
-          "Grassroots",
-          "High Supply",
-          "High Wired",
-          "In House",
-          "Interstate 420",
-          "Loud*r",
-          "Midweek Friday",
-          "Mini Budz",
-          "Nature's Grace and Wellness",
-          "Nature's Heritage",
-          "Ozone",
-          "Rythm",
-          "Savvy",
-          "Simply Herb",
-          "Superflux",
-          "Tales and Travels",
-          "Twenty Twenty",
-          "UpNorth",
-          "Verano Essence",
-          "Verano Reserve",
-          "nuEra"
+          "Bloomcraft",
+          "Cloudline",
+          "Copper Kettle",
+          "Dry Creek Co.",
+          "Evergreen",
+          "Moonfield",
+          "Ninebark",
+          "Northwind Farms",
+          "Wildstack"
         ]
       },
       {
@@ -53,70 +31,40 @@
         "type": "range",
         "unit": "%",
         "unitPrefix": false,
-        "min": 17.0,
-        "max": 65.0,
-        "note": "Total combined THC/THCa values. Review product labels for exact percentages."
+        "min": 10,
+        "max": 40,
+        "note": "Total combined THC/THCa. Check the label for exact figures."
       },
       {
         "title": "Price Range",
         "type": "range",
         "unit": "$",
         "unitPrefix": true,
-        "min": 0.0,
-        "max": 190.0,
+        "min": 0,
+        "max": 260,
         "note": ""
       },
       {
-        "title": "Size",
-        "type": "checkboxes",
+        "title": "Weight",
+        "type": "pills",
         "options": [
-          "1g",
-          "1.5g",
           "3.5g",
-          "4.2g",
-          "4.5g",
           "7g",
           "14g",
-          "28g",
-          "28.3g"
+          "28g"
         ]
       },
       {
-        "title": "Flower Type",
+        "title": "Top Terpenes",
         "type": "checkboxes",
         "options": [
-          "Flower",
-          "Ground Flower",
-          "Infused Flower",
-          "Mixed Buds",
-          "Moon Rocks",
-          "Popcorn",
-          "Premium",
-          "Shake"
-        ]
-      },
-      {
-        "title": "Terpenes",
-        "type": "checkboxes",
-        "options": [
-          "Bisabolol",
-          "Caryophyllene",
-          "Farnesene",
-          "Humulene",
-          "Limonene",
-          "Linalool",
           "Myrcene",
-          "Ocimene",
+          "Limonene",
+          "Caryophyllene",
           "Pinene",
-          "Terpinolene"
-        ]
-      },
-      {
-        "title": "Featured",
-        "type": "checkboxes",
-        "options": [
-          "On Sale",
-          "Only at Sunnyside"
+          "Linalool",
+          "Terpinolene",
+          "Humulene"
         ]
       }
     ]
@@ -130,36 +78,24 @@
         "options": [
           "Sativa",
           "Hybrid",
-          "Indica",
-          "CBD"
+          "Indica"
         ]
       },
       {
         "title": "Brand",
         "type": "checkboxes",
         "options": [
-          "& Shine",
-          "Briq",
-          "Cresco",
-          "Crystal Clear",
-          "FloraCal",
-          "Good Green",
-          "Good News",
-          "High Supply",
-          "High Wired",
-          "In House",
-          "Joos",
-          "Marmas Bar",
-          "Midweek Friday",
-          "Ozone",
-          "Ozone Reserve",
-          "Rythm",
-          "Savvy",
-          "Select",
-          "Simply Herb",
-          "The Botanist",
-          "Verano Essence",
-          "Verano Reserve"
+          "Cloudline",
+          "Copper Kettle",
+          "Dry Creek Co.",
+          "Evergreen",
+          "Half Light",
+          "Lantern & Leaf",
+          "Moonfield",
+          "Ninebark",
+          "Northwind Farms",
+          "Terra Verde",
+          "Wildstack"
         ]
       },
       {
@@ -167,88 +103,35 @@
         "type": "range",
         "unit": "%",
         "unitPrefix": false,
-        "min": 44.0,
-        "max": 96.0,
-        "note": "Total combined THC/THCa values. Review product labels for exact percentages."
-      },
-      {
-        "title": "CBD Potency",
-        "type": "range",
-        "unit": "%",
-        "unitPrefix": false,
-        "min": 0.0,
-        "max": 45.0,
-        "note": "Total combined CBD/CBDa values. Review product labels for exact percentages."
+        "min": 10,
+        "max": 40,
+        "note": "Total combined THC/THCa. Check the label for exact figures."
       },
       {
         "title": "Price Range",
         "type": "range",
         "unit": "$",
         "unitPrefix": true,
-        "min": 10.0,
-        "max": 70.0,
+        "min": 0,
+        "max": 260,
         "note": ""
       },
       {
-        "title": "CBD Ratio",
-        "type": "checkboxes",
+        "title": "Hardware",
+        "type": "pills",
         "options": [
-          "CBD 1:1",
-          "CBD 1:2"
+          "510 Cartridge",
+          "All-in-One",
+          "Pod"
         ]
       },
       {
-        "title": "Size",
+        "title": "Extraction",
         "type": "checkboxes",
         "options": [
-          "1g",
-          "2g",
-          "300mg",
-          "500mg"
-        ]
-      },
-      {
-        "title": "Vape Type",
-        "type": "checkboxes",
-        "options": [
-          "Cartridge",
-          "Disposable Pen",
-          "Live Disposable Pen",
-          "Live Resin Cartridge",
-          "Live Rosin Cartridge"
-        ]
-      },
-      {
-        "title": "Extraction Method",
-        "type": "checkboxes",
-        "options": [
-          "BHO",
           "Distillate",
-          "Live",
-          "Solventless"
-        ]
-      },
-      {
-        "title": "Terpenes",
-        "type": "checkboxes",
-        "options": [
-          "Bisabolol",
-          "Caryophyllene",
-          "Humulene",
-          "Limonene",
-          "Linalool",
-          "Myrcene",
-          "Nerolidol",
-          "Ocimene",
-          "Pinene",
-          "Terpinolene"
-        ]
-      },
-      {
-        "title": "Featured",
-        "type": "checkboxes",
-        "options": [
-          "On Sale"
+          "Live Resin",
+          "Rosin"
         ]
       }
     ]
@@ -262,228 +145,60 @@
         "options": [
           "Sativa",
           "Hybrid",
-          "Indica",
-          "CBD"
+          "Indica"
         ]
       },
       {
         "title": "Brand",
         "type": "checkboxes",
         "options": [
-          "93 Boyz",
-          "Aeriz",
-          "Alchemy",
-          "Betty's Eddies",
-          "Bubby's Baked Goods",
-          "Camino",
-          "Camino Sours",
-          "Daze Off",
-          "Encore",
-          "FloraCal",
-          "Good News",
-          "In House",
-          "Incredibles",
-          "JAMS",
-          "Kalm Fusion",
-          "Kiva",
-          "Lost Farm",
-          "Midweek Friday",
-          "Mindy's",
-          "Nature's Grace and Wellness",
-          "Terra Bites",
-          "The Funnies",
-          "WANA",
-          "Wonder"
+          "Cloudline",
+          "Copper Kettle",
+          "Evergreen",
+          "Half Light",
+          "Lantern & Leaf",
+          "Moonfield",
+          "Ninebark",
+          "Northwind Farms",
+          "Terra Verde",
+          "Wildstack"
         ]
       },
       {
-        "title": "CBD Ratio",
-        "type": "checkboxes",
-        "options": [
-          "CBD 1:1",
-          "CBD 1:2",
-          "CBD 1:5",
-          "CBD 2:1",
-          "CBD 20:1",
-          "CBD 4:1",
-          "CBD 5:1"
-        ]
-      },
-      {
-        "title": "Edible Type",
-        "type": "checkboxes",
-        "options": [
-          "Blondie",
-          "Brownie",
-          "Candy",
-          "Chewable Tablet",
-          "Chocolate",
-          "Cookie",
-          "Fruit Chew",
-          "Gummy",
-          "Mint"
-        ]
-      },
-      {
-        "title": "Flavors",
-        "type": "checkboxes",
-        "options": [
-          "Assorted Sours",
-          "Berries",
-          "Berry",
-          "Black Cherry",
-          "Black Raspberry",
-          "Blackberry",
-          "Blackberry Dream",
-          "Blood Orange",
-          "Blue Raspberry",
-          "Blueberry",
-          "Caramel",
-          "Cherry",
-          "Cherry Cola",
-          "Churro",
-          "Citrus",
-          "Clementine",
-          "Clementine Orange",
-          "Cranberry Lime",
-          "Coffee",
-          "Dark",
-          "Dark Chocolate",
-          "Dark Chocolate Blackberry",
-          "Dragon Fruit",
-          "Freshly Squeezed",
-          "Fruit Punch",
-          "Grape",
-          "Grapefruit",
-          "Green Apple",
-          "Honey Melon",
-          "Juicy Peach X Pineapple Express",
-          "Key Lime",
-          "Keylime Kiwi",
-          "Lemon",
-          "Lemon Lime",
-          "Mandarin Orange",
-          "Mango",
-          "Mango Pineapple",
-          "Marshmallow",
-          "Marshmallow Graham",
-          "Midnight Blueberry",
-          "Milk And Cookies",
-          "Milk Chocolate",
-          "Mimosa",
-          "Mint",
-          "Orange",
-          "Passionfruit",
-          "Peach",
-          "Peanut",
-          "Peppermint",
-          "Pina Colada",
-          "Pineapple",
-          "Pink Lemonade",
-          "Plum",
-          "Pomegranate",
-          "Prickly Pear",
-          "Purple Passionfruit",
-          "Raspberry",
-          "Raspberry Lemonade",
-          "Snickerdoodle",
-          "Sour Apple",
-          "Sour Blueberry",
-          "Sour Green Apple",
-          "Sour Lemon",
-          "Sour Watermelon",
-          "Strawberry",
-          "Strawberry Jam",
-          "Strawberry Lemonade",
-          "Strawberry Margarita",
-          "Strawberry Peach",
-          "Strawberry Sunset",
-          "Tangerine",
-          "Tropical",
-          "Tropical Punch",
-          "Watermelon",
-          "Watermelon Spritz",
-          "White Grape Caffeine",
-          "Wild Berry",
-          "Wild Cherry"
-        ]
-      },
-      {
-        "title": "CBN",
-        "type": "checkboxes",
-        "options": [
-          "20mg",
-          "40mg",
-          "50mg",
-          "100mg",
-          "200mg",
-          "500mg"
-        ]
-      },
-      {
-        "title": "CBG",
-        "type": "checkboxes",
-        "options": [
-          "20mg",
-          "50mg",
-          "100mg",
-          "200mg"
-        ]
-      },
-      {
-        "title": "Quantity",
-        "type": "checkboxes",
-        "options": [
-          "1ct",
-          "2ct",
-          "5ct",
-          "10ct",
-          "20ct",
-          "40ct"
-        ]
+        "title": "THC Potency",
+        "type": "range",
+        "unit": "%",
+        "unitPrefix": false,
+        "min": 10,
+        "max": 40,
+        "note": "Total combined THC/THCa. Check the label for exact figures."
       },
       {
         "title": "Price Range",
         "type": "range",
         "unit": "$",
         "unitPrefix": true,
-        "min": 0.0,
-        "max": 30.0,
+        "min": 0,
+        "max": 260,
         "note": ""
       },
       {
-        "title": "THC",
-        "type": "checkboxes",
+        "title": "Dose",
+        "type": "pills",
         "options": [
+          "5mg",
           "10mg",
-          "20mg",
-          "25mg",
-          "50mg",
-          "100mg"
+          "25mg"
         ]
       },
       {
-        "title": "CBD",
+        "title": "Type",
         "type": "checkboxes",
         "options": [
-          "25mg",
-          "50mg",
-          "80mg",
-          "100mg",
-          "200mg",
-          "300mg",
-          "400mg",
-          "500mg",
-          "800mg",
-          "2000mg"
-        ]
-      },
-      {
-        "title": "Featured",
-        "type": "checkboxes",
-        "options": [
-          "On Sale",
-          "Only at Sunnyside"
+          "Gummies",
+          "Chocolate",
+          "Mints",
+          "Chews"
         ]
       }
     ]
@@ -504,39 +219,14 @@
         "title": "Brand",
         "type": "checkboxes",
         "options": [
-          "1988",
-          "93 Boyz",
-          "Aeriz",
-          "Anthem",
-          "Binske",
-          "Cookies",
-          "Daze Off",
-          "Dogwalkers",
-          "Find",
-          "Good Green",
-          "Good News",
-          "Grassroots",
-          "Grow Sciences",
-          "High Supply",
-          "High Wired",
-          "Interstate 420",
-          "Island",
-          "Loud*r",
-          "Lowell Farms",
-          "Miss Grass",
-          "Nature's Grace and Wellness",
-          "Nature's Heritage",
-          "Rythm",
-          "Simply Herb",
-          "Slims",
-          "Smoke Breaks",
-          "Superflux",
-          "Swift Lifts",
-          "Twenty Twenty",
-          "UpNorth",
-          "Verano",
-          "Verano Essence",
-          "Verano Reserve"
+          "Cloudline",
+          "Evergreen",
+          "Half Light",
+          "Lantern & Leaf",
+          "Moonfield",
+          "Northwind Farms",
+          "Terra Verde",
+          "Wildstack"
         ]
       },
       {
@@ -544,500 +234,26 @@
         "type": "range",
         "unit": "%",
         "unitPrefix": false,
-        "min": 19.0,
-        "max": 62.0,
-        "note": "Total combined THC/THCa values. Review product labels for exact percentages."
-      },
-      {
-        "title": "Quantity",
-        "type": "checkboxes",
-        "options": [
-          "1ct",
-          "2ct",
-          "5ct",
-          "6ct",
-          "7ct",
-          "10ct",
-          "12ct",
-          "14ct"
-        ]
+        "min": 10,
+        "max": 40,
+        "note": "Total combined THC/THCa. Check the label for exact figures."
       },
       {
         "title": "Price Range",
         "type": "range",
         "unit": "$",
         "unitPrefix": true,
-        "min": 0.0,
-        "max": 90.0,
+        "min": 0,
+        "max": 260,
         "note": ""
       },
       {
-        "title": "Size",
-        "type": "checkboxes",
-        "options": [
-          "0.7g",
-          "0.75g",
-          "1g",
-          "1.5g",
-          "1.75g",
-          "2g",
-          "2.25g",
-          "2.5g",
-          "3g",
-          "3.5g",
-          "4.2g",
-          "5g",
-          "5.4g",
-          "7g",
-          "10g",
-          "14g"
-        ]
-      },
-      {
-        "title": "Pre-Rolls Type",
-        "type": "checkboxes",
-        "options": [
-          "Blunt",
-          "Infused Pre-Rolls",
-          "Pre-Rolls",
-          "Shorties"
-        ]
-      },
-      {
-        "title": "Terpenes",
-        "type": "checkboxes",
-        "options": [
-          "Bisabolol",
-          "Caryophyllene",
-          "Humulene",
-          "Limonene",
-          "Linalool",
-          "Myrcene",
-          "Ocimene",
-          "Pinene",
-          "Terpinolene"
-        ]
-      },
-      {
-        "title": "Featured",
-        "type": "checkboxes",
-        "options": [
-          "On Sale",
-          "Only at Sunnyside"
-        ]
-      }
-    ]
-  },
-  {
-    "category": "topicals",
-    "sections": [
-      {
-        "title": "Strain Type",
+        "title": "Pack Size",
         "type": "pills",
         "options": [
-          "Hybrid",
-          "CBD"
-        ]
-      },
-      {
-        "title": "Brand",
-        "type": "checkboxes",
-        "options": [
-          "Alchemy",
-          "Avexia",
-          "Nature's Grace and Wellness"
-        ]
-      },
-      {
-        "title": "THC",
-        "type": "checkboxes",
-        "options": [
-          "100mg"
-        ]
-      },
-      {
-        "title": "CBD",
-        "type": "checkboxes",
-        "options": [
-          "100mg",
-          "500mg"
-        ]
-      },
-      {
-        "title": "Price Range",
-        "type": "range",
-        "unit": "$",
-        "unitPrefix": true,
-        "min": 20.0,
-        "max": 50.0,
-        "note": ""
-      },
-      {
-        "title": "CBD Ratio",
-        "type": "checkboxes",
-        "options": [
-          "CBD 1:1"
-        ]
-      },
-      {
-        "title": "Topical Type",
-        "type": "checkboxes",
-        "options": [
-          "Balm",
-          "Epsom Salt",
-          "Lotion",
-          "Salve"
-        ]
-      },
-      {
-        "title": "Featured",
-        "type": "checkboxes",
-        "options": [
-          "On Sale"
-        ]
-      }
-    ]
-  },
-  {
-    "category": "capsules",
-    "sections": [
-      {
-        "title": "Strain Type",
-        "type": "pills",
-        "options": [
-          "Hybrid",
-          "Indica",
-          "CBD"
-        ]
-      },
-      {
-        "title": "Brand",
-        "type": "checkboxes",
-        "options": [
-          "1906",
-          "Avexia",
-          "Grassroots",
-          "Remedi"
-        ]
-      },
-      {
-        "title": "THC",
-        "type": "checkboxes",
-        "options": [
-          "50mg",
-          "75mg",
-          "100mg"
-        ]
-      },
-      {
-        "title": "CBD",
-        "type": "checkboxes",
-        "options": [
-          "20mg",
-          "50mg",
-          "75mg",
-          "100mg",
-          "400mg",
-          "500mg"
-        ]
-      },
-      {
-        "title": "CBN",
-        "type": "checkboxes",
-        "options": [
-          "40mg",
-          "100mg"
-        ]
-      },
-      {
-        "title": "Price Range",
-        "type": "range",
-        "unit": "$",
-        "unitPrefix": true,
-        "min": 20.0,
-        "max": 50.0,
-        "note": ""
-      },
-      {
-        "title": "CBD Ratio",
-        "type": "checkboxes",
-        "options": [
-          "CBD 1:1",
-          "CBD 1:5",
-          "CBD 4:1",
-          "CBD 5:1"
-        ]
-      },
-      {
-        "title": "Capsule Type",
-        "type": "checkboxes",
-        "options": [
-          "CBD 1:1",
-          "CBD 4:1",
-          "CBG 1 To 1",
-          "Swallowable Pills"
-        ]
-      },
-      {
-        "title": "Featured",
-        "type": "checkboxes",
-        "options": [
-          "On Sale"
-        ]
-      }
-    ]
-  },
-  {
-    "category": "tinctures",
-    "sections": [
-      {
-        "title": "Strain Type",
-        "type": "pills",
-        "options": [
-          "Hybrid",
-          "Indica",
-          "CBD"
-        ]
-      },
-      {
-        "title": "Brand",
-        "type": "checkboxes",
-        "options": [
-          "Dr. Solomon's",
-          "Remedi"
-        ]
-      },
-      {
-        "title": "THC",
-        "type": "checkboxes",
-        "options": [
-          "25mg",
-          "50mg",
-          "100mg"
-        ]
-      },
-      {
-        "title": "CBD",
-        "type": "checkboxes",
-        "options": [
-          "20mg",
-          "50mg",
-          "100mg",
-          "500mg"
-        ]
-      },
-      {
-        "title": "CBN",
-        "type": "checkboxes",
-        "options": [
-          "50mg"
-        ]
-      },
-      {
-        "title": "Price Range",
-        "type": "range",
-        "unit": "$",
-        "unitPrefix": true,
-        "min": 20.0,
-        "max": 50.0,
-        "note": ""
-      },
-      {
-        "title": "CBD Ratio",
-        "type": "checkboxes",
-        "options": [
-          "CBD 1:1",
-          "CBD 1:5"
-        ]
-      },
-      {
-        "title": "Tincture Type",
-        "type": "checkboxes",
-        "options": [
-          "Dropper"
-        ]
-      },
-      {
-        "title": "Featured",
-        "type": "checkboxes",
-        "options": [
-          "On Sale"
-        ]
-      }
-    ]
-  },
-  {
-    "category": "beverages",
-    "sections": [
-      {
-        "title": "Strain Type",
-        "type": "pills",
-        "options": [
-          "Sativa",
-          "Hybrid"
-        ]
-      },
-      {
-        "title": "Brand",
-        "type": "checkboxes",
-        "options": [
-          "Daze Off",
-          "Midweek Friday",
-          "RisEau",
-          "Uncle Arnie's",
-          "Vibations",
-          "Zero Proof"
-        ]
-      },
-      {
-        "title": "THC",
-        "type": "checkboxes",
-        "options": [
-          "25mg",
-          "100mg"
-        ]
-      },
-      {
-        "title": "CBD",
-        "type": "checkboxes",
-        "options": [
-          "100mg",
-          "200mg"
-        ]
-      },
-      {
-        "title": "CBN",
-        "type": "checkboxes",
-        "options": [
-          "50mg"
-        ]
-      },
-      {
-        "title": "Price Range",
-        "type": "range",
-        "unit": "$",
-        "unitPrefix": true,
-        "min": 10.0,
-        "max": 20.0,
-        "note": ""
-      },
-      {
-        "title": "Beverage Type",
-        "type": "checkboxes",
-        "options": [
-          "Elixer",
-          "Juice",
-          "Lemonade",
-          "Shot",
-          "Syrup",
-          "Tonic"
-        ]
-      },
-      {
-        "title": "Flavors",
-        "type": "checkboxes",
-        "options": [
-          "Blood Orange",
-          "Grape",
-          "Hibiscus",
-          "Iced Tea Lemonade",
-          "Lemon Lime",
-          "Lime",
-          "Orange",
-          "Raspberry Lemonade",
-          "Sour Watermelon",
-          "Strawberry Lemonade",
-          "Tropical Punch"
-        ]
-      },
-      {
-        "title": "Featured",
-        "type": "checkboxes",
-        "options": [
-          "On Sale"
-        ]
-      }
-    ]
-  },
-  {
-    "category": "accessories",
-    "sections": [
-      {
-        "title": "Accessories Type",
-        "type": "checkboxes",
-        "options": [
-          "Adaptogens",
-          "Battery",
-          "Bongs",
-          "Cleaning",
-          "Cones",
-          "Grinders",
-          "Lifestyle",
-          "Lighters",
-          "Papers",
-          "Pipes",
-          "Snacks",
-          "Storage",
-          "Tools",
-          "Vaporizers"
-        ]
-      },
-      {
-        "title": "Price Range",
-        "type": "range",
-        "unit": "$",
-        "unitPrefix": true,
-        "min": 0.0,
-        "max": 490.0,
-        "note": ""
-      },
-      {
-        "title": "Brand",
-        "type": "checkboxes",
-        "options": [
-          "Alice Mushrooms",
-          "BIC",
-          "Bear Quartz",
-          "Burner Babe",
-          "CCell",
-          "CannaDevices",
-          "Cartisan",
-          "Dewbie",
-          "Dime Bags",
-          "Doob Tube",
-          "Edie Parker",
-          "Flintts Mints",
-          "Houseplant",
-          "Human Grade",
-          "Iconic Candy",
-          "Juicy Jay",
-          "King Palm",
-          "Lit Silicone",
-          "MJ Arsenal",
-          "Maven",
-          "MicroJoy",
-          "NWTN Home",
-          "OCB",
-          "Ongrok",
-          "Paw 20",
-          "Puffco",
-          "Pulsar",
-          "Randy's",
-          "Red Eye Glass",
-          "Revelry Supply",
-          "Stache",
-          "Storz & Bickell",
-          "Sunnyside",
-          "Vuber",
-          "West Coast Gifts",
-          "Yocan"
-        ]
-      },
-      {
-        "title": "Featured",
-        "type": "checkboxes",
-        "options": [
-          "On Sale"
+          "Single",
+          "5-Pack",
+          "Infused"
         ]
       }
     ]
@@ -1058,20 +274,16 @@
         "title": "Brand",
         "type": "checkboxes",
         "options": [
-          "Aeriz",
-          "Alchemy",
-          "Avexia",
-          "Cresco",
-          "FloraCal",
-          "Grassroots",
-          "High Supply",
-          "Nature's Grace and Wellness",
-          "Nature's Heritage",
-          "Ozone Reserve",
-          "Remedi",
-          "Rythm",
-          "Superflux",
-          "UpNorth"
+          "Cloudline",
+          "Copper Kettle",
+          "Dry Creek Co.",
+          "Evergreen",
+          "Half Light",
+          "Lantern & Leaf",
+          "Moonfield",
+          "Northwind Farms",
+          "Terra Verde",
+          "Wildstack"
         ]
       },
       {
@@ -1079,86 +291,289 @@
         "type": "range",
         "unit": "%",
         "unitPrefix": false,
-        "min": 37.0,
-        "max": 97.0,
-        "note": "Total combined THC/THCa values. Review product labels for exact percentages."
+        "min": 10,
+        "max": 40,
+        "note": "Total combined THC/THCa. Check the label for exact figures."
       },
       {
         "title": "Price Range",
         "type": "range",
         "unit": "$",
         "unitPrefix": true,
-        "min": 20.0,
-        "max": 120.0,
+        "min": 0,
+        "max": 260,
         "note": ""
       },
       {
-        "title": "Size",
+        "title": "Consistency",
         "type": "checkboxes",
         "options": [
-          "1g",
-          "2g",
-          "2.5g",
-          "2.52g",
-          "3.5g",
-          "500mg"
-        ]
-      },
-      {
-        "title": "Concentrate Type",
-        "type": "checkboxes",
-        "options": [
-          "Budder",
-          "Cured Resin",
-          "Cured Wax",
-          "Jam",
-          "Kief",
-          "Live Badder",
-          "Live Badder Rosin",
-          "Live Budder",
-          "Live Resin",
-          "Live Sauce",
-          "Live Sugar",
-          "Oil",
-          "RSO",
-          "Shatter",
+          "Badder",
           "Sugar",
-          "Syringe"
+          "Live Resin",
+          "Rosin",
+          "Sauce"
+        ]
+      }
+    ]
+  },
+  {
+    "category": "topicals",
+    "sections": [
+      {
+        "title": "Strain Type",
+        "type": "pills",
+        "options": [
+          "Sativa",
+          "Hybrid",
+          "Indica"
         ]
       },
       {
-        "title": "Extraction Method",
+        "title": "Brand",
         "type": "checkboxes",
         "options": [
-          "BHO",
-          "Live",
-          "RSO",
-          "Solventless"
+          "Bloomcraft",
+          "Evergreen",
+          "Half Light",
+          "Moonfield",
+          "Terra Verde",
+          "Understory",
+          "Wildstack"
         ]
       },
       {
-        "title": "Terpenes",
+        "title": "THC Potency",
+        "type": "range",
+        "unit": "%",
+        "unitPrefix": false,
+        "min": 10,
+        "max": 40,
+        "note": "Total combined THC/THCa. Check the label for exact figures."
+      },
+      {
+        "title": "Price Range",
+        "type": "range",
+        "unit": "$",
+        "unitPrefix": true,
+        "min": 0,
+        "max": 260,
+        "note": ""
+      },
+      {
+        "title": "Format",
         "type": "checkboxes",
         "options": [
-          "Bisabolol",
-          "Caryophyllene",
-          "Humulene",
-          "Limonene",
-          "Linalool",
-          "Myrcene",
-          "Nerolidol",
-          "Ocimene",
-          "Pinene",
-          "Terpinolene"
+          "Balm",
+          "Roll-On",
+          "Lotion",
+          "Bath Soak"
+        ]
+      }
+    ]
+  },
+  {
+    "category": "capsules",
+    "sections": [
+      {
+        "title": "Strain Type",
+        "type": "pills",
+        "options": [
+          "Sativa",
+          "Hybrid",
+          "Indica"
         ]
       },
       {
-        "title": "Featured",
+        "title": "Brand",
         "type": "checkboxes",
         "options": [
-          "On Sale",
-          "Only at Sunnyside"
+          "Copper Kettle",
+          "Dry Creek Co.",
+          "Evergreen",
+          "Half Light",
+          "Terra Verde",
+          "Wildstack"
         ]
+      },
+      {
+        "title": "THC Potency",
+        "type": "range",
+        "unit": "%",
+        "unitPrefix": false,
+        "min": 10,
+        "max": 40,
+        "note": "Total combined THC/THCa. Check the label for exact figures."
+      },
+      {
+        "title": "Price Range",
+        "type": "range",
+        "unit": "$",
+        "unitPrefix": true,
+        "min": 0,
+        "max": 260,
+        "note": ""
+      },
+      {
+        "title": "Dose",
+        "type": "pills",
+        "options": [
+          "10mg",
+          "25mg"
+        ]
+      }
+    ]
+  },
+  {
+    "category": "tinctures",
+    "sections": [
+      {
+        "title": "Strain Type",
+        "type": "pills",
+        "options": [
+          "Sativa",
+          "Hybrid",
+          "Indica"
+        ]
+      },
+      {
+        "title": "Brand",
+        "type": "checkboxes",
+        "options": [
+          "Copper Kettle",
+          "Dry Creek Co.",
+          "Evergreen",
+          "Lantern & Leaf",
+          "Moonfield",
+          "Ninebark"
+        ]
+      },
+      {
+        "title": "THC Potency",
+        "type": "range",
+        "unit": "%",
+        "unitPrefix": false,
+        "min": 10,
+        "max": 40,
+        "note": "Total combined THC/THCa. Check the label for exact figures."
+      },
+      {
+        "title": "Price Range",
+        "type": "range",
+        "unit": "$",
+        "unitPrefix": true,
+        "min": 0,
+        "max": 260,
+        "note": ""
+      },
+      {
+        "title": "Ratio",
+        "type": "checkboxes",
+        "options": [
+          "1:1 THC:CBD",
+          "THC-Dominant",
+          "CBD-Dominant"
+        ]
+      }
+    ]
+  },
+  {
+    "category": "beverages",
+    "sections": [
+      {
+        "title": "Strain Type",
+        "type": "pills",
+        "options": [
+          "Sativa",
+          "Hybrid",
+          "Indica"
+        ]
+      },
+      {
+        "title": "Brand",
+        "type": "checkboxes",
+        "options": [
+          "Cloudline",
+          "Copper Kettle",
+          "Evergreen",
+          "Half Light",
+          "Lantern & Leaf",
+          "Moonfield",
+          "Ninebark",
+          "Northwind Farms",
+          "Terra Verde",
+          "Wildstack"
+        ]
+      },
+      {
+        "title": "THC Potency",
+        "type": "range",
+        "unit": "%",
+        "unitPrefix": false,
+        "min": 10,
+        "max": 40,
+        "note": "Total combined THC/THCa. Check the label for exact figures."
+      },
+      {
+        "title": "Price Range",
+        "type": "range",
+        "unit": "$",
+        "unitPrefix": true,
+        "min": 0,
+        "max": 260,
+        "note": ""
+      },
+      {
+        "title": "Format",
+        "type": "checkboxes",
+        "options": [
+          "Seltzer",
+          "Tonic",
+          "Shot",
+          "Tea"
+        ]
+      }
+    ]
+  },
+  {
+    "category": "accessories",
+    "sections": [
+      {
+        "title": "Brand",
+        "type": "checkboxes",
+        "options": [
+          "Bloomcraft",
+          "Cloudline",
+          "Evergreen",
+          "Half Light",
+          "Lantern & Leaf",
+          "Ninebark",
+          "Northwind Farms",
+          "Terra Verde"
+        ]
+      },
+      {
+        "title": "Type",
+        "type": "checkboxes",
+        "options": [
+          "Grinder",
+          "Rolling Tray",
+          "Glass Pipe",
+          "Storage Jar",
+          "Odor-Proof Bag",
+          "Lighter Case",
+          "Ashtray",
+          "Cleaning Kit"
+        ]
+      },
+      {
+        "title": "Price Range",
+        "type": "range",
+        "unit": "$",
+        "unitPrefix": true,
+        "min": 0,
+        "max": 80,
+        "note": ""
       }
     ]
   }

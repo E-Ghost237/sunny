@@ -36,7 +36,7 @@ export interface Product {
   price: number;
   discountedPrice: number | null;
   badge: string | null;
-  onlyAtSunnyside: boolean;
+  isExclusive: boolean;
   images: string[];
   category: ProductCategory;
 }

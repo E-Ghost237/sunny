@@ -158,7 +158,7 @@ export class CategoryList {
       if (sizes.size > 0 && !(p.size && sizes.has(p.size))) return false;
       if (featured.size > 0) {
         const onSale = !!p.badge;
-        const onlyHere = p.onlyAtSunnyside;
+        const onlyHere = p.isExclusive;
         const matches = [...featured].some((f) => (f.toLowerCase().includes('sale') ? onSale : onlyHere));
         if (!matches) return false;
       }

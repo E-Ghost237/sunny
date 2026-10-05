@@ -14,9 +14,7 @@ const CATEGORIES = [
   { label: 'Accessories', slug: 'accessories' },
 ];
 
-// Ported from sunny2's global .cat-bar -- sits below the header on every page
-// (confirmed via grep: it appears once in the source, before any .page div, not
-// duplicated per-page), not just on shop pages.
+/** Secondary category strip; sits under the header on every page. */
 @Component({
   selector: 'app-cat-bar',
   imports: [RouterLink, RouterLinkActive],

@@ -3,8 +3,8 @@
     @if (product().badge) {
       <div class="sale-badge-multi">{{ product().badge }}</div>
     }
-    @if (product().onlyAtSunnyside) {
-      <div class="only-badge">ONLY AT SUNNYSIDE</div>
+    @if (product().isExclusive) {
+      <div class="only-badge">EVERGREEN EXCLUSIVE</div>
     }
     <app-product-image [src]="product().images[0]" [alt]="product().name" [category]="product().category" />
   </div>

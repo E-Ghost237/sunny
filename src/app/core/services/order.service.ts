@@ -3,7 +3,7 @@ import { Injectable, signal } from '@angular/core';
 import { CartItem } from '../models/cart.model';
 import { Order } from '../models/order.model';
 
-const ORDERS_KEY = 'sunnyside-orders';
+const ORDERS_KEY = 'evergreen-orders';
 
 function loadOrders(): Order[] {
   try {
