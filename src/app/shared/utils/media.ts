@@ -14,13 +14,12 @@ export function categoryImage(slug: string): string {
 }
 
 /**
- * Product photo. The catalog only has placeholder art, so every product shows its
- * category photo until real per-product photos are dropped into /assets/img/products/.
+ * Product photo: one generated photo per product, showing its partner brand
+ * (public/assets/img/products/{slug}.jpg). Until a product's photo exists the
+ * product card shows the premium gradient fallback, never the category photo.
  */
-export function productImage(p: Pick<Product, 'images' | 'category'>): string {
-  const first = p.images?.[0];
-  if (first && !first.startsWith('/assets/placeholder/')) return first;
-  return categoryImage(p.category);
+export function productImage(p: Pick<Product, 'slug'>): string {
+  return `/assets/img/products/${p.slug}.jpg`;
 }
 
 /** Store photo set: outside, inside and all-round (panorama) views. */

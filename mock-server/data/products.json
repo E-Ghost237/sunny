@@ -3,7 +3,7 @@
     "id": 100001,
     "slug": "amber-drift-flower-100001",
     "name": "Amber Drift Flower",
-    "brand": "Northwind Farms",
+    "brand": "Cresco",
     "strain": "Indica",
     "strainName": "Amber Drift",
     "strainDescription": "Amber Drift is a indica-leaning cultivar with Pinene and Caryophyllene up top. Expect berry on the nose rolling into pepper on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -22,9 +22,7 @@
     "badge": "New",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/amber-drift-flower-100001.jpg"
     ],
     "category": "flower"
   },
@@ -32,7 +30,7 @@
     "id": 100002,
     "slug": "coastal-trail-flower-100002",
     "name": "Coastal Trail Flower",
-    "brand": "Ninebark",
+    "brand": "Loud*r",
     "strain": "Hybrid",
     "strainName": "Coastal Trail",
     "strainDescription": "Coastal Trail is a hybrid-leaning cultivar with Caryophyllene and Humulene up top. Expect pepper on the nose rolling into diesel on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -51,9 +49,7 @@
     "badge": "Staff Pick",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/coastal-trail-flower-100002.jpg"
     ],
     "category": "flower"
   },
@@ -61,7 +57,7 @@
     "id": 100003,
     "slug": "northern-pine-flower-100003",
     "name": "Northern Pine Flower",
-    "brand": "DeLight",
+    "brand": "Floracal",
     "strain": "Sativa",
     "strainName": "Northern Pine",
     "strainDescription": "Northern Pine is a sativa-leaning cultivar with Caryophyllene and Limonene up top. Expect gassy on the nose rolling into citrus on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -80,9 +76,7 @@
     "badge": null,
     "isExclusive": true,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/northern-pine-flower-100003.jpg"
     ],
     "category": "flower"
   },
@@ -90,7 +84,7 @@
     "id": 100004,
     "slug": "silver-harbor-flower-100004",
     "name": "Silver Harbor Flower",
-    "brand": "Cloudline",
+    "brand": "Good News",
     "strain": "Hybrid",
     "strainName": "Silver Harbor",
     "strainDescription": "Silver Harbor is a hybrid-leaning cultivar with Limonene and Myrcene up top. Expect berry on the nose rolling into sweet on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -109,9 +103,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/silver-harbor-flower-100004.jpg"
     ],
     "category": "flower"
   },
@@ -119,7 +111,7 @@
     "id": 100005,
     "slug": "golden-trail-flower-100005",
     "name": "Golden Trail Flower",
-    "brand": "Northwind Farms",
+    "brand": "Camino",
     "strain": "Indica",
     "strainName": "Golden Trail",
     "strainDescription": "Golden Trail is a indica-leaning cultivar with Myrcene and Limonene up top. Expect berry on the nose rolling into gassy on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -138,9 +130,7 @@
     "badge": "15% Off",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/golden-trail-flower-100005.jpg"
     ],
     "category": "flower"
   },
@@ -148,7 +138,7 @@
     "id": 100006,
     "slug": "velvet-hollow-flower-100006",
     "name": "Velvet Hollow Flower",
-    "brand": "Moonfield",
+    "brand": "Camino Sours",
     "strain": "Indica",
     "strainName": "Velvet Hollow",
     "strainDescription": "Velvet Hollow is a indica-leaning cultivar with Pinene and Limonene up top. Expect herbal on the nose rolling into gassy on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -167,9 +157,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/velvet-hollow-flower-100006.jpg"
     ],
     "category": "flower"
   },
@@ -177,7 +165,7 @@
     "id": 100007,
     "slug": "golden-orchard-flower-100007",
     "name": "Golden Orchard Flower",
-    "brand": "DeLight",
+    "brand": "Kiva",
     "strain": "Sativa",
     "strainName": "Golden Orchard",
     "strainDescription": "Golden Orchard is a sativa-leaning cultivar with Limonene and Terpinolene up top. Expect herbal on the nose rolling into earth on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -196,9 +184,7 @@
     "badge": null,
     "isExclusive": true,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/golden-orchard-flower-100007.jpg"
     ],
     "category": "flower"
   },
@@ -206,7 +192,7 @@
     "id": 100008,
     "slug": "amber-haze-flower-100008",
     "name": "Amber Haze Flower",
-    "brand": "DeLight",
+    "brand": "Lost Farm",
     "strain": "Sativa",
     "strainName": "Amber Haze",
     "strainDescription": "Amber Haze is a sativa-leaning cultivar with Pinene and Humulene up top. Expect berry on the nose rolling into sweet on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -225,9 +211,7 @@
     "badge": null,
     "isExclusive": true,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/amber-haze-flower-100008.jpg"
     ],
     "category": "flower"
   },
@@ -235,7 +219,7 @@
     "id": 100009,
     "slug": "hazel-tide-flower-100009",
     "name": "Hazel Tide Flower",
-    "brand": "Northwind Farms",
+    "brand": "Mindy's",
     "strain": "Sativa",
     "strainName": "Hazel Tide",
     "strainDescription": "Hazel Tide is a sativa-leaning cultivar with Terpinolene and Myrcene up top. Expect citrus on the nose rolling into earth on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -254,9 +238,7 @@
     "badge": "15% Off",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/hazel-tide-flower-100009.jpg"
     ],
     "category": "flower"
   },
@@ -264,7 +246,7 @@
     "id": 100010,
     "slug": "frosted-ridge-flower-100010",
     "name": "Frosted Ridge Flower",
-    "brand": "Northwind Farms",
+    "brand": "High Supply",
     "strain": "Hybrid",
     "strainName": "Frosted Ridge",
     "strainDescription": "Frosted Ridge is a hybrid-leaning cultivar with Humulene and Linalool up top. Expect herbal on the nose rolling into pine on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -283,9 +265,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/frosted-ridge-flower-100010.jpg"
     ],
     "category": "flower"
   },
@@ -293,7 +273,7 @@
     "id": 100011,
     "slug": "cobalt-cascade-flower-100011",
     "name": "Cobalt Cascade Flower",
-    "brand": "Ninebark",
+    "brand": "Avexia",
     "strain": "Indica",
     "strainName": "Cobalt Cascade",
     "strainDescription": "Cobalt Cascade is a indica-leaning cultivar with Linalool and Terpinolene up top. Expect pepper on the nose rolling into pepper on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -312,9 +292,7 @@
     "badge": "Staff Pick",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/cobalt-cascade-flower-100011.jpg"
     ],
     "category": "flower"
   },
@@ -322,7 +300,7 @@
     "id": 100012,
     "slug": "northern-cascade-flower-100012",
     "name": "Northern Cascade Flower",
-    "brand": "Bloomcraft",
+    "brand": "Remedi",
     "strain": "Indica",
     "strainName": "Northern Cascade",
     "strainDescription": "Northern Cascade is a indica-leaning cultivar with Humulene and Humulene up top. Expect citrus on the nose rolling into diesel on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -341,9 +319,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/northern-cascade-flower-100012.jpg"
     ],
     "category": "flower"
   },
@@ -351,7 +327,7 @@
     "id": 100013,
     "slug": "ember-hollow-flower-100013",
     "name": "Ember Hollow Flower",
-    "brand": "Northwind Farms",
+    "brand": "1906",
     "strain": "Indica",
     "strainName": "Ember Hollow",
     "strainDescription": "Ember Hollow is a indica-leaning cultivar with Limonene and Terpinolene up top. Expect citrus on the nose rolling into berry on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -370,9 +346,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/ember-hollow-flower-100013.jpg"
     ],
     "category": "flower"
   },
@@ -380,7 +354,7 @@
     "id": 100014,
     "slug": "golden-orchard-flower-100014",
     "name": "Golden Orchard Flower",
-    "brand": "Northwind Farms",
+    "brand": "Daze Off",
     "strain": "Sativa",
     "strainName": "Golden Orchard",
     "strainDescription": "Golden Orchard is a sativa-leaning cultivar with Limonene and Caryophyllene up top. Expect pine on the nose rolling into pepper on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -399,9 +373,7 @@
     "badge": "New",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/golden-orchard-flower-100014.jpg"
     ],
     "category": "flower"
   },
@@ -409,7 +381,7 @@
     "id": 100015,
     "slug": "silver-meadow-flower-100015",
     "name": "Silver Meadow Flower",
-    "brand": "Moonfield",
+    "brand": "Day Savers",
     "strain": "Indica",
     "strainName": "Silver Meadow",
     "strainDescription": "Silver Meadow is a indica-leaning cultivar with Linalool and Linalool up top. Expect berry on the nose rolling into floral on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -428,9 +400,7 @@
     "badge": "Low Stock",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/silver-meadow-flower-100015.jpg"
     ],
     "category": "flower"
   },
@@ -438,7 +408,7 @@
     "id": 100016,
     "slug": "hazel-orchard-flower-100016",
     "name": "Hazel Orchard Flower",
-    "brand": "Wildstack",
+    "brand": "Houseplant",
     "strain": "Hybrid",
     "strainName": "Hazel Orchard",
     "strainDescription": "Hazel Orchard is a hybrid-leaning cultivar with Linalool and Humulene up top. Expect gassy on the nose rolling into floral on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -457,9 +427,7 @@
     "badge": "Staff Pick",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/hazel-orchard-flower-100016.jpg"
     ],
     "category": "flower"
   },
@@ -467,7 +435,7 @@
     "id": 100017,
     "slug": "cobalt-hollow-flower-100017",
     "name": "Cobalt Hollow Flower",
-    "brand": "Copper Kettle",
+    "brand": "Lookah",
     "strain": "Sativa",
     "strainName": "Cobalt Hollow",
     "strainDescription": "Cobalt Hollow is a sativa-leaning cultivar with Caryophyllene and Linalool up top. Expect sweet on the nose rolling into diesel on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -486,9 +454,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/cobalt-hollow-flower-100017.jpg"
     ],
     "category": "flower"
   },
@@ -496,7 +462,7 @@
     "id": 100018,
     "slug": "ember-tide-flower-100018",
     "name": "Ember Tide Flower",
-    "brand": "Wildstack",
+    "brand": "Human Grade",
     "strain": "Hybrid",
     "strainName": "Ember Tide",
     "strainDescription": "Ember Tide is a hybrid-leaning cultivar with Humulene and Pinene up top. Expect diesel on the nose rolling into pine on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -515,9 +481,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/ember-tide-flower-100018.jpg"
     ],
     "category": "flower"
   },
@@ -525,7 +489,7 @@
     "id": 100019,
     "slug": "midnight-tide-flower-100019",
     "name": "Midnight Tide Flower",
-    "brand": "Dry Creek Co.",
+    "brand": "Cartisan",
     "strain": "Hybrid",
     "strainName": "Midnight Tide",
     "strainDescription": "Midnight Tide is a hybrid-leaning cultivar with Limonene and Limonene up top. Expect diesel on the nose rolling into citrus on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -544,9 +508,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/midnight-tide-flower-100019.jpg"
     ],
     "category": "flower"
   },
@@ -554,7 +516,7 @@
     "id": 100020,
     "slug": "golden-bloom-flower-100020",
     "name": "Golden Bloom Flower",
-    "brand": "Cloudline",
+    "brand": "Dime Bags",
     "strain": "Hybrid",
     "strainName": "Golden Bloom",
     "strainDescription": "Golden Bloom is a hybrid-leaning cultivar with Limonene and Terpinolene up top. Expect gassy on the nose rolling into berry on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -573,9 +535,7 @@
     "badge": "New",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/golden-bloom-flower-100020.jpg"
     ],
     "category": "flower"
   },
@@ -583,7 +543,7 @@
     "id": 100021,
     "slug": "wandering-ridge-flower-100021",
     "name": "Wandering Ridge Flower",
-    "brand": "Northwind Farms",
+    "brand": "Runtz",
     "strain": "Indica",
     "strainName": "Wandering Ridge",
     "strainDescription": "Wandering Ridge is a indica-leaning cultivar with Limonene and Myrcene up top. Expect diesel on the nose rolling into floral on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -602,9 +562,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/wandering-ridge-flower-100021.jpg"
     ],
     "category": "flower"
   },
@@ -612,7 +570,7 @@
     "id": 100022,
     "slug": "coastal-pine-flower-100022",
     "name": "Coastal Pine Flower",
-    "brand": "DeLight",
+    "brand": "Cresco",
     "strain": "Indica",
     "strainName": "Coastal Pine",
     "strainDescription": "Coastal Pine is a indica-leaning cultivar with Terpinolene and Terpinolene up top. Expect diesel on the nose rolling into diesel on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -631,9 +589,7 @@
     "badge": null,
     "isExclusive": true,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/coastal-pine-flower-100022.jpg"
     ],
     "category": "flower"
   },
@@ -641,7 +597,7 @@
     "id": 100023,
     "slug": "coastal-tide-flower-100023",
     "name": "Coastal Tide Flower",
-    "brand": "Bloomcraft",
+    "brand": "Loud*r",
     "strain": "Indica",
     "strainName": "Coastal Tide",
     "strainDescription": "Coastal Tide is a indica-leaning cultivar with Terpinolene and Caryophyllene up top. Expect pepper on the nose rolling into gassy on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -660,9 +616,7 @@
     "badge": "Low Stock",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/coastal-tide-flower-100023.jpg"
     ],
     "category": "flower"
   },
@@ -670,7 +624,7 @@
     "id": 100024,
     "slug": "hazel-ridge-flower-100024",
     "name": "Hazel Ridge Flower",
-    "brand": "DeLight",
+    "brand": "Floracal",
     "strain": "Indica",
     "strainName": "Hazel Ridge",
     "strainDescription": "Hazel Ridge is a indica-leaning cultivar with Terpinolene and Humulene up top. Expect herbal on the nose rolling into diesel on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -689,9 +643,7 @@
     "badge": "25% Off",
     "isExclusive": true,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/hazel-ridge-flower-100024.jpg"
     ],
     "category": "flower"
   },
@@ -699,7 +651,7 @@
     "id": 100025,
     "slug": "dusk-orchard-flower-100025",
     "name": "Dusk Orchard Flower",
-    "brand": "Dry Creek Co.",
+    "brand": "Good News",
     "strain": "Sativa",
     "strainName": "Dusk Orchard",
     "strainDescription": "Dusk Orchard is a sativa-leaning cultivar with Pinene and Linalool up top. Expect citrus on the nose rolling into gassy on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -718,9 +670,7 @@
     "badge": "Low Stock",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/dusk-orchard-flower-100025.jpg"
     ],
     "category": "flower"
   },
@@ -728,7 +678,7 @@
     "id": 100026,
     "slug": "northern-trail-flower-100026",
     "name": "Northern Trail Flower",
-    "brand": "DeLight",
+    "brand": "Camino",
     "strain": "Indica",
     "strainName": "Northern Trail",
     "strainDescription": "Northern Trail is a indica-leaning cultivar with Myrcene and Caryophyllene up top. Expect herbal on the nose rolling into sweet on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -747,9 +697,7 @@
     "badge": "20% Off",
     "isExclusive": true,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/northern-trail-flower-100026.jpg"
     ],
     "category": "flower"
   },
@@ -757,7 +705,7 @@
     "id": 100027,
     "slug": "midnight-pine-vapes-100027",
     "name": "Midnight Pine Cart",
-    "brand": "Northwind Farms",
+    "brand": "Camino Sours",
     "strain": "Hybrid",
     "strainName": "Midnight Pine",
     "strainDescription": "Midnight Pine is a hybrid-leaning cultivar with Caryophyllene and Caryophyllene up top. Expect pine on the nose rolling into pepper on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -776,9 +724,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/midnight-pine-vapes-100027.jpg"
     ],
     "category": "vapes"
   },
@@ -786,7 +732,7 @@
     "id": 100028,
     "slug": "wandering-pine-vapes-100028",
     "name": "Wandering Pine Cart",
-    "brand": "Ninebark",
+    "brand": "Kiva",
     "strain": "Sativa",
     "strainName": "Wandering Pine",
     "strainDescription": "Wandering Pine is a sativa-leaning cultivar with Terpinolene and Terpinolene up top. Expect herbal on the nose rolling into earth on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -805,9 +751,7 @@
     "badge": "Low Stock",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/wandering-pine-vapes-100028.jpg"
     ],
     "category": "vapes"
   },
@@ -815,7 +759,7 @@
     "id": 100029,
     "slug": "wandering-drift-vapes-100029",
     "name": "Wandering Drift Cart",
-    "brand": "DeLight",
+    "brand": "Lost Farm",
     "strain": "Hybrid",
     "strainName": "Wandering Drift",
     "strainDescription": "Wandering Drift is a hybrid-leaning cultivar with Pinene and Caryophyllene up top. Expect earth on the nose rolling into sweet on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -834,9 +778,7 @@
     "badge": "25% Off",
     "isExclusive": true,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/wandering-drift-vapes-100029.jpg"
     ],
     "category": "vapes"
   },
@@ -844,7 +786,7 @@
     "id": 100030,
     "slug": "hazel-haze-vapes-100030",
     "name": "Hazel Haze Cart",
-    "brand": "Wildstack",
+    "brand": "Mindy's",
     "strain": "Indica",
     "strainName": "Hazel Haze",
     "strainDescription": "Hazel Haze is a indica-leaning cultivar with Humulene and Linalool up top. Expect citrus on the nose rolling into gassy on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -863,9 +805,7 @@
     "badge": "25% Off",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/hazel-haze-vapes-100030.jpg"
     ],
     "category": "vapes"
   },
@@ -873,7 +813,7 @@
     "id": 100031,
     "slug": "cobalt-bloom-vapes-100031",
     "name": "Cobalt Bloom Cart",
-    "brand": "Terra Verde",
+    "brand": "High Supply",
     "strain": "Hybrid",
     "strainName": "Cobalt Bloom",
     "strainDescription": "Cobalt Bloom is a hybrid-leaning cultivar with Myrcene and Humulene up top. Expect sweet on the nose rolling into herbal on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -892,9 +832,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/cobalt-bloom-vapes-100031.jpg"
     ],
     "category": "vapes"
   },
@@ -902,7 +840,7 @@
     "id": 100032,
     "slug": "cobalt-grove-vapes-100032",
     "name": "Cobalt Grove Cart",
-    "brand": "Ninebark",
+    "brand": "Avexia",
     "strain": "Sativa",
     "strainName": "Cobalt Grove",
     "strainDescription": "Cobalt Grove is a sativa-leaning cultivar with Limonene and Limonene up top. Expect pepper on the nose rolling into sweet on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -921,9 +859,7 @@
     "badge": "15% Off",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/cobalt-grove-vapes-100032.jpg"
     ],
     "category": "vapes"
   },
@@ -931,7 +867,7 @@
     "id": 100033,
     "slug": "coastal-drift-vapes-100033",
     "name": "Coastal Drift Cart",
-    "brand": "Wildstack",
+    "brand": "Remedi",
     "strain": "Indica",
     "strainName": "Coastal Drift",
     "strainDescription": "Coastal Drift is a indica-leaning cultivar with Myrcene and Caryophyllene up top. Expect gassy on the nose rolling into gassy on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -950,9 +886,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/coastal-drift-vapes-100033.jpg"
     ],
     "category": "vapes"
   },
@@ -960,7 +894,7 @@
     "id": 100034,
     "slug": "crimson-tide-vapes-100034",
     "name": "Crimson Tide Cart",
-    "brand": "Cloudline",
+    "brand": "1906",
     "strain": "Indica",
     "strainName": "Crimson Tide",
     "strainDescription": "Crimson Tide is a indica-leaning cultivar with Humulene and Caryophyllene up top. Expect gassy on the nose rolling into sweet on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -979,9 +913,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/crimson-tide-vapes-100034.jpg"
     ],
     "category": "vapes"
   },
@@ -989,7 +921,7 @@
     "id": 100035,
     "slug": "amber-cascade-vapes-100035",
     "name": "Amber Cascade Cart",
-    "brand": "Wildstack",
+    "brand": "Daze Off",
     "strain": "Sativa",
     "strainName": "Amber Cascade",
     "strainDescription": "Amber Cascade is a sativa-leaning cultivar with Limonene and Terpinolene up top. Expect herbal on the nose rolling into pepper on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -1008,9 +940,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/amber-cascade-vapes-100035.jpg"
     ],
     "category": "vapes"
   },
@@ -1018,7 +948,7 @@
     "id": 100036,
     "slug": "coastal-ridge-vapes-100036",
     "name": "Coastal Ridge Cart",
-    "brand": "Half Light",
+    "brand": "Day Savers",
     "strain": "Indica",
     "strainName": "Coastal Ridge",
     "strainDescription": "Coastal Ridge is a indica-leaning cultivar with Caryophyllene and Caryophyllene up top. Expect pepper on the nose rolling into berry on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -1037,9 +967,7 @@
     "badge": "20% Off",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/coastal-ridge-vapes-100036.jpg"
     ],
     "category": "vapes"
   },
@@ -1047,7 +975,7 @@
     "id": 100037,
     "slug": "silver-pine-vapes-100037",
     "name": "Silver Pine Cart",
-    "brand": "Terra Verde",
+    "brand": "Houseplant",
     "strain": "Hybrid",
     "strainName": "Silver Pine",
     "strainDescription": "Silver Pine is a hybrid-leaning cultivar with Caryophyllene and Linalool up top. Expect earth on the nose rolling into herbal on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -1066,9 +994,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/silver-pine-vapes-100037.jpg"
     ],
     "category": "vapes"
   },
@@ -1076,7 +1002,7 @@
     "id": 100038,
     "slug": "silver-harbor-vapes-100038",
     "name": "Silver Harbor Cart",
-    "brand": "Copper Kettle",
+    "brand": "Lookah",
     "strain": "Hybrid",
     "strainName": "Silver Harbor",
     "strainDescription": "Silver Harbor is a hybrid-leaning cultivar with Limonene and Terpinolene up top. Expect diesel on the nose rolling into citrus on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -1095,9 +1021,7 @@
     "badge": "15% Off",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/silver-harbor-vapes-100038.jpg"
     ],
     "category": "vapes"
   },
@@ -1105,7 +1029,7 @@
     "id": 100039,
     "slug": "dusk-meadow-vapes-100039",
     "name": "Dusk Meadow Cart",
-    "brand": "DeLight",
+    "brand": "Human Grade",
     "strain": "Sativa",
     "strainName": "Dusk Meadow",
     "strainDescription": "Dusk Meadow is a sativa-leaning cultivar with Myrcene and Linalool up top. Expect diesel on the nose rolling into herbal on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -1124,9 +1048,7 @@
     "badge": "Low Stock",
     "isExclusive": true,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/dusk-meadow-vapes-100039.jpg"
     ],
     "category": "vapes"
   },
@@ -1134,7 +1056,7 @@
     "id": 100040,
     "slug": "midnight-bloom-vapes-100040",
     "name": "Midnight Bloom Cart",
-    "brand": "Northwind Farms",
+    "brand": "Cartisan",
     "strain": "Sativa",
     "strainName": "Midnight Bloom",
     "strainDescription": "Midnight Bloom is a sativa-leaning cultivar with Caryophyllene and Limonene up top. Expect diesel on the nose rolling into herbal on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -1153,9 +1075,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/midnight-bloom-vapes-100040.jpg"
     ],
     "category": "vapes"
   },
@@ -1163,7 +1083,7 @@
     "id": 100041,
     "slug": "northern-ridge-vapes-100041",
     "name": "Northern Ridge Cart",
-    "brand": "Copper Kettle",
+    "brand": "Dime Bags",
     "strain": "Hybrid",
     "strainName": "Northern Ridge",
     "strainDescription": "Northern Ridge is a hybrid-leaning cultivar with Humulene and Pinene up top. Expect pepper on the nose rolling into sweet on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -1182,9 +1102,7 @@
     "badge": "15% Off",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/northern-ridge-vapes-100041.jpg"
     ],
     "category": "vapes"
   },
@@ -1192,7 +1110,7 @@
     "id": 100042,
     "slug": "frosted-lantern-vapes-100042",
     "name": "Frosted Lantern Cart",
-    "brand": "Half Light",
+    "brand": "Runtz",
     "strain": "Hybrid",
     "strainName": "Frosted Lantern",
     "strainDescription": "Frosted Lantern is a hybrid-leaning cultivar with Myrcene and Linalool up top. Expect herbal on the nose rolling into diesel on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -1211,9 +1129,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/frosted-lantern-vapes-100042.jpg"
     ],
     "category": "vapes"
   },
@@ -1221,7 +1137,7 @@
     "id": 100043,
     "slug": "cobalt-hollow-vapes-100043",
     "name": "Cobalt Hollow Cart",
-    "brand": "Lantern & Leaf",
+    "brand": "Cresco",
     "strain": "Hybrid",
     "strainName": "Cobalt Hollow",
     "strainDescription": "Cobalt Hollow is a hybrid-leaning cultivar with Myrcene and Terpinolene up top. Expect diesel on the nose rolling into pine on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -1240,9 +1156,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/cobalt-hollow-vapes-100043.jpg"
     ],
     "category": "vapes"
   },
@@ -1250,7 +1164,7 @@
     "id": 100044,
     "slug": "ember-haze-vapes-100044",
     "name": "Ember Haze Cart",
-    "brand": "Ninebark",
+    "brand": "Loud*r",
     "strain": "Hybrid",
     "strainName": "Ember Haze",
     "strainDescription": "Ember Haze is a hybrid-leaning cultivar with Humulene and Pinene up top. Expect herbal on the nose rolling into herbal on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -1269,9 +1183,7 @@
     "badge": "New",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/ember-haze-vapes-100044.jpg"
     ],
     "category": "vapes"
   },
@@ -1279,7 +1191,7 @@
     "id": 100045,
     "slug": "quiet-hollow-vapes-100045",
     "name": "Quiet Hollow Cart",
-    "brand": "Copper Kettle",
+    "brand": "Floracal",
     "strain": "Sativa",
     "strainName": "Quiet Hollow",
     "strainDescription": "Quiet Hollow is a sativa-leaning cultivar with Pinene and Pinene up top. Expect pine on the nose rolling into gassy on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -1298,9 +1210,7 @@
     "badge": "15% Off",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/quiet-hollow-vapes-100045.jpg"
     ],
     "category": "vapes"
   },
@@ -1308,7 +1218,7 @@
     "id": 100046,
     "slug": "sunlit-orchard-vapes-100046",
     "name": "Sunlit Orchard Cart",
-    "brand": "Moonfield",
+    "brand": "Good News",
     "strain": "Hybrid",
     "strainName": "Sunlit Orchard",
     "strainDescription": "Sunlit Orchard is a hybrid-leaning cultivar with Pinene and Myrcene up top. Expect citrus on the nose rolling into pepper on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -1327,9 +1237,7 @@
     "badge": "Low Stock",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/sunlit-orchard-vapes-100046.jpg"
     ],
     "category": "vapes"
   },
@@ -1337,7 +1245,7 @@
     "id": 100047,
     "slug": "dusk-current-vapes-100047",
     "name": "Dusk Current Cart",
-    "brand": "Dry Creek Co.",
+    "brand": "Camino",
     "strain": "Indica",
     "strainName": "Dusk Current",
     "strainDescription": "Dusk Current is a indica-leaning cultivar with Linalool and Myrcene up top. Expect gassy on the nose rolling into sweet on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -1356,9 +1264,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/dusk-current-vapes-100047.jpg"
     ],
     "category": "vapes"
   },
@@ -1366,7 +1272,7 @@
     "id": 100048,
     "slug": "velvet-ridge-vapes-100048",
     "name": "Velvet Ridge Cart",
-    "brand": "Half Light",
+    "brand": "Camino Sours",
     "strain": "Sativa",
     "strainName": "Velvet Ridge",
     "strainDescription": "Velvet Ridge is a sativa-leaning cultivar with Limonene and Myrcene up top. Expect pepper on the nose rolling into pine on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -1385,9 +1291,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/velvet-ridge-vapes-100048.jpg"
     ],
     "category": "vapes"
   },
@@ -1395,7 +1299,7 @@
     "id": 100049,
     "slug": "crimson-field-vapes-100049",
     "name": "Crimson Field Cart",
-    "brand": "DeLight",
+    "brand": "Kiva",
     "strain": "Hybrid",
     "strainName": "Crimson Field",
     "strainDescription": "Crimson Field is a hybrid-leaning cultivar with Humulene and Myrcene up top. Expect citrus on the nose rolling into floral on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -1414,9 +1318,7 @@
     "badge": null,
     "isExclusive": true,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/crimson-field-vapes-100049.jpg"
     ],
     "category": "vapes"
   },
@@ -1424,7 +1326,7 @@
     "id": 100050,
     "slug": "ember-harbor-vapes-100050",
     "name": "Ember Harbor Cart",
-    "brand": "DeLight",
+    "brand": "Lost Farm",
     "strain": "Sativa",
     "strainName": "Ember Harbor",
     "strainDescription": "Ember Harbor is a sativa-leaning cultivar with Pinene and Pinene up top. Expect citrus on the nose rolling into diesel on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -1443,9 +1345,7 @@
     "badge": null,
     "isExclusive": true,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/ember-harbor-vapes-100050.jpg"
     ],
     "category": "vapes"
   },
@@ -1453,7 +1353,7 @@
     "id": 100051,
     "slug": "crimson-trail-edibles-100051",
     "name": "Crimson Trail Gummies",
-    "brand": "Half Light",
+    "brand": "Mindy's",
     "strain": "Hybrid",
     "strainName": "Crimson Trail",
     "strainDescription": "Crimson Trail is a hybrid-leaning cultivar with Limonene and Linalool up top. Expect herbal on the nose rolling into citrus on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -1472,9 +1372,7 @@
     "badge": "15% Off",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/crimson-trail-edibles-100051.jpg"
     ],
     "category": "edibles"
   },
@@ -1482,7 +1380,7 @@
     "id": 100052,
     "slug": "coastal-lantern-edibles-100052",
     "name": "Coastal Lantern Gummies",
-    "brand": "DeLight",
+    "brand": "High Supply",
     "strain": "Indica",
     "strainName": "Coastal Lantern",
     "strainDescription": "Coastal Lantern is a indica-leaning cultivar with Pinene and Terpinolene up top. Expect floral on the nose rolling into floral on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -1501,9 +1399,7 @@
     "badge": "Buy 1 Get 1",
     "isExclusive": true,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/coastal-lantern-edibles-100052.jpg"
     ],
     "category": "edibles"
   },
@@ -1511,7 +1407,7 @@
     "id": 100053,
     "slug": "crimson-pine-edibles-100053",
     "name": "Crimson Pine Gummies",
-    "brand": "Half Light",
+    "brand": "Avexia",
     "strain": "Sativa",
     "strainName": "Crimson Pine",
     "strainDescription": "Crimson Pine is a sativa-leaning cultivar with Caryophyllene and Linalool up top. Expect pepper on the nose rolling into diesel on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -1530,9 +1426,7 @@
     "badge": "New",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/crimson-pine-edibles-100053.jpg"
     ],
     "category": "edibles"
   },
@@ -1540,7 +1434,7 @@
     "id": 100054,
     "slug": "midnight-drift-edibles-100054",
     "name": "Midnight Drift Gummies",
-    "brand": "Half Light",
+    "brand": "Remedi",
     "strain": "Hybrid",
     "strainName": "Midnight Drift",
     "strainDescription": "Midnight Drift is a hybrid-leaning cultivar with Myrcene and Pinene up top. Expect earth on the nose rolling into citrus on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -1559,9 +1453,7 @@
     "badge": "15% Off",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/midnight-drift-edibles-100054.jpg"
     ],
     "category": "edibles"
   },
@@ -1569,7 +1461,7 @@
     "id": 100055,
     "slug": "cobalt-cascade-edibles-100055",
     "name": "Cobalt Cascade Gummies",
-    "brand": "Copper Kettle",
+    "brand": "1906",
     "strain": "Sativa",
     "strainName": "Cobalt Cascade",
     "strainDescription": "Cobalt Cascade is a sativa-leaning cultivar with Caryophyllene and Limonene up top. Expect herbal on the nose rolling into herbal on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -1588,9 +1480,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/cobalt-cascade-edibles-100055.jpg"
     ],
     "category": "edibles"
   },
@@ -1598,7 +1488,7 @@
     "id": 100056,
     "slug": "wandering-orchard-edibles-100056",
     "name": "Wandering Orchard Gummies",
-    "brand": "DeLight",
+    "brand": "Daze Off",
     "strain": "Hybrid",
     "strainName": "Wandering Orchard",
     "strainDescription": "Wandering Orchard is a hybrid-leaning cultivar with Linalool and Linalool up top. Expect pine on the nose rolling into sweet on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -1617,9 +1507,7 @@
     "badge": "15% Off",
     "isExclusive": true,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/wandering-orchard-edibles-100056.jpg"
     ],
     "category": "edibles"
   },
@@ -1627,7 +1515,7 @@
     "id": 100057,
     "slug": "coastal-cascade-edibles-100057",
     "name": "Coastal Cascade Gummies",
-    "brand": "Half Light",
+    "brand": "Day Savers",
     "strain": "Sativa",
     "strainName": "Coastal Cascade",
     "strainDescription": "Coastal Cascade is a sativa-leaning cultivar with Limonene and Myrcene up top. Expect diesel on the nose rolling into diesel on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -1646,9 +1534,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/coastal-cascade-edibles-100057.jpg"
     ],
     "category": "edibles"
   },
@@ -1656,7 +1542,7 @@
     "id": 100058,
     "slug": "hazel-cascade-edibles-100058",
     "name": "Hazel Cascade Gummies",
-    "brand": "Terra Verde",
+    "brand": "Houseplant",
     "strain": "Hybrid",
     "strainName": "Hazel Cascade",
     "strainDescription": "Hazel Cascade is a hybrid-leaning cultivar with Caryophyllene and Linalool up top. Expect berry on the nose rolling into citrus on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -1675,9 +1561,7 @@
     "badge": "15% Off",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/hazel-cascade-edibles-100058.jpg"
     ],
     "category": "edibles"
   },
@@ -1685,7 +1569,7 @@
     "id": 100059,
     "slug": "golden-pine-edibles-100059",
     "name": "Golden Pine Gummies",
-    "brand": "Cloudline",
+    "brand": "Lookah",
     "strain": "Sativa",
     "strainName": "Golden Pine",
     "strainDescription": "Golden Pine is a sativa-leaning cultivar with Terpinolene and Humulene up top. Expect earth on the nose rolling into herbal on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -1704,9 +1588,7 @@
     "badge": "Staff Pick",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/golden-pine-edibles-100059.jpg"
     ],
     "category": "edibles"
   },
@@ -1714,7 +1596,7 @@
     "id": 100060,
     "slug": "sunlit-orchard-edibles-100060",
     "name": "Sunlit Orchard Gummies",
-    "brand": "Lantern & Leaf",
+    "brand": "Human Grade",
     "strain": "Indica",
     "strainName": "Sunlit Orchard",
     "strainDescription": "Sunlit Orchard is a indica-leaning cultivar with Caryophyllene and Humulene up top. Expect sweet on the nose rolling into citrus on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -1733,9 +1615,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/sunlit-orchard-edibles-100060.jpg"
     ],
     "category": "edibles"
   },
@@ -1743,7 +1623,7 @@
     "id": 100061,
     "slug": "cobalt-meadow-edibles-100061",
     "name": "Cobalt Meadow Gummies",
-    "brand": "Moonfield",
+    "brand": "Cartisan",
     "strain": "Sativa",
     "strainName": "Cobalt Meadow",
     "strainDescription": "Cobalt Meadow is a sativa-leaning cultivar with Humulene and Terpinolene up top. Expect gassy on the nose rolling into pepper on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -1762,9 +1642,7 @@
     "badge": "Buy 1 Get 1",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/cobalt-meadow-edibles-100061.jpg"
     ],
     "category": "edibles"
   },
@@ -1772,7 +1650,7 @@
     "id": 100062,
     "slug": "frosted-trail-edibles-100062",
     "name": "Frosted Trail Gummies",
-    "brand": "Northwind Farms",
+    "brand": "Dime Bags",
     "strain": "Indica",
     "strainName": "Frosted Trail",
     "strainDescription": "Frosted Trail is a indica-leaning cultivar with Pinene and Myrcene up top. Expect sweet on the nose rolling into earth on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -1791,9 +1669,7 @@
     "badge": "Buy 1 Get 1",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/frosted-trail-edibles-100062.jpg"
     ],
     "category": "edibles"
   },
@@ -1801,7 +1677,7 @@
     "id": 100063,
     "slug": "crimson-orchard-edibles-100063",
     "name": "Crimson Orchard Gummies",
-    "brand": "Cloudline",
+    "brand": "Runtz",
     "strain": "Hybrid",
     "strainName": "Crimson Orchard",
     "strainDescription": "Crimson Orchard is a hybrid-leaning cultivar with Humulene and Myrcene up top. Expect earth on the nose rolling into sweet on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -1820,9 +1696,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/crimson-orchard-edibles-100063.jpg"
     ],
     "category": "edibles"
   },
@@ -1830,7 +1704,7 @@
     "id": 100064,
     "slug": "velvet-pine-edibles-100064",
     "name": "Velvet Pine Gummies",
-    "brand": "Cloudline",
+    "brand": "Cresco",
     "strain": "Hybrid",
     "strainName": "Velvet Pine",
     "strainDescription": "Velvet Pine is a hybrid-leaning cultivar with Limonene and Pinene up top. Expect herbal on the nose rolling into citrus on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -1849,9 +1723,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/velvet-pine-edibles-100064.jpg"
     ],
     "category": "edibles"
   },
@@ -1859,7 +1731,7 @@
     "id": 100065,
     "slug": "northern-hollow-edibles-100065",
     "name": "Northern Hollow Gummies",
-    "brand": "Terra Verde",
+    "brand": "Loud*r",
     "strain": "Sativa",
     "strainName": "Northern Hollow",
     "strainDescription": "Northern Hollow is a sativa-leaning cultivar with Limonene and Myrcene up top. Expect pine on the nose rolling into pepper on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -1878,9 +1750,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/northern-hollow-edibles-100065.jpg"
     ],
     "category": "edibles"
   },
@@ -1888,7 +1758,7 @@
     "id": 100066,
     "slug": "velvet-drift-edibles-100066",
     "name": "Velvet Drift Gummies",
-    "brand": "DeLight",
+    "brand": "Floracal",
     "strain": "Indica",
     "strainName": "Velvet Drift",
     "strainDescription": "Velvet Drift is a indica-leaning cultivar with Humulene and Myrcene up top. Expect sweet on the nose rolling into herbal on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -1907,9 +1777,7 @@
     "badge": "25% Off",
     "isExclusive": true,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/velvet-drift-edibles-100066.jpg"
     ],
     "category": "edibles"
   },
@@ -1917,7 +1785,7 @@
     "id": 100067,
     "slug": "wandering-meadow-edibles-100067",
     "name": "Wandering Meadow Gummies",
-    "brand": "Moonfield",
+    "brand": "Good News",
     "strain": "Indica",
     "strainName": "Wandering Meadow",
     "strainDescription": "Wandering Meadow is a indica-leaning cultivar with Humulene and Humulene up top. Expect gassy on the nose rolling into pine on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -1936,9 +1804,7 @@
     "badge": "Staff Pick",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/wandering-meadow-edibles-100067.jpg"
     ],
     "category": "edibles"
   },
@@ -1946,7 +1812,7 @@
     "id": 100068,
     "slug": "silver-current-edibles-100068",
     "name": "Silver Current Gummies",
-    "brand": "Wildstack",
+    "brand": "Camino",
     "strain": "Sativa",
     "strainName": "Silver Current",
     "strainDescription": "Silver Current is a sativa-leaning cultivar with Humulene and Humulene up top. Expect pine on the nose rolling into earth on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -1965,9 +1831,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/silver-current-edibles-100068.jpg"
     ],
     "category": "edibles"
   },
@@ -1975,7 +1839,7 @@
     "id": 100069,
     "slug": "ember-meadow-edibles-100069",
     "name": "Ember Meadow Gummies",
-    "brand": "Northwind Farms",
+    "brand": "Camino Sours",
     "strain": "Sativa",
     "strainName": "Ember Meadow",
     "strainDescription": "Ember Meadow is a sativa-leaning cultivar with Myrcene and Caryophyllene up top. Expect berry on the nose rolling into sweet on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -1994,9 +1858,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/ember-meadow-edibles-100069.jpg"
     ],
     "category": "edibles"
   },
@@ -2004,7 +1866,7 @@
     "id": 100070,
     "slug": "sunlit-bloom-edibles-100070",
     "name": "Sunlit Bloom Gummies",
-    "brand": "DeLight",
+    "brand": "Kiva",
     "strain": "Sativa",
     "strainName": "Sunlit Bloom",
     "strainDescription": "Sunlit Bloom is a sativa-leaning cultivar with Caryophyllene and Caryophyllene up top. Expect sweet on the nose rolling into pepper on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -2023,9 +1885,7 @@
     "badge": null,
     "isExclusive": true,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/sunlit-bloom-edibles-100070.jpg"
     ],
     "category": "edibles"
   },
@@ -2033,7 +1893,7 @@
     "id": 100071,
     "slug": "quiet-hollow-edibles-100071",
     "name": "Quiet Hollow Gummies",
-    "brand": "Moonfield",
+    "brand": "Lost Farm",
     "strain": "Indica",
     "strainName": "Quiet Hollow",
     "strainDescription": "Quiet Hollow is a indica-leaning cultivar with Limonene and Linalool up top. Expect pine on the nose rolling into herbal on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -2052,9 +1912,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/quiet-hollow-edibles-100071.jpg"
     ],
     "category": "edibles"
   },
@@ -2062,7 +1920,7 @@
     "id": 100072,
     "slug": "quiet-hollow-edibles-100072",
     "name": "Quiet Hollow Gummies",
-    "brand": "Lantern & Leaf",
+    "brand": "Mindy's",
     "strain": "Indica",
     "strainName": "Quiet Hollow",
     "strainDescription": "Quiet Hollow is a indica-leaning cultivar with Limonene and Humulene up top. Expect floral on the nose rolling into herbal on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -2081,9 +1939,7 @@
     "badge": "New",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/quiet-hollow-edibles-100072.jpg"
     ],
     "category": "edibles"
   },
@@ -2091,7 +1947,7 @@
     "id": 100073,
     "slug": "northern-current-edibles-100073",
     "name": "Northern Current Gummies",
-    "brand": "DeLight",
+    "brand": "High Supply",
     "strain": "Indica",
     "strainName": "Northern Current",
     "strainDescription": "Northern Current is a indica-leaning cultivar with Caryophyllene and Caryophyllene up top. Expect gassy on the nose rolling into sweet on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -2110,9 +1966,7 @@
     "badge": null,
     "isExclusive": true,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/northern-current-edibles-100073.jpg"
     ],
     "category": "edibles"
   },
@@ -2120,7 +1974,7 @@
     "id": 100074,
     "slug": "northern-trail-edibles-100074",
     "name": "Northern Trail Gummies",
-    "brand": "Ninebark",
+    "brand": "Avexia",
     "strain": "Hybrid",
     "strainName": "Northern Trail",
     "strainDescription": "Northern Trail is a hybrid-leaning cultivar with Limonene and Myrcene up top. Expect pine on the nose rolling into sweet on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -2139,9 +1993,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/northern-trail-edibles-100074.jpg"
     ],
     "category": "edibles"
   },
@@ -2149,7 +2001,7 @@
     "id": 100075,
     "slug": "coastal-lantern-prerolls-100075",
     "name": "Coastal Lantern Pre-Roll",
-    "brand": "Half Light",
+    "brand": "Remedi",
     "strain": "Sativa",
     "strainName": "Coastal Lantern",
     "strainDescription": "Coastal Lantern is a sativa-leaning cultivar with Linalool and Myrcene up top. Expect diesel on the nose rolling into pine on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -2168,9 +2020,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/coastal-lantern-prerolls-100075.jpg"
     ],
     "category": "prerolls"
   },
@@ -2178,7 +2028,7 @@
     "id": 100076,
     "slug": "cobalt-hollow-prerolls-100076",
     "name": "Cobalt Hollow Pre-Roll",
-    "brand": "Terra Verde",
+    "brand": "1906",
     "strain": "Hybrid",
     "strainName": "Cobalt Hollow",
     "strainDescription": "Cobalt Hollow is a hybrid-leaning cultivar with Linalool and Limonene up top. Expect berry on the nose rolling into floral on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -2197,9 +2047,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/cobalt-hollow-prerolls-100076.jpg"
     ],
     "category": "prerolls"
   },
@@ -2207,7 +2055,7 @@
     "id": 100077,
     "slug": "amber-haze-prerolls-100077",
     "name": "Amber Haze Pre-Roll",
-    "brand": "Lantern & Leaf",
+    "brand": "Daze Off",
     "strain": "Sativa",
     "strainName": "Amber Haze",
     "strainDescription": "Amber Haze is a sativa-leaning cultivar with Myrcene and Myrcene up top. Expect berry on the nose rolling into pepper on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -2226,9 +2074,7 @@
     "badge": "Staff Pick",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/amber-haze-prerolls-100077.jpg"
     ],
     "category": "prerolls"
   },
@@ -2236,7 +2082,7 @@
     "id": 100078,
     "slug": "ember-haze-prerolls-100078",
     "name": "Ember Haze Pre-Roll",
-    "brand": "Wildstack",
+    "brand": "Day Savers",
     "strain": "Sativa",
     "strainName": "Ember Haze",
     "strainDescription": "Ember Haze is a sativa-leaning cultivar with Humulene and Linalool up top. Expect floral on the nose rolling into herbal on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -2255,9 +2101,7 @@
     "badge": "Buy 1 Get 1",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/ember-haze-prerolls-100078.jpg"
     ],
     "category": "prerolls"
   },
@@ -2265,7 +2109,7 @@
     "id": 100079,
     "slug": "velvet-haze-prerolls-100079",
     "name": "Velvet Haze Pre-Roll",
-    "brand": "DeLight",
+    "brand": "Houseplant",
     "strain": "Sativa",
     "strainName": "Velvet Haze",
     "strainDescription": "Velvet Haze is a sativa-leaning cultivar with Caryophyllene and Humulene up top. Expect gassy on the nose rolling into pepper on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -2284,9 +2128,7 @@
     "badge": "Low Stock",
     "isExclusive": true,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/velvet-haze-prerolls-100079.jpg"
     ],
     "category": "prerolls"
   },
@@ -2294,7 +2136,7 @@
     "id": 100080,
     "slug": "frosted-lantern-prerolls-100080",
     "name": "Frosted Lantern Pre-Roll",
-    "brand": "Lantern & Leaf",
+    "brand": "Lookah",
     "strain": "Sativa",
     "strainName": "Frosted Lantern",
     "strainDescription": "Frosted Lantern is a sativa-leaning cultivar with Myrcene and Terpinolene up top. Expect pine on the nose rolling into herbal on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -2313,9 +2155,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/frosted-lantern-prerolls-100080.jpg"
     ],
     "category": "prerolls"
   },
@@ -2323,7 +2163,7 @@
     "id": 100081,
     "slug": "amber-field-prerolls-100081",
     "name": "Amber Field Pre-Roll",
-    "brand": "Wildstack",
+    "brand": "Human Grade",
     "strain": "Sativa",
     "strainName": "Amber Field",
     "strainDescription": "Amber Field is a sativa-leaning cultivar with Pinene and Pinene up top. Expect sweet on the nose rolling into pine on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -2342,9 +2182,7 @@
     "badge": "15% Off",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/amber-field-prerolls-100081.jpg"
     ],
     "category": "prerolls"
   },
@@ -2352,7 +2190,7 @@
     "id": 100082,
     "slug": "midnight-pine-prerolls-100082",
     "name": "Midnight Pine Pre-Roll",
-    "brand": "DeLight",
+    "brand": "Cartisan",
     "strain": "Hybrid",
     "strainName": "Midnight Pine",
     "strainDescription": "Midnight Pine is a hybrid-leaning cultivar with Limonene and Pinene up top. Expect gassy on the nose rolling into diesel on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -2371,9 +2209,7 @@
     "badge": null,
     "isExclusive": true,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/midnight-pine-prerolls-100082.jpg"
     ],
     "category": "prerolls"
   },
@@ -2381,7 +2217,7 @@
     "id": 100083,
     "slug": "quiet-bloom-prerolls-100083",
     "name": "Quiet Bloom Pre-Roll",
-    "brand": "Lantern & Leaf",
+    "brand": "Dime Bags",
     "strain": "Indica",
     "strainName": "Quiet Bloom",
     "strainDescription": "Quiet Bloom is a indica-leaning cultivar with Myrcene and Myrcene up top. Expect gassy on the nose rolling into diesel on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -2400,9 +2236,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/quiet-bloom-prerolls-100083.jpg"
     ],
     "category": "prerolls"
   },
@@ -2410,7 +2244,7 @@
     "id": 100084,
     "slug": "crimson-haze-prerolls-100084",
     "name": "Crimson Haze Pre-Roll",
-    "brand": "Moonfield",
+    "brand": "Runtz",
     "strain": "Hybrid",
     "strainName": "Crimson Haze",
     "strainDescription": "Crimson Haze is a hybrid-leaning cultivar with Linalool and Pinene up top. Expect citrus on the nose rolling into gassy on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -2429,9 +2263,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/crimson-haze-prerolls-100084.jpg"
     ],
     "category": "prerolls"
   },
@@ -2439,7 +2271,7 @@
     "id": 100085,
     "slug": "amber-field-prerolls-100085",
     "name": "Amber Field Pre-Roll",
-    "brand": "Half Light",
+    "brand": "Cresco",
     "strain": "Indica",
     "strainName": "Amber Field",
     "strainDescription": "Amber Field is a indica-leaning cultivar with Terpinolene and Limonene up top. Expect diesel on the nose rolling into diesel on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -2458,9 +2290,7 @@
     "badge": "Low Stock",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/amber-field-prerolls-100085.jpg"
     ],
     "category": "prerolls"
   },
@@ -2468,7 +2298,7 @@
     "id": 100086,
     "slug": "quiet-pine-prerolls-100086",
     "name": "Quiet Pine Pre-Roll",
-    "brand": "Moonfield",
+    "brand": "Loud*r",
     "strain": "Hybrid",
     "strainName": "Quiet Pine",
     "strainDescription": "Quiet Pine is a hybrid-leaning cultivar with Limonene and Humulene up top. Expect pine on the nose rolling into floral on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -2487,9 +2317,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/quiet-pine-prerolls-100086.jpg"
     ],
     "category": "prerolls"
   },
@@ -2497,7 +2325,7 @@
     "id": 100087,
     "slug": "wandering-haze-prerolls-100087",
     "name": "Wandering Haze Pre-Roll",
-    "brand": "DeLight",
+    "brand": "Floracal",
     "strain": "Hybrid",
     "strainName": "Wandering Haze",
     "strainDescription": "Wandering Haze is a hybrid-leaning cultivar with Linalool and Limonene up top. Expect citrus on the nose rolling into berry on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -2516,9 +2344,7 @@
     "badge": "Staff Pick",
     "isExclusive": true,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/wandering-haze-prerolls-100087.jpg"
     ],
     "category": "prerolls"
   },
@@ -2526,7 +2352,7 @@
     "id": 100088,
     "slug": "northern-drift-prerolls-100088",
     "name": "Northern Drift Pre-Roll",
-    "brand": "Cloudline",
+    "brand": "Good News",
     "strain": "Hybrid",
     "strainName": "Northern Drift",
     "strainDescription": "Northern Drift is a hybrid-leaning cultivar with Myrcene and Myrcene up top. Expect gassy on the nose rolling into diesel on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -2545,9 +2371,7 @@
     "badge": "Buy 1 Get 1",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/northern-drift-prerolls-100088.jpg"
     ],
     "category": "prerolls"
   },
@@ -2555,7 +2379,7 @@
     "id": 100089,
     "slug": "coastal-current-prerolls-100089",
     "name": "Coastal Current Pre-Roll",
-    "brand": "DeLight",
+    "brand": "Camino",
     "strain": "Indica",
     "strainName": "Coastal Current",
     "strainDescription": "Coastal Current is a indica-leaning cultivar with Linalool and Pinene up top. Expect floral on the nose rolling into citrus on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -2574,9 +2398,7 @@
     "badge": null,
     "isExclusive": true,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/coastal-current-prerolls-100089.jpg"
     ],
     "category": "prerolls"
   },
@@ -2584,7 +2406,7 @@
     "id": 100090,
     "slug": "northern-harbor-prerolls-100090",
     "name": "Northern Harbor Pre-Roll",
-    "brand": "Northwind Farms",
+    "brand": "Camino Sours",
     "strain": "Indica",
     "strainName": "Northern Harbor",
     "strainDescription": "Northern Harbor is a indica-leaning cultivar with Pinene and Myrcene up top. Expect gassy on the nose rolling into diesel on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -2603,9 +2425,7 @@
     "badge": "New",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/northern-harbor-prerolls-100090.jpg"
     ],
     "category": "prerolls"
   },
@@ -2613,7 +2433,7 @@
     "id": 100091,
     "slug": "frosted-trail-prerolls-100091",
     "name": "Frosted Trail Pre-Roll",
-    "brand": "DeLight",
+    "brand": "Kiva",
     "strain": "Sativa",
     "strainName": "Frosted Trail",
     "strainDescription": "Frosted Trail is a sativa-leaning cultivar with Linalool and Limonene up top. Expect gassy on the nose rolling into sweet on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -2632,9 +2452,7 @@
     "badge": "15% Off",
     "isExclusive": true,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/frosted-trail-prerolls-100091.jpg"
     ],
     "category": "prerolls"
   },
@@ -2642,7 +2460,7 @@
     "id": 100092,
     "slug": "ember-drift-prerolls-100092",
     "name": "Ember Drift Pre-Roll",
-    "brand": "DeLight",
+    "brand": "Lost Farm",
     "strain": "Indica",
     "strainName": "Ember Drift",
     "strainDescription": "Ember Drift is a indica-leaning cultivar with Pinene and Myrcene up top. Expect diesel on the nose rolling into pine on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -2661,9 +2479,7 @@
     "badge": "Staff Pick",
     "isExclusive": true,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/ember-drift-prerolls-100092.jpg"
     ],
     "category": "prerolls"
   },
@@ -2671,7 +2487,7 @@
     "id": 100093,
     "slug": "silver-field-prerolls-100093",
     "name": "Silver Field Pre-Roll",
-    "brand": "DeLight",
+    "brand": "Mindy's",
     "strain": "Hybrid",
     "strainName": "Silver Field",
     "strainDescription": "Silver Field is a hybrid-leaning cultivar with Limonene and Pinene up top. Expect berry on the nose rolling into pine on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -2690,9 +2506,7 @@
     "badge": null,
     "isExclusive": true,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/silver-field-prerolls-100093.jpg"
     ],
     "category": "prerolls"
   },
@@ -2700,7 +2514,7 @@
     "id": 100094,
     "slug": "quiet-orchard-prerolls-100094",
     "name": "Quiet Orchard Pre-Roll",
-    "brand": "Wildstack",
+    "brand": "High Supply",
     "strain": "Indica",
     "strainName": "Quiet Orchard",
     "strainDescription": "Quiet Orchard is a indica-leaning cultivar with Humulene and Caryophyllene up top. Expect gassy on the nose rolling into floral on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -2719,9 +2533,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/quiet-orchard-prerolls-100094.jpg"
     ],
     "category": "prerolls"
   },
@@ -2729,7 +2541,7 @@
     "id": 100095,
     "slug": "velvet-lantern-prerolls-100095",
     "name": "Velvet Lantern Pre-Roll",
-    "brand": "DeLight",
+    "brand": "Avexia",
     "strain": "Sativa",
     "strainName": "Velvet Lantern",
     "strainDescription": "Velvet Lantern is a sativa-leaning cultivar with Pinene and Humulene up top. Expect earth on the nose rolling into gassy on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -2748,9 +2560,7 @@
     "badge": "20% Off",
     "isExclusive": true,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/velvet-lantern-prerolls-100095.jpg"
     ],
     "category": "prerolls"
   },
@@ -2758,7 +2568,7 @@
     "id": 100096,
     "slug": "coastal-trail-prerolls-100096",
     "name": "Coastal Trail Pre-Roll",
-    "brand": "Half Light",
+    "brand": "Remedi",
     "strain": "Hybrid",
     "strainName": "Coastal Trail",
     "strainDescription": "Coastal Trail is a hybrid-leaning cultivar with Caryophyllene and Caryophyllene up top. Expect herbal on the nose rolling into pine on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -2777,9 +2587,7 @@
     "badge": "Low Stock",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/coastal-trail-prerolls-100096.jpg"
     ],
     "category": "prerolls"
   },
@@ -2787,7 +2595,7 @@
     "id": 100097,
     "slug": "crimson-drift-concentrates-100097",
     "name": "Crimson Drift Concentrate",
-    "brand": "Cloudline",
+    "brand": "1906",
     "strain": "Sativa",
     "strainName": "Crimson Drift",
     "strainDescription": "Crimson Drift is a sativa-leaning cultivar with Limonene and Limonene up top. Expect floral on the nose rolling into pepper on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -2806,9 +2614,7 @@
     "badge": "New",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/crimson-drift-concentrates-100097.jpg"
     ],
     "category": "concentrates"
   },
@@ -2816,7 +2622,7 @@
     "id": 100098,
     "slug": "coastal-trail-concentrates-100098",
     "name": "Coastal Trail Concentrate",
-    "brand": "Copper Kettle",
+    "brand": "Daze Off",
     "strain": "Hybrid",
     "strainName": "Coastal Trail",
     "strainDescription": "Coastal Trail is a hybrid-leaning cultivar with Terpinolene and Pinene up top. Expect pepper on the nose rolling into earth on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -2835,9 +2641,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/coastal-trail-concentrates-100098.jpg"
     ],
     "category": "concentrates"
   },
@@ -2845,7 +2649,7 @@
     "id": 100099,
     "slug": "northern-tide-concentrates-100099",
     "name": "Northern Tide Concentrate",
-    "brand": "Terra Verde",
+    "brand": "Day Savers",
     "strain": "Hybrid",
     "strainName": "Northern Tide",
     "strainDescription": "Northern Tide is a hybrid-leaning cultivar with Limonene and Terpinolene up top. Expect floral on the nose rolling into earth on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -2864,9 +2668,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/northern-tide-concentrates-100099.jpg"
     ],
     "category": "concentrates"
   },
@@ -2874,7 +2676,7 @@
     "id": 100100,
     "slug": "amber-ridge-concentrates-100100",
     "name": "Amber Ridge Concentrate",
-    "brand": "Terra Verde",
+    "brand": "Houseplant",
     "strain": "Hybrid",
     "strainName": "Amber Ridge",
     "strainDescription": "Amber Ridge is a hybrid-leaning cultivar with Myrcene and Limonene up top. Expect earth on the nose rolling into earth on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -2893,9 +2695,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/amber-ridge-concentrates-100100.jpg"
     ],
     "category": "concentrates"
   },
@@ -2903,7 +2703,7 @@
     "id": 100101,
     "slug": "frosted-haze-concentrates-100101",
     "name": "Frosted Haze Concentrate",
-    "brand": "DeLight",
+    "brand": "Lookah",
     "strain": "Hybrid",
     "strainName": "Frosted Haze",
     "strainDescription": "Frosted Haze is a hybrid-leaning cultivar with Limonene and Myrcene up top. Expect sweet on the nose rolling into floral on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -2922,9 +2722,7 @@
     "badge": null,
     "isExclusive": true,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/frosted-haze-concentrates-100101.jpg"
     ],
     "category": "concentrates"
   },
@@ -2932,7 +2730,7 @@
     "id": 100102,
     "slug": "dusk-ridge-concentrates-100102",
     "name": "Dusk Ridge Concentrate",
-    "brand": "Dry Creek Co.",
+    "brand": "Human Grade",
     "strain": "Hybrid",
     "strainName": "Dusk Ridge",
     "strainDescription": "Dusk Ridge is a hybrid-leaning cultivar with Pinene and Caryophyllene up top. Expect citrus on the nose rolling into diesel on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -2951,9 +2749,7 @@
     "badge": "Low Stock",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/dusk-ridge-concentrates-100102.jpg"
     ],
     "category": "concentrates"
   },
@@ -2961,7 +2757,7 @@
     "id": 100103,
     "slug": "wandering-pine-concentrates-100103",
     "name": "Wandering Pine Concentrate",
-    "brand": "DeLight",
+    "brand": "Cartisan",
     "strain": "Hybrid",
     "strainName": "Wandering Pine",
     "strainDescription": "Wandering Pine is a hybrid-leaning cultivar with Linalool and Linalool up top. Expect pepper on the nose rolling into sweet on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -2980,9 +2776,7 @@
     "badge": null,
     "isExclusive": true,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/wandering-pine-concentrates-100103.jpg"
     ],
     "category": "concentrates"
   },
@@ -2990,7 +2784,7 @@
     "id": 100104,
     "slug": "amber-tide-concentrates-100104",
     "name": "Amber Tide Concentrate",
-    "brand": "Northwind Farms",
+    "brand": "Dime Bags",
     "strain": "Sativa",
     "strainName": "Amber Tide",
     "strainDescription": "Amber Tide is a sativa-leaning cultivar with Pinene and Humulene up top. Expect sweet on the nose rolling into herbal on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -3009,9 +2803,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/amber-tide-concentrates-100104.jpg"
     ],
     "category": "concentrates"
   },
@@ -3019,7 +2811,7 @@
     "id": 100105,
     "slug": "crimson-current-concentrates-100105",
     "name": "Crimson Current Concentrate",
-    "brand": "Half Light",
+    "brand": "Runtz",
     "strain": "Sativa",
     "strainName": "Crimson Current",
     "strainDescription": "Crimson Current is a sativa-leaning cultivar with Linalool and Myrcene up top. Expect diesel on the nose rolling into pepper on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -3038,9 +2830,7 @@
     "badge": "Staff Pick",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/crimson-current-concentrates-100105.jpg"
     ],
     "category": "concentrates"
   },
@@ -3048,7 +2838,7 @@
     "id": 100106,
     "slug": "cobalt-hollow-concentrates-100106",
     "name": "Cobalt Hollow Concentrate",
-    "brand": "Cloudline",
+    "brand": "Cresco",
     "strain": "Indica",
     "strainName": "Cobalt Hollow",
     "strainDescription": "Cobalt Hollow is a indica-leaning cultivar with Myrcene and Caryophyllene up top. Expect earth on the nose rolling into pine on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -3067,9 +2857,7 @@
     "badge": "Low Stock",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/cobalt-hollow-concentrates-100106.jpg"
     ],
     "category": "concentrates"
   },
@@ -3077,7 +2865,7 @@
     "id": 100107,
     "slug": "wandering-meadow-concentrates-100107",
     "name": "Wandering Meadow Concentrate",
-    "brand": "DeLight",
+    "brand": "Loud*r",
     "strain": "Sativa",
     "strainName": "Wandering Meadow",
     "strainDescription": "Wandering Meadow is a sativa-leaning cultivar with Limonene and Linalool up top. Expect diesel on the nose rolling into sweet on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -3096,9 +2884,7 @@
     "badge": "15% Off",
     "isExclusive": true,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/wandering-meadow-concentrates-100107.jpg"
     ],
     "category": "concentrates"
   },
@@ -3106,7 +2892,7 @@
     "id": 100108,
     "slug": "cobalt-cascade-concentrates-100108",
     "name": "Cobalt Cascade Concentrate",
-    "brand": "DeLight",
+    "brand": "Floracal",
     "strain": "Sativa",
     "strainName": "Cobalt Cascade",
     "strainDescription": "Cobalt Cascade is a sativa-leaning cultivar with Myrcene and Linalool up top. Expect diesel on the nose rolling into herbal on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -3125,9 +2911,7 @@
     "badge": null,
     "isExclusive": true,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/cobalt-cascade-concentrates-100108.jpg"
     ],
     "category": "concentrates"
   },
@@ -3135,7 +2919,7 @@
     "id": 100109,
     "slug": "quiet-orchard-concentrates-100109",
     "name": "Quiet Orchard Concentrate",
-    "brand": "Cloudline",
+    "brand": "Good News",
     "strain": "Sativa",
     "strainName": "Quiet Orchard",
     "strainDescription": "Quiet Orchard is a sativa-leaning cultivar with Humulene and Limonene up top. Expect berry on the nose rolling into earth on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -3154,9 +2938,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/quiet-orchard-concentrates-100109.jpg"
     ],
     "category": "concentrates"
   },
@@ -3164,7 +2946,7 @@
     "id": 100110,
     "slug": "cobalt-drift-concentrates-100110",
     "name": "Cobalt Drift Concentrate",
-    "brand": "Wildstack",
+    "brand": "Camino",
     "strain": "Hybrid",
     "strainName": "Cobalt Drift",
     "strainDescription": "Cobalt Drift is a hybrid-leaning cultivar with Pinene and Humulene up top. Expect gassy on the nose rolling into floral on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -3183,9 +2965,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/cobalt-drift-concentrates-100110.jpg"
     ],
     "category": "concentrates"
   },
@@ -3193,7 +2973,7 @@
     "id": 100111,
     "slug": "velvet-haze-concentrates-100111",
     "name": "Velvet Haze Concentrate",
-    "brand": "DeLight",
+    "brand": "Camino Sours",
     "strain": "Hybrid",
     "strainName": "Velvet Haze",
     "strainDescription": "Velvet Haze is a hybrid-leaning cultivar with Limonene and Humulene up top. Expect pepper on the nose rolling into sweet on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -3212,9 +2992,7 @@
     "badge": null,
     "isExclusive": true,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/velvet-haze-concentrates-100111.jpg"
     ],
     "category": "concentrates"
   },
@@ -3222,7 +3000,7 @@
     "id": 100112,
     "slug": "sunlit-cascade-concentrates-100112",
     "name": "Sunlit Cascade Concentrate",
-    "brand": "Half Light",
+    "brand": "Kiva",
     "strain": "Indica",
     "strainName": "Sunlit Cascade",
     "strainDescription": "Sunlit Cascade is a indica-leaning cultivar with Limonene and Humulene up top. Expect gassy on the nose rolling into sweet on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -3241,9 +3019,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/sunlit-cascade-concentrates-100112.jpg"
     ],
     "category": "concentrates"
   },
@@ -3251,7 +3027,7 @@
     "id": 100113,
     "slug": "amber-orchard-concentrates-100113",
     "name": "Amber Orchard Concentrate",
-    "brand": "Lantern & Leaf",
+    "brand": "Lost Farm",
     "strain": "Indica",
     "strainName": "Amber Orchard",
     "strainDescription": "Amber Orchard is a indica-leaning cultivar with Myrcene and Limonene up top. Expect gassy on the nose rolling into earth on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -3270,9 +3046,7 @@
     "badge": "20% Off",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/amber-orchard-concentrates-100113.jpg"
     ],
     "category": "concentrates"
   },
@@ -3280,7 +3054,7 @@
     "id": 100114,
     "slug": "frosted-lantern-concentrates-100114",
     "name": "Frosted Lantern Concentrate",
-    "brand": "Moonfield",
+    "brand": "Mindy's",
     "strain": "Indica",
     "strainName": "Frosted Lantern",
     "strainDescription": "Frosted Lantern is a indica-leaning cultivar with Humulene and Myrcene up top. Expect pine on the nose rolling into pepper on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -3299,9 +3073,7 @@
     "badge": "15% Off",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/frosted-lantern-concentrates-100114.jpg"
     ],
     "category": "concentrates"
   },
@@ -3309,7 +3081,7 @@
     "id": 100115,
     "slug": "frosted-pine-concentrates-100115",
     "name": "Frosted Pine Concentrate",
-    "brand": "Lantern & Leaf",
+    "brand": "High Supply",
     "strain": "Hybrid",
     "strainName": "Frosted Pine",
     "strainDescription": "Frosted Pine is a hybrid-leaning cultivar with Humulene and Caryophyllene up top. Expect pine on the nose rolling into earth on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -3328,9 +3100,7 @@
     "badge": "Low Stock",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/frosted-pine-concentrates-100115.jpg"
     ],
     "category": "concentrates"
   },
@@ -3338,7 +3108,7 @@
     "id": 100116,
     "slug": "midnight-drift-concentrates-100116",
     "name": "Midnight Drift Concentrate",
-    "brand": "Cloudline",
+    "brand": "Avexia",
     "strain": "Hybrid",
     "strainName": "Midnight Drift",
     "strainDescription": "Midnight Drift is a hybrid-leaning cultivar with Terpinolene and Limonene up top. Expect floral on the nose rolling into herbal on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -3357,9 +3127,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/midnight-drift-concentrates-100116.jpg"
     ],
     "category": "concentrates"
   },
@@ -3367,7 +3135,7 @@
     "id": 100117,
     "slug": "coastal-bloom-topicals-100117",
     "name": "Coastal Bloom Balm",
-    "brand": "Moonfield",
+    "brand": "Remedi",
     "strain": "Indica",
     "strainName": "Coastal Bloom",
     "strainDescription": "Coastal Bloom is a indica-leaning cultivar with Pinene and Myrcene up top. Expect diesel on the nose rolling into gassy on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -3386,9 +3154,7 @@
     "badge": "Staff Pick",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/coastal-bloom-topicals-100117.jpg"
     ],
     "category": "topicals"
   },
@@ -3396,7 +3162,7 @@
     "id": 100118,
     "slug": "silver-lantern-topicals-100118",
     "name": "Silver Lantern Balm",
-    "brand": "Bloomcraft",
+    "brand": "1906",
     "strain": "Indica",
     "strainName": "Silver Lantern",
     "strainDescription": "Silver Lantern is a indica-leaning cultivar with Humulene and Humulene up top. Expect herbal on the nose rolling into citrus on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -3415,9 +3181,7 @@
     "badge": "New",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/silver-lantern-topicals-100118.jpg"
     ],
     "category": "topicals"
   },
@@ -3425,7 +3189,7 @@
     "id": 100119,
     "slug": "coastal-grove-topicals-100119",
     "name": "Coastal Grove Balm",
-    "brand": "Wildstack",
+    "brand": "Daze Off",
     "strain": "Sativa",
     "strainName": "Coastal Grove",
     "strainDescription": "Coastal Grove is a sativa-leaning cultivar with Caryophyllene and Linalool up top. Expect berry on the nose rolling into pine on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -3444,9 +3208,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/coastal-grove-topicals-100119.jpg"
     ],
     "category": "topicals"
   },
@@ -3454,7 +3216,7 @@
     "id": 100120,
     "slug": "silver-current-topicals-100120",
     "name": "Silver Current Balm",
-    "brand": "Half Light",
+    "brand": "Day Savers",
     "strain": "Indica",
     "strainName": "Silver Current",
     "strainDescription": "Silver Current is a indica-leaning cultivar with Pinene and Limonene up top. Expect floral on the nose rolling into berry on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -3473,9 +3235,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/silver-current-topicals-100120.jpg"
     ],
     "category": "topicals"
   },
@@ -3483,7 +3243,7 @@
     "id": 100121,
     "slug": "cobalt-field-topicals-100121",
     "name": "Cobalt Field Balm",
-    "brand": "DeLight",
+    "brand": "Houseplant",
     "strain": "Indica",
     "strainName": "Cobalt Field",
     "strainDescription": "Cobalt Field is a indica-leaning cultivar with Limonene and Caryophyllene up top. Expect gassy on the nose rolling into herbal on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -3502,9 +3262,7 @@
     "badge": "15% Off",
     "isExclusive": true,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/cobalt-field-topicals-100121.jpg"
     ],
     "category": "topicals"
   },
@@ -3512,7 +3270,7 @@
     "id": 100122,
     "slug": "wandering-drift-topicals-100122",
     "name": "Wandering Drift Balm",
-    "brand": "Understory",
+    "brand": "Lookah",
     "strain": "Sativa",
     "strainName": "Wandering Drift",
     "strainDescription": "Wandering Drift is a sativa-leaning cultivar with Humulene and Myrcene up top. Expect pepper on the nose rolling into pepper on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -3531,9 +3289,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/wandering-drift-topicals-100122.jpg"
     ],
     "category": "topicals"
   },
@@ -3541,7 +3297,7 @@
     "id": 100123,
     "slug": "crimson-current-topicals-100123",
     "name": "Crimson Current Balm",
-    "brand": "DeLight",
+    "brand": "Human Grade",
     "strain": "Hybrid",
     "strainName": "Crimson Current",
     "strainDescription": "Crimson Current is a hybrid-leaning cultivar with Humulene and Myrcene up top. Expect pine on the nose rolling into sweet on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -3560,9 +3316,7 @@
     "badge": null,
     "isExclusive": true,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/crimson-current-topicals-100123.jpg"
     ],
     "category": "topicals"
   },
@@ -3570,7 +3324,7 @@
     "id": 100124,
     "slug": "silver-current-topicals-100124",
     "name": "Silver Current Balm",
-    "brand": "Half Light",
+    "brand": "Cartisan",
     "strain": "Hybrid",
     "strainName": "Silver Current",
     "strainDescription": "Silver Current is a hybrid-leaning cultivar with Linalool and Caryophyllene up top. Expect pine on the nose rolling into pine on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -3589,9 +3343,7 @@
     "badge": "15% Off",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/silver-current-topicals-100124.jpg"
     ],
     "category": "topicals"
   },
@@ -3599,7 +3351,7 @@
     "id": 100125,
     "slug": "hazel-trail-topicals-100125",
     "name": "Hazel Trail Balm",
-    "brand": "Terra Verde",
+    "brand": "Dime Bags",
     "strain": "Indica",
     "strainName": "Hazel Trail",
     "strainDescription": "Hazel Trail is a indica-leaning cultivar with Terpinolene and Limonene up top. Expect earth on the nose rolling into gassy on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -3618,9 +3370,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/hazel-trail-topicals-100125.jpg"
     ],
     "category": "topicals"
   },
@@ -3628,7 +3378,7 @@
     "id": 100126,
     "slug": "velvet-orchard-topicals-100126",
     "name": "Velvet Orchard Balm",
-    "brand": "Half Light",
+    "brand": "Runtz",
     "strain": "Hybrid",
     "strainName": "Velvet Orchard",
     "strainDescription": "Velvet Orchard is a hybrid-leaning cultivar with Pinene and Pinene up top. Expect pepper on the nose rolling into berry on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -3647,9 +3397,7 @@
     "badge": "20% Off",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/velvet-orchard-topicals-100126.jpg"
     ],
     "category": "topicals"
   },
@@ -3657,7 +3405,7 @@
     "id": 100127,
     "slug": "northern-field-capsules-100127",
     "name": "Northern Field Capsules",
-    "brand": "Copper Kettle",
+    "brand": "Cresco",
     "strain": "Indica",
     "strainName": "Northern Field",
     "strainDescription": "Northern Field is a indica-leaning cultivar with Caryophyllene and Caryophyllene up top. Expect pepper on the nose rolling into berry on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -3676,9 +3424,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/northern-field-capsules-100127.jpg"
     ],
     "category": "capsules"
   },
@@ -3686,7 +3432,7 @@
     "id": 100128,
     "slug": "quiet-drift-capsules-100128",
     "name": "Quiet Drift Capsules",
-    "brand": "Dry Creek Co.",
+    "brand": "Loud*r",
     "strain": "Sativa",
     "strainName": "Quiet Drift",
     "strainDescription": "Quiet Drift is a sativa-leaning cultivar with Terpinolene and Pinene up top. Expect diesel on the nose rolling into pepper on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -3705,9 +3451,7 @@
     "badge": "20% Off",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/quiet-drift-capsules-100128.jpg"
     ],
     "category": "capsules"
   },
@@ -3715,7 +3459,7 @@
     "id": 100129,
     "slug": "dusk-lantern-capsules-100129",
     "name": "Dusk Lantern Capsules",
-    "brand": "Copper Kettle",
+    "brand": "Floracal",
     "strain": "Sativa",
     "strainName": "Dusk Lantern",
     "strainDescription": "Dusk Lantern is a sativa-leaning cultivar with Caryophyllene and Humulene up top. Expect pepper on the nose rolling into gassy on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -3734,9 +3478,7 @@
     "badge": "25% Off",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/dusk-lantern-capsules-100129.jpg"
     ],
     "category": "capsules"
   },
@@ -3744,7 +3486,7 @@
     "id": 100130,
     "slug": "amber-harbor-capsules-100130",
     "name": "Amber Harbor Capsules",
-    "brand": "Dry Creek Co.",
+    "brand": "Good News",
     "strain": "Hybrid",
     "strainName": "Amber Harbor",
     "strainDescription": "Amber Harbor is a hybrid-leaning cultivar with Linalool and Caryophyllene up top. Expect diesel on the nose rolling into earth on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -3763,9 +3505,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/amber-harbor-capsules-100130.jpg"
     ],
     "category": "capsules"
   },
@@ -3773,7 +3513,7 @@
     "id": 100131,
     "slug": "amber-grove-capsules-100131",
     "name": "Amber Grove Capsules",
-    "brand": "Half Light",
+    "brand": "Camino",
     "strain": "Hybrid",
     "strainName": "Amber Grove",
     "strainDescription": "Amber Grove is a hybrid-leaning cultivar with Humulene and Pinene up top. Expect floral on the nose rolling into berry on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -3792,9 +3532,7 @@
     "badge": "Low Stock",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/amber-grove-capsules-100131.jpg"
     ],
     "category": "capsules"
   },
@@ -3802,7 +3540,7 @@
     "id": 100132,
     "slug": "ember-meadow-capsules-100132",
     "name": "Ember Meadow Capsules",
-    "brand": "Terra Verde",
+    "brand": "Camino Sours",
     "strain": "Indica",
     "strainName": "Ember Meadow",
     "strainDescription": "Ember Meadow is a indica-leaning cultivar with Pinene and Caryophyllene up top. Expect diesel on the nose rolling into herbal on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -3821,9 +3559,7 @@
     "badge": "Staff Pick",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/ember-meadow-capsules-100132.jpg"
     ],
     "category": "capsules"
   },
@@ -3831,7 +3567,7 @@
     "id": 100133,
     "slug": "dusk-tide-capsules-100133",
     "name": "Dusk Tide Capsules",
-    "brand": "DeLight",
+    "brand": "Kiva",
     "strain": "Indica",
     "strainName": "Dusk Tide",
     "strainDescription": "Dusk Tide is a indica-leaning cultivar with Limonene and Caryophyllene up top. Expect diesel on the nose rolling into pine on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -3850,9 +3586,7 @@
     "badge": "25% Off",
     "isExclusive": true,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/dusk-tide-capsules-100133.jpg"
     ],
     "category": "capsules"
   },
@@ -3860,7 +3594,7 @@
     "id": 100134,
     "slug": "dusk-tide-capsules-100134",
     "name": "Dusk Tide Capsules",
-    "brand": "Wildstack",
+    "brand": "Lost Farm",
     "strain": "Sativa",
     "strainName": "Dusk Tide",
     "strainDescription": "Dusk Tide is a sativa-leaning cultivar with Myrcene and Humulene up top. Expect berry on the nose rolling into floral on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -3879,9 +3613,7 @@
     "badge": "New",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/dusk-tide-capsules-100134.jpg"
     ],
     "category": "capsules"
   },
@@ -3889,7 +3621,7 @@
     "id": 100135,
     "slug": "coastal-trail-capsules-100135",
     "name": "Coastal Trail Capsules",
-    "brand": "Terra Verde",
+    "brand": "Mindy's",
     "strain": "Indica",
     "strainName": "Coastal Trail",
     "strainDescription": "Coastal Trail is a indica-leaning cultivar with Limonene and Terpinolene up top. Expect earth on the nose rolling into citrus on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -3908,9 +3640,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/coastal-trail-capsules-100135.jpg"
     ],
     "category": "capsules"
   },
@@ -3918,7 +3648,7 @@
     "id": 100136,
     "slug": "wandering-field-capsules-100136",
     "name": "Wandering Field Capsules",
-    "brand": "Terra Verde",
+    "brand": "High Supply",
     "strain": "Hybrid",
     "strainName": "Wandering Field",
     "strainDescription": "Wandering Field is a hybrid-leaning cultivar with Limonene and Linalool up top. Expect sweet on the nose rolling into diesel on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -3937,9 +3667,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/wandering-field-capsules-100136.jpg"
     ],
     "category": "capsules"
   },
@@ -3947,7 +3675,7 @@
     "id": 100137,
     "slug": "sunlit-pine-capsules-100137",
     "name": "Sunlit Pine Capsules",
-    "brand": "DeLight",
+    "brand": "Avexia",
     "strain": "Hybrid",
     "strainName": "Sunlit Pine",
     "strainDescription": "Sunlit Pine is a hybrid-leaning cultivar with Myrcene and Caryophyllene up top. Expect gassy on the nose rolling into earth on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -3966,9 +3694,7 @@
     "badge": "New",
     "isExclusive": true,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/sunlit-pine-capsules-100137.jpg"
     ],
     "category": "capsules"
   },
@@ -3976,7 +3702,7 @@
     "id": 100138,
     "slug": "dusk-tide-capsules-100138",
     "name": "Dusk Tide Capsules",
-    "brand": "Wildstack",
+    "brand": "Remedi",
     "strain": "Indica",
     "strainName": "Dusk Tide",
     "strainDescription": "Dusk Tide is a indica-leaning cultivar with Myrcene and Humulene up top. Expect herbal on the nose rolling into sweet on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -3995,9 +3721,7 @@
     "badge": "Staff Pick",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/dusk-tide-capsules-100138.jpg"
     ],
     "category": "capsules"
   },
@@ -4005,7 +3729,7 @@
     "id": 100139,
     "slug": "dusk-haze-tinctures-100139",
     "name": "Dusk Haze Tincture",
-    "brand": "Dry Creek Co.",
+    "brand": "1906",
     "strain": "Hybrid",
     "strainName": "Dusk Haze",
     "strainDescription": "Dusk Haze is a hybrid-leaning cultivar with Caryophyllene and Terpinolene up top. Expect pepper on the nose rolling into gassy on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -4024,9 +3748,7 @@
     "badge": "20% Off",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/dusk-haze-tinctures-100139.jpg"
     ],
     "category": "tinctures"
   },
@@ -4034,7 +3756,7 @@
     "id": 100140,
     "slug": "ember-tide-tinctures-100140",
     "name": "Ember Tide Tincture",
-    "brand": "DeLight",
+    "brand": "Daze Off",
     "strain": "Hybrid",
     "strainName": "Ember Tide",
     "strainDescription": "Ember Tide is a hybrid-leaning cultivar with Pinene and Humulene up top. Expect floral on the nose rolling into floral on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -4053,9 +3775,7 @@
     "badge": null,
     "isExclusive": true,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/ember-tide-tinctures-100140.jpg"
     ],
     "category": "tinctures"
   },
@@ -4063,7 +3783,7 @@
     "id": 100141,
     "slug": "hazel-hollow-tinctures-100141",
     "name": "Hazel Hollow Tincture",
-    "brand": "Copper Kettle",
+    "brand": "Day Savers",
     "strain": "Hybrid",
     "strainName": "Hazel Hollow",
     "strainDescription": "Hazel Hollow is a hybrid-leaning cultivar with Humulene and Linalool up top. Expect herbal on the nose rolling into pepper on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -4082,9 +3802,7 @@
     "badge": "20% Off",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/hazel-hollow-tinctures-100141.jpg"
     ],
     "category": "tinctures"
   },
@@ -4092,7 +3810,7 @@
     "id": 100142,
     "slug": "dusk-trail-tinctures-100142",
     "name": "Dusk Trail Tincture",
-    "brand": "Moonfield",
+    "brand": "Houseplant",
     "strain": "Sativa",
     "strainName": "Dusk Trail",
     "strainDescription": "Dusk Trail is a sativa-leaning cultivar with Pinene and Linalool up top. Expect earth on the nose rolling into floral on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -4111,9 +3829,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/dusk-trail-tinctures-100142.jpg"
     ],
     "category": "tinctures"
   },
@@ -4121,7 +3837,7 @@
     "id": 100143,
     "slug": "midnight-harbor-tinctures-100143",
     "name": "Midnight Harbor Tincture",
-    "brand": "DeLight",
+    "brand": "Lookah",
     "strain": "Indica",
     "strainName": "Midnight Harbor",
     "strainDescription": "Midnight Harbor is a indica-leaning cultivar with Linalool and Pinene up top. Expect earth on the nose rolling into diesel on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -4140,9 +3856,7 @@
     "badge": "New",
     "isExclusive": true,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/midnight-harbor-tinctures-100143.jpg"
     ],
     "category": "tinctures"
   },
@@ -4150,7 +3864,7 @@
     "id": 100144,
     "slug": "wandering-grove-tinctures-100144",
     "name": "Wandering Grove Tincture",
-    "brand": "Moonfield",
+    "brand": "Human Grade",
     "strain": "Sativa",
     "strainName": "Wandering Grove",
     "strainDescription": "Wandering Grove is a sativa-leaning cultivar with Limonene and Myrcene up top. Expect sweet on the nose rolling into citrus on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -4169,9 +3883,7 @@
     "badge": "20% Off",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/wandering-grove-tinctures-100144.jpg"
     ],
     "category": "tinctures"
   },
@@ -4179,7 +3891,7 @@
     "id": 100145,
     "slug": "midnight-haze-tinctures-100145",
     "name": "Midnight Haze Tincture",
-    "brand": "DeLight",
+    "brand": "Cartisan",
     "strain": "Sativa",
     "strainName": "Midnight Haze",
     "strainDescription": "Midnight Haze is a sativa-leaning cultivar with Limonene and Humulene up top. Expect diesel on the nose rolling into herbal on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -4198,9 +3910,7 @@
     "badge": null,
     "isExclusive": true,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/midnight-haze-tinctures-100145.jpg"
     ],
     "category": "tinctures"
   },
@@ -4208,7 +3918,7 @@
     "id": 100146,
     "slug": "golden-bloom-tinctures-100146",
     "name": "Golden Bloom Tincture",
-    "brand": "Lantern & Leaf",
+    "brand": "Dime Bags",
     "strain": "Hybrid",
     "strainName": "Golden Bloom",
     "strainDescription": "Golden Bloom is a hybrid-leaning cultivar with Pinene and Pinene up top. Expect pepper on the nose rolling into sweet on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -4227,9 +3937,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/golden-bloom-tinctures-100146.jpg"
     ],
     "category": "tinctures"
   },
@@ -4237,7 +3945,7 @@
     "id": 100147,
     "slug": "sunlit-current-tinctures-100147",
     "name": "Sunlit Current Tincture",
-    "brand": "Ninebark",
+    "brand": "Runtz",
     "strain": "Indica",
     "strainName": "Sunlit Current",
     "strainDescription": "Sunlit Current is a indica-leaning cultivar with Linalool and Linalool up top. Expect gassy on the nose rolling into herbal on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -4256,9 +3964,7 @@
     "badge": "New",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/sunlit-current-tinctures-100147.jpg"
     ],
     "category": "tinctures"
   },
@@ -4266,7 +3972,7 @@
     "id": 100148,
     "slug": "dusk-drift-tinctures-100148",
     "name": "Dusk Drift Tincture",
-    "brand": "Copper Kettle",
+    "brand": "Cresco",
     "strain": "Indica",
     "strainName": "Dusk Drift",
     "strainDescription": "Dusk Drift is a indica-leaning cultivar with Linalool and Limonene up top. Expect floral on the nose rolling into pine on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -4285,9 +3991,7 @@
     "badge": "Staff Pick",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/dusk-drift-tinctures-100148.jpg"
     ],
     "category": "tinctures"
   },
@@ -4295,7 +3999,7 @@
     "id": 100149,
     "slug": "amber-orchard-beverages-100149",
     "name": "Amber Orchard Tonic",
-    "brand": "Copper Kettle",
+    "brand": "Loud*r",
     "strain": "Indica",
     "strainName": "Amber Orchard",
     "strainDescription": "Amber Orchard is a indica-leaning cultivar with Terpinolene and Caryophyllene up top. Expect herbal on the nose rolling into pine on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -4314,9 +4018,7 @@
     "badge": "Staff Pick",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/amber-orchard-beverages-100149.jpg"
     ],
     "category": "beverages"
   },
@@ -4324,7 +4026,7 @@
     "id": 100150,
     "slug": "sunlit-pine-beverages-100150",
     "name": "Sunlit Pine Tonic",
-    "brand": "Lantern & Leaf",
+    "brand": "Floracal",
     "strain": "Indica",
     "strainName": "Sunlit Pine",
     "strainDescription": "Sunlit Pine is a indica-leaning cultivar with Pinene and Terpinolene up top. Expect diesel on the nose rolling into diesel on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -4343,9 +4045,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/sunlit-pine-beverages-100150.jpg"
     ],
     "category": "beverages"
   },
@@ -4353,7 +4053,7 @@
     "id": 100151,
     "slug": "coastal-cascade-beverages-100151",
     "name": "Coastal Cascade Tonic",
-    "brand": "Northwind Farms",
+    "brand": "Good News",
     "strain": "Hybrid",
     "strainName": "Coastal Cascade",
     "strainDescription": "Coastal Cascade is a hybrid-leaning cultivar with Pinene and Myrcene up top. Expect herbal on the nose rolling into citrus on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -4372,9 +4072,7 @@
     "badge": "New",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/coastal-cascade-beverages-100151.jpg"
     ],
     "category": "beverages"
   },
@@ -4382,7 +4080,7 @@
     "id": 100152,
     "slug": "sunlit-orchard-beverages-100152",
     "name": "Sunlit Orchard Tonic",
-    "brand": "Copper Kettle",
+    "brand": "Camino",
     "strain": "Indica",
     "strainName": "Sunlit Orchard",
     "strainDescription": "Sunlit Orchard is a indica-leaning cultivar with Limonene and Pinene up top. Expect berry on the nose rolling into herbal on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -4401,9 +4099,7 @@
     "badge": "New",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/sunlit-orchard-beverages-100152.jpg"
     ],
     "category": "beverages"
   },
@@ -4411,7 +4107,7 @@
     "id": 100153,
     "slug": "northern-hollow-beverages-100153",
     "name": "Northern Hollow Tonic",
-    "brand": "Half Light",
+    "brand": "Camino Sours",
     "strain": "Sativa",
     "strainName": "Northern Hollow",
     "strainDescription": "Northern Hollow is a sativa-leaning cultivar with Caryophyllene and Limonene up top. Expect gassy on the nose rolling into herbal on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -4430,9 +4126,7 @@
     "badge": "Staff Pick",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/northern-hollow-beverages-100153.jpg"
     ],
     "category": "beverages"
   },
@@ -4440,7 +4134,7 @@
     "id": 100154,
     "slug": "golden-haze-beverages-100154",
     "name": "Golden Haze Tonic",
-    "brand": "Ninebark",
+    "brand": "Kiva",
     "strain": "Sativa",
     "strainName": "Golden Haze",
     "strainDescription": "Golden Haze is a sativa-leaning cultivar with Caryophyllene and Linalool up top. Expect herbal on the nose rolling into pine on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -4459,9 +4153,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/golden-haze-beverages-100154.jpg"
     ],
     "category": "beverages"
   },
@@ -4469,7 +4161,7 @@
     "id": 100155,
     "slug": "coastal-cascade-beverages-100155",
     "name": "Coastal Cascade Tonic",
-    "brand": "Wildstack",
+    "brand": "Lost Farm",
     "strain": "Sativa",
     "strainName": "Coastal Cascade",
     "strainDescription": "Coastal Cascade is a sativa-leaning cultivar with Humulene and Caryophyllene up top. Expect herbal on the nose rolling into pepper on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -4488,9 +4180,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/coastal-cascade-beverages-100155.jpg"
     ],
     "category": "beverages"
   },
@@ -4498,7 +4188,7 @@
     "id": 100156,
     "slug": "golden-lantern-beverages-100156",
     "name": "Golden Lantern Tonic",
-    "brand": "Cloudline",
+    "brand": "Mindy's",
     "strain": "Hybrid",
     "strainName": "Golden Lantern",
     "strainDescription": "Golden Lantern is a hybrid-leaning cultivar with Humulene and Linalool up top. Expect pine on the nose rolling into earth on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -4517,9 +4207,7 @@
     "badge": "15% Off",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/golden-lantern-beverages-100156.jpg"
     ],
     "category": "beverages"
   },
@@ -4527,7 +4215,7 @@
     "id": 100157,
     "slug": "crimson-pine-beverages-100157",
     "name": "Crimson Pine Tonic",
-    "brand": "Cloudline",
+    "brand": "High Supply",
     "strain": "Indica",
     "strainName": "Crimson Pine",
     "strainDescription": "Crimson Pine is a indica-leaning cultivar with Humulene and Limonene up top. Expect citrus on the nose rolling into gassy on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -4546,9 +4234,7 @@
     "badge": "15% Off",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/crimson-pine-beverages-100157.jpg"
     ],
     "category": "beverages"
   },
@@ -4556,7 +4242,7 @@
     "id": 100158,
     "slug": "dusk-orchard-beverages-100158",
     "name": "Dusk Orchard Tonic",
-    "brand": "Lantern & Leaf",
+    "brand": "Avexia",
     "strain": "Hybrid",
     "strainName": "Dusk Orchard",
     "strainDescription": "Dusk Orchard is a hybrid-leaning cultivar with Limonene and Pinene up top. Expect pepper on the nose rolling into gassy on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -4575,9 +4261,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/dusk-orchard-beverages-100158.jpg"
     ],
     "category": "beverages"
   },
@@ -4585,7 +4269,7 @@
     "id": 100159,
     "slug": "northern-grove-beverages-100159",
     "name": "Northern Grove Tonic",
-    "brand": "Ninebark",
+    "brand": "Remedi",
     "strain": "Sativa",
     "strainName": "Northern Grove",
     "strainDescription": "Northern Grove is a sativa-leaning cultivar with Humulene and Limonene up top. Expect gassy on the nose rolling into gassy on the exhale, and a bright, talkative head lift that works for daytime. A dependable pick when you want something familiar rather than a surprise.",
@@ -4604,9 +4288,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/northern-grove-beverages-100159.jpg"
     ],
     "category": "beverages"
   },
@@ -4614,7 +4296,7 @@
     "id": 100160,
     "slug": "wandering-bloom-beverages-100160",
     "name": "Wandering Bloom Tonic",
-    "brand": "Moonfield",
+    "brand": "1906",
     "strain": "Indica",
     "strainName": "Wandering Bloom",
     "strainDescription": "Wandering Bloom is a indica-leaning cultivar with Humulene and Pinene up top. Expect floral on the nose rolling into earth on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -4633,9 +4315,7 @@
     "badge": "25% Off",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/wandering-bloom-beverages-100160.jpg"
     ],
     "category": "beverages"
   },
@@ -4643,7 +4323,7 @@
     "id": 100161,
     "slug": "hazel-bloom-beverages-100161",
     "name": "Hazel Bloom Tonic",
-    "brand": "DeLight",
+    "brand": "Daze Off",
     "strain": "Hybrid",
     "strainName": "Hazel Bloom",
     "strainDescription": "Hazel Bloom is a hybrid-leaning cultivar with Limonene and Limonene up top. Expect herbal on the nose rolling into citrus on the exhale, and a balanced lift that stays social without much drag. A dependable pick when you want something familiar rather than a surprise.",
@@ -4662,9 +4342,7 @@
     "badge": null,
     "isExclusive": true,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/hazel-bloom-beverages-100161.jpg"
     ],
     "category": "beverages"
   },
@@ -4672,7 +4350,7 @@
     "id": 100162,
     "slug": "frosted-harbor-beverages-100162",
     "name": "Frosted Harbor Tonic",
-    "brand": "Terra Verde",
+    "brand": "Day Savers",
     "strain": "Indica",
     "strainName": "Frosted Harbor",
     "strainDescription": "Frosted Harbor is a indica-leaning cultivar with Terpinolene and Pinene up top. Expect citrus on the nose rolling into diesel on the exhale, and a heavy, settled body feel that suits a slow evening. A dependable pick when you want something familiar rather than a surprise.",
@@ -4691,9 +4369,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/frosted-harbor-beverages-100162.jpg"
     ],
     "category": "beverages"
   },
@@ -4701,7 +4377,7 @@
     "id": 100163,
     "slug": "bloomcraft-cleaning-kit-100163",
     "name": "Bloomcraft Cleaning Kit",
-    "brand": "Bloomcraft",
+    "brand": "Houseplant",
     "strain": null,
     "strainName": null,
     "strainDescription": null,
@@ -4720,9 +4396,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/bloomcraft-cleaning-kit-100163.jpg"
     ],
     "category": "accessories"
   },
@@ -4730,7 +4404,7 @@
     "id": 100164,
     "slug": "half-light-lighter-case-100164",
     "name": "Half Light Lighter Case",
-    "brand": "Half Light",
+    "brand": "Lookah",
     "strain": null,
     "strainName": null,
     "strainDescription": null,
@@ -4749,9 +4423,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/half-light-lighter-case-100164.jpg"
     ],
     "category": "accessories"
   },
@@ -4759,7 +4431,7 @@
     "id": 100165,
     "slug": "terra-verde-ashtray-100165",
     "name": "Terra Verde Ashtray",
-    "brand": "Terra Verde",
+    "brand": "Human Grade",
     "strain": null,
     "strainName": null,
     "strainDescription": null,
@@ -4778,9 +4450,7 @@
     "badge": "Staff Pick",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/terra-verde-ashtray-100165.jpg"
     ],
     "category": "accessories"
   },
@@ -4788,7 +4458,7 @@
     "id": 100166,
     "slug": "cloudline-ashtray-100166",
     "name": "Cloudline Ashtray",
-    "brand": "Cloudline",
+    "brand": "Cartisan",
     "strain": null,
     "strainName": null,
     "strainDescription": null,
@@ -4807,9 +4477,7 @@
     "badge": "Low Stock",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/cloudline-ashtray-100166.jpg"
     ],
     "category": "accessories"
   },
@@ -4817,7 +4485,7 @@
     "id": 100167,
     "slug": "bloomcraft-grinder-100167",
     "name": "Bloomcraft Grinder",
-    "brand": "Bloomcraft",
+    "brand": "Dime Bags",
     "strain": null,
     "strainName": null,
     "strainDescription": null,
@@ -4836,9 +4504,7 @@
     "badge": "New",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/bloomcraft-grinder-100167.jpg"
     ],
     "category": "accessories"
   },
@@ -4846,7 +4512,7 @@
     "id": 100168,
     "slug": "evergreen-ashtray-100168",
     "name": "DeLight Ashtray",
-    "brand": "DeLight",
+    "brand": "Runtz",
     "strain": null,
     "strainName": null,
     "strainDescription": null,
@@ -4865,9 +4531,7 @@
     "badge": null,
     "isExclusive": true,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/evergreen-ashtray-100168.jpg"
     ],
     "category": "accessories"
   },
@@ -4875,7 +4539,7 @@
     "id": 100169,
     "slug": "terra-verde-glass-pipe-100169",
     "name": "Terra Verde Glass Pipe",
-    "brand": "Terra Verde",
+    "brand": "Cresco",
     "strain": null,
     "strainName": null,
     "strainDescription": null,
@@ -4894,9 +4558,7 @@
     "badge": "New",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/terra-verde-glass-pipe-100169.jpg"
     ],
     "category": "accessories"
   },
@@ -4904,7 +4566,7 @@
     "id": 100170,
     "slug": "evergreen-storage-jar-100170",
     "name": "DeLight Storage Jar",
-    "brand": "DeLight",
+    "brand": "Loud*r",
     "strain": null,
     "strainName": null,
     "strainDescription": null,
@@ -4923,9 +4585,7 @@
     "badge": "New",
     "isExclusive": true,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/evergreen-storage-jar-100170.jpg"
     ],
     "category": "accessories"
   },
@@ -4933,7 +4593,7 @@
     "id": 100171,
     "slug": "lantern-leaf-ashtray-100171",
     "name": "Lantern & Leaf Ashtray",
-    "brand": "Lantern & Leaf",
+    "brand": "Floracal",
     "strain": null,
     "strainName": null,
     "strainDescription": null,
@@ -4952,9 +4612,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/lantern-leaf-ashtray-100171.jpg"
     ],
     "category": "accessories"
   },
@@ -4962,7 +4620,7 @@
     "id": 100172,
     "slug": "evergreen-grinder-100172",
     "name": "DeLight Grinder",
-    "brand": "DeLight",
+    "brand": "Good News",
     "strain": null,
     "strainName": null,
     "strainDescription": null,
@@ -4981,9 +4639,7 @@
     "badge": "15% Off",
     "isExclusive": true,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/evergreen-grinder-100172.jpg"
     ],
     "category": "accessories"
   },
@@ -4991,7 +4647,7 @@
     "id": 100173,
     "slug": "ninebark-storage-jar-100173",
     "name": "Ninebark Storage Jar",
-    "brand": "Ninebark",
+    "brand": "Camino",
     "strain": null,
     "strainName": null,
     "strainDescription": null,
@@ -5010,9 +4666,7 @@
     "badge": "New",
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/ninebark-storage-jar-100173.jpg"
     ],
     "category": "accessories"
   },
@@ -5020,7 +4674,7 @@
     "id": 100174,
     "slug": "evergreen-ashtray-100174",
     "name": "DeLight Ashtray",
-    "brand": "DeLight",
+    "brand": "Camino Sours",
     "strain": null,
     "strainName": null,
     "strainDescription": null,
@@ -5039,9 +4693,7 @@
     "badge": "Low Stock",
     "isExclusive": true,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/evergreen-ashtray-100174.jpg"
     ],
     "category": "accessories"
   },
@@ -5049,7 +4701,7 @@
     "id": 100175,
     "slug": "evergreen-storage-jar-100175",
     "name": "DeLight Storage Jar",
-    "brand": "DeLight",
+    "brand": "Kiva",
     "strain": null,
     "strainName": null,
     "strainDescription": null,
@@ -5068,9 +4720,7 @@
     "badge": "25% Off",
     "isExclusive": true,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/evergreen-storage-jar-100175.jpg"
     ],
     "category": "accessories"
   },
@@ -5078,7 +4728,7 @@
     "id": 100176,
     "slug": "evergreen-lighter-case-100176",
     "name": "DeLight Lighter Case",
-    "brand": "DeLight",
+    "brand": "Lost Farm",
     "strain": null,
     "strainName": null,
     "strainDescription": null,
@@ -5097,9 +4747,7 @@
     "badge": null,
     "isExclusive": true,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/evergreen-lighter-case-100176.jpg"
     ],
     "category": "accessories"
   },
@@ -5107,7 +4755,7 @@
     "id": 100177,
     "slug": "northwind-farms-storage-jar-100177",
     "name": "Northwind Farms Storage Jar",
-    "brand": "Northwind Farms",
+    "brand": "Mindy's",
     "strain": null,
     "strainName": null,
     "strainDescription": null,
@@ -5126,9 +4774,7 @@
     "badge": null,
     "isExclusive": false,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/northwind-farms-storage-jar-100177.jpg"
     ],
     "category": "accessories"
   },
@@ -5136,7 +4782,7 @@
     "id": 100178,
     "slug": "evergreen-grinder-100178",
     "name": "DeLight Grinder",
-    "brand": "DeLight",
+    "brand": "High Supply",
     "strain": null,
     "strainName": null,
     "strainDescription": null,
@@ -5155,9 +4801,7 @@
     "badge": "20% Off",
     "isExclusive": true,
     "images": [
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg",
-      "/assets/placeholder/product.svg"
+      "/assets/img/products/evergreen-grinder-100178.jpg"
     ],
     "category": "accessories"
   }

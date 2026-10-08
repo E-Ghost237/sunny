@@ -10,7 +10,7 @@ import { ContentService } from '../../../core/services/content.service';
 import { QuantityStepper } from '../../../shared/components/quantity-stepper/quantity-stepper';
 import { SmartImage } from '../../../shared/smart-image/smart-image';
 import { Reveal } from '../../../shared/directives/reveal.directive';
-import { categoryImage, productImage } from '../../../shared/utils/media';
+import { productImage } from '../../../shared/utils/media';
 import { ProductCard } from '../product-card/product-card';
 import { Accordion } from '../../../shared/components/accordion/accordion';
 import { CATEGORY_EMOJI } from '../../../shared/constants/category-emoji';
@@ -63,10 +63,8 @@ export class ProductDetail {
   protected readonly galleryImages = computed(() => {
     const p = this.product();
     if (!p) return [];
-    // De-dupe -- most products only have one *real* distinct image, the rest of
-    // the array is placeholder repeats from the source data.
-    const main = productImage(p);
-    return [...new Set([main, categoryImage(p.category)])];
+    // One generated photo per product (shows its partner brand).
+    return [productImage(p)];
   });
 
   /** Potency bars, normalised to a 40% scale (visual only; values come from the lab data). */
