@@ -1,11 +1,38 @@
-<div class="shop-home">
-  <h1>Shop</h1>
-  <div class="grid">
-    @for (cat of categories; track cat.slug) {
-      <a class="cat-tile" [routerLink]="['/shop', cat.slug]">
-        <span class="icon">{{ cat.icon }}</span>
-        <span class="label">{{ cat.label }}</span>
-      </a>
-    }
+<app-store-context />
+
+<section class="page-hero">
+  <div class="page-hero__media" aria-hidden="true"><img class="kb" src="/assets/img/hero-shop.jpg" alt="" /></div>
+  <div class="page-hero__veil" aria-hidden="true"></div>
+  <div class="container page-hero__inner">
+    <p class="eyebrow">The shop</p>
+    <h1>Find your <em>favourite</em> format.</h1>
+    <p class="lead">Ten categories, one standard. Every product lists its potency, its lab report and its origin.</p>
   </div>
-</div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cat-grid">
+      @for (c of categories; track c.slug; let i = $index) {
+        <a class="cat-card" [routerLink]="['/shop', c.slug]" appReveal [revealDelay]="(i % 4) * 90">
+          <span class="cat-card__img"><app-smart-image [src]="c.image" [alt]="c.label" /></span>
+          <span class="cat-card__body">
+            <span class="cat-card__name">{{ c.label }}</span>
+            <span class="cat-card__blurb">{{ c.blurb }}</span>
+            <span class="cat-card__go">Explore <span aria-hidden="true">→</span></span>
+          </span>
+        </a>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="section section--dark banner">
+  <div class="container banner__inner" appReveal>
+    <div>
+      <p class="eyebrow">New to cannabis?</p>
+      <h2>Read before you buy. Our guides explain formats, dosing and labels.</h2>
+    </div>
+    <a routerLink="/learn" class="btn btn--gold">Open the guides</a>
+  </div>
+</section>

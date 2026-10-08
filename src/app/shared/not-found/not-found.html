@@ -1,9 +1,13 @@
-<div class="not-found">
-  <div class="asterisk">✳</div>
-  <h1>404</h1>
-  <p>We couldn't find that page. It may have moved, or never existed.</p>
-  <div class="actions">
-    <a class="btn-orange" routerLink="/">Back Home</a>
-    <a class="btn-outline" routerLink="/shop">Shop</a>
+<section class="nf">
+  <div class="nf__media" aria-hidden="true"><img class="kb" src="/assets/img/hero-home.jpg" alt="" /></div>
+  <div class="nf__veil" aria-hidden="true"></div>
+  <div class="container nf__inner" appReveal>
+    <p class="eyebrow">Error 404</p>
+    <h1>This page has <em>wandered off.</em></h1>
+    <p class="lead">The link may be out of date, or the page moved. Let's get you back on track.</p>
+    <div class="nf__actions">
+      <a class="btn btn--gold" routerLink="/">Back home</a>
+      <a class="btn btn--light" routerLink="/shop">Browse the shop</a>
+    </div>
   </div>
-</div>
+</section>

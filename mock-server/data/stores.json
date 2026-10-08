@@ -8,7 +8,14 @@
     "lng": -88.1535,
     "timezone": "America/Chicago",
     "brands": [
-      "evergreen"
+      "Cresco",
+      "Loud*r",
+      "Floracal",
+      "Good News",
+      "Camino",
+      "Camino Sours",
+      "Kiva",
+      "Lost Farm"
     ],
     "address": {
       "streetAddress": "657 Harbor Blvd",
@@ -87,7 +94,9 @@
         "rating": 4,
         "text": "Friendly team and a well-organized floor. Parking is easy too."
       }
-    ]
+    ],
+    "description": "Riverbend, IL is a DeLight dispensary built for a calm, unhurried visit. Browse the full menu online, reserve a pickup, or ask a team member for help choosing.",
+    "id": "riverbend-il"
   },
   {
     "slug": "lakeshore-il",
@@ -98,7 +107,14 @@
     "lng": -87.6877,
     "timezone": "America/Chicago",
     "brands": [
-      "evergreen"
+      "Good News",
+      "Camino",
+      "Camino Sours",
+      "Kiva",
+      "Lost Farm",
+      "Mindy's",
+      "High Supply",
+      "Avexia"
     ],
     "address": {
       "streetAddress": "3800 Main St",
@@ -177,7 +193,9 @@
         "rating": 5,
         "text": "Clean store, fair prices, and the online order was ready when it said it would be."
       }
-    ]
+    ],
+    "description": "Lakeshore, IL is a DeLight dispensary built for a calm, unhurried visit. Browse the full menu online, reserve a pickup, or ask a team member for help choosing.",
+    "id": "lakeshore-il"
   },
   {
     "slug": "prairie-gate-il",
@@ -188,7 +206,14 @@
     "lng": -89.6501,
     "timezone": "America/Chicago",
     "brands": [
-      "evergreen"
+      "Kiva",
+      "Lost Farm",
+      "Mindy's",
+      "High Supply",
+      "Avexia",
+      "Remedi",
+      "1906",
+      "Daze Off"
     ],
     "address": {
       "streetAddress": "657 Main St",
@@ -262,7 +287,9 @@
         "rating": 4,
         "text": "Good rotating selection. The deals section is worth checking before you go."
       }
-    ]
+    ],
+    "description": "Prairie Gate, IL is a DeLight dispensary built for a calm, unhurried visit. Browse the full menu online, reserve a pickup, or ask a team member for help choosing.",
+    "id": "prairie-gate-il"
   },
   {
     "slug": "maple-row-oh",
@@ -273,7 +300,14 @@
     "lng": -82.9988,
     "timezone": "America/New_York",
     "brands": [
-      "evergreen"
+      "High Supply",
+      "Avexia",
+      "Remedi",
+      "1906",
+      "Daze Off",
+      "Day Savers",
+      "Houseplant",
+      "Lookah"
     ],
     "address": {
       "streetAddress": "2247 Harbor Blvd",
@@ -352,7 +386,9 @@
         "rating": 5,
         "text": "Quick pickup and the staff knew the menu cold. Easy trip."
       }
-    ]
+    ],
+    "description": "Maple Row, OH is a DeLight dispensary built for a calm, unhurried visit. Browse the full menu online, reserve a pickup, or ask a team member for help choosing.",
+    "id": "maple-row-oh"
   },
   {
     "slug": "great-miami-oh",
@@ -363,7 +399,14 @@
     "lng": -84.1916,
     "timezone": "America/New_York",
     "brands": [
-      "evergreen"
+      "1906",
+      "Daze Off",
+      "Day Savers",
+      "Houseplant",
+      "Lookah",
+      "Human Grade",
+      "Cartisan",
+      "Dime Bags"
     ],
     "address": {
       "streetAddress": "4793 Union Ave",
@@ -447,7 +490,9 @@
         "rating": 4,
         "text": "Good rotating selection. The deals section is worth checking before you go."
       }
-    ]
+    ],
+    "description": "Great Miami, OH is a DeLight dispensary built for a calm, unhurried visit. Browse the full menu online, reserve a pickup, or ask a team member for help choosing.",
+    "id": "great-miami-oh"
   },
   {
     "slug": "cuyahoga-oh",
@@ -458,7 +503,14 @@
     "lng": -81.6944,
     "timezone": "America/New_York",
     "brands": [
-      "evergreen"
+      "Houseplant",
+      "Lookah",
+      "Human Grade",
+      "Cartisan",
+      "Dime Bags",
+      "Runtz",
+      "Cresco",
+      "Loud*r"
     ],
     "address": {
       "streetAddress": "878 Commerce Dr",
@@ -542,7 +594,9 @@
         "rating": 5,
         "text": "Good rotating selection. The deals section is worth checking before you go."
       }
-    ]
+    ],
+    "description": "Cuyahoga, OH is a DeLight dispensary built for a calm, unhurried visit. Browse the full menu online, reserve a pickup, or ask a team member for help choosing.",
+    "id": "cuyahoga-oh"
   },
   {
     "slug": "keystone-pa",
@@ -553,7 +607,14 @@
     "lng": -79.9959,
     "timezone": "America/New_York",
     "brands": [
-      "evergreen"
+      "Cartisan",
+      "Dime Bags",
+      "Runtz",
+      "Cresco",
+      "Loud*r",
+      "Floracal",
+      "Good News",
+      "Camino"
     ],
     "address": {
       "streetAddress": "4462 Commerce Dr",
@@ -637,7 +698,9 @@
         "rating": 4,
         "text": "Helpful budtender walked me through a few options without any pressure."
       }
-    ]
+    ],
+    "description": "Keystone, PA is a DeLight dispensary built for a calm, unhurried visit. Browse the full menu online, reserve a pickup, or ask a team member for help choosing.",
+    "id": "keystone-pa"
   },
   {
     "slug": "liberty-bell-pa",
@@ -648,7 +711,14 @@
     "lng": -75.1652,
     "timezone": "America/New_York",
     "brands": [
-      "evergreen"
+      "Cresco",
+      "Loud*r",
+      "Floracal",
+      "Good News",
+      "Camino",
+      "Camino Sours",
+      "Kiva",
+      "Lost Farm"
     ],
     "address": {
       "streetAddress": "1871 Harbor Blvd",
@@ -727,7 +797,9 @@
         "rating": 5,
         "text": "Friendly team and a well-organized floor. Parking is easy too."
       }
-    ]
+    ],
+    "description": "Liberty Bell, PA is a DeLight dispensary built for a calm, unhurried visit. Browse the full menu online, reserve a pickup, or ask a team member for help choosing.",
+    "id": "liberty-bell-pa"
   },
   {
     "slug": "chesapeake-md",
@@ -738,7 +810,14 @@
     "lng": -76.6122,
     "timezone": "America/New_York",
     "brands": [
-      "evergreen"
+      "Good News",
+      "Camino",
+      "Camino Sours",
+      "Kiva",
+      "Lost Farm",
+      "Mindy's",
+      "High Supply",
+      "Avexia"
     ],
     "address": {
       "streetAddress": "3109 Union Ave",
@@ -812,7 +891,9 @@
         "rating": 4,
         "text": "Helpful budtender walked me through a few options without any pressure."
       }
-    ]
+    ],
+    "description": "Chesapeake, MD is a DeLight dispensary built for a calm, unhurried visit. Browse the full menu online, reserve a pickup, or ask a team member for help choosing.",
+    "id": "chesapeake-md"
   },
   {
     "slug": "potomac-md",
@@ -823,7 +904,14 @@
     "lng": -77.1528,
     "timezone": "America/New_York",
     "brands": [
-      "evergreen"
+      "Kiva",
+      "Lost Farm",
+      "Mindy's",
+      "High Supply",
+      "Avexia",
+      "Remedi",
+      "1906",
+      "Daze Off"
     ],
     "address": {
       "streetAddress": "3717 Union Ave",
@@ -897,7 +985,9 @@
         "rating": 5,
         "text": "Helpful budtender walked me through a few options without any pressure."
       }
-    ]
+    ],
+    "description": "Potomac, MD is a DeLight dispensary built for a calm, unhurried visit. Browse the full menu online, reserve a pickup, or ask a team member for help choosing.",
+    "id": "potomac-md"
   },
   {
     "slug": "bayfront-fl",
@@ -908,7 +998,14 @@
     "lng": -82.4572,
     "timezone": "America/New_York",
     "brands": [
-      "evergreen"
+      "High Supply",
+      "Avexia",
+      "Remedi",
+      "1906",
+      "Daze Off",
+      "Day Savers",
+      "Houseplant",
+      "Lookah"
     ],
     "address": {
       "streetAddress": "2781 Elm St",
@@ -987,7 +1084,9 @@
         "rating": 5,
         "text": "In and out in five minutes. Order matched the site exactly."
       }
-    ]
+    ],
+    "description": "Bayfront, FL is a DeLight dispensary built for a calm, unhurried visit. Browse the full menu online, reserve a pickup, or ask a team member for help choosing.",
+    "id": "bayfront-fl"
   },
   {
     "slug": "palmetto-fl",
@@ -998,7 +1097,14 @@
     "lng": -81.3792,
     "timezone": "America/New_York",
     "brands": [
-      "evergreen"
+      "1906",
+      "Daze Off",
+      "Day Savers",
+      "Houseplant",
+      "Lookah",
+      "Human Grade",
+      "Cartisan",
+      "Dime Bags"
     ],
     "address": {
       "streetAddress": "2723 Harbor Blvd",
@@ -1072,7 +1178,9 @@
         "rating": 4,
         "text": "Good rotating selection. The deals section is worth checking before you go."
       }
-    ]
+    ],
+    "description": "Palmetto, FL is a DeLight dispensary built for a calm, unhurried visit. Browse the full menu online, reserve a pickup, or ask a team member for help choosing.",
+    "id": "palmetto-fl"
   },
   {
     "slug": "bluegrass-ky",
@@ -1083,7 +1191,14 @@
     "lng": -85.7585,
     "timezone": "America/New_York",
     "brands": [
-      "evergreen"
+      "Houseplant",
+      "Lookah",
+      "Human Grade",
+      "Cartisan",
+      "Dime Bags",
+      "Runtz",
+      "Cresco",
+      "Loud*r"
     ],
     "address": {
       "streetAddress": "3343 Commerce Dr",
@@ -1167,6 +1282,8 @@
         "rating": 4,
         "text": "In and out in five minutes. Order matched the site exactly."
       }
-    ]
+    ],
+    "description": "Bluegrass, KY is a DeLight dispensary built for a calm, unhurried visit. Browse the full menu online, reserve a pickup, or ask a team member for help choosing.",
+    "id": "bluegrass-ky"
   }
 ]

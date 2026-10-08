@@ -1,25 +1,22 @@
 @if (!confirmed()) {
-  <div class="age-gate-overlay" role="dialog" aria-modal="true" aria-labelledby="age-gate-title">
-    <div class="age-gate-card">
-      <div class="brand-mark" aria-hidden="true">◆</div>
-
+  <div class="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
+    <div class="gate__bg" aria-hidden="true"></div>
+    <div class="gate__card">
+      <app-logo />
       @if (!declined()) {
-        <h2 id="age-gate-title">Are you 21 or older?</h2>
+        <p class="eyebrow eyebrow--plain">Age verification</p>
+        <h2 id="gate-title">Are you 21 or older?</h2>
         <p>
-          You must be 21+ to enter this site, or 18+ with a valid medical card in a
-          state where that applies.
+          DeLight offers cannabis products only to adults. By entering you confirm you are of legal
+          age in your jurisdiction and agree to our terms.
         </p>
-        <div class="actions">
-          <button class="btn-primary btn-block" type="button" (click)="confirm()">
-            Yes, I'm 21 or older
-          </button>
-          <button class="btn-ghost btn-block" type="button" (click)="decline()">
-            No, I'm under 21
-          </button>
+        <div class="gate__actions">
+          <button type="button" class="btn btn--gold" (click)="confirm()">Yes, I am 21+</button>
+          <button type="button" class="btn btn--ghost" (click)="decline()">No</button>
         </div>
       } @else {
-        <h2 id="age-gate-title">Come back when you're 21</h2>
-        <p>You must be 21 or older (or 18+ with a valid medical card) to view this site.</p>
+        <h2 id="gate-title">Sorry, not yet.</h2>
+        <p>You need to be of legal age to visit DeLight. Come back when you are.</p>
       }
     </div>
   </div>

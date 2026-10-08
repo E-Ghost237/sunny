@@ -1,59 +1,61 @@
-import { Component, computed, inject, signal } from '@angular/core';
+import { Component, HostListener, computed, effect, inject, signal, untracked } from '@angular/core';
 import { rxResource } from '@angular/core/rxjs-interop';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 
 import { CartService } from '../../core/services/cart.service';
 import { AuthService } from '../../core/services/auth.service';
-import { ProductService } from '../../core/services/product.service';
-import { StoreService } from '../../core/services/store.service';
 import { ContentService } from '../../core/services/content.service';
+import { MarketService, MarketRegion } from '../../core/services/market.service';
+import { Logo } from '../../shared/logo/logo';
+import { SmartImage } from '../../shared/smart-image/smart-image';
+import { SHOP_CATEGORIES } from '../cat-bar/cat-bar';
 
-type DropdownKey = 'shop' | 'deals' | 'learn' | null;
-
-const SHOP_CATEGORIES = [
-  { label: 'Flower', slug: 'flower' },
-  { label: 'Vapes', slug: 'vapes' },
-  { label: 'Edibles', slug: 'edibles' },
-  { label: 'Pre-Rolls', slug: 'prerolls' },
-  { label: 'Concentrates', slug: 'concentrates' },
-  { label: 'Topicals', slug: 'topicals' },
-  { label: 'Capsules', slug: 'capsules' },
-  { label: 'Tinctures', slug: 'tinctures' },
-  { label: 'Beverages', slug: 'beverages' },
-  { label: 'Accessories', slug: 'accessories' },
-];
-
-// Merchandising collections. Not backed by real filter data yet — all route to
-// /shop until collection pages land.
-const COLLECTIONS = [
-  'New Arrivals',
-  'High THC',
-  'Best for Beginners',
-  'Staff Picks',
-  'Best Sellers',
-  'On Sale',
-  'House Brand',
-];
+type DropdownKey = 'shop' | 'learn' | 'account' | null;
 
 @Component({
   selector: 'app-header',
-  imports: [RouterLink, RouterLinkActive],
+  imports: [RouterLink, RouterLinkActive, Logo, SmartImage],
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })
 export class Header {
   protected readonly cartService = inject(CartService);
   protected readonly authService = inject(AuthService);
-  private readonly productService = inject(ProductService);
-  private readonly storeService = inject(StoreService);
+  protected readonly market = inject(MarketService);
   private readonly contentService = inject(ContentService);
+  private readonly router = inject(Router);
 
   protected readonly shopCategories = SHOP_CATEGORIES;
-  protected readonly collections = COLLECTIONS;
-
   protected readonly openDropdown = signal<DropdownKey>(null);
+  protected readonly mobileOpen = signal(false);
+  protected readonly scrolled = signal(false);
+  protected readonly cartBump = signal(false);
+  protected readonly cartCount = this.cartService.totalItems;
 
-  protected toggleDropdown(key: DropdownKey): void {
+  private readonly articlesResource = rxResource({
+    stream: () => this.contentService.getArticles(),
+  });
+  protected readonly featuredArticles = computed(() => (this.articlesResource.value() ?? []).slice(0, 3));
+
+  constructor() {
+    // Pulse the cart icon whenever the item count goes up.
+    let previous = untracked(() => this.cartService.totalItems());
+    effect(() => {
+      const now = this.cartService.totalItems();
+      if (now > previous) {
+        this.cartBump.set(true);
+        setTimeout(() => this.cartBump.set(false), 650);
+      }
+      previous = now;
+    });
+  }
+
+  @HostListener('window:scroll')
+  onScroll(): void {
+    this.scrolled.set(window.scrollY > 24);
+  }
+
+  protected toggleDropdown(key: Exclude<DropdownKey, null>): void {
     this.openDropdown.update((current) => (current === key ? null : key));
   }
 
@@ -61,27 +63,20 @@ export class Header {
     this.openDropdown.set(null);
   }
 
-  // No store-selection / geolocation state yet — show the first store as a
-  // stand-in for the "shopping at" indicator.
-  private readonly storesResource = rxResource({
-    stream: () => this.storeService.getStores(),
-  });
-  protected readonly currentStore = computed(() => this.storesResource.value()?.[0] ?? null);
+  protected toggleMobile(): void {
+    this.mobileOpen.update((v) => !v);
+  }
 
-  private readonly productsResource = rxResource({
-    stream: () => this.productService.getAllProducts(),
-  });
-  protected readonly dealProducts = computed(() =>
-    (this.productsResource.value() ?? [])
-      .filter((p) => p.badge && p.discountedPrice != null)
-      .sort((a, b) => b.price - b.discountedPrice! - (a.price - a.discountedPrice!))
-      .slice(0, 4),
-  );
+  protected closeMobile(): void {
+    this.mobileOpen.set(false);
+    this.closeDropdown();
+  }
 
-  private readonly articlesResource = rxResource({
-    stream: () => this.contentService.getArticles(),
-  });
-  protected readonly featuredArticles = computed(() =>
-    (this.articlesResource.value() ?? []).slice(0, 4),
-  );
+  protected onMarketChange(value: string): void {
+    this.market.set(value as MarketRegion);
+  }
+
+  protected goAccount(): void {
+    this.router.navigate([this.authService.isAuthenticated() ? '/account' : '/login']);
+  }
 }

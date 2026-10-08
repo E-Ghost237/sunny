@@ -1,48 +1,32 @@
-<div class="legal-hero">
-  <h1>Terms of Service</h1>
-  <div class="legal-dates">Last Updated: July 2026 &nbsp;|&nbsp; Effective Date: July 2026</div>
-</div>
-<div class="legal-body">
-  <p>
-    <span class="legal-caps">Please read these Terms of Service carefully.</span>
-    This is placeholder legal text for a student mockup project — it summarizes the kind of sections a real
-    dispensary site's Terms of Service would include, but is not actual legal language and should not be used as
-    such.
-  </p>
+<section class="page-hero">
+  <div class="container page-hero__inner">
+    <p class="eyebrow">Legal</p>
+    <h1>Terms of service</h1>
+    <p class="lead">Last updated {{ updated }}. Please read these terms carefully.</p>
+  </div>
+</section>
 
-  <h2>Privacy</h2>
-  <p>Our Privacy Policy explains what information we collect when you use this site and how we use it. By using the site, you agree to that policy.</p>
+<section class="section">
+  <div class="container legal">
+    <nav class="legal__toc" aria-label="Contents">
+      <strong>On this page</strong>
+      @for (s of sections; track s.id) {
+        <a [href]="'#' + s.id">{{ s.title }}</a>
+      }
+    </nav>
 
-  <h2>Restrictions on Use</h2>
-  <p>Content on this site is provided for personal use only. Automated scraping, reverse engineering, or attempting to disrupt normal site operation is not permitted. Misrepresenting your identity or using the site for unlawful purposes is prohibited.</p>
-
-  <h2>Eligibility</h2>
-  <p>This site is intended only for visitors who are 21 years of age or older, or 18 years of age or older with a valid medical marijuana registration where applicable. By using the site, you confirm you meet this requirement.</p>
-
-  <h2>Communications</h2>
-  <p>If you provide an email address, you may receive order-related messages and, unless you opt out, occasional marketing messages. You can unsubscribe at any time using the link provided in those messages.</p>
-
-  <h2>Use of the Site</h2>
-  <p>We grant a limited, non-transferable right to access and use this site for personal, non-commercial purposes, provided you follow these terms. The site or its contents may not be reproduced or redistributed for commercial purposes without permission.</p>
-
-  <h2>Medical Disclaimer</h2>
-  <p>Nothing on this site constitutes medical advice. Information here is for general purposes only and is not a substitute for guidance from a licensed physician.</p>
-
-  <h2>Billing and Payment</h2>
-  <p>Orders placed through the site are picked up and paid for in person; payment information is not collected online at checkout.</p>
-
-  <h2>Limitation of Liability</h2>
-  <p>The site and its information are provided "as is," without warranties of any kind. To the extent permitted by law, we are not liable for damages arising from use of, or inability to use, this site.</p>
-
-  <h2>Intellectual Property</h2>
-  <p>All text, graphics, and other content on this site are owned by or licensed to the site operator and are protected by applicable intellectual property laws. Unauthorized copying or redistribution is not permitted.</p>
-
-  <h2>Governing Law &amp; Dispute Resolution</h2>
-  <p>These terms are governed by the laws of the state in which the operating company is headquartered, without regard to conflict-of-law principles. Any disputes would typically be resolved according to the process described in a real, fully drafted agreement.</p>
-
-  <h2>Changes to These Terms</h2>
-  <p>These terms may be updated from time to time. Continued use of the site after changes are posted constitutes acceptance of the revised terms.</p>
-</div>
-<div class="legal-back-top">
-  <button class="back-top" (click)="scrollToTop()"><span>&and;</span>TOP</button>
-</div>
+    <div class="legal__body">
+      <p class="legal__intro">
+        These terms are a placeholder draft for layout review. They are not legal advice and must be replaced with
+        the reviewed terms before launch.
+      </p>
+      @for (s of sections; track s.id; let i = $index) {
+        <section class="legal__section" [id]="s.id" appReveal [revealDelay]="(i % 3) * 60">
+          <h2>{{ s.title }}</h2>
+          <p>{{ s.body }}</p>
+        </section>
+      }
+      <button type="button" class="btn btn--ghost" (click)="scrollToTop()">Back to top ↑</button>
+    </div>
+  </div>
+</section>

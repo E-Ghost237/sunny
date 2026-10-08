@@ -1,84 +1,101 @@
-<div class="shop-wrap">
-  <div class="shop-side">
-    <div class="filt-results-label">Filter results by:</div>
+<section class="cat-hero">
+  <div class="cat-hero__media" aria-hidden="true">
+    <app-smart-image [src]="heroImage()" alt="" />
+  </div>
+  <div class="cat-hero__veil" aria-hidden="true"></div>
+  <div class="container cat-hero__inner">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a routerLink="/">Home</a><span>/</span><a routerLink="/shop">Shop</a><span>/</span><span>{{ categoryLabel() }}</span>
+    </nav>
+    <h1>{{ categoryLabel() }}</h1>
+    <p class="lead">
+      {{ productsResource.value()?.length ?? 0 }} products. Filter by strain, potency, brand and price.
+    </p>
+  </div>
+</section>
 
-    @for (section of sections(); track section.title) {
-      <app-accordion [title]="section.title" [startOpen]="$first">
+<app-store-context />
+
+<section class="section catalog">
+  <div class="container catalog__layout">
+    <aside class="filters" [class.is-open]="filtersOpen()" aria-label="Filters">
+      <div class="filters__head">
+        <strong>Filter</strong>
+        @if (hasActiveFilters()) {
+          <button type="button" class="link-btn" (click)="clearFilters()">Clear all</button>
+        }
+        <button type="button" class="link-btn filters__close" (click)="filtersOpen.set(false)">Close</button>
+      </div>
+
+      @for (section of sections(); track section.title; let first = $first) {
         @switch (section.type) {
           @case ('pills') {
-            <div class="filt-pills-row">
-              @for (opt of section.options; track opt) {
-                @if (wireKindFor(section) === 'strain') {
-                  <div class="filt-pill-btn" [class.on]="isSelected('strains', opt)" (click)="toggle('strains', opt)">{{ opt }}</div>
-                } @else {
-                  <div class="filt-pill-btn readonly">{{ opt }}</div>
+            <app-accordion [title]="section.title" [startOpen]="first">
+              <div class="pill-row">
+                @for (opt of section.options ?? []; track opt) {
+                  <button type="button" class="chip" [attr.aria-pressed]="isOn(section.title, opt)"
+                    (click)="toggle(section.title, opt)">{{ opt }}</button>
                 }
-              }
-            </div>
+              </div>
+            </app-accordion>
           }
           @case ('checkboxes') {
-            <div class="filt-acc-body two-col">
-              @for (opt of section.options; track opt) {
-                @if (wireKindFor(section) === 'brand') {
-                  <label class="filt-check"><input type="checkbox" [checked]="isSelected('brands', opt)" (change)="toggle('brands', opt)" />{{ opt }}</label>
-                } @else if (wireKindFor(section) === 'size') {
-                  <label class="filt-check"><input type="checkbox" [checked]="isSelected('sizes', opt)" (change)="toggle('sizes', opt)" />{{ opt }}</label>
-                } @else if (wireKindFor(section) === 'featured') {
-                  <label class="filt-check"><input type="checkbox" [checked]="isSelected('featured', opt)" (change)="toggle('featured', opt)" />{{ opt }}</label>
-                } @else {
-                  <label class="filt-check readonly"><input type="checkbox" disabled />{{ opt }}</label>
-                }
+            <app-accordion [title]="section.title" [startOpen]="first">
+              @for (opt of section.options ?? []; track opt) {
+                <label class="check">
+                  <input type="checkbox" [checked]="isOn(section.title, opt)" (change)="toggle(section.title, opt)" />
+                  <span>{{ opt }}</span>
+                </label>
               }
-            </div>
+            </app-accordion>
           }
           @case ('range') {
-            @if (wireKindFor(section) === 'thc-range' && effectiveThcBounds(); as b) {
-              <app-range-slider [boundMin]="b.min" [boundMax]="b.max" [unit]="section.unit!" [unitPrefix]="!!section.unitPrefix" [note]="section.note!" (rangeChange)="thcFilter.set($event)" />
-            } @else if (wireKindFor(section) === 'cbd-range' && effectiveCbdBounds(); as b) {
-              <app-range-slider [boundMin]="b.min" [boundMax]="b.max" [unit]="section.unit!" [unitPrefix]="!!section.unitPrefix" [note]="section.note!" (rangeChange)="cbdFilter.set($event)" />
-            } @else if (wireKindFor(section) === 'price-range' && effectivePriceBounds(); as b) {
-              <app-range-slider [boundMin]="b.min" [boundMax]="b.max" [unit]="section.unit!" [unitPrefix]="!!section.unitPrefix" [note]="section.note!" (rangeChange)="priceFilter.set($event)" />
-            } @else {
-              <app-range-slider [boundMin]="section.min!" [boundMax]="section.max!" [unit]="section.unit!" [unitPrefix]="!!section.unitPrefix" [note]="section.note!" />
-            }
+            <app-accordion [title]="section.title" [startOpen]="first">
+              <app-range-slider [boundMin]="boundsFor(section).min" [boundMax]="boundsFor(section).max"
+                [unit]="section.unit ?? '%'" [unitPrefix]="!!section.unitPrefix" [note]="section.note ?? ''"
+                (rangeChange)="setRange(section.title, $event, boundsFor(section))" />
+            </app-accordion>
           }
         }
-      </app-accordion>
-    }
+      }
+    </aside>
 
-    @if (hasActiveFilters()) {
-      <button class="clear-filters-btn" type="button" (click)="clearFilters()">Clear All Filters</button>
-    }
-  </div>
-
-  <div class="shop-main">
-    <div class="shop-search-row">
-      <h1>{{ categoryLabel() }}</h1>
-      <div class="shop-results-txt">
-        @if (!productsResource.isLoading()) {
-          Showing {{ filteredProducts().length }} of {{ products().length }} results
-        }
+    <div class="catalog__main">
+      <div class="toolbar">
+        <button type="button" class="btn btn--ghost btn--sm filters-toggle" (click)="filtersOpen.set(true)">
+          Filters @if (hasActiveFilters()) { <span class="dot"></span> }
+        </button>
+        <p class="toolbar__count">Showing <strong>{{ sortedProducts().length }}</strong> of {{ products().length }}</p>
+        <label class="sort">
+          <span>Sort by</span>
+          <select [value]="sortMode()" (change)="sortMode.set($any($event.target).value)">
+            <option value="featured">Featured</option>
+            <option value="price-asc">Price: low to high</option>
+            <option value="price-desc">Price: high to low</option>
+            <option value="thc-desc">Highest potency</option>
+          </select>
+        </label>
       </div>
-    </div>
 
-    <div class="pills">
-      @for (c of allCategories; track c) {
-        <a class="pill" [class.on]="c === category()" [routerLink]="['/shop', c]">{{ labelFor(c) }}</a>
+      @if (productsResource.isLoading()) {
+        <div class="grid-products">
+          @for (i of [1, 2, 3, 4, 5, 6]; track i) {
+            <div class="skeleton"></div>
+          }
+        </div>
+      } @else if (sortedProducts().length) {
+        <div class="grid-products">
+          @for (p of sortedProducts(); track p.id; let i = $index) {
+            <app-product-card [product]="p" appReveal [revealDelay]="(i % 6) * 60" />
+          }
+        </div>
+      } @else {
+        <div class="empty">
+          <h3>No products match those filters.</h3>
+          <p>Try widening your potency or price range.</p>
+          <button type="button" class="btn btn--primary" (click)="clearFilters()">Reset filters</button>
+        </div>
       }
     </div>
-
-    @if (productsResource.isLoading()) {
-      <p class="status">Loading {{ categoryLabel() }}&hellip;</p>
-    } @else if (productsResource.error()) {
-      <p class="status error">Couldn't load products. Is the mock API running? (npm run mock-api)</p>
-    } @else if (filteredProducts().length === 0) {
-      <p class="status">No products match your filters.</p>
-    } @else {
-      <div class="prod-grid-shop">
-        @for (product of filteredProducts(); track product.id) {
-          <app-product-card [product]="product" />
-        }
-      </div>
-    }
   </div>
-</div>
+</section>

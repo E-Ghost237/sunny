@@ -1,6 +1,6 @@
 import { Component, input, linkedSignal } from '@angular/core';
 
-// Generic collapsible section, ported from sunny2's .filt-acc/.pd-acc pattern
+// Generic collapsible section, ported from the prototype's .filt-acc/.pd-acc pattern
 // (both are the same toggle-chevron behavior with slightly different visual
 // contexts) -- used by the shop filter sidebar and the product-detail page.
 @Component({

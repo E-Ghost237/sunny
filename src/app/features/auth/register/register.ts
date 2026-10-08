@@ -1,3 +1,5 @@
+import { Logo } from '../../../shared/logo/logo';
+import { Reveal } from '../../../shared/directives/reveal.directive';
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
@@ -6,7 +8,7 @@ import { AuthService } from '../../../core/services/auth.service';
 
 @Component({
   selector: 'app-register',
-  imports: [FormsModule, RouterLink],
+  imports: [FormsModule, RouterLink, Logo, Reveal],
   templateUrl: './register.html',
   styleUrl: './register.scss',
 })

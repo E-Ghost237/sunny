@@ -1,7 +1,111 @@
-.status {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 48px 24px;
-  text-align: center;
-  color: var(--g500);
+.page-hero {
+  position: relative;
+  min-height: clamp(340px, 52vh, 480px);
+  display: flex;
+  align-items: flex-end;
+  color: var(--white);
+  overflow: hidden;
+  background: var(--forest-900);
+
+  &__media img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: kenburns 28s ease-in-out infinite alternate;
+  }
+
+  &__veil {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, rgba(7, 20, 14, 0.96), rgba(7, 20, 14, 0.4) 60%, rgba(7, 20, 14, 0.3));
+  }
+
+  &__inner {
+    position: relative;
+    padding-block: 8rem clamp(3rem, 6vh, 4.5rem);
+
+    h1 {
+      font-size: var(--text-5xl);
+      color: var(--white);
+      font-weight: 600;
+      margin-bottom: var(--space-4);
+    }
+
+    em {
+      color: var(--gold-400);
+      font-style: italic;
+    }
+
+    .lead {
+      color: rgba(246, 241, 231, 0.85);
+      margin: 0;
+    }
+
+    .eyebrow {
+      color: var(--gold-400);
+    }
+  }
+}
+
+.ask {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: var(--space-12);
+  align-items: start;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+
+  &__form {
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+
+    h2 {
+      font-size: var(--text-3xl);
+      margin-bottom: var(--space-6);
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-4);
+
+      @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .btn {
+      margin-top: var(--space-2);
+    }
+  }
+
+  &__content {
+    padding-top: var(--space-4);
+  }
+}
+
+.topic-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-6);
+
+  .chip {
+    cursor: pointer;
+  }
+
+  .chip:has(input:checked) {
+    background: var(--forest-800);
+    border-color: var(--forest-800);
+    color: var(--gold-200);
+  }
+}
+
+.fine {
+  margin: var(--space-4) 0 0;
+  font-size: var(--text-xs);
+  color: var(--c-text-muted);
 }

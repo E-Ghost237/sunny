@@ -243,5 +243,1328 @@
         }
       }
     ]
+  },
+  {
+    "slug": "partner-cresco",
+    "title": "Meet Cresco: a DeLight partner brand",
+    "description": "Get to know Cresco, one of the partner brands on DeLight, and how to shop it with confidence.",
+    "heroImage": "/assets/placeholder/content.svg",
+    "tags": [
+      "partner brands"
+    ],
+    "partnerBrand": "cresco",
+    "partnerBrandName": "Cresco",
+    "publishedDate": "2026-10-01T09:00:00.000Z",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Cresco is one of the partner brands featured on DeLight. We carry its products in our dispensaries and online menu, so you can compare them with everything else on the shelf using the same lab data and clear pricing."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "What to look for on the label"
+        }
+      },
+      {
+        "type": "list",
+        "data": {
+          "ordered": false,
+          "items": [
+            "Find the Cresco product you want and check its batch number and lab report on the product page.",
+            "Read the THC and CBD figures and the product type before you buy.",
+            "Start with a small amount, especially with a product you have not tried before."
+          ]
+        }
+      },
+      {
+        "type": "quote",
+        "data": {
+          "text": "Know what you are buying, check the lab results, and start low."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "Shopping DeLight's partner brands"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Every Cresco product sold through DeLight is sold under the same rules as the rest of our menu: ID is checked at pickup or delivery, and the price you see is the price you pay. Browse the full collection to find a product that fits what you are looking for."
+        }
+      },
+      {
+        "type": "cta-banner",
+        "data": {
+          "label": "Shop the DeLight collection"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "partner-loud-r",
+    "title": "Meet Loud*r: a DeLight partner brand",
+    "description": "Get to know Loud*r, one of the partner brands on DeLight, and how to shop it with confidence.",
+    "heroImage": "/assets/placeholder/content.svg",
+    "tags": [
+      "partner brands"
+    ],
+    "partnerBrand": "loud-r",
+    "partnerBrandName": "Loud*r",
+    "publishedDate": "2026-10-01T09:00:00.000Z",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Loud*r is one of the partner brands featured on DeLight. We carry its products in our dispensaries and online menu, so you can compare them with everything else on the shelf using the same lab data and clear pricing."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "What to look for on the label"
+        }
+      },
+      {
+        "type": "list",
+        "data": {
+          "ordered": false,
+          "items": [
+            "Find the Loud*r product you want and check its batch number and lab report on the product page.",
+            "Read the THC and CBD figures and the product type before you buy.",
+            "Start with a small amount, especially with a product you have not tried before."
+          ]
+        }
+      },
+      {
+        "type": "quote",
+        "data": {
+          "text": "Know what you are buying, check the lab results, and start low."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "Shopping DeLight's partner brands"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Every Loud*r product sold through DeLight is sold under the same rules as the rest of our menu: ID is checked at pickup or delivery, and the price you see is the price you pay. Browse the full collection to find a product that fits what you are looking for."
+        }
+      },
+      {
+        "type": "cta-banner",
+        "data": {
+          "label": "Shop the DeLight collection"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "partner-floracal",
+    "title": "Meet Floracal: a DeLight partner brand",
+    "description": "Get to know Floracal, one of the partner brands on DeLight, and how to shop it with confidence.",
+    "heroImage": "/assets/placeholder/content.svg",
+    "tags": [
+      "partner brands"
+    ],
+    "partnerBrand": "floracal",
+    "partnerBrandName": "Floracal",
+    "publishedDate": "2026-10-01T09:00:00.000Z",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Floracal is one of the partner brands featured on DeLight. We carry its products in our dispensaries and online menu, so you can compare them with everything else on the shelf using the same lab data and clear pricing."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "What to look for on the label"
+        }
+      },
+      {
+        "type": "list",
+        "data": {
+          "ordered": false,
+          "items": [
+            "Find the Floracal product you want and check its batch number and lab report on the product page.",
+            "Read the THC and CBD figures and the product type before you buy.",
+            "Start with a small amount, especially with a product you have not tried before."
+          ]
+        }
+      },
+      {
+        "type": "quote",
+        "data": {
+          "text": "Know what you are buying, check the lab results, and start low."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "Shopping DeLight's partner brands"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Every Floracal product sold through DeLight is sold under the same rules as the rest of our menu: ID is checked at pickup or delivery, and the price you see is the price you pay. Browse the full collection to find a product that fits what you are looking for."
+        }
+      },
+      {
+        "type": "cta-banner",
+        "data": {
+          "label": "Shop the DeLight collection"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "partner-good-news",
+    "title": "Meet Good News: a DeLight partner brand",
+    "description": "Get to know Good News, one of the partner brands on DeLight, and how to shop it with confidence.",
+    "heroImage": "/assets/placeholder/content.svg",
+    "tags": [
+      "partner brands"
+    ],
+    "partnerBrand": "good-news",
+    "partnerBrandName": "Good News",
+    "publishedDate": "2026-10-01T09:00:00.000Z",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Good News is one of the partner brands featured on DeLight. We carry its products in our dispensaries and online menu, so you can compare them with everything else on the shelf using the same lab data and clear pricing."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "What to look for on the label"
+        }
+      },
+      {
+        "type": "list",
+        "data": {
+          "ordered": false,
+          "items": [
+            "Find the Good News product you want and check its batch number and lab report on the product page.",
+            "Read the THC and CBD figures and the product type before you buy.",
+            "Start with a small amount, especially with a product you have not tried before."
+          ]
+        }
+      },
+      {
+        "type": "quote",
+        "data": {
+          "text": "Know what you are buying, check the lab results, and start low."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "Shopping DeLight's partner brands"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Every Good News product sold through DeLight is sold under the same rules as the rest of our menu: ID is checked at pickup or delivery, and the price you see is the price you pay. Browse the full collection to find a product that fits what you are looking for."
+        }
+      },
+      {
+        "type": "cta-banner",
+        "data": {
+          "label": "Shop the DeLight collection"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "partner-camino",
+    "title": "Meet Camino: a DeLight partner brand",
+    "description": "Get to know Camino, one of the partner brands on DeLight, and how to shop it with confidence.",
+    "heroImage": "/assets/placeholder/content.svg",
+    "tags": [
+      "partner brands"
+    ],
+    "partnerBrand": "camino",
+    "partnerBrandName": "Camino",
+    "publishedDate": "2026-10-01T09:00:00.000Z",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Camino is one of the partner brands featured on DeLight. We carry its products in our dispensaries and online menu, so you can compare them with everything else on the shelf using the same lab data and clear pricing."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "What to look for on the label"
+        }
+      },
+      {
+        "type": "list",
+        "data": {
+          "ordered": false,
+          "items": [
+            "Find the Camino product you want and check its batch number and lab report on the product page.",
+            "Read the THC and CBD figures and the product type before you buy.",
+            "Start with a small amount, especially with a product you have not tried before."
+          ]
+        }
+      },
+      {
+        "type": "quote",
+        "data": {
+          "text": "Know what you are buying, check the lab results, and start low."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "Shopping DeLight's partner brands"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Every Camino product sold through DeLight is sold under the same rules as the rest of our menu: ID is checked at pickup or delivery, and the price you see is the price you pay. Browse the full collection to find a product that fits what you are looking for."
+        }
+      },
+      {
+        "type": "cta-banner",
+        "data": {
+          "label": "Shop the DeLight collection"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "partner-camino-sours",
+    "title": "Meet Camino Sours: a DeLight partner brand",
+    "description": "Get to know Camino Sours, one of the partner brands on DeLight, and how to shop it with confidence.",
+    "heroImage": "/assets/placeholder/content.svg",
+    "tags": [
+      "partner brands"
+    ],
+    "partnerBrand": "camino-sours",
+    "partnerBrandName": "Camino Sours",
+    "publishedDate": "2026-10-01T09:00:00.000Z",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Camino Sours is one of the partner brands featured on DeLight. We carry its products in our dispensaries and online menu, so you can compare them with everything else on the shelf using the same lab data and clear pricing."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "What to look for on the label"
+        }
+      },
+      {
+        "type": "list",
+        "data": {
+          "ordered": false,
+          "items": [
+            "Find the Camino Sours product you want and check its batch number and lab report on the product page.",
+            "Read the THC and CBD figures and the product type before you buy.",
+            "Start with a small amount, especially with a product you have not tried before."
+          ]
+        }
+      },
+      {
+        "type": "quote",
+        "data": {
+          "text": "Know what you are buying, check the lab results, and start low."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "Shopping DeLight's partner brands"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Every Camino Sours product sold through DeLight is sold under the same rules as the rest of our menu: ID is checked at pickup or delivery, and the price you see is the price you pay. Browse the full collection to find a product that fits what you are looking for."
+        }
+      },
+      {
+        "type": "cta-banner",
+        "data": {
+          "label": "Shop the DeLight collection"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "partner-kiva",
+    "title": "Meet Kiva: a DeLight partner brand",
+    "description": "Get to know Kiva, one of the partner brands on DeLight, and how to shop it with confidence.",
+    "heroImage": "/assets/placeholder/content.svg",
+    "tags": [
+      "partner brands"
+    ],
+    "partnerBrand": "kiva",
+    "partnerBrandName": "Kiva",
+    "publishedDate": "2026-10-01T09:00:00.000Z",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Kiva is one of the partner brands featured on DeLight. We carry its products in our dispensaries and online menu, so you can compare them with everything else on the shelf using the same lab data and clear pricing."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "What to look for on the label"
+        }
+      },
+      {
+        "type": "list",
+        "data": {
+          "ordered": false,
+          "items": [
+            "Find the Kiva product you want and check its batch number and lab report on the product page.",
+            "Read the THC and CBD figures and the product type before you buy.",
+            "Start with a small amount, especially with a product you have not tried before."
+          ]
+        }
+      },
+      {
+        "type": "quote",
+        "data": {
+          "text": "Know what you are buying, check the lab results, and start low."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "Shopping DeLight's partner brands"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Every Kiva product sold through DeLight is sold under the same rules as the rest of our menu: ID is checked at pickup or delivery, and the price you see is the price you pay. Browse the full collection to find a product that fits what you are looking for."
+        }
+      },
+      {
+        "type": "cta-banner",
+        "data": {
+          "label": "Shop the DeLight collection"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "partner-lost-farm",
+    "title": "Meet Lost Farm: a DeLight partner brand",
+    "description": "Get to know Lost Farm, one of the partner brands on DeLight, and how to shop it with confidence.",
+    "heroImage": "/assets/placeholder/content.svg",
+    "tags": [
+      "partner brands"
+    ],
+    "partnerBrand": "lost-farm",
+    "partnerBrandName": "Lost Farm",
+    "publishedDate": "2026-10-01T09:00:00.000Z",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Lost Farm is one of the partner brands featured on DeLight. We carry its products in our dispensaries and online menu, so you can compare them with everything else on the shelf using the same lab data and clear pricing."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "What to look for on the label"
+        }
+      },
+      {
+        "type": "list",
+        "data": {
+          "ordered": false,
+          "items": [
+            "Find the Lost Farm product you want and check its batch number and lab report on the product page.",
+            "Read the THC and CBD figures and the product type before you buy.",
+            "Start with a small amount, especially with a product you have not tried before."
+          ]
+        }
+      },
+      {
+        "type": "quote",
+        "data": {
+          "text": "Know what you are buying, check the lab results, and start low."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "Shopping DeLight's partner brands"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Every Lost Farm product sold through DeLight is sold under the same rules as the rest of our menu: ID is checked at pickup or delivery, and the price you see is the price you pay. Browse the full collection to find a product that fits what you are looking for."
+        }
+      },
+      {
+        "type": "cta-banner",
+        "data": {
+          "label": "Shop the DeLight collection"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "partner-mindys",
+    "title": "Meet Mindy's: a DeLight partner brand",
+    "description": "Get to know Mindy's, one of the partner brands on DeLight, and how to shop it with confidence.",
+    "heroImage": "/assets/placeholder/content.svg",
+    "tags": [
+      "partner brands"
+    ],
+    "partnerBrand": "mindys",
+    "partnerBrandName": "Mindy's",
+    "publishedDate": "2026-10-01T09:00:00.000Z",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Mindy's is one of the partner brands featured on DeLight. We carry its products in our dispensaries and online menu, so you can compare them with everything else on the shelf using the same lab data and clear pricing."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "What to look for on the label"
+        }
+      },
+      {
+        "type": "list",
+        "data": {
+          "ordered": false,
+          "items": [
+            "Find the Mindy's product you want and check its batch number and lab report on the product page.",
+            "Read the THC and CBD figures and the product type before you buy.",
+            "Start with a small amount, especially with a product you have not tried before."
+          ]
+        }
+      },
+      {
+        "type": "quote",
+        "data": {
+          "text": "Know what you are buying, check the lab results, and start low."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "Shopping DeLight's partner brands"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Every Mindy's product sold through DeLight is sold under the same rules as the rest of our menu: ID is checked at pickup or delivery, and the price you see is the price you pay. Browse the full collection to find a product that fits what you are looking for."
+        }
+      },
+      {
+        "type": "cta-banner",
+        "data": {
+          "label": "Shop the DeLight collection"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "partner-high-supply",
+    "title": "Meet High Supply: a DeLight partner brand",
+    "description": "Get to know High Supply, one of the partner brands on DeLight, and how to shop it with confidence.",
+    "heroImage": "/assets/placeholder/content.svg",
+    "tags": [
+      "partner brands"
+    ],
+    "partnerBrand": "high-supply",
+    "partnerBrandName": "High Supply",
+    "publishedDate": "2026-10-01T09:00:00.000Z",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "High Supply is one of the partner brands featured on DeLight. We carry its products in our dispensaries and online menu, so you can compare them with everything else on the shelf using the same lab data and clear pricing."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "What to look for on the label"
+        }
+      },
+      {
+        "type": "list",
+        "data": {
+          "ordered": false,
+          "items": [
+            "Find the High Supply product you want and check its batch number and lab report on the product page.",
+            "Read the THC and CBD figures and the product type before you buy.",
+            "Start with a small amount, especially with a product you have not tried before."
+          ]
+        }
+      },
+      {
+        "type": "quote",
+        "data": {
+          "text": "Know what you are buying, check the lab results, and start low."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "Shopping DeLight's partner brands"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Every High Supply product sold through DeLight is sold under the same rules as the rest of our menu: ID is checked at pickup or delivery, and the price you see is the price you pay. Browse the full collection to find a product that fits what you are looking for."
+        }
+      },
+      {
+        "type": "cta-banner",
+        "data": {
+          "label": "Shop the DeLight collection"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "partner-avexia",
+    "title": "Meet Avexia: a DeLight partner brand",
+    "description": "Get to know Avexia, one of the partner brands on DeLight, and how to shop it with confidence.",
+    "heroImage": "/assets/placeholder/content.svg",
+    "tags": [
+      "partner brands"
+    ],
+    "partnerBrand": "avexia",
+    "partnerBrandName": "Avexia",
+    "publishedDate": "2026-10-01T09:00:00.000Z",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Avexia is one of the partner brands featured on DeLight. We carry its products in our dispensaries and online menu, so you can compare them with everything else on the shelf using the same lab data and clear pricing."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "What to look for on the label"
+        }
+      },
+      {
+        "type": "list",
+        "data": {
+          "ordered": false,
+          "items": [
+            "Find the Avexia product you want and check its batch number and lab report on the product page.",
+            "Read the THC and CBD figures and the product type before you buy.",
+            "Start with a small amount, especially with a product you have not tried before."
+          ]
+        }
+      },
+      {
+        "type": "quote",
+        "data": {
+          "text": "Know what you are buying, check the lab results, and start low."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "Shopping DeLight's partner brands"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Every Avexia product sold through DeLight is sold under the same rules as the rest of our menu: ID is checked at pickup or delivery, and the price you see is the price you pay. Browse the full collection to find a product that fits what you are looking for."
+        }
+      },
+      {
+        "type": "cta-banner",
+        "data": {
+          "label": "Shop the DeLight collection"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "partner-remedi",
+    "title": "Meet Remedi: a DeLight partner brand",
+    "description": "Get to know Remedi, one of the partner brands on DeLight, and how to shop it with confidence.",
+    "heroImage": "/assets/placeholder/content.svg",
+    "tags": [
+      "partner brands"
+    ],
+    "partnerBrand": "remedi",
+    "partnerBrandName": "Remedi",
+    "publishedDate": "2026-10-01T09:00:00.000Z",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Remedi is one of the partner brands featured on DeLight. We carry its products in our dispensaries and online menu, so you can compare them with everything else on the shelf using the same lab data and clear pricing."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "What to look for on the label"
+        }
+      },
+      {
+        "type": "list",
+        "data": {
+          "ordered": false,
+          "items": [
+            "Find the Remedi product you want and check its batch number and lab report on the product page.",
+            "Read the THC and CBD figures and the product type before you buy.",
+            "Start with a small amount, especially with a product you have not tried before."
+          ]
+        }
+      },
+      {
+        "type": "quote",
+        "data": {
+          "text": "Know what you are buying, check the lab results, and start low."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "Shopping DeLight's partner brands"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Every Remedi product sold through DeLight is sold under the same rules as the rest of our menu: ID is checked at pickup or delivery, and the price you see is the price you pay. Browse the full collection to find a product that fits what you are looking for."
+        }
+      },
+      {
+        "type": "cta-banner",
+        "data": {
+          "label": "Shop the DeLight collection"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "partner-1906",
+    "title": "Meet 1906: a DeLight partner brand",
+    "description": "Get to know 1906, one of the partner brands on DeLight, and how to shop it with confidence.",
+    "heroImage": "/assets/placeholder/content.svg",
+    "tags": [
+      "partner brands"
+    ],
+    "partnerBrand": "1906",
+    "partnerBrandName": "1906",
+    "publishedDate": "2026-10-01T09:00:00.000Z",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "1906 is one of the partner brands featured on DeLight. We carry its products in our dispensaries and online menu, so you can compare them with everything else on the shelf using the same lab data and clear pricing."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "What to look for on the label"
+        }
+      },
+      {
+        "type": "list",
+        "data": {
+          "ordered": false,
+          "items": [
+            "Find the 1906 product you want and check its batch number and lab report on the product page.",
+            "Read the THC and CBD figures and the product type before you buy.",
+            "Start with a small amount, especially with a product you have not tried before."
+          ]
+        }
+      },
+      {
+        "type": "quote",
+        "data": {
+          "text": "Know what you are buying, check the lab results, and start low."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "Shopping DeLight's partner brands"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Every 1906 product sold through DeLight is sold under the same rules as the rest of our menu: ID is checked at pickup or delivery, and the price you see is the price you pay. Browse the full collection to find a product that fits what you are looking for."
+        }
+      },
+      {
+        "type": "cta-banner",
+        "data": {
+          "label": "Shop the DeLight collection"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "partner-daze-off",
+    "title": "Meet Daze Off: a DeLight partner brand",
+    "description": "Get to know Daze Off, one of the partner brands on DeLight, and how to shop it with confidence.",
+    "heroImage": "/assets/placeholder/content.svg",
+    "tags": [
+      "partner brands"
+    ],
+    "partnerBrand": "daze-off",
+    "partnerBrandName": "Daze Off",
+    "publishedDate": "2026-10-01T09:00:00.000Z",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Daze Off is one of the partner brands featured on DeLight. We carry its products in our dispensaries and online menu, so you can compare them with everything else on the shelf using the same lab data and clear pricing."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "What to look for on the label"
+        }
+      },
+      {
+        "type": "list",
+        "data": {
+          "ordered": false,
+          "items": [
+            "Find the Daze Off product you want and check its batch number and lab report on the product page.",
+            "Read the THC and CBD figures and the product type before you buy.",
+            "Start with a small amount, especially with a product you have not tried before."
+          ]
+        }
+      },
+      {
+        "type": "quote",
+        "data": {
+          "text": "Know what you are buying, check the lab results, and start low."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "Shopping DeLight's partner brands"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Every Daze Off product sold through DeLight is sold under the same rules as the rest of our menu: ID is checked at pickup or delivery, and the price you see is the price you pay. Browse the full collection to find a product that fits what you are looking for."
+        }
+      },
+      {
+        "type": "cta-banner",
+        "data": {
+          "label": "Shop the DeLight collection"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "partner-day-savers",
+    "title": "Meet Day Savers: a DeLight partner brand",
+    "description": "Get to know Day Savers, one of the partner brands on DeLight, and how to shop it with confidence.",
+    "heroImage": "/assets/placeholder/content.svg",
+    "tags": [
+      "partner brands"
+    ],
+    "partnerBrand": "day-savers",
+    "partnerBrandName": "Day Savers",
+    "publishedDate": "2026-10-01T09:00:00.000Z",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Day Savers is one of the partner brands featured on DeLight. We carry its products in our dispensaries and online menu, so you can compare them with everything else on the shelf using the same lab data and clear pricing."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "What to look for on the label"
+        }
+      },
+      {
+        "type": "list",
+        "data": {
+          "ordered": false,
+          "items": [
+            "Find the Day Savers product you want and check its batch number and lab report on the product page.",
+            "Read the THC and CBD figures and the product type before you buy.",
+            "Start with a small amount, especially with a product you have not tried before."
+          ]
+        }
+      },
+      {
+        "type": "quote",
+        "data": {
+          "text": "Know what you are buying, check the lab results, and start low."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "Shopping DeLight's partner brands"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Every Day Savers product sold through DeLight is sold under the same rules as the rest of our menu: ID is checked at pickup or delivery, and the price you see is the price you pay. Browse the full collection to find a product that fits what you are looking for."
+        }
+      },
+      {
+        "type": "cta-banner",
+        "data": {
+          "label": "Shop the DeLight collection"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "partner-houseplant",
+    "title": "Meet Houseplant: a DeLight partner brand",
+    "description": "Get to know Houseplant, one of the partner brands on DeLight, and how to shop it with confidence.",
+    "heroImage": "/assets/placeholder/content.svg",
+    "tags": [
+      "partner brands"
+    ],
+    "partnerBrand": "houseplant",
+    "partnerBrandName": "Houseplant",
+    "publishedDate": "2026-10-01T09:00:00.000Z",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Houseplant is one of the partner brands featured on DeLight. We carry its products in our dispensaries and online menu, so you can compare them with everything else on the shelf using the same lab data and clear pricing."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "What to look for on the label"
+        }
+      },
+      {
+        "type": "list",
+        "data": {
+          "ordered": false,
+          "items": [
+            "Find the Houseplant product you want and check its batch number and lab report on the product page.",
+            "Read the THC and CBD figures and the product type before you buy.",
+            "Start with a small amount, especially with a product you have not tried before."
+          ]
+        }
+      },
+      {
+        "type": "quote",
+        "data": {
+          "text": "Know what you are buying, check the lab results, and start low."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "Shopping DeLight's partner brands"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Every Houseplant product sold through DeLight is sold under the same rules as the rest of our menu: ID is checked at pickup or delivery, and the price you see is the price you pay. Browse the full collection to find a product that fits what you are looking for."
+        }
+      },
+      {
+        "type": "cta-banner",
+        "data": {
+          "label": "Shop the DeLight collection"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "partner-lookah",
+    "title": "Meet Lookah: a DeLight partner brand",
+    "description": "Get to know Lookah, one of the partner brands on DeLight, and how to shop it with confidence.",
+    "heroImage": "/assets/placeholder/content.svg",
+    "tags": [
+      "partner brands"
+    ],
+    "partnerBrand": "lookah",
+    "partnerBrandName": "Lookah",
+    "publishedDate": "2026-10-01T09:00:00.000Z",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Lookah is one of the partner brands featured on DeLight. We carry its products in our dispensaries and online menu, so you can compare them with everything else on the shelf using the same lab data and clear pricing."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "What to look for on the label"
+        }
+      },
+      {
+        "type": "list",
+        "data": {
+          "ordered": false,
+          "items": [
+            "Find the Lookah product you want and check its batch number and lab report on the product page.",
+            "Read the THC and CBD figures and the product type before you buy.",
+            "Start with a small amount, especially with a product you have not tried before."
+          ]
+        }
+      },
+      {
+        "type": "quote",
+        "data": {
+          "text": "Know what you are buying, check the lab results, and start low."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "Shopping DeLight's partner brands"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Every Lookah product sold through DeLight is sold under the same rules as the rest of our menu: ID is checked at pickup or delivery, and the price you see is the price you pay. Browse the full collection to find a product that fits what you are looking for."
+        }
+      },
+      {
+        "type": "cta-banner",
+        "data": {
+          "label": "Shop the DeLight collection"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "partner-human-grade",
+    "title": "Meet Human Grade: a DeLight partner brand",
+    "description": "Get to know Human Grade, one of the partner brands on DeLight, and how to shop it with confidence.",
+    "heroImage": "/assets/placeholder/content.svg",
+    "tags": [
+      "partner brands"
+    ],
+    "partnerBrand": "human-grade",
+    "partnerBrandName": "Human Grade",
+    "publishedDate": "2026-10-01T09:00:00.000Z",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Human Grade is one of the partner brands featured on DeLight. We carry its products in our dispensaries and online menu, so you can compare them with everything else on the shelf using the same lab data and clear pricing."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "What to look for on the label"
+        }
+      },
+      {
+        "type": "list",
+        "data": {
+          "ordered": false,
+          "items": [
+            "Find the Human Grade product you want and check its batch number and lab report on the product page.",
+            "Read the THC and CBD figures and the product type before you buy.",
+            "Start with a small amount, especially with a product you have not tried before."
+          ]
+        }
+      },
+      {
+        "type": "quote",
+        "data": {
+          "text": "Know what you are buying, check the lab results, and start low."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "Shopping DeLight's partner brands"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Every Human Grade product sold through DeLight is sold under the same rules as the rest of our menu: ID is checked at pickup or delivery, and the price you see is the price you pay. Browse the full collection to find a product that fits what you are looking for."
+        }
+      },
+      {
+        "type": "cta-banner",
+        "data": {
+          "label": "Shop the DeLight collection"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "partner-cartisan",
+    "title": "Meet Cartisan: a DeLight partner brand",
+    "description": "Get to know Cartisan, one of the partner brands on DeLight, and how to shop it with confidence.",
+    "heroImage": "/assets/placeholder/content.svg",
+    "tags": [
+      "partner brands"
+    ],
+    "partnerBrand": "cartisan",
+    "partnerBrandName": "Cartisan",
+    "publishedDate": "2026-10-01T09:00:00.000Z",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Cartisan is one of the partner brands featured on DeLight. We carry its products in our dispensaries and online menu, so you can compare them with everything else on the shelf using the same lab data and clear pricing."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "What to look for on the label"
+        }
+      },
+      {
+        "type": "list",
+        "data": {
+          "ordered": false,
+          "items": [
+            "Find the Cartisan product you want and check its batch number and lab report on the product page.",
+            "Read the THC and CBD figures and the product type before you buy.",
+            "Start with a small amount, especially with a product you have not tried before."
+          ]
+        }
+      },
+      {
+        "type": "quote",
+        "data": {
+          "text": "Know what you are buying, check the lab results, and start low."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "Shopping DeLight's partner brands"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Every Cartisan product sold through DeLight is sold under the same rules as the rest of our menu: ID is checked at pickup or delivery, and the price you see is the price you pay. Browse the full collection to find a product that fits what you are looking for."
+        }
+      },
+      {
+        "type": "cta-banner",
+        "data": {
+          "label": "Shop the DeLight collection"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "partner-dime-bags",
+    "title": "Meet Dime Bags: a DeLight partner brand",
+    "description": "Get to know Dime Bags, one of the partner brands on DeLight, and how to shop it with confidence.",
+    "heroImage": "/assets/placeholder/content.svg",
+    "tags": [
+      "partner brands"
+    ],
+    "partnerBrand": "dime-bags",
+    "partnerBrandName": "Dime Bags",
+    "publishedDate": "2026-10-01T09:00:00.000Z",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Dime Bags is one of the partner brands featured on DeLight. We carry its products in our dispensaries and online menu, so you can compare them with everything else on the shelf using the same lab data and clear pricing."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "What to look for on the label"
+        }
+      },
+      {
+        "type": "list",
+        "data": {
+          "ordered": false,
+          "items": [
+            "Find the Dime Bags product you want and check its batch number and lab report on the product page.",
+            "Read the THC and CBD figures and the product type before you buy.",
+            "Start with a small amount, especially with a product you have not tried before."
+          ]
+        }
+      },
+      {
+        "type": "quote",
+        "data": {
+          "text": "Know what you are buying, check the lab results, and start low."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "Shopping DeLight's partner brands"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Every Dime Bags product sold through DeLight is sold under the same rules as the rest of our menu: ID is checked at pickup or delivery, and the price you see is the price you pay. Browse the full collection to find a product that fits what you are looking for."
+        }
+      },
+      {
+        "type": "cta-banner",
+        "data": {
+          "label": "Shop the DeLight collection"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "partner-runtz",
+    "title": "Meet Runtz: a DeLight partner brand",
+    "description": "Get to know Runtz, one of the partner brands on DeLight, and how to shop it with confidence.",
+    "heroImage": "/assets/placeholder/content.svg",
+    "tags": [
+      "partner brands"
+    ],
+    "partnerBrand": "runtz",
+    "partnerBrandName": "Runtz",
+    "publishedDate": "2026-10-01T09:00:00.000Z",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Runtz is one of the partner brands featured on DeLight. We carry its products in our dispensaries and online menu, so you can compare them with everything else on the shelf using the same lab data and clear pricing."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "What to look for on the label"
+        }
+      },
+      {
+        "type": "list",
+        "data": {
+          "ordered": false,
+          "items": [
+            "Find the Runtz product you want and check its batch number and lab report on the product page.",
+            "Read the THC and CBD figures and the product type before you buy.",
+            "Start with a small amount, especially with a product you have not tried before."
+          ]
+        }
+      },
+      {
+        "type": "quote",
+        "data": {
+          "text": "Know what you are buying, check the lab results, and start low."
+        }
+      },
+      {
+        "type": "heading",
+        "data": {
+          "level": 3,
+          "text": "Shopping DeLight's partner brands"
+        }
+      },
+      {
+        "type": "paragraph",
+        "data": {
+          "text": "Every Runtz product sold through DeLight is sold under the same rules as the rest of our menu: ID is checked at pickup or delivery, and the price you see is the price you pay. Browse the full collection to find a product that fits what you are looking for."
+        }
+      },
+      {
+        "type": "cta-banner",
+        "data": {
+          "label": "Shop the DeLight collection"
+        }
+      }
+    ]
   }
 ]

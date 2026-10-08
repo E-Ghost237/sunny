@@ -1,0 +1,20 @@
+<div class="adm-login">
+  <div class="adm-login__card">
+    <p class="adm-login__brand">DeLight <span>back-office</span></p>
+    <h1>Team sign-in</h1>
+    <p class="adm-muted">Enter the team passcode to manage products, stores, payments and orders.</p>
+
+    <form (ngSubmit)="submit()" class="adm-form">
+      <label class="adm-field">
+        <span>Passcode</span>
+        <input type="password" name="passcode" autocomplete="current-password" [(ngModel)]="passcode" required autofocus />
+      </label>
+      @if (error()) {
+        <p class="adm-alert adm-alert--error" role="alert">That passcode is not right.</p>
+      }
+      <button type="submit" class="adm-btn adm-btn--primary adm-btn--block">Sign in</button>
+    </form>
+    <p class="adm-muted adm-small">Client-side gate only. Production access needs server-side accounts.</p>
+  </div>
+  <div class="adm-login__glow" aria-hidden="true"></div>
+</div>

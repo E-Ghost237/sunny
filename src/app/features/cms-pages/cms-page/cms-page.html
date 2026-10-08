@@ -1,10 +1,20 @@
 @if (pageResource.isLoading()) {
-  <p class="status">Loading&hellip;</p>
+  <p class="status">Loading…</p>
 } @else if (!page()) {
-  <div class="status">
-    <p>Page not found.</p>
-    <a routerLink="/">Back home</a>
-  </div>
+  <section class="container status"><h1>This page isn't available.</h1><a class="btn btn--primary" routerLink="/">Back home</a></section>
 } @else {
-  <app-content-page-renderer [blocks]="page()!.blocks" />
+  <section class="page-hero">
+    <div class="page-hero__media" aria-hidden="true"><img class="kb" src="/assets/img/hero-shop.jpg" alt="" /></div>
+    <div class="page-hero__veil" aria-hidden="true"></div>
+    <div class="container page-hero__inner">
+      <p class="eyebrow">DeLight</p>
+      <h1>{{ page()!.title }}</h1>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container page-body" appReveal>
+      <app-content-page-renderer [blocks]="page()!.blocks" />
+      <a class="btn btn--ghost page-back" routerLink="/shop">← Back to shop</a>
+    </div>
+  </section>
 }

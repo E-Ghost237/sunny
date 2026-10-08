@@ -1,0 +1,40 @@
+@if (store(); as s) {
+  <section class="store-context" aria-label="Your store">
+    <div class="container store-context__inner">
+      <div class="store-context__who">
+        <p class="store-context__eyebrow">You're shopping adult use at:</p>
+        <h2 class="store-context__name">{{ s.name }}</h2>
+        <p class="store-context__address">
+          {{ s.address.streetAddress }}, {{ s.address.addressLocality }}, {{ s.address.addressRegion }} {{ s.address.postalCode }}
+        </p>
+      </div>
+
+      <div class="store-context__actions">
+        <a class="btn btn--light btn--sm" [routerLink]="['/stores', s.slug]">Store details</a>
+        <a class="btn btn--light btn--sm" routerLink="/stores">Change store</a>
+        @if (s.phone) {
+          <a class="store-context__link" [href]="'tel:' + s.phone">{{ s.phone }}</a>
+        }
+        <a class="store-context__link" [href]="directionsUrl()" target="_blank" rel="noopener">Get directions</a>
+      </div>
+
+      <div class="store-context__hours">
+        @if (todayHours(); as h) {
+          <p><span class="dot"></span> Open today <strong>{{ h.opens }} – {{ h.closes }}</strong></p>
+        } @else {
+          <p>Closed today</p>
+        }
+        <button type="button" class="store-context__more" [attr.aria-expanded]="hoursOpen()" (click)="toggleHours()">
+          {{ hoursOpen() ? 'Less' : 'More' }}
+        </button>
+        @if (hoursOpen()) {
+          <ul class="store-context__week">
+            @for (h of s.openingHours; track h.day) {
+              <li><span>{{ h.day }}</span><span>{{ h.opens ? h.opens + ' – ' + h.closes : 'Closed' }}</span></li>
+            }
+          </ul>
+        }
+      </div>
+    </div>
+  </section>
+}

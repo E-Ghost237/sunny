@@ -1,39 +1,50 @@
-<div class="med-hero">
-  <div class="eyebrow">Medical Program</div>
-  <h1>Get Your Medical Marijuana Card</h1>
-  <p>Step-by-step guidance to help you get certified and start shopping as a medical patient at Evergreen.</p>
-</div>
+<section class="page-hero">
+  <div class="page-hero__media" aria-hidden="true"><img class="kb" src="/assets/img/section-lab.jpg" alt="" /></div>
+  <div class="page-hero__veil" aria-hidden="true"></div>
+  <div class="container page-hero__inner">
+    <p class="eyebrow">Medical program</p>
+    <h1>Registered patients, <em>looked after.</em></h1>
+    <p class="lead">Medical programs differ by state. Choose yours to see the steps that apply.</p>
+  </div>
+</section>
 
-<div class="state-tabs-bar">
-  @for (state of states; track state) {
-    <div class="sfilt" [class.on]="state === activeState()" (click)="activeState.set(state)">{{ state }}</div>
-  }
-</div>
+<section class="section">
+  <div class="container">
+    <div class="chips" role="group" aria-label="Choose your state" appReveal>
+      @for (s of states; track s) {
+        <button type="button" class="chip" [attr.aria-pressed]="activeState() === s" (click)="activeState.set(s)">{{ s }}</button>
+      }
+    </div>
 
-<div class="content">
-  <div class="section-title">How to Get Your {{ activeState() }} Medical Card</div>
+    <div class="steps">
+      @for (step of steps; track step.n; let i = $index) {
+        <article class="step" appReveal [revealDelay]="i * 110">
+          <span class="step__n">{{ step.n }}</span>
+          <h3>{{ step.title }}</h3>
+          <p>{{ step.body }}</p>
+        </article>
+      }
+    </div>
+    <p class="note">Showing general steps for <strong>{{ activeState() }}</strong>. Confirm current requirements with your state program.</p>
+  </div>
+</section>
 
-  <div class="steps-grid">
-    @for (step of steps; track step.n) {
-      <div class="scard">
-        <div class="scard-n">{{ step.n }}</div>
-        <h4>{{ step.title }}</h4>
-        <p>{{ step.body }}</p>
+<section class="section section--alt">
+  <div class="container benefits">
+    @for (b of benefits; track b.title; let i = $index) {
+      <div class="benefit card" appReveal [revealDelay]="i * 110">
+        <h3>{{ b.title }}</h3>
+        <p>{{ b.body }}</p>
       </div>
     }
   </div>
+</section>
 
-  <div class="divider"></div>
-  <div class="section-title small">Trusted Certification Partners</div>
-
-  <div class="partner-grid">
-    @for (partner of partners; track partner.name) {
-      <div class="partner-card">
-        <div class="partner-nm">{{ partner.name }}</div>
-        <div class="partner-pr">{{ partner.price }}</div>
-        <div class="partner-desc">{{ partner.desc }}</div>
-        <button class="btn-orange partner-btn" type="button">Get Certified &rarr;</button>
-      </div>
-    }
-  </div>
-</div>
+@if (page(); as p) {
+  <section class="section">
+    <div class="container prose-wrap" appReveal>
+      <app-content-page-renderer [blocks]="p.blocks" />
+      <a class="btn btn--primary" routerLink="/stores">Find a location</a>
+    </div>
+  </section>
+}

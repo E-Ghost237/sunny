@@ -1,0 +1,118 @@
+@if (order(); as o) {
+  <header class="adm-head">
+    <div>
+      <p class="adm-eyebrow"><a routerLink="/admin/orders">← Orders</a></p>
+      <h1>{{ o.id }}</h1>
+      <p class="adm-muted">Placed {{ o.placedAt | date: 'MMM d, y · h:mm a' }}</p>
+    </div>
+    <span class="adm-pill adm-pill--lg" [attr.data-status]="o.status">{{ statusLabel[o.status] }}</span>
+  </header>
+
+  @if (notice()) { <p class="adm-alert adm-alert--ok" role="status">{{ notice() }}</p> }
+  @if (error()) { <p class="adm-alert adm-alert--error" role="alert">{{ error() }}</p> }
+
+  <div class="adm-grid-2 adm-grid-2--wide">
+    <div class="adm-stack">
+      <!-- Proof of payment -->
+      <section class="adm-card">
+        <div class="adm-card__head"><h2>Proof of payment</h2></div>
+        @if (o.proof; as p) {
+          @if (proofIsPdf()) {
+            <a class="adm-btn" [href]="p.path" target="_blank" rel="noopener">Open PDF · {{ p.fileName }}</a>
+          } @else {
+            <a [href]="p.path" target="_blank" rel="noopener" class="adm-proof">
+              <img [src]="p.path" [alt]="'Payment proof for ' + o.id" />
+            </a>
+            <p class="adm-muted adm-small">{{ p.fileName }} · uploaded {{ p.uploadedAt | date: 'MMM d, h:mm a' }} · click to open full size</p>
+          }
+        } @else {
+          <p class="adm-muted">No proof uploaded yet. The customer sees payment instructions until they send one.</p>
+        }
+      </section>
+
+      <!-- Actions -->
+      <section class="adm-card">
+        <div class="adm-card__head"><h2>Actions</h2></div>
+        @if (available(o).length === 0) {
+          <p class="adm-muted">No further actions for this order.</p>
+        }
+
+        @if (available(o).includes('approved') || available(o).includes('proof-rejected')) {
+          <label class="adm-field">
+            <span>Note to customer (required to reject)</span>
+            <textarea rows="2" [ngModel]="rejectNote()" (ngModelChange)="rejectNote.set($event)" placeholder="e.g. The amount is blurred. Please upload the full receipt."></textarea>
+          </label>
+        }
+        @if (available(o).includes('dispatched')) {
+          <label class="adm-field">
+            <span>Tracking number (optional)</span>
+            <input [ngModel]="tracking()" (ngModelChange)="tracking.set($event)" placeholder="e.g. 1Z999AA10123456784" />
+          </label>
+        }
+
+        <div class="adm-actions">
+          @for (to of available(o); track to) {
+            <button type="button" class="adm-btn"
+              [class.adm-btn--primary]="to === 'approved' || to === 'dispatched' || to === 'completed'"
+              [class.adm-btn--danger]="to === 'cancelled' || to === 'proof-rejected'"
+              [disabled]="busy()" (click)="act(to)">
+              {{ actionLabel(to, o) }}
+            </button>
+          }
+        </div>
+        <p class="adm-muted adm-small">Approving confirms payment and moves the order to ready-to-dispatch. Nothing is sent to the customer until you dispatch.</p>
+      </section>
+
+      <!-- History -->
+      <section class="adm-card">
+        <div class="adm-card__head"><h2>History</h2></div>
+        <ol class="adm-timeline">
+          @for (h of o.history; track h.at) {
+            <li>
+              <strong>{{ statusLabel[h.status] }}</strong>
+              <span class="adm-muted">{{ h.at | date: 'MMM d, h:mm a' }}</span>
+              @if (h.note) { <p>{{ h.note }}</p> }
+            </li>
+          }
+        </ol>
+        @if (o.tracking) { <p>Tracking: <strong>{{ o.tracking }}</strong></p> }
+      </section>
+    </div>
+
+    <div class="adm-stack">
+      <section class="adm-card">
+        <div class="adm-card__head"><h2>Customer</h2></div>
+        <dl class="adm-dl">
+          <div><dt>Name</dt><dd>{{ o.customer.name }}</dd></div>
+          <div><dt>Email</dt><dd><a [href]="'mailto:' + o.customer.email">{{ o.customer.email }}</a></dd></div>
+          <div><dt>Phone</dt><dd>{{ o.customer.phone || '—' }}</dd></div>
+          <div><dt>Fulfilment</dt><dd>{{ o.fulfilment === 'pickup' ? 'Pickup at ' + o.pickupStoreName : 'Ship to ' + o.destination }}</dd></div>
+          <div><dt>Payment</dt><dd>{{ o.payment }}</dd></div>
+        </dl>
+      </section>
+
+      <section class="adm-card">
+        <div class="adm-card__head"><h2>Items</h2></div>
+        <table class="adm-table">
+          <tbody>
+            @for (i of o.items; track i.productId) {
+              <tr>
+                <td>{{ i.name }}<small class="adm-muted adm-block">× {{ i.quantity }}</small></td>
+                <td class="adm-right">{{ i.priceAtAdd * i.quantity | currency }}</td>
+              </tr>
+            }
+          </tbody>
+        </table>
+        <dl class="adm-dl">
+          <div><dt>Subtotal</dt><dd>{{ o.subtotal | currency }}</dd></div>
+          <div><dt>Shipping</dt><dd>{{ o.shipping === 0 ? 'Free' : (o.shipping | currency) }}</dd></div>
+          <div class="adm-total"><dt>Total</dt><dd>{{ o.total | currency }}</dd></div>
+        </dl>
+      </section>
+    </div>
+  </div>
+} @else if (orderRes.isLoading()) {
+  <p class="adm-muted">Loading order…</p>
+} @else {
+  <p class="adm-alert adm-alert--error">Order not found. <a routerLink="/admin/orders">Back to orders</a></p>
+}

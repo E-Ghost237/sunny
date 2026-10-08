@@ -30,7 +30,6 @@ yarn-error.log
 .history/*
 
 # Mock API (regenerate with `npm run build:mock-db`; source of truth is mock-server/data/)
-/mock-server/db.json
 
 # Miscellaneous
 /.angular/cache

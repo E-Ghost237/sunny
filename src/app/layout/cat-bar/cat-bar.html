@@ -1,5 +1,10 @@
-<div class="cat-bar">
-  @for (cat of categories; track cat.slug) {
-    <a class="cat-tab" [routerLink]="['/shop', cat.slug]" routerLinkActive="on">{{ cat.label }}</a>
-  }
-</div>
+<nav class="cat-bar" aria-label="Shop by category">
+  <div class="cat-bar__inner">
+    @for (c of categories; track c.slug) {
+      <a class="cat-bar__item" [routerLink]="['/shop', c.slug]" routerLinkActive="is-active">
+        <span class="cat-bar__thumb"><app-smart-image [src]="c.image" [alt]="c.label" /></span>
+        <span>{{ c.label }}</span>
+      </a>
+    }
+  </div>
+</nav>

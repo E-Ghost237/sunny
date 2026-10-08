@@ -1,92 +1,201 @@
-@if (cartService.items().length === 0) {
-  <div class="empty-cart">
-    <p>Your cart is empty.</p>
-    <a class="btn-orange" routerLink="/shop">Start Shopping</a>
+<section class="co-head">
+  <div class="container">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a routerLink="/">Home</a><span>/</span><a routerLink="/cart">Bag</a><span>/</span><span>Checkout</span>
+    </nav>
+    <h1>Checkout</h1>
+    <ol class="progress" aria-label="Checkout progress">
+      <li class="is-done">Bag</li>
+      <li [class.is-done]="!!contact.email && !!contact.firstName">Details</li>
+      <li [class.is-done]="!!paymentMethod()">Payment</li>
+      <li>Confirm</li>
+    </ol>
   </div>
+</section>
+
+@if (cartService.items().length === 0) {
+  <section class="container empty">
+    <h2>Your bag is empty.</h2>
+    <a class="btn btn--primary" routerLink="/shop">Continue shopping</a>
+  </section>
 } @else {
-  <div class="checkout-wrap">
-    <div class="co-main">
-      <div class="co-h">Checkout</div>
+  <section class="container co">
+    <div class="co__main">
 
-      <div class="co-step">
-        <div class="co-step-h"><div class="step-badge">1</div>Your Information</div>
-        <div class="form-2">
-          <div class="fg"><label for="co-first-name">First Name</label><input id="co-first-name" type="text" [value]="authService.user()?.firstName ?? ''" placeholder="Jane" /></div>
-          <div class="fg"><label for="co-last-name">Last Name</label><input id="co-last-name" type="text" [value]="authService.user()?.lastName ?? ''" placeholder="Doe" /></div>
+      <!-- 1. Contact -->
+      <fieldset class="block" appReveal>
+        <legend><span class="num">1</span> Your details</legend>
+        <div class="row">
+          <div class="field"><label for="fn">First name</label><input id="fn" name="fn" [(ngModel)]="contact.firstName" autocomplete="given-name" /></div>
+          <div class="field"><label for="ln">Last name</label><input id="ln" name="ln" [(ngModel)]="contact.lastName" autocomplete="family-name" /></div>
         </div>
-        <div class="fg"><label for="co-email">Email</label><input id="co-email" type="email" [value]="authService.user()?.email ?? ''" placeholder="jane@example.com" /></div>
-        <div class="fg"><label for="co-phone">Phone</label><input id="co-phone" type="tel" [value]="authService.user()?.phone ?? ''" placeholder="+1 (555) 000-0000" /></div>
-      </div>
+        <div class="row">
+          <div class="field"><label for="em">Email</label><input id="em" type="email" name="em" [(ngModel)]="contact.email" autocomplete="email" /></div>
+          <div class="field"><label for="ph">Phone (optional)</label><input id="ph" type="tel" name="ph" [(ngModel)]="contact.phone" autocomplete="tel" /></div>
+        </div>
+        <div class="seg" role="radiogroup" aria-label="Customer type">
+          <button type="button" class="seg__btn" [attr.aria-pressed]="customerType === 'recreational'" (click)="customerType = 'recreational'">Recreational</button>
+          <button type="button" class="seg__btn" [attr.aria-pressed]="customerType === 'medical'" (click)="customerType = 'medical'">Medical patient</button>
+        </div>
+      </fieldset>
 
-      <div class="co-step">
-        <div class="co-step-h"><div class="step-badge">2</div>Pickup Location</div>
-        <div class="pickup-cards">
-          @for (store of storesResource.value()?.slice(0, 4); track store.slug) {
-            <div class="pickup-card" [class.on]="store.slug === selectedStoreSlug()" (click)="selectStore(store.slug)">
-              <h4>📍 {{ store.name }}</h4>
-              <p>{{ store.address.streetAddress }}, {{ store.address.addressLocality }}, {{ store.address.addressRegion }}</p>
+      <!-- 2. Fulfilment -->
+      <fieldset class="block" appReveal>
+        <legend><span class="num">2</span> How would you like to receive it?</legend>
+        <div class="fulfil">
+          <button type="button" class="fulfil__card" [class.is-selected]="fulfilment() === 'pickup'" (click)="fulfilment.set('pickup')">
+            <span class="fulfil__icon" aria-hidden="true">🏬</span>
+            <strong>Pick up in store</strong>
+            <span>Free · ready in about an hour</span>
+          </button>
+          <button type="button" class="fulfil__card" [class.is-selected]="fulfilment() === 'ship'" (click)="fulfilment.set('ship')">
+            <span class="fulfil__icon" aria-hidden="true">📦</span>
+            <strong>Ship to me</strong>
+            <span>{{ shippingFee | currency }} · free over {{ freeShippingOver | currency }}</span>
+          </button>
+        </div>
+
+        @if (fulfilment() === 'pickup') {
+          <div class="stores" appReveal>
+            @for (s of stores(); track s.slug) {
+              <label class="store-opt" [class.is-selected]="selectedStoreSlug() === s.slug">
+                <input type="radio" name="store" [checked]="selectedStoreSlug() === s.slug" (change)="selectStore(s.slug)" class="sr-only" />
+                <span class="store-opt__img"><app-smart-image [src]="storeImage(s, 'exterior')" [alt]="s.name" /></span>
+                <span class="store-opt__body">
+                  <strong>{{ s.name }}</strong>
+                  <span>{{ s.address.streetAddress }}, {{ s.address.addressLocality }}</span>
+                </span>
+                <span class="store-opt__dot" aria-hidden="true"></span>
+              </label>
+            }
+          </div>
+        } @else {
+          <div class="row" appReveal>
+            <div class="field" style="grid-column: 1 / -1"><label for="ad1">Street address</label><input id="ad1" [(ngModel)]="address.line1" autocomplete="address-line1" /></div>
+            <div class="field"><label for="city">City</label><input id="city" [(ngModel)]="address.city" autocomplete="address-level2" /></div>
+            <div class="field">
+              <label for="reg">{{ regionLabel() }}</label>
+              <select id="reg" [(ngModel)]="address.region">
+                <option value="" disabled>Select…</option>
+                @for (d of destinations(); track d) {
+                  <option [value]="d">{{ d }}</option>
+                }
+              </select>
             </div>
+            <div class="field"><label for="zip">Postal code</label><input id="zip" [(ngModel)]="address.postal" autocomplete="postal-code" /></div>
+          </div>
+          <p class="hint">Shipping is available to the {{ market.current().label }} market. Change market in the header to see other regions.</p>
+        }
+      </fieldset>
+
+      <!-- 3. Payment -->
+      <fieldset class="block" appReveal>
+        <legend><span class="num">3</span> Payment method</legend>
+        <p class="hint">Choose how you'd like to pay. Instructions appear once you select a method.</p>
+
+        <div class="methods" role="radiogroup" aria-label="Payment methods">
+          @for (m of paymentMethods(); track m.id) {
+            <button type="button" class="method" role="radio" [attr.aria-checked]="paymentMethod() === m.id"
+              [class.is-selected]="paymentMethod() === m.id" (click)="choosePayment(m.id)">
+              <span class="method__mark" [style.background]="m.accent">
+                @if (m.id === 'applepay') { <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9s-1.8-.8-3-.8c-1.5 0-3 .9-3.8 2.3-1.6 2.8-.4 6.9 1.2 9.1.8 1.1 1.7 2.3 2.9 2.3 1.2 0 1.6-.7 3-.7s1.8.7 3 .7c1.3 0 2.1-1.1 2.8-2.2.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.5-1-2.5-3.9zM14.2 5.8c.6-.8 1.1-1.9 1-3-.9 0-2.1.6-2.7 1.4-.6.7-1.1 1.8-1 2.9 1 .1 2.1-.5 2.7-1.3z"/></svg> }
+                @else { {{ m.mark }} }
+              </span>
+              <span class="method__body">
+                <strong>{{ m.label }}</strong>
+                <span class="method__tags">
+                  @for (t of m.tags; track t) {
+                    <span class="tag tag--outline">{{ t }}</span>
+                  }
+                </span>
+              </span>
+              <span class="method__radio" aria-hidden="true"></span>
+            </button>
           }
         </div>
-      </div>
 
-      <div class="co-step">
-        <div class="co-step-h"><div class="step-badge">3</div>ID Verification</div>
-        <div class="alert-info">🪪 Present a valid, non-expired government-issued ID at pickup. Medical patients must also bring their cannabis card.</div>
-        <div class="fg">
-          <label for="co-customer-type">Customer Type</label>
-          <select id="co-customer-type" [(ngModel)]="customerType">
-            <option value="recreational">Adult-Use / Recreational (21+)</option>
-            <option value="medical">Medical Patient (18+)</option>
-          </select>
-        </div>
-        <label class="age-row inline">
-          <input type="checkbox" [(ngModel)]="ageConfirmed" />
-          <span>I confirm I am 21+ or 18+ with a valid medical card.</span>
-        </label>
-      </div>
-
-      <div class="co-step">
-        <div class="co-step-h"><div class="step-badge">4</div>Payment Method</div>
-        <div class="alert-info">💳 Payment collected in-store at pickup. We do not process payments online.</div>
-        <div class="pay-list">
-          <label class="pay-opt"><input type="radio" name="pay" value="cash" [(ngModel)]="paymentMethod" /> 💵 Cash (on-site ATM available)</label>
-          <label class="pay-opt"><input type="radio" name="pay" value="debit" [(ngModel)]="paymentMethod" /> 💳 Debit Card ($3 fee per $500)</label>
-          <label class="pay-opt"><input type="radio" name="pay" value="canpay" [(ngModel)]="paymentMethod" /> 📱 CanPay (select locations)</label>
-        </div>
-      </div>
-
-      @if (authService.isAuthenticated()) {
-        <div class="co-step">
-          <div class="co-step-h"><div class="step-badge">5</div>Rewards</div>
-          <div class="rew-box">
-            <p>⭐ You'll earn {{ cartService.subtotal() | number: '1.0-0' }} points on this order.</p>
+        @if (selectedMethod(); as m) {
+          <div class="instructions" [style.--accent]="m.accent" appReveal>
+            <div class="instructions__head">
+              <span class="instructions__mark" [style.background]="m.accent">{{ m.mark || '' }}</span>
+              <strong>Pay with {{ m.label }}</strong>
+            </div>
+            <ol class="instructions__steps">
+              @for (s of m.steps; track s) {
+                <li>{{ s }}</li>
+              }
+            </ol>
+            @if (m.id !== 'applepay') {
+              <div class="recipient">
+                <div>
+                  <span class="recipient__label">{{ m.recipient.label }}</span>
+                  <strong class="recipient__value">{{ m.recipient.value }}</strong>
+                </div>
+                <button type="button" class="btn btn--ghost btn--sm" (click)="copyRecipient(m.recipient.value)">
+                  {{ copied() ? 'Copied ✓' : 'Copy' }}
+                </button>
+              </div>
+              <p class="hint">Amount due: <strong>{{ total() | currency }}</strong> · Use your order reference in the memo.</p>
+            }
           </div>
+        }
+      </fieldset>
+
+      <!-- Age -->
+      <fieldset class="block block--age" appReveal>
+        <label class="check">
+          <input type="checkbox" [(ngModel)]="ageConfirmed" name="age" />
+          <span>I confirm I am 21 years of age or older and I agree to the <a routerLink="/terms">terms of service</a>.</span>
+        </label>
+      </fieldset>
+
+      @if (submitted() && errors().length) {
+        <div class="errors" role="alert">
+          <strong>Please fix the following:</strong>
+          <ul>@for (e of errors(); track e) { <li>{{ e }}</li> }</ul>
+        </div>
+      }
+    </div>
+
+    <!-- Summary -->
+    <aside class="summary" aria-label="Order summary">
+      <h2>Order summary</h2>
+      <ul class="summary__items">
+        @for (i of cartService.items(); track i.productId) {
+          <li>
+            <span class="summary__thumb"><app-smart-image [src]="i.image" [alt]="i.name" /><b>{{ i.quantity }}</b></span>
+            <span class="summary__name"><strong>{{ i.name }}</strong><small>{{ i.meta }}</small></span>
+            <span class="summary__price">{{ i.priceAtAdd * i.quantity | currency }}</span>
+          </li>
+        }
+      </ul>
+
+      @if (fulfilment() === 'ship' && amountToFreeShipping() > 0) {
+        <div class="progress-bar" aria-live="polite">
+          <span>Add {{ amountToFreeShipping() | currency }} for free shipping</span>
+          <div class="progress-bar__track"><div class="progress-bar__fill" [style.width.%]="(subtotal() / freeShippingOver) * 100"></div></div>
         </div>
       }
 
-      <button class="form-submit place-order-btn" type="button" [disabled]="!ageConfirmed" (click)="placeOrder()">Place Order &rarr;</button>
-      <div class="fine-print">By placing this order you confirm you are of legal age and agree to our Terms of Use.</div>
-    </div>
+      <dl class="totals">
+        <div><dt>Subtotal</dt><dd>{{ subtotal() | currency }}</dd></div>
+        <div><dt>{{ fulfilment() === 'pickup' ? 'Pickup' : 'Shipping' }}</dt>
+          <dd>{{ shipping() === 0 ? 'Free' : (shipping() | currency) }}</dd></div>
+        <div class="totals__total"><dt>Total</dt><dd>{{ total() | currency }}</dd></div>
+      </dl>
 
-    <div class="co-side">
-      <div class="cs-h">Your Order ({{ cartService.totalItems() }} items)</div>
-      <div class="order-lines">
-        @for (item of cartService.items(); track item.productId) {
-          <div class="order-line">
-            <img [src]="item.image" [alt]="item.name" />
-            <div class="line-info">
-              {{ item.name }}<br />
-              <span class="line-meta">{{ item.brand }} &middot; x{{ item.quantity }}</span>
-            </div>
-            <b>${{ (item.priceAtAdd * item.quantity).toFixed(2) }}</b>
-          </div>
-        }
-      </div>
-      <div class="divider"></div>
-      <div class="cs-row"><span>Subtotal</span><span>${{ cartService.subtotal().toFixed(2) }}</span></div>
-      <div class="cs-total"><span>Total</span><span>${{ cartService.subtotal().toFixed(2) }}</span></div>
-      <div class="tax-note">+ tax collected at dispensary</div>
-    </div>
-  </div>
+      <button type="button" class="btn btn--primary btn--block btn--lg" [disabled]="cartService.items().length === 0 || placing()" (click)="placeOrder()">
+        {{ fulfilment() === 'pickup' ? 'Reserve order' : 'Place order' }} · {{ total() | currency }}
+      </button>
+      @if (placeError()) {
+        <p class="status status--error" role="alert">{{ placeError() }}</p>
+      }
+      <p class="fine">Pay using the method above. Your order is confirmed on the next screen with payment instructions.</p>
+      <ul class="trust">
+        <li>🔒 Encrypted checkout</li>
+        <li>📦 Recyclable packaging</li>
+        <li>🧪 Lab-tested products</li>
+      </ul>
+    </aside>
+  </section>
 }

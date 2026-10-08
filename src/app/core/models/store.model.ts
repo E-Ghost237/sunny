@@ -12,6 +12,7 @@ export interface StoreAddress {
 
 export interface StoreHours {
   day: string;
+  /** Both null when the store is closed that day. */
   opens: string | null;
   closes: string | null;
 }
@@ -32,7 +33,10 @@ export interface StoreCapabilities {
 }
 
 export interface StoreLocation {
+  id?: string;
   slug: string;
+  /** Back-office uploads; when a view is missing the default photo path is used. */
+  photos?: Partial<Record<'exterior' | 'interior' | 'panorama', string>>;
   name: string;
   image: string;
   phone: string | null;
@@ -40,6 +44,8 @@ export interface StoreLocation {
   lng: number | null;
   timezone: string | null;
   brands: string[];
+  /** Short store description, shown in the store's About section. */
+  description?: string;
   address: StoreAddress;
   openingHours: StoreHours[];
   capabilities: StoreCapabilities;

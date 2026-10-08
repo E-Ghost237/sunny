@@ -1,46 +1,46 @@
-.age-gate-overlay {
+.gate {
   position: fixed;
   inset: 0;
   z-index: var(--z-age-gate);
-  background: color-mix(in srgb, var(--brand-ink) 92%, transparent);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
   padding: var(--space-6);
-}
+  animation: fadeIn 500ms var(--ease-standard) both;
 
-.age-gate-card {
-  background: var(--color-surface);
-  border-radius: var(--radius-lg);
-  padding: var(--space-10);
-  max-width: 440px;
-  width: 100%;
-  text-align: center;
-  box-shadow: var(--shadow-lg);
-}
+  &__bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(60% 50% at 70% 20%, rgba(201, 162, 74, 0.35), transparent 60%),
+      radial-gradient(70% 70% at 10% 90%, rgba(63, 143, 91, 0.35), transparent 60%),
+      linear-gradient(160deg, var(--forest-800), var(--forest-950));
+    backdrop-filter: blur(14px);
+  }
 
-.brand-mark {
-  font-size: var(--text-3xl);
-  color: var(--color-brand);
-  margin-bottom: var(--space-3);
-}
+  &__card {
+    position: relative;
+    width: min(520px, 100%);
+    padding: clamp(2rem, 4vw, 3.25rem);
+    border-radius: var(--radius-xl);
+    background: rgba(252, 250, 245, 0.97);
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+    animation: fadeUp 800ms var(--ease-emphasized) both;
 
-h2 {
-  font-size: var(--text-2xl);
-  font-weight: var(--fw-extrabold);
-  letter-spacing: var(--tracking-tight);
-  margin: 0 0 var(--space-3);
-}
+    h2 {
+      font-size: var(--text-3xl);
+    }
 
-p {
-  font-size: var(--text-sm);
-  color: var(--color-text-muted);
-  line-height: var(--lh-normal);
-  margin: 0 0 var(--space-6);
-}
+    p {
+      color: var(--c-text-soft);
+    }
+  }
 
-.actions {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
+  &__actions {
+    display: flex;
+    gap: var(--space-3);
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: var(--space-6);
+  }
 }

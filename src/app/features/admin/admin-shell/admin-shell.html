@@ -1,0 +1,17 @@
+<div class="adm">
+  <aside class="adm-side" aria-label="Back-office navigation">
+    <a routerLink="/admin" class="adm-side__brand">DeLight <span>back-office</span></a>
+    <nav>
+      @for (item of nav; track item.path) {
+        <a [routerLink]="item.path" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: item.exact }">{{ item.label }}</a>
+      }
+    </nav>
+    <div class="adm-side__foot">
+      <a href="/" target="_blank" rel="noopener">View storefront ↗</a>
+      <button type="button" class="adm-link" (click)="signOut()">Sign out</button>
+    </div>
+  </aside>
+  <div class="adm-body">
+    <router-outlet />
+  </div>
+</div>

@@ -1,42 +1,41 @@
 <a class="pcard" [routerLink]="['/shop', product().category, product().slug]">
-  <div class="pcard-img">
+  <span class="pcard__media">
+    <app-smart-image [src]="image()" [alt]="product().name" />
     @if (product().badge) {
-      <div class="sale-badge-multi">{{ product().badge }}</div>
+      <span class="tag tag--sale pcard__badge">{{ product().badge }}</span>
     }
     @if (product().isExclusive) {
-      <div class="only-badge">EVERGREEN EXCLUSIVE</div>
+      <span class="tag tag--dark pcard__exclusive">DeLight exclusive</span>
     }
-    <app-product-image [src]="product().images[0]" [alt]="product().name" [category]="product().category" />
-  </div>
+    <span class="pcard__cta" aria-hidden="true">View product</span>
+  </span>
 
-  <div class="pcard-body">
+  <span class="pcard__body">
     @if (product().brand) {
-      <div class="pcard-brand">{{ product().brand }}</div>
+      <span class="pcard__brand">{{ product().brand }}</span>
     }
-    <div class="pcard-name">{{ product().name }}</div>
+    <span class="pcard__name">{{ product().name }}</span>
 
-    @if (showSize()) {
-      <div class="pcard-weight">{{ product().size }}</div>
-    }
-
-    <div class="pcard-prices">
-      @if (onSale()) {
-        <span class="pcard-sale-price">${{ product().discountedPrice!.toFixed(2) }}</span>
-        <span class="pcard-orig-price">${{ product().price.toFixed(2) }}</span>
-      } @else {
-        <span class="pcard-reg-price">${{ product().price.toFixed(2) }}</span>
+    <span class="pcard__meta">
+      @if (product().strain) {
+        <span [class]="strainTagClass()">{{ product().strain }}</span>
       }
-    </div>
+      @if (showSize() && product().size) {
+        <span class="pcard__size">{{ product().size }}</span>
+      }
+    </span>
 
-    @if (showTags()) {
-      <div class="pcard-tags">
-        @if (product().strain) {
-          <span class="strain-tag" [class]="strainTagClass()">{{ product().strain }}</span>
-        }
-        @if (potencyLabel()) {
-          <span class="thc-label">{{ potencyLabel() }}</span>
-        }
-      </div>
+    @if (potency()) {
+      <span class="pcard__potency">{{ potency() }}</span>
     }
-  </div>
+
+    <span class="pcard__prices">
+      @if (onSale()) {
+        <span class="price">${{ product().discountedPrice!.toFixed(2) }}</span>
+        <span class="price price--old">${{ product().price.toFixed(2) }}</span>
+      } @else {
+        <span class="price">${{ product().price.toFixed(2) }}</span>
+      }
+    </span>
+  </span>
 </a>

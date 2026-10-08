@@ -39,4 +39,6 @@ export interface Product {
   isExclusive: boolean;
   images: string[];
   category: ProductCategory;
+  /** Values for the category-specific filter sections, keyed by section title (e.g. 'Top Terpenes'). */
+  filters?: Record<string, string[]>;
 }

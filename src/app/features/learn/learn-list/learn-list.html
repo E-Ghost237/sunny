@@ -1,28 +1,67 @@
-<div class="learn-list-page">
-  <div class="learn-hero">
-    <h1>Learn</h1>
-    <p>Cannabis education, strain guides, and stories from Evergreen.</p>
+<section class="page-hero">
+  <div class="page-hero__media" aria-hidden="true"><img class="kb" src="/assets/img/hero-learn.jpg" alt="" /></div>
+  <div class="page-hero__veil" aria-hidden="true"></div>
+  <div class="container page-hero__inner">
+    <p class="eyebrow">Learn</p>
+    <h1>Knowledge is the <em>best</em> first purchase.</h1>
+    <p class="lead">Plain-language guides on formats, potency, terpenes, dosing and reading a lab report.</p>
   </div>
+</section>
 
-  @if (articlesResource.isLoading()) {
-    <p class="status">Loading articles&hellip;</p>
-  } @else if (articlesResource.error()) {
-    <p class="status error">Couldn't load articles. Is the mock API running? (npm run mock-api)</p>
-  } @else {
-    <div class="grid">
-      @for (article of articlesResource.value(); track article.slug) {
-        <a class="article-card" [routerLink]="['/learn', article.slug]">
-          @if (article.heroImage) {
-            <img [src]="article.heroImage" [alt]="article.title" loading="lazy" />
-          }
-          <div class="card-body">
-            <div class="title">{{ article.title }}</div>
-            @if (article.description) {
-              <div class="desc">{{ article.description }}</div>
+<section class="section">
+  <div class="container">
+    @if (articlesResource.isLoading()) {
+      <p class="status">Loading guides…</p>
+    } @else if (articlesResource.error()) {
+      <p class="status">We couldn't load the guides right now. Please try again shortly.</p>
+    } @else {
+      <div class="topics" role="group" aria-label="Filter by topic">
+        <button type="button" class="chip" [attr.aria-pressed]="activeTag() === null" (click)="activeTag.set(null)">All guides</button>
+        @for (t of tags(); track t) {
+          <button type="button" class="chip" [attr.aria-pressed]="activeTag() === t" (click)="activeTag.set(t)">{{ t }}</button>
+        }
+      </div>
+
+      @if (partnerBrands().length) {
+        <div class="brands" aria-label="DeLight partner brands" appReveal>
+          <p class="eyebrow">Partner brands</p>
+          <div class="brands__row">
+            @for (b of partnerBrands(); track b.slug; let i = $index) {
+              <a class="brands__chip" [routerLink]="['/learn', b.slug]" [style.--i]="i">{{ b.name }}</a>
             }
           </div>
+        </div>
+      }
+
+      @if (featured(); as f) {
+        <a class="feature" [routerLink]="['/learn', f.slug]" appReveal>
+          <span class="feature__img"><app-smart-image [src]="articleImage(f)" [alt]="f.title" /></span>
+          <span class="feature__body">
+            <span class="tag tag--gold">Start here</span>
+            <strong>{{ f.title }}</strong>
+            <span class="feature__desc">{{ f.description }}</span>
+            <span class="feature__go">Read the guide →</span>
+          </span>
         </a>
       }
-    </div>
-  }
-</div>
+
+      <div class="guides">
+        @for (a of rest(); track a.slug; let i = $index) {
+          <a class="guide" [routerLink]="['/learn', a.slug]" appReveal [revealDelay]="(i % 3) * 100">
+            <span class="guide__img"><app-smart-image [src]="articleImage(a)" [alt]="a.title" /></span>
+            <span class="guide__body">
+              @if (a.tags.length) {
+                <span class="tag tag--leaf">{{ a.tags[0] }}</span>
+              }
+              @if (a.partnerBrandName) {
+                <span class="tag tag--gold">{{ a.partnerBrandName }}</span>
+              }
+              <strong>{{ a.title }}</strong>
+              <span class="guide__desc">{{ a.description }}</span>
+            </span>
+          </a>
+        }
+      </div>
+    }
+  </div>
+</section>

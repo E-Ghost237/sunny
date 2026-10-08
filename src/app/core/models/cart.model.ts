@@ -1,7 +1,7 @@
 import { ProductCategory } from './product.model';
 
 // Snapshots display fields at add-time so the cart doesn't need to refetch each
-// product just to render -- standard e-commerce pattern (also matches how sunny2's
+// product just to render -- standard e-commerce pattern (also matches how the prototype's
 // cart mockup shows brand/name/meta/price directly on the cart-item).
 export interface CartItem {
   productId: number;

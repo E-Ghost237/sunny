@@ -1,28 +1,17 @@
-<div class="filt-range-wrap">
-  <div class="filt-range-labels">
+<div class="rs">
+  <div class="rs__values">
     <span>{{ label(currentMin()) }}</span>
+    <span class="rs__sep" aria-hidden="true">—</span>
     <span>{{ label(currentMax()) }}</span>
   </div>
-  <div class="filt-range-track">
-    <div class="filt-range-fill" [style.left.%]="fillLeft()" [style.right.%]="fillRight()"></div>
-    <input
-      class="range-min"
-      type="range"
-      [min]="boundMin()"
-      [max]="boundMax()"
-      [value]="currentMin()"
-      (input)="onMinInput($any($event.target).value)"
-    />
-    <input
-      class="range-max"
-      type="range"
-      [min]="boundMin()"
-      [max]="boundMax()"
-      [value]="currentMax()"
-      (input)="onMaxInput($any($event.target).value)"
-    />
+  <div class="rs__track">
+    <div class="rs__fill" [style.left.%]="fillLeft()" [style.right.%]="fillRight()"></div>
+    <input type="range" class="rs__input" aria-label="Minimum" [min]="boundMin()" [max]="boundMax()"
+      [value]="currentMin()" (input)="onMinInput($any($event.target).value)" />
+    <input type="range" class="rs__input" aria-label="Maximum" [min]="boundMin()" [max]="boundMax()"
+      [value]="currentMax()" (input)="onMaxInput($any($event.target).value)" />
   </div>
   @if (note()) {
-    <div class="filt-range-note">{{ note() }}</div>
+    <p class="rs__note">{{ note() }}</p>
   }
 </div>

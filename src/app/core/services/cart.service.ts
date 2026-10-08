@@ -2,7 +2,7 @@ import { Injectable, computed, effect, signal } from '@angular/core';
 
 import { CartItem } from '../models/cart.model';
 
-const STORAGE_KEY = 'evergreen-cart';
+const STORAGE_KEY = 'delight-cart';
 
 function loadInitial(): CartItem[] {
   try {

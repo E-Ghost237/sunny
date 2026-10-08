@@ -1,0 +1,89 @@
+<header class="adm-head">
+  <div>
+    <p class="adm-eyebrow">Checkout</p>
+    <h1>Payment methods</h1>
+    <p class="adm-muted">Turn methods on or off, set their order, and edit the instructions shown after a customer picks one.</p>
+  </div>
+  <button type="button" class="adm-btn adm-btn--primary" (click)="openNew()">+ Add payment method</button>
+</header>
+
+@if (message()) { <p class="adm-alert adm-alert--ok" role="status">{{ message() }}</p> }
+@if (error()) { <p class="adm-alert adm-alert--error" role="alert">{{ error() }}</p> }
+
+<div class="adm-card">
+  @if (res.isLoading()) {
+    <p class="adm-muted">Loading…</p>
+  } @else {
+    <table class="adm-table">
+      <thead><tr><th>#</th><th>Method</th><th>Tags</th><th>Live</th><th></th></tr></thead>
+      <tbody>
+        @for (m of methods(); track m.id; let i = $index) {
+          <tr [class.is-off]="!m.enabled">
+            <td>
+              <div class="adm-order">
+                <span>{{ i + 1 }}</span>
+                <button type="button" (click)="move(i, -1)" [disabled]="busy() || i === 0" aria-label="Move up">↑</button>
+                <button type="button" (click)="move(i, 1)" [disabled]="busy() || i === methods().length - 1" aria-label="Move down">↓</button>
+              </div>
+            </td>
+            <td>
+              <span class="adm-badge" [style.background]="m.accent">{{ m.mark }}</span>
+              <strong>{{ m.label }}</strong>
+              <small class="adm-muted adm-block">{{ m.id }}</small>
+            </td>
+            <td><span class="adm-tagrow">@for (t of m.tags; track t) { <span class="adm-tag">{{ t }}</span> }</span></td>
+            <td>
+              <label class="adm-switch">
+                <input type="checkbox" [checked]="m.enabled" [disabled]="busy()" (change)="toggle(m)" />
+                <span>{{ m.enabled ? 'On' : 'Off' }}</span>
+              </label>
+            </td>
+            <td class="adm-right">
+              <button type="button" class="adm-link" (click)="openEdit(m)">Edit</button>
+              <button type="button" class="adm-link adm-link--danger" [disabled]="busy()" (click)="remove(m)">Remove</button>
+            </td>
+          </tr>
+        } @empty {
+          <tr><td colspan="5" class="adm-muted">No payment methods yet. Add one to start taking payments.</td></tr>
+        }
+      </tbody>
+    </table>
+  }
+</div>
+
+@if (editing(); as ed) {
+  <div class="adm-drawer-scrim" (click)="closeEditor()" aria-hidden="true"></div>
+  <aside class="adm-drawer" role="dialog" aria-modal="true" [attr.aria-label]="ed.isNew ? 'Add payment method' : 'Edit payment method'">
+    <header class="adm-drawer__head">
+      <h2>{{ ed.isNew ? 'Add payment method' : 'Edit ' + draft.label }}</h2>
+      <button type="button" class="adm-link" (click)="closeEditor()">Close</button>
+    </header>
+
+    <form class="adm-form" (ngSubmit)="saveDraft()">
+      <label class="adm-field"><span>Name *</span>
+        <input name="label" [(ngModel)]="draft.label" placeholder="e.g. Zelle" required /></label>
+      <label class="adm-field"><span>Tags (comma separated)</span>
+        <input name="tags" [(ngModel)]="draft.tagsText" placeholder="Instant, Bank-to-bank" /></label>
+      <div class="adm-form-grid">
+        <label class="adm-field"><span>Brand colour</span>
+          <input name="accent" type="color" [(ngModel)]="draft.accent" /></label>
+        <label class="adm-field"><span>Monogram (1–2 letters)</span>
+          <input name="mark" maxlength="2" [(ngModel)]="draft.mark" /></label>
+      </div>
+      <label class="adm-field"><span>Instructions (one step per line)</span>
+        <textarea name="steps" rows="4" [(ngModel)]="draft.stepsText"></textarea></label>
+      <div class="adm-form-grid">
+        <label class="adm-field"><span>Recipient label</span>
+          <input name="rlabel" [(ngModel)]="draft.recipientLabel" placeholder="Send to" /></label>
+        <label class="adm-field"><span>Recipient value</span>
+          <input name="rvalue" [(ngModel)]="draft.recipientValue" /></label>
+      </div>
+      <label class="adm-check"><input type="checkbox" name="enabled" [(ngModel)]="draft.enabled" /> <span>Show at checkout</span></label>
+
+      <div class="adm-actions">
+        <button type="submit" class="adm-btn adm-btn--primary" [disabled]="busy()">{{ ed.isNew ? 'Add method' : 'Save method' }}</button>
+        <button type="button" class="adm-btn" (click)="closeEditor()">Cancel</button>
+      </div>
+    </form>
+  </aside>
+}

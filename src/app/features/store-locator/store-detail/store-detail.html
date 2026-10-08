@@ -1,91 +1,235 @@
-@if (storeResource.isLoading()) {
-  <p class="status">Loading&hellip;</p>
-} @else if (!store()) {
-  <div class="status">
-    <p>Store not found.</p>
-    <a routerLink="/stores">Back to all stores</a>
-  </div>
-} @else {
-  <div class="breadcrumb">
-    <a routerLink="/stores">Find a Dispensary</a> &rsaquo; <strong>{{ store()!.name }}</strong>
-  </div>
+@if (store(); as s) {
+  <!-- Header: name, address, shop switch, contact -->
+  <section class="sd-hero">
+    <div class="sd-hero__media" aria-hidden="true">
+      <app-smart-image [src]="storeImage(s, 'exterior')" alt="" [eager]="true" />
+    </div>
+    <div class="sd-hero__veil" aria-hidden="true"></div>
+    <div class="container sd-hero__inner">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a routerLink="/">Home</a><span>/</span><a routerLink="/stores">Locations</a><span>/</span><span>{{ s.name }}</span>
+      </nav>
+      <p class="eyebrow">{{ s.address.addressLocality }}, {{ s.address.addressRegion }}</p>
+      <h1>{{ s.name }}</h1>
+      <p class="lead">{{ s.address.streetAddress }}, {{ s.address.addressLocality }}, {{ s.address.addressRegion }} {{ s.address.postalCode }}</p>
 
-  <div class="store-body">
-    <div class="store-main">
-      <div class="eyebrow">You're Shopping At:</div>
-      <div class="store-title">{{ store()!.name }}</div>
-      <div class="addr-line">{{ store()!.address.streetAddress }}</div>
-      <div class="addr-line">
-        {{ store()!.address.addressLocality }}, {{ store()!.address.addressRegion }} {{ store()!.address.postalCode }}
-      </div>
-
-      <div class="store-img-mock">{{ thumbs[activeThumb()] }}</div>
-      <div class="store-thumb-row">
-        @for (thumb of thumbs; track $index) {
-          <div class="store-thumb" [class.on]="$index === activeThumb()" (click)="activeThumb.set($index)">{{ thumb }}</div>
+      <div class="sd-switch" role="group" aria-label="Shop type">
+        <a class="sd-switch__btn is-active" routerLink="/shop">Shop adult use</a>
+        @if (hasMedical()) {
+          <a class="sd-switch__btn" routerLink="/medical">Shop medical</a>
         }
       </div>
 
-      <div class="store-info-grid">
-        @if (store()!.phone) {
-          <a class="store-info-btn" [href]="'tel:' + store()!.phone">📞 {{ store()!.phone }}</a>
+      <div class="sd-hero__ctas">
+        @if (s.phone) {
+          <a class="sd-link" [href]="'tel:' + s.phone">{{ s.phone }}</a>
         }
-        <a class="store-info-btn" [href]="directionsUrl()" target="_blank" rel="noopener">📍 Get Directions</a>
-        @if (store()!.aggregateRating) {
-          <div class="store-info-btn">★ {{ store()!.aggregateRating!.ratingValue }} ({{ store()!.aggregateRating!.reviewCount }})</div>
-        }
+        <a class="sd-link" [href]="directionsUrl()" target="_blank" rel="noopener">Get directions</a>
+        <a class="sd-link" routerLink="/askusanything">Contact us</a>
       </div>
 
-      <div class="divider"></div>
-      <div class="sec-h2">Your Visit, Step by Step</div>
-      @for (step of visitSteps; track step.n) {
-        <div class="vstep">
-          <div class="vstep-n">{{ step.n }}</div>
-          <p class="vstep-t"><b>{{ step.title }}</b> {{ step.body }}</p>
-        </div>
+      <div class="sd-hero__ctas">
+        @if (isSelected()) {
+          <span class="tag tag--gold">This is your store</span>
+        } @else {
+          <button type="button" class="btn btn--gold" (click)="shopHere()">Shop at this store</button>
+        }
+        <a class="btn btn--light" routerLink="/shop">Browse the menu</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Store hours -->
+  <section class="sd-hours">
+    <div class="container sd-hours__inner">
+      <div>
+        <h2 class="sd-h">Store hours</h2>
+        @if (todayHours(); as h) {
+          <p class="sd-today"><span class="dot"></span> Open today <strong>{{ h.opens }} – {{ h.closes }}</strong></p>
+        } @else {
+          <p class="sd-today">Closed today</p>
+        }
+      </div>
+      <button type="button" class="sd-more" [attr.aria-expanded]="hoursOpen()" (click)="toggleHours()">
+        {{ hoursOpen() ? 'Less' : 'More' }}
+      </button>
+      @if (hoursOpen()) {
+        <ul class="sd-week">
+          @for (h of s.openingHours; track h.day) {
+            <li [class.is-today]="h.day === todayName"><span>{{ h.day }}</span><span>{{ h.opens ? h.opens + ' – ' + h.closes : 'Closed' }}</span></li>
+          }
+        </ul>
       }
+    </div>
+  </section>
 
-      @if (store()!.reviews.length > 0) {
-        <div class="divider"></div>
-        <div class="sec-h2">Reviews</div>
-        @for (r of store()!.reviews; track $index) {
-          <div class="review">
-            <div class="review-head">
-              <span class="review-author">{{ r.author }}</span>
-              @if (r.rating) {
-                <span class="review-rating">★ {{ r.rating }}</span>
-              }
-            </div>
-            @if (r.text) {
-              <p class="review-text">{{ r.text }}</p>
+  <!-- Photos: outside, inside, all round -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head" appReveal>
+        <div>
+          <p class="eyebrow">Take a look around</p>
+          <h2>Outside, inside and all round</h2>
+        </div>
+        <div class="view-switch" role="tablist" aria-label="Store views">
+          @for (v of views; track v.key) {
+            <button type="button" role="tab" class="chip" [attr.aria-selected]="activeView() === v.key"
+              [attr.aria-pressed]="activeView() === v.key" (click)="setView(v.key)">{{ v.label }}</button>
+          }
+        </div>
+      </div>
+
+      <div class="viewer" appReveal>
+        @for (v of views; track v.key) {
+          @if (activeView() === v.key) {
+            <figure class="viewer__frame" [class.viewer__frame--pan]="v.key === 'panorama'">
+              <div class="viewer__img">
+                <app-smart-image [src]="storeImage(s, v.key)" [alt]="s.name + ' · ' + v.label + ' view'"
+                  [focusX]="v.key === 'panorama' ? panPosition() : 50" [eager]="true" />
+              </div>
+              <figcaption class="viewer__cap">
+                <span class="tag tag--gold">{{ v.label }} view</span>
+                <span class="tag">AI-generated image</span>
+                @if (v.key === 'panorama') {
+                  <label class="pan">
+                    <span>Look around</span>
+                    <input type="range" min="0" max="100" [value]="panPosition()"
+                      (input)="panPosition.set(+$any($event.target).value)" aria-label="Look around" />
+                  </label>
+                }
+              </figcaption>
+            </figure>
+          }
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Savings at this store -->
+  @if (savings().length) {
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section-head" appReveal>
+          <div>
+            <p class="eyebrow">Deals</p>
+            <h2>Savings at this store</h2>
+          </div>
+          <a class="section-head__link" routerLink="/shop">Shop all</a>
+        </div>
+        <ul class="savings">
+          @for (p of savings(); track p.id; let i = $index) {
+            <li class="savings__item" appReveal [revealDelay]="i * 60">
+              <a [routerLink]="['/shop', p.category, p.slug]">
+                <span class="savings__brand">{{ p.brand }}</span>
+                <strong>{{ p.name }}</strong>
+                <span class="savings__size">{{ p.size }}</span>
+                <span class="savings__price">
+                  <s>{{ p.price | currency }}</s> <b>{{ p.discountedPrice | currency }}</b>
+                </span>
+              </a>
+            </li>
+          }
+        </ul>
+      </div>
+    </section>
+  }
+
+  <!-- About -->
+  <section class="section">
+    <div class="container sd-grid">
+      <div class="sd-about" appReveal>
+        <p class="eyebrow">About this store</p>
+        <h2>{{ s.name }}</h2>
+        <p>{{ s.description }}</p>
+        <p>Find us at {{ s.address.streetAddress }}, {{ s.address.addressLocality }}, {{ s.address.addressRegion }}. Parking and access details are on our directions link.</p>
+      </div>
+
+      <div class="card sd-card" appReveal [revealDelay]="120">
+        <h3>Store details</h3>
+        <ul class="bullets">
+          @for (b of detailBullets(); track b) {
+            <li>{{ b }}</li>
+          }
+        </ul>
+        @if (s.brands.length) {
+          <h4>Brands in store</h4>
+          <div class="brand-cloud">
+            @for (b of s.brands; track b) {
+              <span class="tag tag--outline">{{ b }}</span>
             }
           </div>
         }
-      }
-    </div>
-
-    <div class="store-aside">
-      <div class="info-box">
-        <div class="info-box-h">Store Hours</div>
-        @for (h of store()!.openingHours; track h.day) {
-          <div class="hours-row" [class.today]="h.day === todayName">
-            <span>{{ h.day === todayName ? 'Today (' + h.day + ')' : h.day }}</span>
-            <span>{{ h.opens }}&ndash;{{ h.closes }}</span>
-          </div>
-        }
       </div>
+    </div>
+  </section>
 
-      <button class="btn-orange full" [routerLink]="['/shop']">Shop Online for Pickup &rarr;</button>
-
-      <div class="info-box">
-        <div class="info-box-h">Important Notes</div>
-        <div class="notes">
-          ✅ Valid non-expired photo ID required<br />
-          ✅ Medical card for medical purchases<br />
-          ❌ No credit cards<br />
-          ❌ No weapons on premises
+  <!-- Payments, discounts, rewards -->
+  <section class="section section--alt">
+    <div class="container sd-info">
+      <div class="card sd-card" appReveal>
+        <h3>Payments</h3>
+        <p class="sd-note">Pay online at checkout with any of these methods. Payment instructions appear for the method you pick.</p>
+        <div class="pay-tags">
+          @for (m of paymentMethods(); track m.id) {
+            <span class="tag tag--outline">{{ m.label }}</span>
+          }
         </div>
       </div>
+
+      <div class="card sd-card" appReveal [revealDelay]="120">
+        <h3>Discounts</h3>
+        <ul class="bullets">
+          <li>Live sale prices appear on product cards and in the savings list above.</li>
+          <li>Discounts apply at checkout and are shown in your order summary.</li>
+        </ul>
+      </div>
+
+      <div class="card sd-card" appReveal [revealDelay]="240">
+        <h3>Rewards</h3>
+        <p class="sd-note">Earn points on every order you place with DeLight and redeem them on future purchases.</p>
+        <a class="btn btn--primary btn--sm" routerLink="/rewards">See DeLight Rewards</a>
+      </div>
     </div>
-  </div>
+  </section>
+
+  <!-- Visit steps -->
+  <section class="section">
+    <div class="container">
+      <div class="card sd-card" appReveal>
+        <h3>How a visit works</h3>
+        <ol class="visit">
+          @for (step of visitSteps; track step.n) {
+            <li><span>{{ step.n }}</span><div><strong>{{ step.title }}</strong><p>{{ step.body }}</p></div></li>
+          }
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  @if (s.reviews.length) {
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section-head" appReveal>
+          <div>
+            <p class="eyebrow">What visitors say</p>
+            <h2>Reviews</h2>
+          </div>
+          @if (s.aggregateRating; as r) {
+            <span class="score"><strong>{{ r.ratingValue }}</strong> / 5 · {{ r.reviewCount }} reviews</span>
+          }
+        </div>
+        <div class="reviews">
+          @for (r of s.reviews; track $index; let i = $index) {
+            <blockquote class="review card" appReveal [revealDelay]="i * 100">
+              <span class="review__stars" aria-label="{{ r.rating }} out of 5">{{ '★'.repeat(r.rating ?? 0) }}</span>
+              <p>{{ r.text }}</p>
+              <footer>{{ r.author }}</footer>
+            </blockquote>
+          }
+        </div>
+      </div>
+    </section>
+  }
+} @else {
+  <section class="container" style="padding-top:9rem"><div class="skeleton-block"></div></section>
 }

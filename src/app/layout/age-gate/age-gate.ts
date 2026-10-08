@@ -1,10 +1,11 @@
 import { Component, signal } from '@angular/core';
+import { Logo } from '../../shared/logo/logo';
 
-const STORAGE_KEY = 'evergreen-age-confirmed';
+const STORAGE_KEY = 'delight-age-confirmed';
 
 @Component({
   selector: 'app-age-gate',
-  imports: [],
+  imports: [Logo],
   templateUrl: './age-gate.html',
   styleUrl: './age-gate.scss',
 })
@@ -16,7 +17,7 @@ export class AgeGate {
     try {
       localStorage.setItem(STORAGE_KEY, 'true');
     } catch {
-      /* storage unavailable — gate will re-prompt next load */
+      /* storage unavailable: the gate re-prompts next load */
     }
     this.confirmed.set(true);
   }

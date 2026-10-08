@@ -1,0 +1,30 @@
+:host {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--forest-800);
+  text-decoration: none;
+}
+
+.logo__mark {
+  width: 34px;
+  height: 34px;
+  flex: 0 0 auto;
+  transition: transform 800ms var(--ease-spring);
+}
+
+:host(:hover) .logo__mark {
+  transform: rotate(-12deg) scale(1.06);
+}
+
+.logo__word {
+  font-family: var(--font-display);
+  font-size: 1.85rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+
+:host(.logo--light) {
+  color: var(--sand-100);
+}

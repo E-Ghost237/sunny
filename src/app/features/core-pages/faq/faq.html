@@ -1,7 +1,41 @@
-@if (pageResource.isLoading()) {
-  <p class="status">Loading&hellip;</p>
-} @else if (!page()) {
-  <p class="status">Content unavailable.</p>
-} @else {
-  <app-content-page-renderer [blocks]="page()!.blocks" />
-}
+<section class="page-hero">
+  <div class="page-hero__media" aria-hidden="true"><img class="kb" src="/assets/img/hero-learn.jpg" alt="" /></div>
+  <div class="page-hero__veil" aria-hidden="true"></div>
+  <div class="container page-hero__inner">
+    <p class="eyebrow">Help centre</p>
+    <h1>Questions, <em>answered.</em></h1>
+    <p class="lead">Pickup, shipping, payments, products and rewards, in one place.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container faq">
+    @if (pageResource.isLoading()) {
+      <p class="status">Loading…</p>
+    } @else if (!page()) {
+      <p class="status">Content unavailable right now.</p>
+    } @else {
+      <div class="faq__list">
+        @for (g of groups(); track $index; let i = $index) {
+          <div class="faq__item" [class.is-open]="openIndex() === i" appReveal [revealDelay]="(i % 4) * 60">
+            <button type="button" class="faq__q" (click)="toggle(i)" [attr.aria-expanded]="openIndex() === i">
+              <span>{{ g.question }}</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__a">
+              <div class="faq__inner">
+                <app-content-page-renderer [blocks]="g.answerBlocks" />
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+
+      <aside class="faq__help" appReveal>
+        <h3>Still need help?</h3>
+        <p>Our team can answer anything the guides don't cover.</p>
+        <a class="btn btn--primary" routerLink="/askusanything">Ask us anything</a>
+      </aside>
+    }
+  </div>
+</section>

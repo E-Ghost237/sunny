@@ -1,7 +1,38 @@
-@if (pageResource.isLoading()) {
-  <p class="status">Loading&hellip;</p>
-} @else if (!page()) {
-  <p class="status">Content unavailable.</p>
+@if (page(); as p) {
+  <section class="page-hero">
+    <div class="page-hero__media" aria-hidden="true"><img class="kb" src="/assets/img/hero-about.jpg" alt="" /></div>
+    <div class="page-hero__veil" aria-hidden="true"></div>
+    <div class="container page-hero__inner">
+      <p class="eyebrow">About DeLight</p>
+      <h1>Good cannabis, <em>done properly.</em></h1>
+      <p class="lead">A calmer way to shop: honest information, responsible packaging and people who know the menu.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container about-grid">
+      <div class="about-copy" appReveal>
+        <app-content-page-renderer [blocks]="p.blocks" />
+      </div>
+      <aside class="pillars" appReveal [revealDelay]="150">
+        <div class="pillar"><span>01</span><strong>Transparency</strong><p>Potency, lab results and origin on every product page.</p></div>
+        <div class="pillar"><span>02</span><strong>Responsibility</strong><p>21+ only, clear dosing guidance and discreet delivery.</p></div>
+        <div class="pillar"><span>03</span><strong>Sustainability</strong><p>Recyclable packaging and partners who farm regeneratively.</p></div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container split">
+      <img src="/assets/img/section-eco.jpg" alt="Dew on a leaf in morning light" loading="lazy" appReveal />
+      <div appReveal [revealDelay]="150">
+        <p class="eyebrow">Our promise</p>
+        <h2>Lighter on the planet, heavier on care.</h2>
+        <p class="lead">We would rather sell less and sell better. Every shelf is curated, every batch is documented and every parcel travels in less plastic than you'd expect.</p>
+        <a class="btn btn--primary" routerLink="/shop">Explore the shop</a>
+      </div>
+    </div>
+  </section>
 } @else {
-  <app-content-page-renderer [blocks]="page()!.blocks" />
+  <p class="status">Loading…</p>
 }

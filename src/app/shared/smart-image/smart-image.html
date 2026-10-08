@@ -1,0 +1,14 @@
+@if (showImg()) {
+  <img
+    class="smart-image__img"
+    [src]="src()"
+    [alt]="alt()"
+    [attr.loading]="eager() ? 'eager' : 'lazy'"
+    [style.object-position]="position()"
+    decoding="async"
+    (load)="loaded.set(true)"
+    (error)="failed.set(true)"
+  />
+} @else {
+  <div class="smart-image__fallback img-fallback" role="img" [attr.aria-label]="alt()"></div>
+}

@@ -1,50 +1,56 @@
 <footer class="footer">
-  <div class="footer-top">
-    <button class="back-top" type="button" (click)="scrollToTop()" aria-label="Back to top">
-      <span aria-hidden="true">↑</span> Top
-    </button>
+  <div class="container footer__top">
+    <div class="footer__brand">
+      <app-logo [light]="true" />
+      <p class="footer__tagline">Curated, lab-tested cannabis from licensed partners. Grown with care, packed in
+        recyclable materials, delivered with discretion.</p>
+      <div class="footer__badges">
+        <span class="tag tag--dark">21+ only</span>
+        <span class="tag tag--dark">Lab-tested</span>
+        <span class="tag tag--dark">Eco packaging</span>
+      </div>
+    </div>
+
+    <nav class="footer__col" aria-label="Shop">
+      <h4>Shop</h4>
+      @for (l of shopLinks; track l.slug) {
+        <a [routerLink]="['/shop', l.slug]">{{ l.label }}</a>
+      }
+    </nav>
+
+    <nav class="footer__col" aria-label="Company">
+      <h4>DeLight</h4>
+      @for (l of companyLinks; track l.path) {
+        <a [routerLink]="l.path">{{ l.label }}</a>
+      }
+    </nav>
+
+    <nav class="footer__col" aria-label="Help">
+      <h4>Help</h4>
+      @for (l of helpLinks; track l.path) {
+        <a [routerLink]="l.path">{{ l.label }}</a>
+      }
+    </nav>
+
+    <div class="footer__col footer__news">
+      <h4>Stay in the know</h4>
+      <p>New drops, lab reports and member-only offers. No spam, unsubscribe anytime.</p>
+      <form class="footer__form" (submit)="$event.preventDefault()">
+        <label class="sr-only" for="news-email">Email</label>
+        <input id="news-email" type="email" placeholder="you@example.com" required />
+        <button type="submit" class="btn btn--gold btn--sm">Join</button>
+      </form>
+    </div>
   </div>
 
-  <div class="footer-cols">
-    <div class="footer-col">
-      <h4 class="ft-title">Company</h4>
-      <div class="ft-links">
-        @for (link of companyLinks; track link.path) {
-          <a class="ft-link" [routerLink]="link.path">{{ link.label }}</a>
-        }
-      </div>
-    </div>
-
-    <div class="footer-col">
-      <h4 class="ft-title">Shop</h4>
-      <div class="ft-shop-grid">
-        <div class="ft-links">
-          @for (cat of shopColA; track cat.slug) {
-            <a class="ft-link" [routerLink]="['/shop', cat.slug]">{{ cat.label }}</a>
-          }
-        </div>
-        <div class="ft-links">
-          @for (cat of shopColB; track cat.slug) {
-            <a class="ft-link" [routerLink]="['/shop', cat.slug]">{{ cat.label }}</a>
-          }
-        </div>
-      </div>
-    </div>
-
-    <div class="footer-col">
-      <h4 class="ft-title">Learn</h4>
-      <div class="ft-links">
-        <a class="ft-link" routerLink="/learn">All Articles</a>
-        <a class="ft-link" routerLink="/faq">Frequently Asked Questions</a>
-        <a class="ft-link" routerLink="/medical">Medical Program</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <div class="ft-copy">© {{ year }} Evergreen. Placeholder brand — for development only.</div>
-    <div class="ft-legal">
-      <a routerLink="/terms">Terms of Service</a>
+  <div class="container footer__bottom">
+    <p>© {{ year }} DeLight. Cannabis products are for adults 21+ only. Keep out of reach of children.
+      Consume responsibly. Products are available only where permitted by law.</p>
+    <p class="footer__ai">Imagery on this site is AI-generated and for illustration only.</p>
+    <div class="footer__legal">
+      <a routerLink="/terms">Terms</a>
+      <a routerLink="/faq">Privacy</a>
+      <button type="button" class="footer__top-btn" (click)="scrollToTop()">Back to top ↑</button>
     </div>
   </div>
 </footer>

@@ -1,6 +1,6 @@
 import { ProductCategory } from './product.model';
 
-// Real, per-category filter sidebar structure extracted from sunny2's 10 hand-built
+// Real, per-category filter sidebar structure extracted from the prototype's 10 hand-built
 // shop pages (see sunny/extract/extract_filter_sidebars.py) -- confirmed to vary
 // significantly per category (flower has "Flower Type"/"Terpenes", vapes adds "CBD
 // Potency"/"CBD Ratio"/"Vape Type"/"Extraction Method", etc).

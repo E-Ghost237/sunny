@@ -1,57 +1,50 @@
-<div class="auth-bg">
-  @if (step() === 'email') {
-    <div class="auth-card">
-      <h2>Enter your email</h2>
-      <p>If you're new here, we'll create an account for you.</p>
-      <div class="fg">
-        <label for="login-email">Email Address</label>
-        <input id="login-email" type="email" [(ngModel)]="email" placeholder="Email Address" (keyup.enter)="continueFromEmail()" />
-      </div>
-      <button class="form-submit" type="button" [disabled]="checking()" (click)="continueFromEmail()">
-        {{ checking() ? 'Checking…' : 'Continue' }}
-      </button>
-      <div class="fine-print">
-        This site is protected by reCAPTCHA and the Google
-        <a>Privacy Policy</a> and <a>Terms of Service</a> apply.
-      </div>
-    </div>
-  }
+<section class="auth">
+  <div class="auth__media" aria-hidden="true"><img class="kb" src="/assets/img/hero-about.jpg" alt="" /></div>
+  <div class="auth__veil" aria-hidden="true"></div>
 
-  @if (step() === 'signin') {
-    <div class="auth-card">
-      <div class="back-link" (click)="back()">&lsaquo; Back</div>
-      <h2>Welcome Back</h2>
-      <p>Sign in to {{ email }}.</p>
-      @if (error()) {
-        <div class="alert-info error">{{ error() }}</div>
+  <div class="auth__card" appReveal>
+    <app-logo />
+    @switch (step()) {
+      @case ('email') {
+        <h1>Welcome back</h1>
+        <p class="sub">Sign in or create a DeLight account with your email.</p>
+        <form (submit)="$event.preventDefault(); continueFromEmail()">
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" [(ngModel)]="email" autocomplete="email" required />
+          </div>
+          <button type="submit" class="btn btn--primary btn--block" [disabled]="checking() || !email">
+            {{ checking() ? 'Checking…' : 'Continue' }}
+          </button>
+        </form>
       }
-      <div class="fg">
-        <label for="login-password">Password</label>
-        <input id="login-password" type="password" [(ngModel)]="password" placeholder="Password" />
-      </div>
-      <button class="form-submit" type="button" (click)="submitSignIn()">Sign In</button>
-    </div>
-  }
-
-  @if (step() === 'create') {
-    <div class="auth-card wide">
-      <div class="back-link" (click)="back()">&lsaquo; Back</div>
-      <h2>Create an Account</h2>
-      <p>Please ensure your information matches the ID you'll be using to pickup your order.</p>
-      <div class="email-display">{{ email }}</div>
-      <div class="not-your-email">Not your email? <a (click)="back()">Enter a different email</a></div>
-
-      <div class="form-2">
-        <div class="fg"><input type="text" [(ngModel)]="firstName" placeholder="First Name" aria-label="First Name" /></div>
-        <div class="fg"><input type="text" [(ngModel)]="lastName" placeholder="Last Name" aria-label="Last Name" /></div>
-      </div>
-      <div class="fg"><input type="tel" [(ngModel)]="phone" placeholder="Phone Number" aria-label="Phone Number" /></div>
-
-      <label class="age-row">
-        <input type="checkbox" />
-        <span>By checking this box and clicking Next, you acknowledge that you have read and agree to the <a>Terms of Service</a> and <a>Privacy Policy</a>.</span>
-      </label>
-      <button class="form-submit" type="button" (click)="submitCreate()">Next</button>
-    </div>
-  }
-</div>
+      @case ('signin') {
+        <h1>Good to see you</h1>
+        <p class="sub">Signing in as <strong>{{ email }}</strong>.</p>
+        <form (submit)="$event.preventDefault(); submitSignIn()">
+          <div class="field">
+            <label for="pw">Password</label>
+            <input id="pw" type="password" name="pw" [(ngModel)]="password" autocomplete="current-password" />
+          </div>
+          @if (error()) { <p class="error" role="alert">{{ error() }}</p> }
+          <button type="submit" class="btn btn--primary btn--block">Sign in</button>
+        </form>
+        <button type="button" class="link" (click)="back()">Use a different email</button>
+      }
+      @case ('create') {
+        <h1>Create your account</h1>
+        <p class="sub">Join DeLight rewards and save your details for faster checkout.</p>
+        <form (submit)="$event.preventDefault(); submitCreate()">
+          <div class="row">
+            <div class="field"><label for="fn">First name</label><input id="fn" name="fn" [(ngModel)]="firstName" autocomplete="given-name" /></div>
+            <div class="field"><label for="ln">Last name</label><input id="ln" name="ln" [(ngModel)]="lastName" autocomplete="family-name" /></div>
+          </div>
+          <div class="field"><label for="ph">Phone (optional)</label><input id="ph" type="tel" name="ph" [(ngModel)]="phone" autocomplete="tel" /></div>
+          <button type="submit" class="btn btn--primary btn--block" [disabled]="!firstName || !lastName">Create account</button>
+        </form>
+        <button type="button" class="link" (click)="back()">Back</button>
+      }
+    }
+    <p class="fine">By continuing you confirm you are 21 or older.</p>
+  </div>
+</section>

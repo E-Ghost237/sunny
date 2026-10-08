@@ -1,26 +1,36 @@
-// Ported from sunny2's .ci-qty / .ci-qbtn / .ci-qval rules.
-
-.ci-qty {
-  display: flex;
+.qty {
+  display: inline-flex;
   align-items: center;
-  border: 1.5px solid var(--g200);
-  border-radius: 6px;
+  border: 1px solid var(--c-border-strong);
+  border-radius: var(--radius-pill);
+  background: var(--white);
+  height: var(--control-height);
   overflow: hidden;
-}
 
-.ci-qbtn {
-  width: 30px;
-  height: 30px;
-  background: var(--g100);
-  border: none;
-  font-size: 14px;
-  font-weight: 700;
-  cursor: pointer;
-}
+  button {
+    width: 48px;
+    height: 100%;
+    border: 0;
+    background: transparent;
+    font-size: 1.25rem;
+    color: var(--c-text);
+    cursor: pointer;
+    transition: background var(--dur-fast);
 
-.ci-qval {
-  width: 36px;
-  text-align: center;
-  font-size: 13px;
-  font-weight: 700;
+    &:hover:not(:disabled) {
+      background: var(--sand-200);
+    }
+
+    &:disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
+    }
+  }
+
+  &__value {
+    min-width: 36px;
+    text-align: center;
+    font-weight: var(--fw-bold);
+    font-variant-numeric: tabular-nums;
+  }
 }
