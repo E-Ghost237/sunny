@@ -1,21 +1,189 @@
-.status {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 48px 24px;
-  text-align: center;
+.page-hero {
+  position: relative;
+  min-height: clamp(400px, 60vh, 560px);
+  display: flex;
+  align-items: flex-end;
+  color: var(--white);
+  overflow: hidden;
+  background: var(--forest-900);
+
+  &__media {
+    position: absolute;
+    inset: 0;
+
+    app-smart-image {
+      position: absolute;
+      inset: 0;
+      animation: kenburns 26s ease-in-out infinite alternate;
+    }
+  }
+
+  &__veil {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, rgba(7, 20, 14, 0.97), rgba(7, 20, 14, 0.45) 60%, rgba(7, 20, 14, 0.35));
+  }
+
+  &__inner {
+    position: relative;
+    padding-block: 8rem clamp(3rem, 6vh, 4.5rem);
+    max-width: 880px;
+
+    h1 {
+      font-size: var(--text-5xl);
+      color: var(--white);
+      font-weight: 600;
+      margin-bottom: var(--space-4);
+      animation: fadeUp 900ms var(--ease-emphasized) 120ms both;
+    }
+
+    .lead {
+      color: rgba(246, 241, 231, 0.88);
+      font-size: var(--text-xl);
+      max-width: 60ch;
+    }
+  }
 }
 
-.breadcrumb {
-  display: block;
-  max-width: 720px;
-  margin: 24px auto 0;
-  padding: 0 24px;
-  color: var(--g600);
-  opacity: 0.7;
-  text-decoration: none;
-  font-size: 13px;
+.crumbs {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  margin-bottom: var(--space-5);
+  color: rgba(246, 241, 231, 0.7);
 
-  &:hover {
-    opacity: 1;
+  a {
+    color: rgba(246, 241, 231, 0.9);
   }
+  span {
+    opacity: 0.6;
+  }
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+
+  &__date {
+    font-size: var(--text-xs);
+    color: rgba(246, 241, 231, 0.7);
+    margin-left: var(--space-2);
+  }
+}
+
+.article-layout {
+  display: flex;
+  justify-content: center;
+  padding-block: var(--space-16) var(--space-12);
+}
+
+.article-body {
+  width: 100%;
+  max-width: 760px;
+}
+
+.article-cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+  margin-top: var(--space-16);
+  padding: var(--space-8);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--leaf-100), var(--sand-100));
+  border: 1px solid var(--c-border);
+
+  strong {
+    display: block;
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    color: var(--forest-800);
+  }
+
+  span {
+    color: var(--c-text-soft);
+    font-size: var(--text-sm);
+  }
+}
+
+.section-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-6);
+  margin-bottom: var(--space-10);
+
+  h2 {
+    margin: 0;
+  }
+
+  &__link {
+    font-weight: var(--fw-bold);
+    font-size: var(--text-sm);
+    color: var(--forest-700);
+    border-bottom: 1px solid currentColor;
+  }
+}
+
+.related {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-6);
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    background: var(--white);
+    border: 1px solid var(--c-border);
+    border-radius: var(--card-radius);
+    overflow: hidden;
+    color: var(--c-text);
+    transition: transform var(--dur-base) var(--ease-standard), box-shadow var(--dur-base);
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+      color: var(--c-text);
+      text-decoration: none;
+    }
+
+    strong {
+      font-family: var(--font-display);
+      font-size: var(--text-2xl);
+      padding: 0 var(--space-6);
+      margin-top: var(--space-4);
+    }
+
+    span:last-child {
+      padding: 0 var(--space-6) var(--space-6);
+      font-size: var(--text-sm);
+      color: var(--c-text-muted);
+    }
+  }
+
+  &__img {
+    position: relative;
+    display: block;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+  }
+}
+
+.status {
+  padding: 9rem 0;
+  text-align: center;
+  color: var(--c-text-muted);
 }

@@ -1,148 +1,153 @@
-@if (productResource.isLoading()) {
-  <p class="status">Loading&hellip;</p>
-} @else if (!product()) {
-  <div class="status">
-    <p>Product not found.</p>
-    <a [routerLink]="['/shop', category()]">Back to {{ category() }}</a>
-  </div>
-} @else {
-  <div class="breadcrumb">
-    <a routerLink="/">Home</a> &rsaquo; <a routerLink="/shop">Shop</a> &rsaquo;
-    <a [routerLink]="['/shop', category()]">{{ category() }}</a> &rsaquo;
-    <strong>{{ product()!.name }}</strong>
-  </div>
+@if (product(); as p) {
+  <section class="pd container">
+    <nav class="crumbs crumbs--dark" aria-label="Breadcrumb">
+      <a routerLink="/">Home</a><span>/</span><a routerLink="/shop">Shop</a><span>/</span>
+      <a [routerLink]="['/shop', p.category]">{{ category() }}</a><span>/</span><span>{{ p.name }}</span>
+    </nav>
 
-  <div class="pd-wrap3">
-    <div class="pd-left">
-      <div class="pd-img-box">
-        @if (product()!.isExclusive) {
-          <div class="pd-only-badge">EVERGREEN<br />EXCLUSIVE</div>
-        }
-        @if (product()!.size) {
-          <div class="pd-weight-sticker">{{ product()!.size }}</div>
-        }
+    <div class="pd__layout">
+      <!-- Gallery -->
+      <div class="pd__gallery">
+        <div class="pd__stage">
+          @for (src of galleryImages(); track src; let i = $index) {
+            @if (i === activeImageIndex()) {
+              <app-smart-image class="pd__image" [src]="src" [alt]="p.name" [attr.data-index]="i" />
+            }
+          }
+          @if (p.badge) {
+            <span class="tag tag--sale pd__badge">{{ p.badge }}</span>
+          }
+          @if (galleryImages().length > 1) {
+            <button type="button" class="pd__nav pd__nav--prev" (click)="shiftImage(-1)" aria-label="Previous image">‹</button>
+            <button type="button" class="pd__nav pd__nav--next" (click)="shiftImage(1)" aria-label="Next image">›</button>
+          }
+        </div>
         @if (galleryImages().length > 1) {
-          <div class="pd-img-arrow left" (click)="shiftImage(-1)">&lsaquo;</div>
-          <div class="pd-img-arrow right" (click)="shiftImage(1)">&rsaquo;</div>
-        }
-        <div class="pd-main-img">
-          <app-product-image [src]="galleryImages()[activeImageIndex()]" [alt]="product()!.name" [category]="category()" />
-        </div>
-      </div>
-      @if (galleryImages().length > 1) {
-        <div class="pd-thumbs">
-          @for (img of galleryImages(); track $index) {
-            <div class="pd-thumb" [class.on]="$index === activeImageIndex()" (click)="activeImageIndex.set($index)">
-              <app-product-image [src]="img" [alt]="product()!.name" [category]="category()" />
-            </div>
-          }
-        </div>
-      }
-    </div>
-
-    <div class="pd-mid">
-      @if (product()!.brand) {
-        <div class="pd-brand">{{ product()!.brand }}</div>
-      }
-      <div class="pd-name">{{ product()!.name }}</div>
-      <div class="pd-price-row">
-        <div class="pd-price">${{ (product()!.discountedPrice ?? product()!.price).toFixed(2) }}</div>
-        @if (onSale()) {
-          <div class="pd-orig">${{ product()!.price.toFixed(2) }}</div>
-          @if (product()!.badge) {
-            <span class="pd-sale-badge-inline">🏷️ {{ product()!.badge }}</span>
-          }
+          <div class="pd__thumbs">
+            @for (src of galleryImages(); track src; let i = $index) {
+              <button type="button" class="pd__thumb" [class.is-active]="i === activeImageIndex()"
+                (click)="activeImageIndex.set(i)" [attr.aria-label]="'Image ' + (i + 1)">
+                <app-smart-image [src]="src" alt="" />
+              </button>
+            }
+          </div>
         }
       </div>
-      <div class="pd-divider"></div>
 
-      @if (product()!.size) {
-        <div class="spec-h">Size</div>
-        <div class="spec-val">{{ product()!.size }}</div>
-      }
+      <!-- Summary -->
+      <div class="pd__summary" appReveal [revealDelay]="120">
+        @if (p.brand) {
+          <p class="eyebrow">{{ p.brand }}</p>
+        }
+        <h1>{{ p.name }}</h1>
 
-      @if (authService.isAuthenticated()) {
-        <div class="add-to-cart-row">
+        <div class="pd__tags">
+          @if (p.strain) {
+            <span class="tag tag--leaf">{{ p.strain }}</span>
+          }
+          @if (p.size) {
+            <span class="tag tag--outline">{{ p.size }}</span>
+          }
+          @if (p.isExclusive) {
+            <span class="tag tag--dark">DeLight exclusive</span>
+          }
+        </div>
+
+        <div class="pd__price">
+          @if (onSale()) {
+            <span class="price">${{ p.discountedPrice!.toFixed(2) }}</span>
+            <span class="price price--old">${{ p.price.toFixed(2) }}</span>
+          } @else {
+            <span class="price">${{ p.price.toFixed(2) }}</span>
+          }
+        </div>
+
+        @if (potencyBars().length) {
+          <div class="potency" aria-label="Potency">
+            @for (b of potencyBars(); track b.label) {
+              <div class="potency__row">
+                <span class="potency__label">{{ b.label }}</span>
+                <span class="potency__track"><span class="potency__fill" [style.width.%]="b.pct"></span></span>
+                <span class="potency__value">{{ b.display }}</span>
+              </div>
+            }
+          </div>
+        }
+
+        @if (p.productDescription) {
+          <p class="pd__desc">{{ p.productDescription }}</p>
+        }
+
+        <div class="pd__buy">
           <app-quantity-stepper [quantity]="quantity()" (quantityChange)="quantity.set($event)" />
-          <button class="form-submit add-btn" type="button" (click)="addToCart()">
-            {{ justAdded() ? 'Added ✓' : 'Add to Cart' }}
+          <button type="button" class="btn btn--primary pd__add" (click)="addToCart()" [class.is-added]="justAdded()">
+            @if (justAdded()) { Added to your bag ✓ } @else { Add to bag · ${{ ((p.discountedPrice ?? p.price) * quantity()).toFixed(2) }} }
           </button>
         </div>
-      } @else {
-        <button class="btn-grey-disabled" type="button" disabled>Add to Cart</button>
-        <div class="pd-login-note">
-          To place an order online, you'll need to <a routerLink="/login">login</a> or
-          <a routerLink="/register">create an account</a>.
-        </div>
-      }
+
+        <ul class="perks">
+          <li><span aria-hidden="true">🌿</span> Lab-tested batch</li>
+          <li><span aria-hidden="true">📦</span> Recyclable packaging</li>
+          <li><span aria-hidden="true">🏬</span> Free pickup in store</li>
+        </ul>
+      </div>
     </div>
 
-    <div class="pd-side">
-      @if (product()!.thc) {
-        <div class="pd-thc-total-lbl">Total THC</div>
-        <div class="pd-thc-total-val">{{ product()!.thc }}</div>
-        <div class="pd-thc-note">Total combined THC/THCa, CBD/CBDa values. Review product labels for exact percentages.</div>
-        <div>
-          @if (product()!.thcRaw != null) {
-            <div class="pd-thc-row"><span class="lbl">THC</span><span class="val">{{ product()!.thcRaw }}%</span></div>
-          }
-          @if (product()!.thcaRaw != null) {
-            <div class="pd-thc-row"><span class="lbl">THCA</span><span class="val">{{ product()!.thcaRaw }}%</span></div>
-          }
-          @if (product()!.cbdRaw != null && product()!.cbdRaw! > 0) {
-            <div class="pd-thc-row"><span class="lbl">CBD</span><span class="val">{{ product()!.cbdRaw }}%</span></div>
-          }
-          @if (product()!.cbdaRaw != null && product()!.cbdaRaw! > 0) {
-            <div class="pd-thc-row"><span class="lbl">CBDA</span><span class="val">{{ product()!.cbdaRaw }}%</span></div>
-          }
-        </div>
-      }
-
-      @if (product()!.strainDescription) {
-        <app-accordion title="About this Strain" [startOpen]="true" variant="detail">
-          <p>{{ product()!.strainDescription }}</p>
-        </app-accordion>
-      }
-
-      @if (product()!.productDescription || onsetDuration()) {
-        <app-accordion title="Product Details" variant="detail">
-          @if (product()!.productDescription) {
-            <p>{{ product()!.productDescription }}</p>
-          }
-          <div class="spec-h">Form</div>
-          <div class="pd-form-tag">{{ categoryEmoji() }} {{ category() }}</div>
-          @if (onsetDuration(); as od) {
-            <div class="pd-onset-row">
-              <div class="pd-onset-col"><div class="lbl">Onset</div><div class="val">{{ od[0] }}</div></div>
-              <div class="pd-onset-col"><div class="lbl">Duration</div><div class="val">{{ od[1] }}</div></div>
-            </div>
-          }
-          <p class="results-note">Results may vary by individual.</p>
-        </app-accordion>
-      }
-    </div>
-  </div>
-
-  @if (relatedProducts().length > 0) {
-    <div class="pd-related-sec">
-      <div class="pd-related-title">Related Products</div>
-      <div class="pd-related-grid">
-        @for (p of relatedProducts(); track p.id) {
-          <app-product-card [product]="p" />
+    <!-- Details -->
+    <div class="pd__details" appReveal>
+      <app-accordion title="About this product" variant="detail" [startOpen]="true">
+        <p>{{ p.productDescription || 'Details for this product will appear here soon.' }}</p>
+        @if (p.strainDescription) {
+          <p><strong>Strain profile.</strong> {{ p.strainDescription }}</p>
         }
-      </div>
+      </app-accordion>
+      <app-accordion title="Potency & lab data" variant="detail">
+        <dl class="specs">
+          @if (p.thc) { <div><dt>THC</dt><dd>{{ p.thc }}</dd></div> }
+          @if (p.cbd) { <div><dt>CBD</dt><dd>{{ p.cbd }}</dd></div> }
+          @if (p.cbn) { <div><dt>CBN</dt><dd>{{ p.cbn }}</dd></div> }
+          @if (p.strain) { <div><dt>Type</dt><dd>{{ p.strain }}</dd></div> }
+          @if (p.size) { <div><dt>Size</dt><dd>{{ p.size }}</dd></div> }
+        </dl>
+      </app-accordion>
+      <app-accordion title="Effects & onset" variant="detail">
+        @if (onsetDuration(); as o) {
+          <p><strong>Onset:</strong> {{ o[0] }}</p>
+          <p><strong>Duration:</strong> {{ o[1] }}</p>
+        }
+        <p class="muted">Effects vary by person, dose and tolerance. Start low and go slow.</p>
+      </app-accordion>
     </div>
-  }
 
-  @if (bannerArticle(); as article) {
-    <a class="learn-banner" [routerLink]="['/learn', article.slug]">
-      <div class="learn-banner-text">
-        <div class="learn-banner-eyebrow">Learn About Cannabis</div>
-        <div class="learn-banner-title">{{ article.title }}</div>
-        <div class="learn-banner-body">{{ article.description }}</div>
-        <span class="learn-banner-btn">Read More</span>
-      </div>
-      <div class="learn-banner-img">{{ categoryEmoji() }}</div>
-    </a>
-  }
+    <!-- Related -->
+    @if (relatedProducts().length) {
+      <section class="pd__related">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">More from {{ category() }}</p>
+            <h2>You might also like</h2>
+          </div>
+          <a class="section-head__link" [routerLink]="['/shop', p.category]">View all</a>
+        </div>
+        <div class="grid-related">
+          @for (r of relatedProducts(); track r.id; let i = $index) {
+            <app-product-card [product]="r" appReveal [revealDelay]="i * 80" />
+          }
+        </div>
+      </section>
+    }
+
+    @if (bannerArticle(); as a) {
+      <a class="learn-banner" [routerLink]="['/learn', a.slug]" appReveal>
+        <span class="eyebrow eyebrow--plain">Learn before you buy</span>
+        <strong>{{ a.title }}</strong>
+        <span>{{ a.description }}</span>
+        <span class="learn-banner__go">Read the guide →</span>
+      </a>
+    }
+  </section>
+} @else {
+  <section class="container pd-loading">
+    <div class="skeleton skeleton--wide"></div>
+  </section>
 }

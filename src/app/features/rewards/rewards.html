@@ -1,43 +1,44 @@
-<div class="rew-hero">
-  <h1>Evergreen <b>Rewards</b></h1>
-  <p>Earn points on every purchase. Redeem anytime. Stack with most discounts.</p>
-  <div class="hero-actions">
-    @if (authService.isAuthenticated()) {
-      <a class="hbtn hbtn-wh" routerLink="/account">View My Points ({{ authService.user()?.rewardsPoints ?? 0 }})</a>
-    } @else {
-      <a class="hbtn hbtn-wh" routerLink="/register">Join Free</a>
-      <a class="hbtn hbtn-ol" routerLink="/login">Sign In to Redeem</a>
-    }
+<section class="page-hero">
+  <div class="page-hero__media" aria-hidden="true"><img class="kb" src="/assets/img/section-delivery.jpg" alt="" /></div>
+  <div class="page-hero__veil" aria-hidden="true"></div>
+  <div class="container page-hero__inner">
+    <p class="eyebrow">DeLight Rewards</p>
+    <h1>Every order <em>grows</em> something.</h1>
+    <p class="lead">Earn points on every purchase and unlock member pricing, early drops and events.</p>
+    <div class="cta-row">
+      @if (authService.isAuthenticated()) {
+        <a class="btn btn--gold" routerLink="/account">View my points</a>
+      } @else {
+        <a class="btn btn--gold" routerLink="/register">Join for free</a>
+        <a class="btn btn--light" routerLink="/login">Sign in</a>
+      }
+    </div>
   </div>
-</div>
+</section>
 
-<div class="section white">
-  <div class="section-title">How You Earn Points</div>
-  <div class="earn-grid">
-    <div class="earn-card">
-      <div class="earn-n">1pt</div>
-      <div class="earn-l">per $1 spent &mdash; after discounts, before tax</div>
+<section class="section">
+  <div class="container">
+    <div class="steps">
+      @for (s of steps; track s.n; let i = $index) {
+        <div class="step" appReveal [revealDelay]="i * 110">
+          <span>{{ s.n }}</span><strong>{{ s.title }}</strong><p>{{ s.body }}</p>
+        </div>
+      }
     </div>
-    <div class="earn-card">
-      <div class="earn-n">$0.025</div>
-      <div class="earn-l">value per point earned</div>
-    </div>
-    <div class="earn-card">
-      <div class="earn-n">200 pts</div>
-      <div class="earn-l">= $5 in Evergreen Rewards</div>
-    </div>
-  </div>
-</div>
 
-<div class="section gray">
-  <div class="section-title">Membership Tiers</div>
-  <div class="tier-grid">
-    @for (tier of tiers; track tier.name) {
-      <div class="tier-card" [class.hl]="tier.highlight">
-        <div class="tier-ic">{{ tier.icon }}</div>
-        <div class="tier-nm">{{ tier.name }}</div>
-        <div class="tier-p">{{ tier.desc }}</div>
-      </div>
-    }
+    <div class="tiers">
+      @for (t of tiers; track t.name; let i = $index) {
+        <article class="tier" [class.is-highlight]="t.highlight" appReveal [revealDelay]="i * 120">
+          <p class="tier__kicker">{{ t.kicker }}</p>
+          <h2>{{ t.name }}</h2>
+          <p class="tier__desc">{{ t.desc }}</p>
+          <ul>
+            @for (p of t.perks; track p) {
+              <li>{{ p }}</li>
+            }
+          </ul>
+        </article>
+      }
+    </div>
   </div>
-</div>
+</section>

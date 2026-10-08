@@ -1,70 +1,264 @@
-// Ported from sunny2's .confirm-* rules.
+@use 'sass:list';
 
-.confirm-wrap {
-  max-width: 580px;
-  margin: 0 auto;
-  padding: 60px 24px;
+$burst-colors: var(--gold-400), var(--leaf-400), var(--sand-100), var(--gold-500), var(--leaf-200), var(--gold-200);
+
+.done {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(8rem, 16vh, 10rem) 0 clamp(4rem, 8vh, 6rem);
   text-align: center;
+  background:
+    radial-gradient(50% 80% at 50% 0%, rgba(201, 162, 74, 0.3), transparent 70%),
+    linear-gradient(180deg, var(--forest-800), var(--forest-950));
+  color: var(--sand-100);
+
+  &__inner {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__check {
+    width: 84px;
+    height: 84px;
+    margin: 0 auto var(--space-6);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--gold-500);
+    color: var(--forest-900);
+    font-size: 2.4rem;
+    font-weight: 800;
+    animation: pulseRing 1.6s 1 both, fadeUp 700ms var(--ease-spring) both;
+  }
+
+  .eyebrow {
+    color: var(--gold-400);
+    justify-content: center;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  h1 {
+    font-size: var(--text-5xl);
+    color: var(--white);
+    font-weight: 600;
+    animation: fadeUp 800ms var(--ease-emphasized) 120ms both;
+
+    em {
+      color: var(--gold-400);
+      font-style: italic;
+    }
+  }
+
+  .lead {
+    max-width: 56ch;
+    margin: var(--space-4) auto var(--space-8);
+    color: rgba(246, 241, 231, 0.85);
+    animation: fadeUp 800ms var(--ease-emphasized) 240ms both;
+  }
+
+  .ref {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-4);
+    padding: var(--space-3) var(--space-3) var(--space-3) var(--space-6);
+    border-radius: var(--radius-pill);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(246, 241, 231, 0.2);
+    animation: fadeUp 800ms var(--ease-emphasized) 360ms both;
+
+    span {
+      font-size: var(--text-xs);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-wide);
+      color: rgba(246, 241, 231, 0.7);
+    }
+
+    strong {
+      font-family: var(--font-mono);
+      font-size: var(--text-lg);
+      color: var(--white);
+    }
+  }
+
+  // Confetti-style burst, pure CSS.
+  &__burst i {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    background: var(--gold-400);
+    opacity: 0;
+    animation: burst 1.6s var(--ease-emphasized) forwards;
+
+    @for $i from 1 through 6 {
+      &:nth-child(#{$i}) {
+        background: list.nth($burst-colors, $i);
+        animation-delay: #{$i * 60}ms;
+        --dx: #{(($i - 3.5) * 70)}px;
+      }
+    }
+  }
 }
 
-.confirm-icon {
-  font-size: 64px;
-  margin-bottom: 16px;
+@keyframes burst {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--dx, 0px), -160px) rotate(260deg);
+  }
 }
 
-.confirm-h {
-  font-size: 30px;
-  font-weight: 900;
-  margin-bottom: 8px;
+.layout {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: var(--space-6);
+  align-items: start;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
 }
 
-.confirm-sub {
-  font-size: 15px;
-  color: var(--g600);
-  margin-bottom: 28px;
-  line-height: 1.6;
-}
-
-.confirm-card {
+.card {
+  padding: var(--space-8);
+  border-radius: var(--radius-lg);
   background: var(--white);
-  border: 1px solid var(--g200);
-  border-radius: 12px;
-  padding: 28px;
-  text-align: left;
-  margin-bottom: 20px;
-}
+  border: 1px solid var(--c-border);
+  box-shadow: var(--shadow-sm);
 
-.confirm-row {
-  display: flex;
-  justify-content: space-between;
-  padding: 9px 0;
-  border-bottom: 1px solid var(--g200);
-  font-size: 13px;
-
-  &.total {
-    font-weight: 900;
-    font-size: 16px;
+  h2 {
+    font-size: var(--text-3xl);
+    margin-bottom: var(--space-5);
   }
 
-  &:last-child {
-    border-bottom: none;
+  ol {
+    padding-left: 1.2em;
+    color: var(--c-text-soft);
+
+    li {
+      margin-bottom: var(--space-2);
+    }
   }
 }
 
-.green-strong {
-  color: var(--green);
-  font-weight: 700;
+.pay__method {
+  color: var(--c-text-soft);
 }
 
-.orange-strong {
-  color: var(--orange);
-  font-weight: 700;
+.recipient {
+  display: grid;
+  gap: 4px;
+  margin-top: var(--space-5);
+  padding: var(--space-5);
+  border-radius: var(--radius-md);
+  background: var(--sand-100);
+  border: 1px dashed var(--c-border-strong);
+
+  span {
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wide);
+    color: var(--c-text-muted);
+  }
+
+  strong {
+    font-family: var(--font-mono);
+    font-size: var(--text-base);
+    word-break: break-all;
+  }
+
+  b {
+    font-family: var(--font-mono);
+    color: var(--forest-800);
+  }
 }
 
-.confirm-actions {
+.summary {
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--space-5);
+    display: grid;
+    gap: var(--space-4);
+
+    li {
+      display: grid;
+      grid-template-columns: 56px 1fr auto;
+      gap: var(--space-3);
+      align-items: center;
+      font-size: var(--text-sm);
+    }
+
+    small {
+      display: block;
+      color: var(--c-text-muted);
+    }
+  }
+
+  &__thumb {
+    position: relative;
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    display: block;
+    background: var(--sand-100);
+  }
+
+  dl {
+    margin: 0;
+    border-top: 1px solid var(--c-border);
+    padding-top: var(--space-4);
+
+    div {
+      display: flex;
+      justify-content: space-between;
+      padding: 4px 0;
+      font-size: var(--text-sm);
+      color: var(--c-text-soft);
+    }
+
+    dd {
+      margin: 0;
+    }
+
+    .total {
+      font-family: var(--font-display);
+      font-size: var(--text-2xl);
+      font-weight: 700;
+      color: var(--c-text);
+      margin-top: var(--space-2);
+    }
+  }
+
+  .pts {
+    margin: var(--space-5) 0 0;
+    font-size: var(--text-sm);
+    color: var(--c-text-muted);
+  }
+}
+
+.actions {
   display: flex;
-  gap: 10px;
+  gap: var(--space-3);
   justify-content: center;
-  margin-top: 16px;
   flex-wrap: wrap;
+  margin-top: var(--space-10);
+}
+
+.nothing {
+  text-align: center;
+  padding: var(--space-24) 0;
+
+  h1 {
+    font-size: var(--text-4xl);
+  }
 }

@@ -19,7 +19,7 @@
           "Cloudline",
           "Copper Kettle",
           "Dry Creek Co.",
-          "Evergreen",
+          "DeLight",
           "Moonfield",
           "Ninebark",
           "Northwind Farms",
@@ -88,7 +88,7 @@
           "Cloudline",
           "Copper Kettle",
           "Dry Creek Co.",
-          "Evergreen",
+          "DeLight",
           "Half Light",
           "Lantern & Leaf",
           "Moonfield",
@@ -154,7 +154,7 @@
         "options": [
           "Cloudline",
           "Copper Kettle",
-          "Evergreen",
+          "DeLight",
           "Half Light",
           "Lantern & Leaf",
           "Moonfield",
@@ -220,7 +220,7 @@
         "type": "checkboxes",
         "options": [
           "Cloudline",
-          "Evergreen",
+          "DeLight",
           "Half Light",
           "Lantern & Leaf",
           "Moonfield",
@@ -277,7 +277,7 @@
           "Cloudline",
           "Copper Kettle",
           "Dry Creek Co.",
-          "Evergreen",
+          "DeLight",
           "Half Light",
           "Lantern & Leaf",
           "Moonfield",
@@ -334,7 +334,7 @@
         "type": "checkboxes",
         "options": [
           "Bloomcraft",
-          "Evergreen",
+          "DeLight",
           "Half Light",
           "Moonfield",
           "Terra Verde",
@@ -390,7 +390,7 @@
         "options": [
           "Copper Kettle",
           "Dry Creek Co.",
-          "Evergreen",
+          "DeLight",
           "Half Light",
           "Terra Verde",
           "Wildstack"
@@ -442,7 +442,7 @@
         "options": [
           "Copper Kettle",
           "Dry Creek Co.",
-          "Evergreen",
+          "DeLight",
           "Lantern & Leaf",
           "Moonfield",
           "Ninebark"
@@ -495,7 +495,7 @@
         "options": [
           "Cloudline",
           "Copper Kettle",
-          "Evergreen",
+          "DeLight",
           "Half Light",
           "Lantern & Leaf",
           "Moonfield",
@@ -544,7 +544,7 @@
         "options": [
           "Bloomcraft",
           "Cloudline",
-          "Evergreen",
+          "DeLight",
           "Half Light",
           "Lantern & Leaf",
           "Ninebark",

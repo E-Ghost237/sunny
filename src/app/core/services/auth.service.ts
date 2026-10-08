@@ -3,8 +3,8 @@ import { Observable, delay, of } from 'rxjs';
 
 import { CheckEmailResponse, User } from '../models/auth.model';
 
-const SESSION_KEY = 'evergreen-auth-user';
-const REGISTRY_KEY = 'evergreen-auth-registry'; // local stand-in for a real user database
+const SESSION_KEY = 'delight-auth-user';
+const REGISTRY_KEY = 'delight-auth-registry'; // local stand-in for a real user database
 
 function loadSession(): User | null {
   try {

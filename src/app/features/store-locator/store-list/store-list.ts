@@ -1,3 +1,6 @@
+import { SmartImage } from '../../../shared/smart-image/smart-image';
+import { Reveal } from '../../../shared/directives/reveal.directive';
+import { storeImage } from '../../../shared/utils/media';
 import { Component, computed, inject, signal } from '@angular/core';
 import { rxResource } from '@angular/core/rxjs-interop';
 import { RouterLink } from '@angular/router';
@@ -17,7 +20,7 @@ function summarizeHours(hours: StoreHours[]): string {
 
 @Component({
   selector: 'app-store-list',
-  imports: [RouterLink],
+  imports: [RouterLink, SmartImage, Reveal],
   templateUrl: './store-list.html',
   styleUrl: './store-list.scss',
 })
@@ -42,6 +45,7 @@ export class StoreList {
   });
 
   protected readonly summarizeHours = summarizeHours;
+  protected readonly storeImage = storeImage;
 
   protected setState(state: string | null): void {
     this.activeState.set(state);

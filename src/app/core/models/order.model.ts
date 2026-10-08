@@ -1,10 +1,18 @@
 import { CartItem } from './cart.model';
 
+export type PaymentMethodId = 'zelle' | 'cashapp' | 'chime' | 'venmo' | 'paypal' | 'bank' | 'applepay';
+export type Fulfilment = 'pickup' | 'ship';
+
 export interface Order {
-  id: string; // e.g. "SS-49102", matching sunny2's confirmation mockup format
+  id: string; // e.g. "DL-49102"
   items: CartItem[];
   subtotal: number;
+  shipping: number;
+  total: number;
   pointsEarned: number;
-  pickupStoreName: string;
+  pickupStoreName: string | null;
+  fulfilment: Fulfilment;
+  destination: string | null;
+  payment: PaymentMethodId;
   placedAt: string;
 }

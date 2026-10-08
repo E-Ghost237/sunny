@@ -1,6 +1,6 @@
 import { Component, input, output } from '@angular/core';
 
-// Ports sunny2's changeQty behavior into a reusable component.
+// Ports the prototype's changeQty behavior into a reusable component.
 @Component({
   selector: 'app-quantity-stepper',
   imports: [],

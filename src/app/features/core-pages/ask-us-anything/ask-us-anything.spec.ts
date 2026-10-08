@@ -1,22 +1,24 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { provideRouter } from '@angular/router';
+import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { AskUsAnything } from './ask-us-anything';
 
 describe('AskUsAnything', () => {
-  let component: AskUsAnything;
   let fixture: ComponentFixture<AskUsAnything>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [AskUsAnything],
+      providers: [provideRouter([]), provideHttpClient(), provideHttpClientTesting()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(AskUsAnything);
-    component = fixture.componentInstance;
+
     fixture.detectChanges();
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(fixture.componentInstance).toBeTruthy();
   });
 });

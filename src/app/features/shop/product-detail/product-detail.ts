@@ -8,12 +8,14 @@ import { CartService } from '../../../core/services/cart.service';
 import { AuthService } from '../../../core/services/auth.service';
 import { ContentService } from '../../../core/services/content.service';
 import { QuantityStepper } from '../../../shared/components/quantity-stepper/quantity-stepper';
-import { ProductImage } from '../../../shared/components/product-image/product-image';
+import { SmartImage } from '../../../shared/smart-image/smart-image';
+import { Reveal } from '../../../shared/directives/reveal.directive';
+import { categoryImage, productImage } from '../../../shared/utils/media';
 import { ProductCard } from '../product-card/product-card';
 import { Accordion } from '../../../shared/components/accordion/accordion';
 import { CATEGORY_EMOJI } from '../../../shared/constants/category-emoji';
 
-// Ported from sunny2's ONSET_DURATION constant -- generic category-level reference
+// Ported from the prototype's ONSET_DURATION constant -- generic category-level reference
 // info, not per-product fabricated data.
 const ONSET_DURATION: Record<string, [string, string]> = {
   flower: ['< 7 minutes', '1 - 3 hours or longer'],
@@ -29,7 +31,7 @@ const ONSET_DURATION: Record<string, [string, string]> = {
 
 @Component({
   selector: 'app-product-detail',
-  imports: [RouterLink, QuantityStepper, ProductImage, ProductCard, Accordion],
+  imports: [RouterLink, QuantityStepper, SmartImage, ProductCard, Accordion, Reveal],
   templateUrl: './product-detail.html',
   styleUrl: './product-detail.scss',
 })
@@ -63,7 +65,22 @@ export class ProductDetail {
     if (!p) return [];
     // De-dupe -- most products only have one *real* distinct image, the rest of
     // the array is placeholder repeats from the source data.
-    return [...new Set(p.images)];
+    const main = productImage(p);
+    return [...new Set([main, categoryImage(p.category)])];
+  });
+
+  /** Potency bars, normalised to a 40% scale (visual only; values come from the lab data). */
+  protected readonly potencyBars = computed(() => {
+    const p = this.product();
+    if (!p) return [];
+    const bars = [
+      { label: 'THC', value: p.thcRaw ?? parseFloat(p.thc ?? '') },
+      { label: 'CBD', value: p.cbdRaw ?? parseFloat(p.cbd ?? '') },
+      { label: 'CBN', value: parseFloat(p.cbn ?? '') },
+    ];
+    return bars
+      .filter((b) => Number.isFinite(b.value) && b.value > 0)
+      .map((b) => ({ ...b, pct: Math.min(100, (b.value / 40) * 100), display: `${b.value}%` }));
   });
 
   protected shiftImage(delta: number): void {
@@ -90,7 +107,7 @@ export class ProductDetail {
         category: p.category,
         name: p.name,
         brand: p.brand,
-        image: p.images[0],
+        image: productImage(p),
         meta: metaBits.join(' · '),
         priceAtAdd: p.discountedPrice ?? p.price,
       },

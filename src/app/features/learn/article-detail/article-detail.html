@@ -1,11 +1,66 @@
-@if (articleResource.isLoading()) {
-  <p class="status">Loading&hellip;</p>
-} @else if (!article()) {
-  <div class="status">
-    <p>Article not found.</p>
-    <a routerLink="/learn">Back to Learn</a>
-  </div>
+@if (article(); as a) {
+  <article>
+    <header class="page-hero page-hero--article">
+      <div class="page-hero__media" aria-hidden="true">
+        <app-smart-image [src]="articleImage(a)" alt="" [eager]="true" />
+      </div>
+      <div class="page-hero__veil" aria-hidden="true"></div>
+      <div class="container page-hero__inner">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <a routerLink="/">Home</a><span>/</span><a routerLink="/learn">Learn</a><span>/</span><span>{{ a.title }}</span>
+        </nav>
+        <div class="meta">
+          @for (t of a.tags; track t) {
+            <span class="tag tag--gold">{{ t }}</span>
+          }
+          @if (readingDate()) {
+            <span class="meta__date">{{ readingDate() }}</span>
+          }
+        </div>
+        <h1>{{ a.title }}</h1>
+        @if (a.description) {
+          <p class="lead">{{ a.description }}</p>
+        }
+      </div>
+    </header>
+
+    <div class="container article-layout">
+      <div class="article-body" appReveal>
+        <app-content-page-renderer [blocks]="a.blocks" />
+
+        <div class="article-cta">
+          <div>
+            <strong>Ready to shop what you've learned?</strong>
+            <span>Browse the collection with potency and lab data on every product.</span>
+          </div>
+          <a class="btn btn--primary" routerLink="/shop">Shop the collection</a>
+        </div>
+      </div>
+    </div>
+
+    @if (related().length) {
+      <section class="section section--alt">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Keep reading</p>
+              <h2>More guides</h2>
+            </div>
+            <a class="section-head__link" routerLink="/learn">All guides</a>
+          </div>
+          <div class="related">
+            @for (r of related(); track r.slug; let i = $index) {
+              <a class="related__card" [routerLink]="['/learn', r.slug]" appReveal [revealDelay]="i * 100">
+                <span class="related__img"><app-smart-image [src]="articleImage(r)" [alt]="r.title" /></span>
+                <strong>{{ r.title }}</strong>
+                <span>{{ r.description }}</span>
+              </a>
+            }
+          </div>
+        </div>
+      </section>
+    }
+  </article>
 } @else {
-  <a class="breadcrumb" routerLink="/learn">&larr; Learn</a>
-  <app-content-page-renderer [blocks]="article()!.blocks" />
+  <div class="container status">Loading guide…</div>
 }

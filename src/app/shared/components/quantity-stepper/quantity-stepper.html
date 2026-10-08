@@ -1,5 +1,5 @@
-<div class="ci-qty">
-  <button class="ci-qbtn" type="button" (click)="decrement()">&minus;</button>
-  <span class="ci-qval">{{ quantity() }}</span>
-  <button class="ci-qbtn" type="button" (click)="increment()">+</button>
+<div class="qty" role="group" aria-label="Quantity">
+  <button type="button" (click)="decrement()" [disabled]="quantity() <= 1" aria-label="Decrease quantity">−</button>
+  <span class="qty__value" aria-live="polite">{{ quantity() }}</span>
+  <button type="button" (click)="increment()" aria-label="Increase quantity">+</button>
 </div>

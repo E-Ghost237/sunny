@@ -1,71 +1,66 @@
-<div class="acct-wrap">
-  <div class="acct-nav">
-    <div class="acct-nav-title">My Account</div>
-    <a class="on">📊 Dashboard</a>
-    <a routerLink="/rewards">⭐ My Rewards</a>
-    <a>📦 Order History</a>
-    <a>👤 Profile Settings</a>
-    <a routerLink="/rewards">🏆 Rewards Program</a>
-    <a class="sign-out" (click)="signOut()">⬅️ Sign Out</a>
-  </div>
-
-  <div class="acct-main">
-    <div class="pts-card">
-      <div class="pts-lbl">Evergreen Rewards Balance</div>
-      <div class="pts-val">{{ authService.user()?.rewardsPoints ?? 0 }}</div>
-      <div class="pts-eq">points &middot; Worth <strong class="worth">${{ ((authService.user()?.rewardsPoints ?? 0) * 0.025).toFixed(2) }}</strong> in rewards</div>
-      <div class="pts-actions">
-        <a class="btn-orange" routerLink="/shop">Redeem in Cart</a>
+@if (authService.user(); as u) {
+  <section class="acc-head">
+    <div class="container acc-head__inner">
+      <div>
+        <p class="eyebrow">Your account</p>
+        <h1>Hello, {{ u.firstName }}.</h1>
+        <p class="lead">{{ u.email }}</p>
       </div>
+      <button type="button" class="btn btn--light btn--sm" (click)="signOut()">Sign out</button>
     </div>
+  </section>
 
-    <div class="stats-row">
-      <div class="stat-card">
-        <div class="stat-n">{{ orderService.orders().length }}</div>
-        <div class="stat-l">Total Orders</div>
+  <section class="section">
+    <div class="container">
+      <div class="stats">
+        <div class="stat card" appReveal><span>Points balance</span><strong>{{ u.rewardsPoints }}</strong></div>
+        <div class="stat card" appReveal [revealDelay]="100"><span>Orders</span><strong>{{ orderService.orders().length }}</strong></div>
+        <div class="stat card" appReveal [revealDelay]="200"><span>Total spent</span><strong>{{ totalSpent() | currency }}</strong></div>
       </div>
-      <div class="stat-card">
-        <div class="stat-n">${{ totalSpent().toFixed(0) }}</div>
-        <div class="stat-l">Total Spent</div>
+
+      <div class="section-title">
+        <h2>Order history</h2>
       </div>
-      <div class="stat-card">
-        <div class="stat-n">{{ totalPoints() }}</div>
-        <div class="stat-l">Points Earned</div>
-      </div>
+
+      @if (orderService.orders().length) {
+        <ul class="orders">
+          @for (o of orderService.orders(); track o.id; let i = $index) {
+            <li class="order card" appReveal [revealDelay]="i * 80">
+              <div class="order__head">
+                <div>
+                  <strong>{{ o.id }}</strong>
+                  <span>{{ o.placedAt | date: 'mediumDate' }}</span>
+                </div>
+                <span class="tag tag--leaf">{{ o.fulfilment === 'pickup' ? 'Pickup' : 'Shipping' }}</span>
+              </div>
+              <div class="order__thumbs">
+                @for (i of o.items; track i.productId) {
+                  <span class="order__thumb"><app-smart-image [src]="i.image" [alt]="i.name" /></span>
+                }
+              </div>
+              <div class="order__foot">
+                <span>{{ o.items.length }} item{{ o.items.length === 1 ? '' : 's' }} · {{ o.pickupStoreName ?? o.destination }}</span>
+                <strong>{{ o.total | currency }}</strong>
+              </div>
+            </li>
+          }
+        </ul>
+      } @else {
+        <div class="empty card">
+          <h3>No orders yet</h3>
+          <p>Your orders will appear here once you check out.</p>
+          <a class="btn btn--primary" routerLink="/shop">Start shopping</a>
+        </div>
+      }
     </div>
-
-    <div class="section-title">Recent Orders</div>
-
-    @if (orderService.orders().length === 0) {
-      <div class="tbl-wrap empty">
-        <p>No orders yet.</p>
-        <a class="btn-outline" routerLink="/shop">Start Shopping</a>
-      </div>
-    } @else {
-      <div class="tbl-wrap">
-        <table class="tbl">
-          <thead>
-            <tr>
-              <th>Order #</th>
-              <th>Store</th>
-              <th>Items</th>
-              <th>Total</th>
-              <th>Points</th>
-            </tr>
-          </thead>
-          <tbody>
-            @for (order of orderService.orders(); track order.id) {
-              <tr>
-                <td><strong>{{ order.id }}</strong></td>
-                <td>{{ order.pickupStoreName }}</td>
-                <td>{{ order.items.length }}</td>
-                <td>${{ order.subtotal.toFixed(2) }}</td>
-                <td class="points-cell">+{{ order.pointsEarned }} pts</td>
-              </tr>
-            }
-          </tbody>
-        </table>
-      </div>
-    }
-  </div>
-</div>
+  </section>
+} @else {
+  <section class="container guest">
+    <p class="eyebrow">Account</p>
+    <h1>Sign in to see your orders and points.</h1>
+    <div class="guest__actions">
+      <a class="btn btn--primary" routerLink="/login">Sign in</a>
+      <a class="btn btn--ghost" routerLink="/register">Create account</a>
+    </div>
+  </section>
+}

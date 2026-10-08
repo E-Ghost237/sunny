@@ -1,7 +1,38 @@
-@if (pageResource.isLoading()) {
-  <p class="status">Loading&hellip;</p>
-} @else if (!page()) {
-  <p class="status">Content unavailable.</p>
-} @else {
-  <app-content-page-renderer [blocks]="page()!.blocks" />
-}
+<section class="page-hero">
+  <div class="page-hero__media" aria-hidden="true"><img class="kb" src="/assets/img/section-eco.jpg" alt="" /></div>
+  <div class="page-hero__veil" aria-hidden="true"></div>
+  <div class="container page-hero__inner">
+    <p class="eyebrow">Ask us anything</p>
+    <h1>A real person, <em>a real answer.</em></h1>
+    <p class="lead">Send a question and a member of the DeLight team will reply within one business day.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container ask">
+    <form class="ask__form card" (submit)="$event.preventDefault()" appReveal>
+      <h2>Send us a message</h2>
+      <div class="topic-row" role="radiogroup" aria-label="Topic">
+        @for (t of topics; track t; let i = $index) {
+          <label class="chip">
+            <input type="radio" name="topic" [value]="t" [checked]="i === 0" class="sr-only" />
+            <span>{{ t }}</span>
+          </label>
+        }
+      </div>
+      <div class="row">
+        <div class="field"><label for="ask-name">Name</label><input id="ask-name" type="text" autocomplete="name" /></div>
+        <div class="field"><label for="ask-email">Email</label><input id="ask-email" type="email" autocomplete="email" /></div>
+      </div>
+      <div class="field"><label for="ask-msg">Your question</label><textarea id="ask-msg" rows="6"></textarea></div>
+      <button type="submit" class="btn btn--primary">Send question</button>
+      <p class="fine">Please don't include medical records or payment details in your message.</p>
+    </form>
+
+    <div class="ask__content" appReveal [revealDelay]="150">
+      @if (page()) {
+        <app-content-page-renderer [blocks]="page()!.blocks" />
+      }
+    </div>
+  </div>
+</section>

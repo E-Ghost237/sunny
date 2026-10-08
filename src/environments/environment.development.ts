@@ -1,4 +1,5 @@
 export const environment = {
   production: false,
-  apiBaseUrl: 'http://localhost:3001', // json-server mock API
+  // Relative URL: the dev server proxies /api to the json-server mock (see proxy.conf.json).
+  apiBaseUrl: '/api',
 };

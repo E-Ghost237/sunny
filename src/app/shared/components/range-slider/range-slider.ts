@@ -1,6 +1,6 @@
 import { Component, computed, input, linkedSignal, output } from '@angular/core';
 
-// Dual-handle range slider, ported visually from sunny2's .filt-range-* rules
+// Dual-handle range slider, ported visually from the prototype's .filt-range-* rules
 // (two overlapping native <input type=range> with a styled fill track between
 // the thumbs -- same technique as the source, not a new pattern).
 @Component({

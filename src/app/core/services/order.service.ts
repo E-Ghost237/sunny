@@ -1,9 +1,9 @@
 import { Injectable, signal } from '@angular/core';
 
 import { CartItem } from '../models/cart.model';
-import { Order } from '../models/order.model';
+import { Fulfilment, Order, PaymentMethodId } from '../models/order.model';
 
-const ORDERS_KEY = 'evergreen-orders';
+const ORDERS_KEY = 'delight-orders';
 
 function loadOrders(): Order[] {
   try {
@@ -15,22 +15,40 @@ function loadOrders(): Order[] {
 }
 
 function randomOrderId(): string {
-  return `SS-${Math.floor(10000 + Math.random() * 90000)}`;
+  return `DL-${Math.floor(10000 + Math.random() * 90000)}`;
 }
 
+export interface PlaceOrderInput {
+  items: CartItem[];
+  shipping: number;
+  fulfilment: Fulfilment;
+  pickupStoreName: string | null;
+  destination: string | null;
+  payment: PaymentMethodId;
+}
+
+/**
+ * Local order store. Replace the body of placeOrder() with a real API call later;
+ * components only depend on this signature.
+ */
 @Injectable({ providedIn: 'root' })
 export class OrderService {
   private readonly _orders = signal<Order[]>(loadOrders());
   readonly orders = this._orders.asReadonly();
 
-  placeOrder(items: CartItem[], pickupStoreName: string): Order {
-    const subtotal = items.reduce((sum, i) => sum + i.priceAtAdd * i.quantity, 0);
+  placeOrder(input: PlaceOrderInput): Order {
+    const subtotal = input.items.reduce((sum, i) => sum + i.priceAtAdd * i.quantity, 0);
     const order: Order = {
       id: randomOrderId(),
-      items,
+      items: input.items,
       subtotal,
+      shipping: input.shipping,
+      total: subtotal + input.shipping,
       pointsEarned: Math.round(subtotal),
-      pickupStoreName,
+      pickupStoreName: input.pickupStoreName,
+      fulfilment: input.fulfilment,
+      destination: input.destination,
+      payment: input.payment,
       placedAt: new Date().toISOString(),
     };
     this._orders.update((orders) => {

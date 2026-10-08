@@ -1,4 +1,4 @@
-import { Component, computed, inject, input, linkedSignal } from '@angular/core';
+import { Component, computed, inject, input, linkedSignal, signal } from '@angular/core';
 import { rxResource } from '@angular/core/rxjs-interop';
 import { RouterLink } from '@angular/router';
 
@@ -8,8 +8,11 @@ import { FilterSection } from '../../../core/models/category-filter.model';
 import { ProductCard } from '../product-card/product-card';
 import { Accordion } from '../../../shared/components/accordion/accordion';
 import { RangeSlider } from '../../../shared/components/range-slider/range-slider';
+import { SmartImage } from '../../../shared/smart-image/smart-image';
+import { categoryImage } from '../../../shared/utils/media';
+import { Reveal } from '../../../shared/directives/reveal.directive';
 
-// Ported from sunny2's CATEGORY_DISPLAY constant.
+// Ported from the prototype's CATEGORY_DISPLAY constant.
 const CATEGORY_DISPLAY: Record<string, string> = {
   flower: 'Flower',
   vapes: 'Vapes',
@@ -27,7 +30,7 @@ const CATEGORY_DISPLAY: Record<string, string> = {
 
 const ALL_CATEGORIES = Object.keys(CATEGORY_DISPLAY) as ProductCategory[];
 
-// Fallback for the 2 categories sunny2 never built a shop page for (ingestibles,
+// Fallback for the 2 categories the prototype never built a shop page for (ingestibles,
 // troches) -- a minimal generic sidebar instead of no sidebar at all.
 const FALLBACK_SECTIONS: FilterSection[] = [
   { title: 'Strain Type', type: 'pills', options: ['Sativa', 'Hybrid', 'Indica', 'CBD'] },
@@ -56,7 +59,7 @@ function parseThc(product: Product): number {
 
 @Component({
   selector: 'app-category-list',
-  imports: [ProductCard, RouterLink, Accordion, RangeSlider],
+  imports: [ProductCard, RouterLink, Accordion, RangeSlider, SmartImage, Reveal],
   templateUrl: './category-list.html',
   styleUrl: './category-list.scss',
 })
@@ -68,6 +71,22 @@ export class CategoryList {
   protected readonly allCategories = ALL_CATEGORIES;
   protected readonly categoryLabel = () => CATEGORY_DISPLAY[this.category()] ?? this.category();
   protected readonly labelFor = (c: string) => CATEGORY_DISPLAY[c] ?? c;
+  protected readonly heroImage = computed(() => categoryImage(this.category()));
+  protected readonly sortMode = signal<'featured' | 'price-asc' | 'price-desc' | 'thc-desc'>('featured');
+  protected readonly sortedProducts = computed(() => {
+    const list = [...this.filteredProducts()];
+    switch (this.sortMode()) {
+      case 'price-asc':
+        return list.sort((a, b) => (a.discountedPrice ?? a.price) - (b.discountedPrice ?? b.price));
+      case 'price-desc':
+        return list.sort((a, b) => (b.discountedPrice ?? b.price) - (a.discountedPrice ?? a.price));
+      case 'thc-desc':
+        return list.sort((a, b) => parseThc(b) - parseThc(a));
+      default:
+        return list;
+    }
+  });
+  protected readonly filtersOpen = signal(false);
 
   protected readonly productsResource = rxResource({
     params: () => ({ category: this.category() }),
@@ -90,7 +109,7 @@ export class CategoryList {
   protected readonly cbdSection = computed(() => this.sections().find((s) => wireKindFor(s) === 'cbd-range'));
   protected readonly priceSection = computed(() => this.sections().find((s) => wireKindFor(s) === 'price-range'));
 
-  // sunny2's advertised min/max (e.g. flower "$0-$190") don't always cover every
+  // the prototype's advertised min/max (e.g. flower "$0-$190") don't always cover every
   // real product in our sample (a few flower products are actually up to $210) --
   // widen the displayed/filterable bounds to the union of the advertised range and
   // the real data, so the slider's default (untouched) position never hides a real

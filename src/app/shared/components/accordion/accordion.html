@@ -1,7 +1,11 @@
-<div class="acc-h" [class.detail]="variant() === 'detail'" (click)="toggle()">
+<button type="button" class="acc__head" [class.is-detail]="variant() === 'detail'" [attr.aria-expanded]="open()" (click)="toggle()">
   <span>{{ title() }}</span>
-  <span class="acc-chev" [class.detail]="variant() === 'detail'" [class.closed]="!open()">▾</span>
-</div>
-<div class="acc-body" [class.detail]="variant() === 'detail'" [class.closed]="!open()">
-  <ng-content />
+  <span class="acc__icon" aria-hidden="true"></span>
+</button>
+<div class="acc__panel" [class.is-open]="open()">
+  <div class="acc__inner">
+    <div class="acc__content">
+      <ng-content />
+    </div>
+  </div>
 </div>

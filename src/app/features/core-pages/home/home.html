@@ -1,143 +1,265 @@
-<section class="hero" aria-roledescription="carousel" aria-label="Featured promotions">
-  <button class="hero-arrow left" type="button" (click)="prevSlide()" aria-label="Previous slide">‹</button>
-  <button class="hero-arrow right" type="button" (click)="nextSlide()" aria-label="Next slide">›</button>
-
-  @for (slide of heroSlides; track $index) {
-    <article
-      class="hero-slide"
-      [class.on]="$index === activeSlide()"
-      [attr.aria-hidden]="$index === activeSlide() ? null : 'true'"
-      [style.background]="
-        'linear-gradient(90deg, rgba(16,16,16,0.62), rgba(16,16,16,0.15) 62%), ' + slide.background
-      "
-    >
-      <div class="hero-content container">
-        <h1>{{ slide.title }}</h1>
-        <p>{{ slide.body }}</p>
-        <div class="hero-actions">
-          <a class="btn-primary" [routerLink]="slide.primaryCta.link">{{ slide.primaryCta.label }}</a>
-          @if (slide.secondaryCta) {
-            <a class="btn-outline hero-btn-ghost" [routerLink]="slide.secondaryCta.link">
-              {{ slide.secondaryCta.label }}
-            </a>
-          }
-        </div>
-      </div>
-    </article>
-  }
-
-  <div class="hero-dots" role="tablist">
-    @for (slide of heroSlides; track $index) {
-      <button
-        class="hero-dot"
-        type="button"
-        role="tab"
-        [class.on]="$index === activeSlide()"
-        [attr.aria-selected]="$index === activeSlide()"
-        [attr.aria-label]="'Go to slide ' + ($index + 1)"
-        (click)="activeSlide.set($index)"
-      ></button>
-    }
+<!-- ============================ HERO ============================ -->
+<section class="hero">
+  <div class="hero__media" aria-hidden="true">
+    <img class="kb" src="/assets/img/hero-home.jpg" alt="" fetchpriority="high" />
   </div>
+  <div class="hero__veil" aria-hidden="true"></div>
+  <div class="hero__glow" aria-hidden="true"></div>
+
+  <div class="container hero__content">
+    <p class="eyebrow hero__eyebrow">Premium cannabis · US · Canada · Europe</p>
+    <h1 class="hero__title">
+      <span class="line"><span>Grown slow.</span></span>
+      <span class="line"><span><em>Sold honest.</em></span></span>
+    </h1>
+    <p class="hero__lead">
+      DeLight brings together carefully grown flower, crafted extracts and everyday favourites from licensed
+      partners. Pick up in one of our locations or have it shipped in recyclable packaging.
+    </p>
+    <div class="hero__ctas">
+      <a routerLink="/shop" class="btn btn--gold">Shop the collection</a>
+      <a routerLink="/learn" class="btn btn--light">New here? Start with our guides</a>
+    </div>
+
+    <dl class="hero__stats">
+      <div><dt>{{ productTotal() }}+</dt><dd>Products</dd></div>
+      <div><dt>{{ storeTotal() }}</dt><dd>Locations</dd></div>
+      <div><dt>3</dt><dd>Regions served</dd></div>
+    </dl>
+  </div>
+
+  <a class="hero__scroll" href="#collections" aria-label="Scroll to collections"><span></span></a>
 </section>
 
-<section class="section container">
-  <h2 class="section-title">Cannabis for pickup, close to you</h2>
-  <div class="promo-grid">
-    @for (card of promoCards; track card.title) {
-      <a class="promo-card" [routerLink]="card.link">
-        <span class="promo-card-img" [style.background-image]="'url(' + card.image + ')'"></span>
-        <span class="promo-card-body">
-          <span class="promo-card-title">{{ card.title }}</span>
-          <span class="promo-card-text">{{ card.body }}</span>
-          <span class="promo-card-cta">{{ card.ctaLabel }} →</span>
-        </span>
-      </a>
-    }
-  </div>
-</section>
-
-<section class="section container">
-  <h2 class="section-title">Shop by category</h2>
-  <div class="cat-grid">
-    @for (cat of inventoryCategories; track cat.slug) {
-      <a class="cat-tile" [routerLink]="['/shop', cat.slug]">
-        <span class="cat-tile-emoji" aria-hidden="true">{{ cat.icon }}</span>
-        <span class="cat-tile-label">{{ cat.label }}</span>
-      </a>
-    }
-  </div>
-</section>
-
-<section class="section container">
-  <div class="row-head">
-    <h2 class="section-title">Flower</h2>
-    <a class="view-all" routerLink="/shop/flower">View all ({{ featuredTotal() }}) →</a>
-  </div>
-  @if (featuredResource.isLoading()) {
-    <p class="status">Loading…</p>
-  } @else if (featuredResource.error()) {
-    <p class="status">Couldn’t load products. Is the mock API running?</p>
-  } @else {
-    <div class="product-grid">
-      @for (product of featuredResource.value()?.slice(0, 4); track product.id) {
-        <app-product-card [product]="product" />
+<!-- ============================ TRUST MARQUEE ============================ -->
+<div class="trust" aria-label="Why DeLight">
+  <div class="marquee">
+    <div class="marquee__track">
+      @for (t of [...trustPoints, ...trustPoints]; track $index) {
+        <span>{{ t }}<i aria-hidden="true">✦</i></span>
       }
     </div>
-  }
+  </div>
+</div>
+
+<!-- ============================ CATEGORIES ============================ -->
+<section class="section" id="collections">
+  <div class="container">
+    <div class="section-head" appReveal>
+      <div>
+        <p class="eyebrow">The collection</p>
+        <h2>Shop by category</h2>
+      </div>
+      <a class="section-head__link" routerLink="/shop">View everything</a>
+    </div>
+
+    <div class="bento">
+      @for (c of categories.slice(0, 6); track c.slug; let i = $index) {
+        <a class="bento__tile" [routerLink]="['/shop', c.slug]"
+          appReveal [revealDelay]="i * 90">
+          <span class="bento__img"><app-smart-image [src]="c.image" [alt]="c.label" /></span>
+          <span class="bento__shade"></span>
+          <span class="bento__label">
+            <span class="bento__name">{{ c.label }}</span>
+            <span class="bento__go" aria-hidden="true">→</span>
+          </span>
+        </a>
+      }
+    </div>
+
+    <div class="chips" appReveal>
+      @for (c of categories.slice(6); track c.slug) {
+        <a class="chip" [routerLink]="['/shop', c.slug]">{{ c.label }}</a>
+      }
+    </div>
+  </div>
 </section>
 
-@if (localStore(); as store) {
-  <section class="section container">
-    <div class="store-strip">
-      <div class="store-strip-media" aria-hidden="true">
-        <img [src]="store.image" alt="" />
+<!-- ============================ FEATURED ============================ -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-head" appReveal>
+      <div>
+        <p class="eyebrow">Staff picks</p>
+        <h2>Flower, fresh from the shelf</h2>
       </div>
-      <div class="store-strip-body">
-        <p class="store-strip-eyebrow">Your nearest store</p>
-        <p class="store-strip-name">{{ store.name }}</p>
-        <p class="store-strip-addr">
-          {{ store.address.streetAddress }}<br />
-          {{ store.address.addressLocality }}, {{ store.address.addressRegion }}
-          {{ store.address.postalCode }}
-        </p>
-        <div class="store-strip-actions">
-          <a class="btn-primary" [routerLink]="['/stores', store.slug]">Store details</a>
-          <a class="btn-outline" routerLink="/stores">Change store</a>
-        </div>
+      <a class="section-head__link" routerLink="/shop/flower">Shop all flower</a>
+    </div>
+
+    @if (featured().length) {
+      <div class="grid-products">
+        @for (p of featured(); track p.id; let i = $index) {
+          <app-product-card [product]="p" appReveal [revealDelay]="i * 110" />
+        }
+      </div>
+    } @else {
+      <div class="skeleton-row" aria-hidden="true">
+        @for (i of [1, 2, 3, 4]; track i) {
+          <div class="skeleton"></div>
+        }
+      </div>
+    }
+  </div>
+</section>
+
+<!-- ============================ ECO SPLIT ============================ -->
+<section class="section split-band">
+  <div class="split-band__media" appReveal>
+    <img class="kb" src="/assets/img/section-eco.jpg" alt="Morning dew on a leaf" loading="lazy" />
+  </div>
+  <div class="container split-band__body">
+    <div class="split-band__copy" appReveal [revealDelay]="150">
+      <p class="eyebrow">Ecofriendly by design</p>
+      <h2>Good for the plant, kind to the planet.</h2>
+      <p class="lead">
+        We favour regenerative growers, paper-based packaging and reusable glass. Every shipment is
+        packed to travel light, so less goes to landfill and more reaches you intact.
+      </p>
+      <ul class="check-list">
+        <li>Regenerative, low-water growing partners</li>
+        <li>100% recyclable mailers and glass jars</li>
+        <li>Carbon-conscious delivery routing</li>
+      </ul>
+      <a routerLink="/about" class="btn btn--primary">Our story</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ LOCATIONS ============================ -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-head" appReveal>
+      <div>
+        <p class="eyebrow">Visit us</p>
+        <h2>Locations you can walk into</h2>
+      </div>
+      <a class="section-head__link" routerLink="/stores">All {{ storeTotal() }} locations</a>
+    </div>
+
+    <div class="grid-stores">
+      @for (s of featuredStores(); track s.slug; let i = $index) {
+        <a class="store-card" [routerLink]="['/stores', s.slug]" appReveal [revealDelay]="i * 120">
+          <span class="store-card__img">
+            <app-smart-image [src]="storeImage(s.slug, 'exterior')" [alt]="s.name + ' storefront'" />
+          </span>
+          <span class="store-card__body">
+            <span class="tag tag--leaf">{{ s.address.addressRegion }}</span>
+            <strong>{{ s.name }}</strong>
+            <span class="store-card__addr">{{ s.address.streetAddress }}, {{ s.address.addressLocality }}</span>
+          </span>
+        </a>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- ============================ DELIVERY / MARKETS ============================ -->
+<section class="section delivery">
+  <div class="container delivery__grid">
+    <div class="delivery__copy" appReveal>
+      <p class="eyebrow">Pickup & shipping</p>
+      <h2>Shop from wherever you are</h2>
+      <p class="lead">
+        Order online and collect in store, or have it delivered discreetly. Shipping rules differ by region,
+        and our checkout shows only the options available where you are.
+      </p>
+      <div class="market-cards">
+        @for (m of marketCards; track m.title; let i = $index) {
+          <a class="market-card" [routerLink]="m.link" appReveal [revealDelay]="i * 110">
+            <span class="market-card__flag" aria-hidden="true">{{ m.flag }}</span>
+            <strong>{{ m.title }}</strong>
+            <span>{{ m.body }}</span>
+          </a>
+        }
       </div>
     </div>
-  </section>
-}
+    <div class="delivery__media" appReveal [revealDelay]="200">
+      <img class="kb" src="/assets/img/section-delivery.jpg" alt="Eco kraft parcel with a sage ribbon" loading="lazy" />
+      <div class="delivery__note">
+        <span class="tag tag--gold">Free pickup</span>
+        <p>Reserve online, collect in store. Payment is taken at pickup or by your chosen method.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-@if (faqItems().length > 0) {
-  <section class="section container faq">
-    <h2 class="section-title">Frequently asked questions</h2>
-    <div class="faq-list">
-      @for (item of faqItems(); track $index) {
-        <div class="faq-item" [class.open]="openFaq() === $index">
-          <button class="faq-q" type="button" (click)="toggleFaq($index)" [attr.aria-expanded]="openFaq() === $index">
-            <span>{{ item.question }}</span>
-            <span class="faq-caret" aria-hidden="true">{{ openFaq() === $index ? '−' : '+' }}</span>
-          </button>
-          @if (openFaq() === $index) {
-            <div class="faq-a">
-              @for (block of item.answerBlocks; track $index) {
-                @if (block.type === 'paragraph') {
-                  <p>{{ $any(block.data).text }}</p>
-                } @else if (block.type === 'list') {
-                  <ul>
-                    @for (li of $any(block.data).items; track $index) {
-                      <li>{{ li }}</li>
-                    }
-                  </ul>
-                }
-              }
+<!-- ============================ LAB / TRUST ============================ -->
+<section class="section section--dark lab">
+  <div class="lab__media" aria-hidden="true">
+    <img src="/assets/img/section-lab.jpg" alt="" loading="lazy" />
+  </div>
+  <div class="container lab__inner">
+    <div appReveal>
+      <p class="eyebrow">Quality you can verify</p>
+      <h2>Every product, a certificate of analysis.</h2>
+      <p class="lead">
+        Read the numbers before you buy. Each product page links to its potency and contaminant results,
+        so you choose with information, not guesswork.
+      </p>
+    </div>
+    <ol class="steps">
+      <li appReveal [revealDelay]="100"><span>01</span><strong>Grown with care</strong><p>Licensed partners and clear cultivation records.</p></li>
+      <li appReveal [revealDelay]="200"><span>02</span><strong>Tested independently</strong><p>Potency, terpenes and contaminant panels.</p></li>
+      <li appReveal [revealDelay]="300"><span>03</span><strong>Packed responsibly</strong><p>Light, recyclable and tamper-evident.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============================ REWARDS CTA ============================ -->
+<section class="section">
+  <div class="container">
+    <div class="cta-panel" appReveal>
+      <div class="cta-panel__copy">
+        <p class="eyebrow">DeLight Rewards</p>
+        <h2>Earn points on every order.</h2>
+        <p class="lead">Redeem for member pricing, early drops and events. It's free to join.</p>
+      </div>
+      <div class="cta-panel__actions">
+        <a routerLink="/rewards" class="btn btn--gold">Join rewards</a>
+        <a routerLink="/medical" class="btn btn--ghost">Medical program</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FAQ ============================ -->
+@if (faqItems().length) {
+  <section class="section section--alt">
+    <div class="container faq-grid">
+      <div appReveal>
+        <p class="eyebrow">Good to know</p>
+        <h2>Questions, answered.</h2>
+        <p class="lead">New to cannabis or new to DeLight? Start here, or read the full FAQ.</p>
+        <a routerLink="/faq" class="btn btn--ghost">Full FAQ</a>
+      </div>
+      <div class="faq">
+        @for (item of faqItems(); track $index; let i = $index) {
+          <div class="faq__item" [class.is-open]="openFaq() === i">
+            <button type="button" class="faq__q" (click)="toggleFaq(i)" [attr.aria-expanded]="openFaq() === i">
+              <span>{{ item.question }}</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq__a">
+              <div class="faq__inner">
+                <app-content-page-renderer [blocks]="item.answerBlocks" />
+              </div>
             </div>
-          }
-        </div>
-      }
+          </div>
+        }
+      </div>
     </div>
-    <a class="view-all" routerLink="/faq">View all FAQs →</a>
   </section>
 }
+
+<!-- ============================ FINAL CTA ============================ -->
+<section class="final">
+  <div class="final__bg" aria-hidden="true"></div>
+  <div class="container final__inner" appReveal>
+    <p class="eyebrow">Ready when you are</p>
+    <h2>Find your next favourite.</h2>
+    <div class="hero__ctas">
+      <a routerLink="/shop" class="btn btn--gold">Start shopping</a>
+      <a routerLink="/stores" class="btn btn--light">Find a location</a>
+    </div>
+  </div>
+</section>

@@ -1,101 +1,85 @@
-<header class="topnav">
-  <a class="logo" routerLink="/">
-    <span class="logo-mark" aria-hidden="true">◆</span>
-    <span class="logo-text">Evergreen</span>
-  </a>
+<header class="header" [class.is-scrolled]="scrolled()" [class.is-open]="mobileOpen()">
+  <div class="header__inner container">
+    <a routerLink="/" class="header__brand" aria-label="DeLight home" (click)="closeMobile()">
+      <app-logo />
+    </a>
 
-  <nav class="nav-menu">
-    <div class="nav-item">
-      <div class="nav-link" (click)="toggleDropdown('shop')">Shop <span class="caret">▾</span></div>
-      <div class="nav-dropdown dd-shop" [class.open]="openDropdown() === 'shop'">
-        <div>
-          <div class="dd-col-title">Products</div>
-          <div class="dd-products-grid">
-            @for (cat of shopCategories; track cat.slug) {
-              <a class="dd-prod-link" [routerLink]="['/shop', cat.slug]" (click)="closeDropdown()">{{ cat.label }}</a>
-            }
-          </div>
-          <div class="dd-collections-box">
-            <div class="dd-col-title" style="border:none;margin-bottom:10px;font-size:13px;">Collections</div>
-            <div class="dd-collections-grid">
-              @for (c of collections; track c) {
-                <a class="dd-prod-link" routerLink="/shop" (click)="closeDropdown()">{{ c }}</a>
+    <nav class="header__nav" aria-label="Primary">
+      <div class="header__item" (mouseleave)="closeDropdown()">
+        <a routerLink="/shop" routerLinkActive="is-active" class="header__link"
+          (mouseenter)="openDropdown.set('shop')" (click)="toggleDropdown('shop')">
+          Shop <span class="chev" aria-hidden="true"></span>
+        </a>
+        @if (openDropdown() === 'shop') {
+          <div class="mega" role="menu">
+            <div class="mega__grid">
+              @for (c of shopCategories; track c.slug) {
+                <a class="mega__tile" [routerLink]="['/shop', c.slug]" (click)="closeMobile()" role="menuitem">
+                  <span class="mega__img"><app-smart-image [src]="c.image" [alt]="c.label" /></span>
+                  <span class="mega__label">{{ c.label }}</span>
+                </a>
               }
             </div>
-          </div>
-        </div>
-        @if (currentStore(); as store) {
-          <div class="dd-store-panel">
-            <div class="dd-store-label">You're Shopping Adult Use at:</div>
-            <div class="dd-store-name">{{ store.name }}</div>
-            <div class="dd-store-addr">
-              {{ store.address.streetAddress }}<br />
-              {{ store.address.addressLocality }}, {{ store.address.addressRegion }} {{ store.address.postalCode }}
-              &nbsp;<a routerLink="/stores" (click)="closeDropdown()">Change Store</a>
-            </div>
-            <div class="dd-store-actions">
-              <a class="dd-store-action" [routerLink]="['/stores', store.slug]" (click)="closeDropdown()">
-                <span class="ic">🏪</span>Store Details
-              </a>
-              @if (store.phone) {
-                <a class="dd-store-action" [href]="'tel:' + store.phone"><span class="ic">📞</span>{{ store.phone }}</a>
-              }
-              <a class="dd-store-action" [routerLink]="['/stores', store.slug]" (click)="closeDropdown()">
-                <span class="ic">📍</span>Get Directions
-              </a>
+            <div class="mega__foot">
+              <a routerLink="/shop" (click)="closeMobile()">Browse all products →</a>
+              <span class="tag tag--leaf">Lab-tested · COA on every product</span>
             </div>
           </div>
         }
       </div>
-    </div>
 
-    <div class="nav-item">
-      <div class="nav-link" (click)="toggleDropdown('deals')">Deals <span class="caret">▾</span></div>
-      <div class="nav-dropdown dd-deals" [class.open]="openDropdown() === 'deals'">
-        <div class="dd-deals-grid">
-          @for (product of dealProducts(); track product.id) {
-            <a class="dd-deal-card" [routerLink]="['/shop', product.category, product.slug]" (click)="closeDropdown()">
-              <div class="dd-deal-icon">{{ product.badge }}</div>
-              <div class="dd-deal-text">{{ product.name }}</div>
-            </a>
-          }
-        </div>
-        <div class="dd-view-all"><a routerLink="/shop" (click)="closeDropdown()">View All Deals</a></div>
+      <a routerLink="/stores" routerLinkActive="is-active" class="header__link" (click)="closeMobile()">Locations</a>
+
+      <div class="header__item" (mouseleave)="closeDropdown()">
+        <a routerLink="/learn" routerLinkActive="is-active" class="header__link"
+          (mouseenter)="openDropdown.set('learn')" (click)="toggleDropdown('learn')">
+          Learn <span class="chev" aria-hidden="true"></span>
+        </a>
+        @if (openDropdown() === 'learn') {
+          <div class="mega mega--narrow" role="menu">
+            @for (a of featuredArticles(); track a.slug) {
+              <a class="mega__row" [routerLink]="['/learn', a.slug]" (click)="closeMobile()" role="menuitem">
+                <strong>{{ a.title }}</strong>
+                <span>{{ a.description }}</span>
+              </a>
+            }
+            <a class="mega__more" routerLink="/learn" (click)="closeMobile()">All guides →</a>
+          </div>
+        }
       </div>
-    </div>
 
-    <div class="nav-item">
-      <div class="nav-link" (click)="toggleDropdown('learn')">Learn <span class="caret">▾</span></div>
-      <div class="nav-dropdown dd-learn" [class.open]="openDropdown() === 'learn'">
-        <div class="dd-learn-title">Featured Articles</div>
-        <div class="dd-articles-grid">
-          @for (article of featuredArticles(); track article.slug) {
-            <a class="dd-article-card" [routerLink]="['/learn', article.slug]" (click)="closeDropdown()">
-              <div class="dd-article-img" [style.background-image]="'url(' + article.heroImage + ')'"></div>
-              <div class="dd-article-text">{{ article.title }}</div>
-            </a>
+      <a routerLink="/rewards" routerLinkActive="is-active" class="header__link" (click)="closeMobile()">Rewards</a>
+      <a routerLink="/medical" routerLinkActive="is-active" class="header__link" (click)="closeMobile()">Medical</a>
+      <a routerLink="/about" routerLinkActive="is-active" class="header__link" (click)="closeMobile()">About</a>
+    </nav>
+
+    <div class="header__actions">
+      <label class="market">
+        <span class="sr-only">Shopping market</span>
+        <span aria-hidden="true">{{ market.current().flag }}</span>
+        <select [value]="market.market()" (change)="onMarketChange($any($event.target).value)">
+          @for (m of market.markets; track m.code) {
+            <option [value]="m.code">{{ m.label }}</option>
           }
-        </div>
-        <div class="dd-view-all"><a routerLink="/learn" (click)="closeDropdown()">View All Articles</a></div>
-      </div>
+        </select>
+      </label>
+
+      <button type="button" class="icon-btn" (click)="goAccount()" aria-label="Account">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4" /><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6" /></svg>
+      </button>
+
+      <a routerLink="/cart" class="icon-btn icon-btn--cart" [class.is-bump]="cartBump()" aria-label="Cart, {{ cartCount() }} items">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14l-1.2 12.1a2 2 0 0 1-2 1.9H8.2a2 2 0 0 1-2-1.9L5 7z" /><path d="M9 7V5.5a3 3 0 0 1 6 0V7" /></svg>
+        @if (cartCount() > 0) {
+          <span class="icon-btn__badge">{{ cartCount() }}</span>
+        }
+      </a>
+
+      <button type="button" class="burger" (click)="toggleMobile()" [attr.aria-expanded]="mobileOpen()" aria-label="Menu">
+        <span></span><span></span>
+      </button>
     </div>
-
-    <a class="nav-link" routerLink="/stores" routerLinkActive="active">Find a Dispensary</a>
-  </nav>
-
-  <div class="nav-right">
-    <a class="icon-link" routerLink="/cart" routerLinkActive="active">
-      Cart
-      @if (cartService.totalItems() > 0) {
-        <span class="cart-count">{{ cartService.totalItems() }}</span>
-      }
-    </a>
-    @if (authService.isAuthenticated()) {
-      <a class="login-btn" routerLink="/account">{{ authService.user()!.firstName }}</a>
-    } @else {
-      <a class="login-btn" routerLink="/login">Login/Register</a>
-    }
   </div>
 </header>
 
-<div class="nav-overlay" [class.open]="openDropdown() !== null" (click)="closeDropdown()"></div>
+<div class="scrim" [class.is-visible]="mobileOpen()" (click)="closeMobile()"></div>

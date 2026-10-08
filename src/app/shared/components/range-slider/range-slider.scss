@@ -1,82 +1,102 @@
-// Ported from sunny2's .filt-range-* rules.
+.rs {
+  padding: var(--space-2) 0 var(--space-3);
 
-.filt-range-wrap {
-  padding-top: 4px;
-}
-
-.filt-range-labels {
-  display: flex;
-  justify-content: space-between;
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--g800);
-  margin-bottom: 14px;
-}
-
-.filt-range-track {
-  position: relative;
-  height: 4px;
-  background: var(--g200);
-  border-radius: 2px;
-  margin: 0 8px;
-}
-
-.filt-range-fill {
-  position: absolute;
-  height: 4px;
-  background: var(--orange);
-  border-radius: 2px;
-}
-
-input[type='range'] {
-  position: absolute;
-  left: -8px;
-  right: -8px;
-  top: -10px;
-  width: calc(100% + 16px);
-  margin: 0;
-  -webkit-appearance: none;
-  appearance: none;
-  background: transparent;
-  pointer-events: none;
-  height: 24px;
-
-  &::-webkit-slider-runnable-track {
-    background: transparent;
-    height: 24px;
+  &__values {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    font-weight: 600;
+    color: var(--forest-800);
+    margin-bottom: var(--space-4);
+    font-variant-numeric: tabular-nums;
   }
-  &::-moz-range-track {
-    background: transparent;
-    height: 24px;
+
+  &__sep {
+    color: var(--c-text-muted);
+    font-family: var(--font-sans);
+    font-size: var(--text-xs);
   }
-  &::-webkit-slider-thumb {
-    -webkit-appearance: none;
+
+  &__track {
+    position: relative;
+    height: 22px;
+    margin: 0 9px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      height: 4px;
+      margin-top: -2px;
+      border-radius: 4px;
+      background: var(--sand-300);
+    }
+  }
+
+  &__fill {
+    position: absolute;
+    top: 50%;
+    height: 4px;
+    margin-top: -2px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, var(--leaf-500), var(--gold-500));
+    pointer-events: none;
+  }
+
+  &__input {
+    position: absolute;
+    left: -9px;
+    width: calc(100% + 18px);
+    top: 0;
+    height: 22px;
+    margin: 0;
+    background: none;
+    pointer-events: none;
     appearance: none;
-    pointer-events: auto;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background: var(--white);
-    border: 2px solid var(--orange);
-    cursor: pointer;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
-    margin-top: 0;
-  }
-  &::-moz-range-thumb {
-    pointer-events: auto;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background: var(--white);
-    border: 2px solid var(--orange);
-    cursor: pointer;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
-  }
-}
+    -webkit-appearance: none;
 
-.filt-range-note {
-  font-size: 11px;
-  color: var(--g400);
-  margin-top: 16px;
-  line-height: 1.6;
+    &::-webkit-slider-runnable-track {
+      background: transparent;
+    }
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      pointer-events: auto;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--white);
+      border: 2px solid var(--forest-700);
+      box-shadow: var(--shadow-sm);
+      cursor: grab;
+    }
+
+    &::-moz-range-thumb {
+      pointer-events: auto;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--white);
+      border: 2px solid var(--forest-700);
+      cursor: grab;
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+
+    &:focus-visible::-webkit-slider-thumb {
+      box-shadow: var(--shadow-focus);
+    }
+  }
+
+  &__note {
+    margin: var(--space-3) 0 0;
+    font-size: var(--text-xs);
+    color: var(--c-text-muted);
+  }
 }

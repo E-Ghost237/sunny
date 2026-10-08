@@ -1,53 +1,63 @@
-@if (cartService.items().length === 0) {
-  <div class="empty-cart">
-    <div class="empty-icon">🛒</div>
-    <p>Your cart is empty.</p>
-    <a class="btn-orange" routerLink="/shop">Start Shopping</a>
+<section class="cart-head">
+  <div class="container">
+    <p class="eyebrow">Your bag</p>
+    <h1>{{ cartService.totalItems() }} {{ cartService.totalItems() === 1 ? 'item' : 'items' }}</h1>
   </div>
-} @else {
-  <div class="cart-wrap">
-    <div class="cart-main">
-      <div class="cart-h">
-        Your Cart
-        <span class="cart-count-lbl">({{ cartService.totalItems() }} {{ cartService.totalItems() === 1 ? 'item' : 'items' }})</span>
-      </div>
+</section>
 
-      @for (item of cartService.items(); track item.productId) {
-        <div class="cart-item">
-          <img class="ci-img" [src]="item.image" [alt]="item.name" />
-          <div class="ci-info">
-            @if (item.brand) {
-              <div class="ci-brand">{{ item.brand }}</div>
-            }
-            <div class="ci-name">{{ item.name }}</div>
-            @if (item.meta) {
-              <div class="ci-meta">{{ item.meta }}</div>
-            }
-            <div class="ci-foot">
-              <app-quantity-stepper
-                [quantity]="item.quantity"
-                (quantityChange)="cartService.updateQuantity(item.productId, $event)"
-              />
-              <div class="ci-price">${{ (item.priceAtAdd * item.quantity).toFixed(2) }}</div>
+<section class="container cart">
+  @if (cartService.items().length === 0) {
+    <div class="empty" appReveal>
+      <span class="empty__icon" aria-hidden="true">🌿</span>
+      <h2>Your bag is waiting for something green.</h2>
+      <p>Explore the collection and add your favourites here.</p>
+      <a class="btn btn--primary" routerLink="/shop">Start shopping</a>
+    </div>
+  } @else {
+    <div class="cart__layout">
+      <ul class="lines">
+        @for (item of cartService.items(); track item.productId; let i = $index) {
+          <li class="line" appReveal [revealDelay]="i * 80">
+            <a class="line__img" [routerLink]="['/shop', item.category, item.slug]">
+              <app-smart-image [src]="item.image" [alt]="item.name" />
+            </a>
+            <div class="line__body">
+              @if (item.brand) { <span class="line__brand">{{ item.brand }}</span> }
+              <a class="line__name" [routerLink]="['/shop', item.category, item.slug]">{{ item.name }}</a>
+              @if (item.meta) { <span class="line__meta">{{ item.meta }}</span> }
+              <button type="button" class="line__remove" (click)="cartService.remove(item.productId)">Remove</button>
             </div>
-            <div class="ci-remove" (click)="cartService.remove(item.productId)">Remove</div>
-          </div>
+            <div class="line__qty">
+              <app-quantity-stepper [quantity]="item.quantity" (quantityChange)="cartService.updateQuantity(item.productId, $event)" />
+            </div>
+            <div class="line__price">{{ item.priceAtAdd * item.quantity | currency }}</div>
+          </li>
+        }
+      </ul>
+
+      <aside class="cart-summary card" appReveal [revealDelay]="150">
+        <h2>Summary</h2>
+        <div class="ship-progress">
+          @if (toFree() > 0) {
+            <span>You're {{ toFree() | currency }} away from free shipping.</span>
+          } @else {
+            <span class="done">✓ You've unlocked free shipping.</span>
+          }
+          <div class="ship-progress__track"><div class="ship-progress__fill" [style.width.%]="progress()"></div></div>
         </div>
-      }
-
-      <div style="margin-top: 20px">
-        <a class="btn-outline" routerLink="/shop">&larr; Continue Shopping</a>
-      </div>
+        <dl class="totals">
+          <div><dt>Subtotal</dt><dd>{{ cartService.subtotal() | currency }}</dd></div>
+          <div><dt>Pickup</dt><dd>Free</dd></div>
+          <div class="totals__total"><dt>Estimated total</dt><dd>{{ cartService.subtotal() | currency }}</dd></div>
+        </dl>
+        <a class="btn btn--primary btn--block" routerLink="/checkout">Checkout</a>
+        <a class="btn btn--ghost btn--block" routerLink="/shop">Keep shopping</a>
+        <ul class="perks">
+          <li>🔒 Secure checkout</li>
+          <li>📦 Recyclable packaging</li>
+          <li>🏬 Pick up in about an hour</li>
+        </ul>
+      </aside>
     </div>
-
-    <div class="cart-side">
-      <div class="cs-h">Order Summary</div>
-      <div class="cs-row"><span>Subtotal ({{ cartService.totalItems() }} items)</span><span>${{ cartService.subtotal().toFixed(2) }}</span></div>
-      <div class="cs-row"><span>Pickup</span><span class="free">Free</span></div>
-      <div class="cs-row tax-note"><span>Tax collected at dispensary</span><span>&mdash;</span></div>
-      <div class="cs-total"><span>Estimated Total</span><span>${{ cartService.subtotal().toFixed(2) }}</span></div>
-      <a class="btn-orange checkout-btn" routerLink="/checkout">Checkout &rarr;</a>
-      <div class="fine-print">Payment collected at the dispensary. Valid ID required at pickup.</div>
-    </div>
-  </div>
-}
+  }
+</section>

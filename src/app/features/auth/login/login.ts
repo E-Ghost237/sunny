@@ -1,3 +1,5 @@
+import { Logo } from '../../../shared/logo/logo';
+import { Reveal } from '../../../shared/directives/reveal.directive';
 import { Component, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -6,12 +8,12 @@ import { AuthService } from '../../../core/services/auth.service';
 
 type Step = 'email' | 'signin' | 'create';
 
-// Ports sunny2's loginBack/loginContinue step-flow, but now branches on the real
-// check-patient-email contract's `is_registered` field (sunny2's prototype always
+// Ports the prototype's loginBack/loginContinue step-flow, but now branches on the real
+// check-patient-email contract's `is_registered` field (the prototype's prototype always
 // went straight to "create account" -- it never modeled an existing-user path).
 @Component({
   selector: 'app-login',
-  imports: [FormsModule],
+  imports: [FormsModule, Logo, Reveal],
   templateUrl: './login.html',
   styleUrl: './login.scss',
 })

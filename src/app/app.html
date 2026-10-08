@@ -1,17 +1,19 @@
 <app-age-gate />
 
-<app-header />
-
-@if (announcement(); as a) {
-  <div class="announcement">
-    <span>{{ a.text }}</span>
-    <a [routerLink]="a.link">{{ a.linkLabel }}</a>
+<div class="ticker" aria-label="Announcements">
+  <div class="marquee">
+    <div class="marquee__track">
+      @for (msg of [...announcements(), ...announcements()]; track $index) {
+        <span class="ticker__item">{{ msg }}<i aria-hidden="true">✦</i></span>
+      }
+    </div>
   </div>
-}
+</div>
 
+<app-header />
 <app-cat-bar />
 
-<main id="main-content">
+<main id="main-content" class="page-enter">
   <router-outlet />
 </main>
 

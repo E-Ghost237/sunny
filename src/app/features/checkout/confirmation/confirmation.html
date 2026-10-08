@@ -1,29 +1,72 @@
-@if (!placedOrder()) {
-  <div class="confirm-wrap">
-    <p>No recent order found.</p>
-    <a class="btn-orange" routerLink="/shop">Continue Shopping</a>
-  </div>
+@if (placedOrder(); as o) {
+  <section class="done">
+    <div class="done__burst" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="container done__inner">
+      <span class="done__check" aria-hidden="true">✓</span>
+      <p class="eyebrow">Order received</p>
+      <h1>Thank you. <em>Your order is in.</em></h1>
+      <p class="lead">
+        {{ o.fulfilment === 'pickup' ? 'Collect at ' + o.pickupStoreName + '.' : 'We will ship to ' + o.destination + '.' }}
+        A confirmation has been prepared for your email.
+      </p>
+      <div class="ref">
+        <span>Order reference</span>
+        <strong>{{ o.id }}</strong>
+        <button type="button" class="btn btn--ghost btn--sm" (click)="copyRef(o.id)">{{ copied() ? 'Copied ✓' : 'Copy' }}</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container layout">
+      <div class="card pay" appReveal>
+        <h2>Complete your payment</h2>
+        @if (method(); as m) {
+          <p class="pay__method">Method: <strong>{{ m.label }}</strong></p>
+          @if (m.id === 'applepay') {
+            <p>Your Apple Pay authorisation was completed at checkout. No further action is needed.</p>
+          } @else {
+            <ol>
+              @for (s of m.steps; track s) { <li>{{ s }}</li> }
+            </ol>
+            <div class="recipient">
+              <span>{{ m.recipient.label }}</span>
+              <strong>{{ m.recipient.value }}</strong>
+              <span>Memo / note: <b>{{ o.id }}</b></span>
+            </div>
+          }
+        }
+      </div>
+
+      <div class="card summary" appReveal [revealDelay]="120">
+        <h2>Order details</h2>
+        <ul>
+          @for (i of o.items; track i.productId) {
+            <li>
+              <span class="summary__thumb"><app-smart-image [src]="i.image" [alt]="i.name" /></span>
+              <span><strong>{{ i.name }}</strong><small>× {{ i.quantity }}</small></span>
+              <span>{{ i.priceAtAdd * i.quantity | currency }}</span>
+            </li>
+          }
+        </ul>
+        <dl>
+          <div><dt>Subtotal</dt><dd>{{ o.subtotal | currency }}</dd></div>
+          <div><dt>{{ o.fulfilment === 'pickup' ? 'Pickup' : 'Shipping' }}</dt><dd>{{ o.shipping === 0 ? 'Free' : (o.shipping | currency) }}</dd></div>
+          <div class="total"><dt>Total</dt><dd>{{ o.total | currency }}</dd></div>
+        </dl>
+        <p class="pts">You earned <strong>{{ o.pointsEarned }}</strong> DeLight points.</p>
+      </div>
+    </div>
+
+    <div class="container actions">
+      <a class="btn btn--primary" routerLink="/shop">Keep shopping</a>
+      <a class="btn btn--ghost" routerLink="/account">View my account</a>
+    </div>
+  </section>
 } @else {
-  <div class="confirm-wrap">
-    <div class="confirm-icon">✅</div>
-    <div class="confirm-h">Order Confirmed!</div>
-    <div class="confirm-sub">
-      Your order is being prepared at {{ placedOrder()!.pickupStoreName }}. You'll receive a text when it's ready.
-    </div>
-
-    <div class="confirm-card">
-      <div class="confirm-row"><span>Order #</span><strong>{{ placedOrder()!.id }}</strong></div>
-      <div class="confirm-row"><span>Pickup Store</span><span>{{ placedOrder()!.pickupStoreName }}</span></div>
-      <div class="confirm-row"><span>Estimated Ready</span><span class="green-strong">~30 minutes</span></div>
-      <div class="confirm-row total"><span>Total Due at Pickup</span><span>${{ placedOrder()!.subtotal.toFixed(2) }} + tax</span></div>
-      <div class="confirm-row"><span>Points Earned</span><span class="orange-strong">+{{ placedOrder()!.pointsEarned }} pts</span></div>
-    </div>
-
-    <div class="alert-info">🪪 Bring your valid government-issued ID. Medical patients must also bring their cannabis card.</div>
-
-    <div class="confirm-actions">
-      <a class="btn-dark" routerLink="/account">View My Orders</a>
-      <a class="btn-outline" routerLink="/shop">Continue Shopping</a>
-    </div>
-  </div>
+  <section class="container nothing">
+    <h1>No recent order found.</h1>
+    <p>If you just placed an order, check your email or visit your account.</p>
+    <a class="btn btn--primary" routerLink="/shop">Continue shopping</a>
+  </section>
 }
