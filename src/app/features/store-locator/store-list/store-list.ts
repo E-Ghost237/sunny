@@ -8,14 +8,16 @@ import { RouterLink } from '@angular/router';
 import { StoreService } from '../../../core/services/store.service';
 import { StoreHours } from '../../../core/models/store.model';
 
+const fmtHours = (h: StoreHours): string => (h.opens ? `${h.opens}–${h.closes}` : 'Closed');
+
 function summarizeHours(hours: StoreHours[]): string {
   if (hours.length === 0) return '';
-  const distinct = new Set(hours.map((h) => `${h.opens}-${h.closes}`));
+  const distinct = new Set(hours.map(fmtHours));
   if (distinct.size === 1) {
-    return `Daily: ${hours[0].opens}–${hours[0].closes}`;
+    return `Daily: ${fmtHours(hours[0])}`;
   }
   const today = hours[new Date().getDay()];
-  return today ? `Today: ${today.opens}–${today.closes}` : '';
+  return today ? `Today: ${fmtHours(today)}` : '';
 }
 
 @Component({

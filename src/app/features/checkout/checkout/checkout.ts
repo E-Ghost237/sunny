@@ -12,7 +12,8 @@ import { MarketService, MarketRegion } from '../../../core/services/market.servi
 import { Fulfilment, PaymentMethodId } from '../../../core/models/order.model';
 import { SmartImage } from '../../../shared/smart-image/smart-image';
 import { storeImage } from '../../../shared/utils/media';
-import { PAYMENT_METHODS, PaymentMethod } from '../payment/payment-methods';
+import { PaymentService } from '../../../core/services/payment.service';
+import { PaymentMethod } from '../../../core/models/payment.model';
 
 export const SHIPPING_FEE = 12;
 export const FREE_SHIPPING_OVER = 150;
@@ -52,7 +53,14 @@ export class Checkout {
   private readonly router = inject(Router);
 
   protected readonly storeImage = storeImage;
-  protected readonly paymentMethods = PAYMENT_METHODS;
+  private readonly paymentService = inject(PaymentService);
+  /** Enabled payment methods from the back-office, in display order. */
+  protected readonly paymentMethodsResource = rxResource({
+    stream: () => this.paymentService.getEnabled(),
+  });
+  protected readonly paymentMethods = computed<PaymentMethod[]>(() => this.paymentMethodsResource.value() ?? []);
+  protected readonly placing = signal(false);
+  protected readonly placeError = signal<string | null>(null);
   protected readonly freeShippingOver = FREE_SHIPPING_OVER;
   protected readonly shippingFee = SHIPPING_FEE;
   protected readonly regionLabel = computed(() => REGION_LABEL[this.market.market()]);
@@ -86,7 +94,7 @@ export class Checkout {
   protected readonly amountToFreeShipping = computed(() => Math.max(0, FREE_SHIPPING_OVER - this.subtotal()));
   protected readonly selectedStore = computed(() => this.stores().find((s) => s.slug === this.selectedStoreSlug()) ?? null);
   protected readonly selectedMethod = computed<PaymentMethod | null>(
-    () => PAYMENT_METHODS.find((m) => m.id === this.paymentMethod()) ?? null,
+    () => this.paymentMethods().find((m) => m.id === this.paymentMethod()) ?? null,
   );
 
   protected readonly errors = computed(() => {
@@ -121,23 +129,39 @@ export class Checkout {
 
   protected placeOrder(): void {
     this.submitted.set(true);
-    if (!this.canSubmit()) return;
+    if (!this.canSubmit() || this.placing()) return;
 
     const store = this.selectedStore();
     const isPickup = this.fulfilment() === 'pickup';
-    const order = this.orderService.placeOrder({
-      items: this.cartService.items(),
-      shipping: this.shipping(),
-      fulfilment: this.fulfilment(),
-      pickupStoreName: isPickup ? (store?.name ?? null) : null,
-      destination: isPickup ? null : `${this.address.line1}, ${this.address.city}, ${this.address.region} ${this.address.postal}`,
-      payment: this.paymentMethod()!,
-    });
-
-    if (this.authService.isAuthenticated()) {
-      this.authService.addRewardsPoints(order.pointsEarned);
-    }
-    this.cartService.clear();
-    this.router.navigate(['/confirmation'], { queryParams: { order: order.id } });
+    this.placing.set(true);
+    this.placeError.set(null);
+    this.orderService
+      .place({
+        items: this.cartService.items(),
+        shipping: this.shipping(),
+        fulfilment: this.fulfilment(),
+        pickupStoreName: isPickup ? (store?.name ?? null) : null,
+        destination: isPickup ? null : `${this.address.line1}, ${this.address.city}, ${this.address.region} ${this.address.postal}`,
+        payment: this.paymentMethod()!,
+        customer: {
+          name: `${this.contact.firstName} ${this.contact.lastName}`.trim(),
+          email: this.contact.email,
+          phone: this.contact.phone,
+        },
+      })
+      .subscribe({
+        next: (order) => {
+          if (this.authService.isAuthenticated()) {
+            this.authService.addRewardsPoints(order.pointsEarned);
+          }
+          this.cartService.clear();
+          this.placing.set(false);
+          this.router.navigate(['/confirmation'], { queryParams: { order: order.id } });
+        },
+        error: () => {
+          this.placing.set(false);
+          this.placeError.set('We could not place your order just now. Please try again.');
+        },
+      });
   }
 }

@@ -1,3 +1,4 @@
+import { adminGuard } from './core/guards/admin.guard';
 import { Routes } from '@angular/router';
 
 import { authGuard } from './core/guards/auth.guard';
@@ -101,6 +102,64 @@ export const routes: Routes = [
     loadComponent: () => import('./features/rewards/rewards').then((m) => m.Rewards),
   },
 
+  // Back-office. The admin shell is guarded; the login page is public.
+  {
+    path: 'admin/login',
+    loadComponent: () => import('./features/admin/admin-login/admin-login').then((m) => m.AdminLogin),
+    title: 'DeLight back-office sign-in',
+  },
+  {
+    path: 'admin',
+    canActivate: [adminGuard],
+    loadComponent: () => import('./features/admin/admin-shell/admin-shell').then((m) => m.AdminShell),
+    children: [
+      {
+        path: '',
+        loadComponent: () => import('./features/admin/admin-dashboard/admin-dashboard').then((m) => m.AdminDashboard),
+        title: 'Back-office · Dashboard',
+      },
+      {
+        path: 'orders',
+        loadComponent: () => import('./features/admin/admin-orders/admin-orders').then((m) => m.AdminOrders),
+        title: 'Back-office · Orders',
+      },
+      {
+        path: 'orders/:id',
+        loadComponent: () => import('./features/admin/admin-order-detail/admin-order-detail').then((m) => m.AdminOrderDetail),
+        title: 'Back-office · Order',
+      },
+      {
+        path: 'products',
+        loadComponent: () => import('./features/admin/admin-products/admin-products').then((m) => m.AdminProducts),
+        title: 'Back-office · Products',
+      },
+      {
+        path: 'products/new',
+        loadComponent: () => import('./features/admin/admin-product-form/admin-product-form').then((m) => m.AdminProductForm),
+        title: 'Back-office · New product',
+      },
+      {
+        path: 'products/:id',
+        loadComponent: () => import('./features/admin/admin-product-form/admin-product-form').then((m) => m.AdminProductForm),
+        title: 'Back-office · Edit product',
+      },
+      {
+        path: 'payments',
+        loadComponent: () => import('./features/admin/admin-payments/admin-payments').then((m) => m.AdminPayments),
+        title: 'Back-office · Payment methods',
+      },
+      {
+        path: 'stores',
+        loadComponent: () => import('./features/admin/admin-stores/admin-stores').then((m) => m.AdminStores),
+        title: 'Back-office · Stores',
+      },
+      {
+        path: 'stores/:slug',
+        loadComponent: () => import('./features/admin/admin-store-form/admin-store-form').then((m) => m.AdminStoreForm),
+        title: 'Back-office · Edit store',
+      },
+    ],
+  },
   {
     path: '**',
     loadComponent: () => import('./shared/not-found/not-found').then((m) => m.NotFound),

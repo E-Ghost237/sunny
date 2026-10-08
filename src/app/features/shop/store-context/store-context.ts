@@ -32,7 +32,10 @@ export class StoreContext {
   private readonly todayName = DAY_NAMES[new Date().getDay()];
 
   protected readonly todayHours = computed<StoreHours | null>(
-    () => this.store()?.openingHours.find((h) => h.day === this.todayName) ?? null,
+    () => {
+      const h = this.store()?.openingHours.find((x) => x.day === this.todayName) ?? null;
+      return h?.opens ? h : null;
+    },
   );
 
   protected readonly directionsUrl = computed(() => {

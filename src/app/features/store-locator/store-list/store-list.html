@@ -24,7 +24,7 @@
       @for (s of filteredStores(); track s.slug; let i = $index) {
         <a class="store" [routerLink]="['/stores', s.slug]" appReveal [revealDelay]="(i % 3) * 100">
           <span class="store__img">
-            <app-smart-image [src]="storeImage(s.slug, 'exterior')" [alt]="s.name + ' storefront'" />
+            <app-smart-image [src]="storeImage(s, 'exterior')" [alt]="s.name + ' storefront'" />
             <span class="store__views" aria-hidden="true">Outside · Inside · All round</span>
           </span>
           <span class="store__body">

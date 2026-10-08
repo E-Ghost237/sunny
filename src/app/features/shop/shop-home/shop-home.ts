@@ -4,6 +4,7 @@ import { RouterLink } from '@angular/router';
 import { SmartImage } from '../../../shared/smart-image/smart-image';
 import { Reveal } from '../../../shared/directives/reveal.directive';
 import { SHOP_CATEGORIES } from '../../../layout/cat-bar/cat-bar';
+import { StoreContext } from '../store-context/store-context';
 
 const BLURBS: Record<string, string> = {
   flower: 'Whole-bud flower from small-batch growers, sorted by strain and potency.',
@@ -20,7 +21,7 @@ const BLURBS: Record<string, string> = {
 
 @Component({
   selector: 'app-shop-home',
-  imports: [RouterLink, SmartImage, Reveal],
+  imports: [RouterLink, SmartImage, Reveal, StoreContext],
   templateUrl: './shop-home.html',
   styleUrl: './shop-home.scss',
 })

@@ -1,31 +1,49 @@
-# Sunnyside App
+# DeLight
 
-A personal/learning-project Angular rebuild of a cannabis-dispensary e-commerce site. Not affiliated with the
-real Sunnyside/Cresco Labs; private, unpublished. Product/store/article data was extracted from a local
-prototype and crawl corpus (see `sunny/extract/*.py`) — see `sunny/har_reference/README.md` for how the real
-site's backend contract shaped a few pieces of this build (the login flow, store data, and the learn/page
-content-block schema).
+A cannabis-dispensary e-commerce storefront (Angular) with a back-office for the team. Built as a rebuild
+prototype; not affiliated with any other brand. Product, store and article data lives in
+`mock-server/data/*.json`.
 
 ## Running this project
 
 Two servers, in separate terminals:
 
 ```bash
-npm run mock-api   # builds mock-server/db.json from mock-server/data/*.json, serves it on :3001
-ng serve           # the Angular app on :4200
+npm run mock-api   # zero-dependency Node API on :3001, reads mock-server/data/*.json on every request
+ng serve           # the Angular app on :4200 (proxies /api to :3001)
 ```
 
-`npm run mock-api` rebuilds the mock database every time it starts — if you edit anything under
-`mock-server/data/` (or re-run one of the `sunny/extract/*.py` scripts), just restart it.
+The mock API writes changes made in the back-office straight back to `mock-server/data/` (and uploaded
+photos to `public/assets/img/uploads/`). Those files are tracked in git.
+
+Run `npm run watch:public` alongside `ng serve` so newly uploaded photos are served without a restart.
+
+## Back-office
+
+Open `/admin` (sign-in at `/admin/login`). It covers:
+
+- **Orders**: review payment proof, approve or reject it (with a note), dispatch with tracking, complete or cancel.
+- **Products**: add and edit products, all fields, category filter attributes, photos (upload and reorder).
+- **Payment methods**: add, edit, show or hide, reorder, remove. Instructions appear only for the method a customer selects.
+- **Stores**: details, services, opening hours, partner brands, and outside, inside and panorama photos.
+
+**Security:** the sign-in is a client-side gate using `environment.adminPasscode`. The mock API has no
+authentication, so this is not safe for live data. Add server-side accounts before going live.
+
+## Order flow
+
+Checkout creates an order with status `awaiting-payment`. The customer uploads proof of payment on the
+confirmation page (or from their account). Statuses: `awaiting-payment` → `proof-submitted` →
+`approved` → `dispatched` → `completed`, with `proof-rejected` (customer re-uploads) and `cancelled`.
+The allowed moves are defined in `mock-server/server.mjs` (`TRANSITIONS`).
 
 ## Connecting the real backend later
 
 Every HTTP call in this app goes through `core/services/*.service.ts`, and every one of those reads its base
 URL from `environment.apiBaseUrl` (`src/environments/environment.ts` for prod builds,
 `environment.development.ts` for `ng serve`) — nothing else hardcodes a URL. To point the app at a real
-backend instead of the mock: implement the same endpoints json-server is currently serving
-(`GET /products`, `GET /stores`, `GET /articles`, `GET /pages`, `GET /core-pages`, each supporting the query
-params the services use — see `core/services/`) and change `apiBaseUrl`. `AuthService`/`CartService`/
+backend instead of the mock: implement the endpoints `mock-server/server.mjs` serves
+(`/products`, `/stores`, `/articles`, `/pages`, `/core-pages`, `/payment-methods`, `/orders`, `/uploads`, and friends) and change `apiBaseUrl`. `AuthService`/`CartService`/
 `OrderService` currently simulate a backend via `localStorage` (see the comments in each) since no real
 cart/checkout/auth traffic was ever captured to model against — those are the services to rewrite first.
 

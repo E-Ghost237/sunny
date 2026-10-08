@@ -1,0 +1,110 @@
+@if (ready() && store) {
+  <header class="adm-head">
+    <div>
+      <p class="adm-eyebrow"><a routerLink="/admin/stores">← Stores</a></p>
+      <h1>{{ f.name }}</h1>
+      <p class="adm-muted">/stores/{{ store.slug }} · {{ f.locality }}, {{ f.region }}</p>
+    </div>
+    <div class="adm-actions">
+      <a class="adm-btn" [routerLink]="['/stores', store.slug]" target="_blank" rel="noopener">View store ↗</a>
+      <button type="button" class="adm-btn adm-btn--primary" [disabled]="saving() || uploadingView() !== null" (click)="save()">
+        {{ saving() ? 'Saving…' : 'Save store' }}
+      </button>
+    </div>
+  </header>
+
+  @if (message()) { <p class="adm-alert adm-alert--ok" role="status">{{ message() }}</p> }
+  @if (errors().length) {
+    <div class="adm-alert adm-alert--error" role="alert"><strong>Fix these first:</strong><ul>@for (e of errors(); track e) { <li>{{ e }}</li> }</ul></div>
+  }
+
+  <div class="adm-grid-2 adm-grid-2--wide">
+    <div class="adm-stack">
+      <section class="adm-card">
+        <div class="adm-card__head"><h2>Details</h2></div>
+        <div class="adm-form-grid">
+          <label class="adm-field adm-span-2"><span>Store name *</span><input name="name" [(ngModel)]="f.name" /></label>
+          <label class="adm-field"><span>Phone</span><input name="phone" [(ngModel)]="f.phone" /></label>
+          <label class="adm-field"><span>Timezone</span><input name="tz" [(ngModel)]="f.timezone" placeholder="America/Chicago" /></label>
+          <label class="adm-field adm-span-2"><span>Street address *</span><input name="street" [(ngModel)]="f.street" /></label>
+          <label class="adm-field"><span>City *</span><input name="city" [(ngModel)]="f.locality" /></label>
+          <label class="adm-field"><span>State / region</span><input name="region" [(ngModel)]="f.region" /></label>
+          <label class="adm-field"><span>Postal code</span><input name="postal" [(ngModel)]="f.postal" /></label>
+          <label class="adm-field"><span>Country</span><input name="country" [(ngModel)]="f.country" /></label>
+          <label class="adm-field"><span>Latitude</span><input name="lat" type="number" step="0.0001" [(ngModel)]="f.lat" /></label>
+          <label class="adm-field"><span>Longitude</span><input name="lng" type="number" step="0.0001" [(ngModel)]="f.lng" /></label>
+          <label class="adm-field adm-span-2"><span>About this store</span><textarea name="desc" rows="3" [(ngModel)]="f.description"></textarea></label>
+        </div>
+      </section>
+
+      <section class="adm-card">
+        <div class="adm-card__head"><h2>Services</h2></div>
+        <div class="adm-form-grid">
+          <label class="adm-check"><input type="checkbox" name="recp" [(ngModel)]="f.recPickup" /> <span>Adult-use pickup</span></label>
+          <label class="adm-check"><input type="checkbox" name="recd" [(ngModel)]="f.recDelivery" /> <span>Adult-use delivery</span></label>
+          <label class="adm-check"><input type="checkbox" name="medp" [(ngModel)]="f.medPickup" /> <span>Medical pickup</span></label>
+          <label class="adm-check"><input type="checkbox" name="medd" [(ngModel)]="f.medDelivery" /> <span>Medical delivery</span></label>
+          <label class="adm-check"><input type="checkbox" name="recs" [(ngModel)]="f.recComingSoon" /> <span>Adult-use “coming soon”</span></label>
+          <label class="adm-check"><input type="checkbox" name="meds" [(ngModel)]="f.medComingSoon" /> <span>Medical “coming soon”</span></label>
+        </div>
+      </section>
+
+      <section class="adm-card">
+        <div class="adm-card__head"><h2>Opening hours</h2><span class="adm-muted adm-small">Untick a day to mark it closed</span></div>
+        <table class="adm-table adm-hours">
+          <tbody>
+            @for (h of hours; track h.day) {
+              <tr>
+                <td><label class="adm-check"><input type="checkbox" [name]="'open-' + h.day" [(ngModel)]="h.open" /> <span>{{ h.day }}</span></label></td>
+                <td><input type="time" [name]="'opens-' + h.day" [(ngModel)]="h.opens" [disabled]="!h.open" aria-label="Opens" /></td>
+                <td>to</td>
+                <td><input type="time" [name]="'closes-' + h.day" [(ngModel)]="h.closes" [disabled]="!h.open" aria-label="Closes" /></td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </section>
+    </div>
+
+    <div class="adm-stack">
+      <section class="adm-card">
+        <div class="adm-card__head"><h2>Photos</h2><span class="adm-muted adm-small">Outside, inside and all-round views</span></div>
+        <div class="adm-photos">
+          @for (v of views; track v.key) {
+            <figure class="adm-photo">
+              <img [src]="photoFor(v.key)" [alt]="f.name + ' · ' + v.label" />
+              <figcaption>
+                <strong>{{ v.label }}</strong>
+                @if (store.photos?.[v.key]) { <span class="adm-tag">Custom</span> } @else { <span class="adm-muted adm-small">Default</span> }
+              </figcaption>
+              <div class="adm-actions">
+                <label class="adm-btn adm-btn--sm" [class.is-disabled]="uploadingView() !== null">
+                  {{ uploadingView() === v.key ? 'Uploading…' : 'Replace photo' }}
+                  <input type="file" accept="image/*" hidden [disabled]="uploadingView() !== null" (change)="uploadPhoto(v.key, $event)" />
+                </label>
+                @if (store.photos?.[v.key]) { <button type="button" class="adm-link" (click)="resetPhoto(v.key)">Use default</button> }
+              </div>
+            </figure>
+          }
+        </div>
+        <p class="adm-muted adm-small">Photos upload immediately. Save the store to publish a changed set.</p>
+      </section>
+
+      <section class="adm-card">
+        <div class="adm-card__head"><h2>Partner brands stocked</h2></div>
+        <div class="adm-chips">
+          @for (b of brandsRes.value() ?? []; track b.slug) {
+            <label class="adm-chip" [class.is-on]="hasBrand(b.name)">
+              <input type="checkbox" [checked]="hasBrand(b.name)" (change)="toggleBrand(b.name, $any($event.target).checked)" />
+              {{ b.name }}
+            </label>
+          }
+        </div>
+      </section>
+    </div>
+  </div>
+} @else if (missing()) {
+  <p class="adm-alert adm-alert--error">That store could not be found. <a routerLink="/admin/stores">Back to stores</a></p>
+} @else {
+  <p class="adm-muted">Loading store…</p>
+}

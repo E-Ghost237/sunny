@@ -95,7 +95,8 @@
         "text": "Friendly team and a well-organized floor. Parking is easy too."
       }
     ],
-    "description": "Riverbend, IL is a DeLight dispensary built for a calm, unhurried visit. Browse the full menu online, reserve a pickup, or ask a team member for help choosing."
+    "description": "Riverbend, IL is a DeLight dispensary built for a calm, unhurried visit. Browse the full menu online, reserve a pickup, or ask a team member for help choosing.",
+    "id": "riverbend-il"
   },
   {
     "slug": "lakeshore-il",
@@ -193,7 +194,8 @@
         "text": "Clean store, fair prices, and the online order was ready when it said it would be."
       }
     ],
-    "description": "Lakeshore, IL is a DeLight dispensary built for a calm, unhurried visit. Browse the full menu online, reserve a pickup, or ask a team member for help choosing."
+    "description": "Lakeshore, IL is a DeLight dispensary built for a calm, unhurried visit. Browse the full menu online, reserve a pickup, or ask a team member for help choosing.",
+    "id": "lakeshore-il"
   },
   {
     "slug": "prairie-gate-il",
@@ -286,7 +288,8 @@
         "text": "Good rotating selection. The deals section is worth checking before you go."
       }
     ],
-    "description": "Prairie Gate, IL is a DeLight dispensary built for a calm, unhurried visit. Browse the full menu online, reserve a pickup, or ask a team member for help choosing."
+    "description": "Prairie Gate, IL is a DeLight dispensary built for a calm, unhurried visit. Browse the full menu online, reserve a pickup, or ask a team member for help choosing.",
+    "id": "prairie-gate-il"
   },
   {
     "slug": "maple-row-oh",
@@ -384,7 +387,8 @@
         "text": "Quick pickup and the staff knew the menu cold. Easy trip."
       }
     ],
-    "description": "Maple Row, OH is a DeLight dispensary built for a calm, unhurried visit. Browse the full menu online, reserve a pickup, or ask a team member for help choosing."
+    "description": "Maple Row, OH is a DeLight dispensary built for a calm, unhurried visit. Browse the full menu online, reserve a pickup, or ask a team member for help choosing.",
+    "id": "maple-row-oh"
   },
   {
     "slug": "great-miami-oh",
@@ -487,7 +491,8 @@
         "text": "Good rotating selection. The deals section is worth checking before you go."
       }
     ],
-    "description": "Great Miami, OH is a DeLight dispensary built for a calm, unhurried visit. Browse the full menu online, reserve a pickup, or ask a team member for help choosing."
+    "description": "Great Miami, OH is a DeLight dispensary built for a calm, unhurried visit. Browse the full menu online, reserve a pickup, or ask a team member for help choosing.",
+    "id": "great-miami-oh"
   },
   {
     "slug": "cuyahoga-oh",
@@ -590,7 +595,8 @@
         "text": "Good rotating selection. The deals section is worth checking before you go."
       }
     ],
-    "description": "Cuyahoga, OH is a DeLight dispensary built for a calm, unhurried visit. Browse the full menu online, reserve a pickup, or ask a team member for help choosing."
+    "description": "Cuyahoga, OH is a DeLight dispensary built for a calm, unhurried visit. Browse the full menu online, reserve a pickup, or ask a team member for help choosing.",
+    "id": "cuyahoga-oh"
   },
   {
     "slug": "keystone-pa",
@@ -693,7 +699,8 @@
         "text": "Helpful budtender walked me through a few options without any pressure."
       }
     ],
-    "description": "Keystone, PA is a DeLight dispensary built for a calm, unhurried visit. Browse the full menu online, reserve a pickup, or ask a team member for help choosing."
+    "description": "Keystone, PA is a DeLight dispensary built for a calm, unhurried visit. Browse the full menu online, reserve a pickup, or ask a team member for help choosing.",
+    "id": "keystone-pa"
   },
   {
     "slug": "liberty-bell-pa",
@@ -791,7 +798,8 @@
         "text": "Friendly team and a well-organized floor. Parking is easy too."
       }
     ],
-    "description": "Liberty Bell, PA is a DeLight dispensary built for a calm, unhurried visit. Browse the full menu online, reserve a pickup, or ask a team member for help choosing."
+    "description": "Liberty Bell, PA is a DeLight dispensary built for a calm, unhurried visit. Browse the full menu online, reserve a pickup, or ask a team member for help choosing.",
+    "id": "liberty-bell-pa"
   },
   {
     "slug": "chesapeake-md",
@@ -884,7 +892,8 @@
         "text": "Helpful budtender walked me through a few options without any pressure."
       }
     ],
-    "description": "Chesapeake, MD is a DeLight dispensary built for a calm, unhurried visit. Browse the full menu online, reserve a pickup, or ask a team member for help choosing."
+    "description": "Chesapeake, MD is a DeLight dispensary built for a calm, unhurried visit. Browse the full menu online, reserve a pickup, or ask a team member for help choosing.",
+    "id": "chesapeake-md"
   },
   {
     "slug": "potomac-md",
@@ -977,7 +986,8 @@
         "text": "Helpful budtender walked me through a few options without any pressure."
       }
     ],
-    "description": "Potomac, MD is a DeLight dispensary built for a calm, unhurried visit. Browse the full menu online, reserve a pickup, or ask a team member for help choosing."
+    "description": "Potomac, MD is a DeLight dispensary built for a calm, unhurried visit. Browse the full menu online, reserve a pickup, or ask a team member for help choosing.",
+    "id": "potomac-md"
   },
   {
     "slug": "bayfront-fl",
@@ -1075,7 +1085,8 @@
         "text": "In and out in five minutes. Order matched the site exactly."
       }
     ],
-    "description": "Bayfront, FL is a DeLight dispensary built for a calm, unhurried visit. Browse the full menu online, reserve a pickup, or ask a team member for help choosing."
+    "description": "Bayfront, FL is a DeLight dispensary built for a calm, unhurried visit. Browse the full menu online, reserve a pickup, or ask a team member for help choosing.",
+    "id": "bayfront-fl"
   },
   {
     "slug": "palmetto-fl",
@@ -1168,7 +1179,8 @@
         "text": "Good rotating selection. The deals section is worth checking before you go."
       }
     ],
-    "description": "Palmetto, FL is a DeLight dispensary built for a calm, unhurried visit. Browse the full menu online, reserve a pickup, or ask a team member for help choosing."
+    "description": "Palmetto, FL is a DeLight dispensary built for a calm, unhurried visit. Browse the full menu online, reserve a pickup, or ask a team member for help choosing.",
+    "id": "palmetto-fl"
   },
   {
     "slug": "bluegrass-ky",
@@ -1271,6 +1283,7 @@
         "text": "In and out in five minutes. Order matched the site exactly."
       }
     ],
-    "description": "Bluegrass, KY is a DeLight dispensary built for a calm, unhurried visit. Browse the full menu online, reserve a pickup, or ask a team member for help choosing."
+    "description": "Bluegrass, KY is a DeLight dispensary built for a calm, unhurried visit. Browse the full menu online, reserve a pickup, or ask a team member for help choosing.",
+    "id": "bluegrass-ky"
   }
 ]

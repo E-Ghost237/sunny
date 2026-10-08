@@ -2,7 +2,7 @@
   <section class="store-context" aria-label="Your store">
     <div class="container store-context__inner">
       <div class="store-context__who">
-        <p class="store-context__eyebrow">You're shopping at</p>
+        <p class="store-context__eyebrow">You're shopping adult use at:</p>
         <h2 class="store-context__name">{{ s.name }}</h2>
         <p class="store-context__address">
           {{ s.address.streetAddress }}, {{ s.address.addressLocality }}, {{ s.address.addressRegion }} {{ s.address.postalCode }}
@@ -30,7 +30,7 @@
         @if (hoursOpen()) {
           <ul class="store-context__week">
             @for (h of s.openingHours; track h.day) {
-              <li><span>{{ h.day }}</span><span>{{ h.opens }} – {{ h.closes }}</span></li>
+              <li><span>{{ h.day }}</span><span>{{ h.opens ? h.opens + ' – ' + h.closes : 'Closed' }}</span></li>
             }
           </ul>
         }

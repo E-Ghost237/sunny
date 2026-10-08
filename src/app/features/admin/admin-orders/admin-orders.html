@@ -1,0 +1,41 @@
+<header class="adm-head">
+  <div>
+    <p class="adm-eyebrow">Fulfilment</p>
+    <h1>Orders</h1>
+  </div>
+  <input class="adm-search" type="search" placeholder="Search order, name or email" [value]="query()" (input)="query.set($any($event.target).value)" aria-label="Search orders" />
+</header>
+
+<nav class="adm-tabs" aria-label="Filter orders by status">
+  @for (t of tabs; track t.value) {
+    <button type="button" class="adm-tab" [class.is-active]="tab() === t.value" (click)="setTab(t.value)">
+      {{ t.label }} <span>{{ counts()[t.value] ?? 0 }}</span>
+    </button>
+  }
+</nav>
+
+<div class="adm-card">
+  @if (listRes.isLoading()) {
+    <p class="adm-muted">Loading orders…</p>
+  } @else if (rows().length) {
+    <table class="adm-table adm-table--hover">
+      <thead>
+        <tr><th>Order</th><th>Placed</th><th>Customer</th><th>Fulfilment</th><th>Total</th><th>Status</th></tr>
+      </thead>
+      <tbody>
+        @for (o of rows(); track o.id) {
+          <tr>
+            <td><a [routerLink]="['/admin/orders', o.id]"><strong>{{ o.id }}</strong></a></td>
+            <td>{{ o.placedAt | date: 'MMM d, h:mm a' }}</td>
+            <td>{{ o.customer.name }}<small class="adm-muted adm-block">{{ o.customer.email }}</small></td>
+            <td>{{ o.fulfilment === 'pickup' ? 'Pickup · ' + o.pickupStoreName : 'Ship · ' + o.destination }}</td>
+            <td>{{ o.total | currency }}</td>
+            <td><span class="adm-pill" [attr.data-status]="o.status">{{ statusLabel[o.status] }}</span></td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  } @else {
+    <p class="adm-muted">No orders match this view.</p>
+  }
+</div>

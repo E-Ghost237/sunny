@@ -1,20 +1,24 @@
-<app-age-gate />
+@if (!isAdminRoute()) {
+  <app-age-gate />
 
-<div class="ticker" aria-label="Announcements">
-  <div class="marquee">
-    <div class="marquee__track">
-      @for (msg of [...announcements(), ...announcements()]; track $index) {
-        <span class="ticker__item">{{ msg }}<i aria-hidden="true">✦</i></span>
-      }
+  <div class="ticker" aria-label="Announcements">
+    <div class="marquee">
+      <div class="marquee__track">
+        @for (msg of [...announcements(), ...announcements()]; track $index) {
+          <span class="ticker__item">{{ msg }}<i aria-hidden="true">✦</i></span>
+        }
+      </div>
     </div>
   </div>
-</div>
 
-<app-header />
-<app-cat-bar />
+  <app-header />
+  <app-cat-bar />
+}
 
-<main id="main-content" class="page-enter">
+<main id="main-content" [class.page-enter]="!isAdminRoute()" [class.admin-main]="isAdminRoute()">
   <router-outlet />
 </main>
 
-<app-footer />
+@if (!isAdminRoute()) {
+  <app-footer />
+}

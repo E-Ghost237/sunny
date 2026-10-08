@@ -140,7 +140,7 @@
       @for (s of featuredStores(); track s.slug; let i = $index) {
         <a class="store-card" [routerLink]="['/stores', s.slug]" appReveal [revealDelay]="i * 120">
           <span class="store-card__img">
-            <app-smart-image [src]="storeImage(s.slug, 'exterior')" [alt]="s.name + ' storefront'" />
+            <app-smart-image [src]="storeImage(s, 'exterior')" [alt]="s.name + ' storefront'" />
           </span>
           <span class="store-card__body">
             <span class="tag tag--leaf">{{ s.address.addressRegion }}</span>

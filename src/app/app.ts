@@ -1,5 +1,7 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, inject, signal } from '@angular/core';
+import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { filter, map, startWith } from 'rxjs';
 import { Header } from './layout/header/header';
 import { Footer } from './layout/footer/footer';
 import { AgeGate } from './layout/age-gate/age-gate';
@@ -19,4 +21,15 @@ export class App {
     'Eco-friendly packaging on every shipment',
     'Shipping to the US, Canada and Europe',
   ]);
+
+  private readonly router = inject(Router);
+  /** The back-office has its own shell, so storefront chrome is hidden on /admin. */
+  protected readonly isAdminRoute = toSignal(
+    this.router.events.pipe(
+      filter((e): e is NavigationEnd => e instanceof NavigationEnd),
+      map((e) => e.urlAfterRedirects.startsWith('/admin')),
+      startWith(this.router.url.startsWith('/admin')),
+    ),
+    { initialValue: this.router.url.startsWith('/admin') },
+  );
 }

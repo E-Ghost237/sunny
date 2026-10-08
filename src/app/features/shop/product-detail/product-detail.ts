@@ -10,8 +10,9 @@ import { ContentService } from '../../../core/services/content.service';
 import { QuantityStepper } from '../../../shared/components/quantity-stepper/quantity-stepper';
 import { SmartImage } from '../../../shared/smart-image/smart-image';
 import { Reveal } from '../../../shared/directives/reveal.directive';
-import { productImage } from '../../../shared/utils/media';
+import { productImage, productImages } from '../../../shared/utils/media';
 import { ProductCard } from '../product-card/product-card';
+import { StoreContext } from '../store-context/store-context';
 import { Accordion } from '../../../shared/components/accordion/accordion';
 import { CATEGORY_EMOJI } from '../../../shared/constants/category-emoji';
 
@@ -31,7 +32,7 @@ const ONSET_DURATION: Record<string, [string, string]> = {
 
 @Component({
   selector: 'app-product-detail',
-  imports: [RouterLink, QuantityStepper, SmartImage, ProductCard, Accordion, Reveal],
+  imports: [RouterLink, QuantityStepper, SmartImage, ProductCard, Accordion, Reveal, StoreContext],
   templateUrl: './product-detail.html',
   styleUrl: './product-detail.scss',
 })
@@ -63,8 +64,8 @@ export class ProductDetail {
   protected readonly galleryImages = computed(() => {
     const p = this.product();
     if (!p) return [];
-    // One generated photo per product (shows its partner brand).
-    return [productImage(p)];
+    // Every back-office photo for the product; the default photo when none are uploaded.
+    return productImages(p);
   });
 
   /** Potency bars, normalised to a 40% scale (visual only; values come from the lab data). */

@@ -60,7 +60,7 @@
             @for (s of stores(); track s.slug) {
               <label class="store-opt" [class.is-selected]="selectedStoreSlug() === s.slug">
                 <input type="radio" name="store" [checked]="selectedStoreSlug() === s.slug" (change)="selectStore(s.slug)" class="sr-only" />
-                <span class="store-opt__img"><app-smart-image [src]="storeImage(s.slug, 'exterior')" [alt]="s.name" /></span>
+                <span class="store-opt__img"><app-smart-image [src]="storeImage(s, 'exterior')" [alt]="s.name" /></span>
                 <span class="store-opt__body">
                   <strong>{{ s.name }}</strong>
                   <span>{{ s.address.streetAddress }}, {{ s.address.addressLocality }}</span>
@@ -94,7 +94,7 @@
         <p class="hint">Choose how you'd like to pay. Instructions appear once you select a method.</p>
 
         <div class="methods" role="radiogroup" aria-label="Payment methods">
-          @for (m of paymentMethods; track m.id) {
+          @for (m of paymentMethods(); track m.id) {
             <button type="button" class="method" role="radio" [attr.aria-checked]="paymentMethod() === m.id"
               [class.is-selected]="paymentMethod() === m.id" (click)="choosePayment(m.id)">
               <span class="method__mark" [style.background]="m.accent">
@@ -184,9 +184,12 @@
         <div class="totals__total"><dt>Total</dt><dd>{{ total() | currency }}</dd></div>
       </dl>
 
-      <button type="button" class="btn btn--primary btn--block btn--lg" [disabled]="cartService.items().length === 0" (click)="placeOrder()">
+      <button type="button" class="btn btn--primary btn--block btn--lg" [disabled]="cartService.items().length === 0 || placing()" (click)="placeOrder()">
         {{ fulfilment() === 'pickup' ? 'Reserve order' : 'Place order' }} · {{ total() | currency }}
       </button>
+      @if (placeError()) {
+        <p class="status status--error" role="alert">{{ placeError() }}</p>
+      }
       <p class="fine">Pay using the method above. Your order is confirmed on the next screen with payment instructions.</p>
       <ul class="trust">
         <li>🔒 Encrypted checkout</li>

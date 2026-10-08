@@ -7,7 +7,7 @@ import { ProductService } from '../../../core/services/product.service';
 import { SelectedStoreService } from '../../../core/services/selected-store.service';
 import { StoreService } from '../../../core/services/store.service';
 import { StoreHours, StoreLocation } from '../../../core/models/store.model';
-import { PAYMENT_METHODS } from '../../checkout/payment/payment-methods';
+import { PaymentService } from '../../../core/services/payment.service';
 import { SmartImage } from '../../../shared/smart-image/smart-image';
 import { Reveal } from '../../../shared/directives/reveal.directive';
 import { STORE_VIEWS, StoreView, storeImage } from '../../../shared/utils/media';
@@ -32,7 +32,11 @@ export class StoreDetail {
   /** Horizontal look-around position for the all-round (panorama) view, 0-100. */
   protected readonly panPosition = signal(50);
   protected readonly storeImage = storeImage;
-  protected readonly paymentMethods = PAYMENT_METHODS;
+  private readonly paymentService = inject(PaymentService);
+  protected readonly paymentMethodsResource = rxResource({
+    stream: () => this.paymentService.getEnabled(),
+  });
+  protected readonly paymentMethods = computed(() => this.paymentMethodsResource.value() ?? []);
   protected readonly hoursOpen = signal(false);
 
   protected readonly storeResource = rxResource({
@@ -64,7 +68,8 @@ export class StoreDetail {
 
   protected readonly todayHours = computed<StoreHours | null>(() => {
     const s = this.store();
-    return s?.openingHours.find((h) => h.day === this.todayName) ?? null;
+    const h = s?.openingHours.find((x) => x.day === this.todayName) ?? null;
+    return h?.opens ? h : null;
   });
 
   protected readonly hasMedical = computed(() => {

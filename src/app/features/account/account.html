@@ -14,7 +14,7 @@
     <div class="container">
       <div class="stats">
         <div class="stat card" appReveal><span>Points balance</span><strong>{{ u.rewardsPoints }}</strong></div>
-        <div class="stat card" appReveal [revealDelay]="100"><span>Orders</span><strong>{{ orderService.orders().length }}</strong></div>
+        <div class="stat card" appReveal [revealDelay]="100"><span>Orders</span><strong>{{ orders().length }}</strong></div>
         <div class="stat card" appReveal [revealDelay]="200"><span>Total spent</span><strong>{{ totalSpent() | currency }}</strong></div>
       </div>
 
@@ -22,16 +22,16 @@
         <h2>Order history</h2>
       </div>
 
-      @if (orderService.orders().length) {
+      @if (orders().length) {
         <ul class="orders">
-          @for (o of orderService.orders(); track o.id; let i = $index) {
+          @for (o of orders(); track o.id; let i = $index) {
             <li class="order card" appReveal [revealDelay]="i * 80">
               <div class="order__head">
                 <div>
                   <strong>{{ o.id }}</strong>
                   <span>{{ o.placedAt | date: 'mediumDate' }}</span>
                 </div>
-                <span class="tag tag--leaf">{{ o.fulfilment === 'pickup' ? 'Pickup' : 'Shipping' }}</span>
+                <span class="tag tag--leaf">{{ statusLabel[o.status] }}</span>
               </div>
               <div class="order__thumbs">
                 @for (i of o.items; track i.productId) {
@@ -40,6 +40,9 @@
               </div>
               <div class="order__foot">
                 <span>{{ o.items.length }} item{{ o.items.length === 1 ? '' : 's' }} · {{ o.pickupStoreName ?? o.destination }}</span>
+                @if (o.status === 'awaiting-payment' || o.status === 'proof-rejected') {
+                  <a class="btn btn--ghost btn--sm" [routerLink]="['/confirmation']" [queryParams]="{ order: o.id }">Upload proof</a>
+                }
                 <strong>{{ o.total | currency }}</strong>
               </div>
             </li>

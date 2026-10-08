@@ -14,15 +14,25 @@ export function categoryImage(slug: string): string {
 }
 
 /**
- * Product photo: one generated photo per product, showing its partner brand
- * (public/assets/img/products/{slug}.jpg). Until a product's photo exists the
- * product card shows the premium gradient fallback, never the category photo.
+ * Product photo: the product's first real image (uploaded in the back-office or
+ * generated), otherwise the photo at its default path. A missing file shows the
+ * premium gradient fallback.
  */
-export function productImage(p: Pick<Product, 'slug'>): string {
-  return `/assets/img/products/${p.slug}.jpg`;
+export function productImage(p: Pick<Product, 'slug'> & { images?: string[] }): string {
+  return productImages(p)[0];
+}
+
+/** All real product images in order (the first one is the main photo). */
+export function productImages(p: Pick<Product, 'slug'> & { images?: string[] }): string[] {
+  const real = (p.images ?? []).filter((src) => src && !src.startsWith('/assets/placeholder/'));
+  return real.length ? real : [`/assets/img/products/${p.slug}.jpg`];
 }
 
 /** Store photo set: outside, inside and all-round (panorama) views. */
-export function storeImage(slug: string, view: StoreView = 'exterior'): string {
-  return `/assets/img/stores/${slug}-${view}.jpg`;
+export function storeImage(
+  store: string | { slug: string; photos?: Partial<Record<StoreView, string>> },
+  view: StoreView = 'exterior',
+): string {
+  if (typeof store === 'string') return `/assets/img/stores/${store}-${view}.jpg`;
+  return store.photos?.[view] || `/assets/img/stores/${store.slug}-${view}.jpg`;
 }

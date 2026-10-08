@@ -1,0 +1,57 @@
+<header class="adm-head">
+  <div>
+    <p class="adm-eyebrow">Overview</p>
+    <h1>Good to see you.</h1>
+  </div>
+  <a class="adm-btn adm-btn--primary" routerLink="/admin/products/new">+ Add product</a>
+</header>
+
+<section class="adm-kpis">
+  <a class="adm-kpi adm-kpi--hot" routerLink="/admin/orders" [queryParams]="{ tab: 'proof-submitted' }">
+    <span>Proof to review</span><strong>{{ needsReview() }}</strong>
+  </a>
+  <a class="adm-kpi" routerLink="/admin/orders" [queryParams]="{ tab: 'approved' }">
+    <span>Ready to dispatch</span><strong>{{ readyToDispatch() }}</strong>
+  </a>
+  <a class="adm-kpi" routerLink="/admin/orders" [queryParams]="{ tab: 'awaiting-payment' }">
+    <span>Awaiting payment</span><strong>{{ awaitingProof() }}</strong>
+  </a>
+  <div class="adm-kpi">
+    <span>Revenue (live orders)</span><strong>{{ revenue() | currency }}</strong>
+  </div>
+</section>
+
+<section class="adm-grid-2">
+  <div class="adm-card">
+    <div class="adm-card__head">
+      <h2>Recent orders</h2>
+      <a routerLink="/admin/orders">All orders →</a>
+    </div>
+    @if (recent().length) {
+      <table class="adm-table">
+        <tbody>
+          @for (o of recent(); track o.id) {
+            <tr>
+              <td><a [routerLink]="['/admin/orders', o.id]">{{ o.id }}</a></td>
+              <td>{{ o.customer.name }}</td>
+              <td>{{ o.total | currency }}</td>
+              <td><span class="adm-pill" [attr.data-status]="o.status">{{ statusLabel[o.status] }}</span></td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    } @else {
+      <p class="adm-muted">No orders yet. They appear here as customers check out.</p>
+    }
+  </div>
+
+  <div class="adm-card">
+    <div class="adm-card__head"><h2>Catalogue</h2></div>
+    <ul class="adm-stats">
+      <li><span>Products</span><strong>{{ productsRes.value()?.length ?? '—' }}</strong><a routerLink="/admin/products">Manage</a></li>
+      <li><span>Stores</span><strong>{{ storesRes.value()?.length ?? '—' }}</strong><a routerLink="/admin/stores">Manage</a></li>
+      <li><span>Orders</span><strong>{{ all().length }}</strong><a routerLink="/admin/orders">Review</a></li>
+    </ul>
+    <p class="adm-muted adm-small">Changes save to the mock API and appear on the storefront straight away.</p>
+  </div>
+</section>

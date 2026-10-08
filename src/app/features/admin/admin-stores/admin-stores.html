@@ -1,0 +1,37 @@
+<header class="adm-head">
+  <div>
+    <p class="adm-eyebrow">Locations</p>
+    <h1>Stores</h1>
+    <p class="adm-muted">{{ all().length }} stores. Edits update the store page, store bar and checkout.</p>
+  </div>
+  <input class="adm-search" type="search" placeholder="Search by name, city or state" [ngModel]="query()" (ngModelChange)="query.set($event)" aria-label="Search stores" />
+</header>
+
+<div class="adm-card">
+  @if (res.isLoading()) {
+    <p class="adm-muted">Loading stores…</p>
+  } @else {
+    <table class="adm-table adm-table--hover adm-table--thumbs">
+      <thead><tr><th></th><th>Store</th><th>Address</th><th>Phone</th><th>Services</th><th></th></tr></thead>
+      <tbody>
+        @for (s of rows(); track s.slug) {
+          <tr>
+            <td><img class="adm-thumb adm-thumb--wide" [src]="photo(s, 'exterior')" alt="" loading="lazy" /></td>
+            <td><a [routerLink]="['/admin/stores', s.slug]"><strong>{{ s.name }}</strong></a></td>
+            <td>{{ s.address.streetAddress }}<small class="adm-muted adm-block">{{ s.address.addressLocality }}, {{ s.address.addressRegion }} {{ s.address.postalCode }}</small></td>
+            <td>{{ s.phone || '—' }}</td>
+            <td>
+              <span class="adm-tagrow">
+                @if (s.capabilities.recPickup) { <span class="adm-tag">Rec pickup</span> }
+                @if (s.capabilities.recDelivery) { <span class="adm-tag">Rec delivery</span> }
+                @if (s.capabilities.medPickup) { <span class="adm-tag">Med pickup</span> }
+                @if (s.capabilities.medDelivery) { <span class="adm-tag">Med delivery</span> }
+              </span>
+            </td>
+            <td class="adm-right"><a class="adm-link" [routerLink]="['/admin/stores', s.slug]">Edit</a></td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  }
+</div>
