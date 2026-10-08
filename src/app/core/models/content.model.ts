@@ -46,6 +46,9 @@ export interface Article {
   tags: string[];
   publishedDate: string | null;
   blocks: ContentBlock[];
+  /** Slug of the DeLight partner brand this article is about, when it is a brand article. */
+  partnerBrand?: string | null;
+  partnerBrandName?: string | null;
 }
 
 export interface CmsPage {

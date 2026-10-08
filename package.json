@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build:mock-db": "node mock-server/build-db.mjs",
-    "mock-api": "npm run build:mock-db && json-server mock-server/db.json --port 3001"
+    "mock-api": "node mock-server/build-db.mjs && (node --watch-path=mock-server/data mock-server/build-db.mjs & json-server mock-server/db.json --port 3001)"
   },
   "private": true,
   "packageManager": "npm@11.12.1",

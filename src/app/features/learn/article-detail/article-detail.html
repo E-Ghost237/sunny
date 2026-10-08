@@ -10,6 +10,9 @@
           <a routerLink="/">Home</a><span>/</span><a routerLink="/learn">Learn</a><span>/</span><span>{{ a.title }}</span>
         </nav>
         <div class="meta">
+          @if (a.partnerBrandName) {
+            <span class="tag tag--gold">Partner brand · {{ a.partnerBrandName }}</span>
+          }
           @for (t of a.tags; track t) {
             <span class="tag tag--gold">{{ t }}</span>
           }

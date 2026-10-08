@@ -22,6 +22,17 @@
         }
       </div>
 
+      @if (partnerBrands().length) {
+        <div class="brands" aria-label="DeLight partner brands" appReveal>
+          <p class="eyebrow">Partner brands</p>
+          <div class="brands__row">
+            @for (b of partnerBrands(); track b.slug; let i = $index) {
+              <a class="brands__chip" [routerLink]="['/learn', b.slug]" [style.--i]="i">{{ b.name }}</a>
+            }
+          </div>
+        </div>
+      }
+
       @if (featured(); as f) {
         <a class="feature" [routerLink]="['/learn', f.slug]" appReveal>
           <span class="feature__img"><app-smart-image [src]="articleImage(f)" [alt]="f.title" /></span>
@@ -41,6 +52,9 @@
             <span class="guide__body">
               @if (a.tags.length) {
                 <span class="tag tag--leaf">{{ a.tags[0] }}</span>
+              }
+              @if (a.partnerBrandName) {
+                <span class="tag tag--gold">{{ a.partnerBrandName }}</span>
               }
               <strong>{{ a.title }}</strong>
               <span class="guide__desc">{{ a.description }}</span>

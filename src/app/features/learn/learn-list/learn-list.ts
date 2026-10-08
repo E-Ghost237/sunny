@@ -32,6 +32,10 @@ export class LearnList {
     const tag = this.activeTag();
     return tag ? this.articles().filter((a) => a.tags.includes(tag)) : this.articles();
   });
+  /** Partner brands with a brand article, in the order they appear in the data. */
+  protected readonly partnerBrands = computed(() =>
+    this.articles().filter((a) => a.partnerBrand && a.partnerBrandName).map((a) => ({ slug: a.slug, name: a.partnerBrandName as string })),
+  );
   protected readonly featured = computed(() => this.visible()[0] ?? null);
   protected readonly rest = computed(() => this.visible().slice(1));
 }
