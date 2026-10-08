@@ -1,27 +1,69 @@
 @if (store(); as s) {
+  <!-- Header: name, address, shop switch, contact -->
   <section class="sd-hero">
     <div class="sd-hero__media" aria-hidden="true">
-      <app-smart-image [src]="storeImage(s.slug, 'exterior')" alt="" />
+      <app-smart-image [src]="storeImage(s.slug, 'exterior')" alt="" [eager]="true" />
     </div>
     <div class="sd-hero__veil" aria-hidden="true"></div>
     <div class="container sd-hero__inner">
       <nav class="crumbs" aria-label="Breadcrumb">
         <a routerLink="/">Home</a><span>/</span><a routerLink="/stores">Locations</a><span>/</span><span>{{ s.name }}</span>
       </nav>
-      <p class="eyebrow">DeLight · {{ s.address.addressRegion }}</p>
+      <p class="eyebrow">{{ s.address.addressLocality }}, {{ s.address.addressRegion }}</p>
       <h1>{{ s.name }}</h1>
       <p class="lead">{{ s.address.streetAddress }}, {{ s.address.addressLocality }}, {{ s.address.addressRegion }} {{ s.address.postalCode }}</p>
-      <div class="sd-hero__ctas">
-        <a class="btn btn--gold" [href]="directionsUrl()" target="_blank" rel="noopener">Get directions</a>
-        @if (s.phone) {
-          <a class="btn btn--light" [href]="'tel:' + s.phone">Call {{ s.phone }}</a>
+
+      <div class="sd-switch" role="group" aria-label="Shop type">
+        <a class="sd-switch__btn is-active" routerLink="/shop">Shop adult use</a>
+        @if (hasMedical()) {
+          <a class="sd-switch__btn" routerLink="/medical">Shop medical</a>
         }
-        <a class="btn btn--light" routerLink="/shop">Shop for pickup</a>
+      </div>
+
+      <div class="sd-hero__ctas">
+        @if (s.phone) {
+          <a class="sd-link" [href]="'tel:' + s.phone">{{ s.phone }}</a>
+        }
+        <a class="sd-link" [href]="directionsUrl()" target="_blank" rel="noopener">Get directions</a>
+        <a class="sd-link" routerLink="/askusanything">Contact us</a>
+      </div>
+
+      <div class="sd-hero__ctas">
+        @if (isSelected()) {
+          <span class="tag tag--gold">This is your store</span>
+        } @else {
+          <button type="button" class="btn btn--gold" (click)="shopHere()">Shop at this store</button>
+        }
+        <a class="btn btn--light" routerLink="/shop">Browse the menu</a>
       </div>
     </div>
   </section>
 
-  <!-- 3-view gallery: outside, inside, all round -->
+  <!-- Store hours -->
+  <section class="sd-hours">
+    <div class="container sd-hours__inner">
+      <div>
+        <h2 class="sd-h">Store hours</h2>
+        @if (todayHours(); as h) {
+          <p class="sd-today"><span class="dot"></span> Open today <strong>{{ h.opens }} – {{ h.closes }}</strong></p>
+        } @else {
+          <p class="sd-today">Closed today</p>
+        }
+      </div>
+      <button type="button" class="sd-more" [attr.aria-expanded]="hoursOpen()" (click)="toggleHours()">
+        {{ hoursOpen() ? 'Less' : 'More' }}
+      </button>
+      @if (hoursOpen()) {
+        <ul class="sd-week">
+          @for (h of s.openingHours; track h.day) {
+            <li [class.is-today]="h.day === todayName"><span>{{ h.day }}</span><span>{{ h.opens }} – {{ h.closes }}</span></li>
+          }
+        </ul>
+      }
+    </div>
+  </section>
+
+  <!-- Photos: outside, inside, all round -->
   <section class="section">
     <div class="container">
       <div class="section-head" appReveal>
@@ -63,28 +105,51 @@
     </div>
   </section>
 
-  <!-- Details -->
-  <section class="section section--alt">
-    <div class="container sd-grid">
-      <div class="card sd-card" appReveal>
-        <h3>Opening hours</h3>
-        @if (todayHours(); as h) {
-          <p class="today"><span class="dot"></span> Today: {{ h.opens }} – {{ h.closes }}</p>
-        }
-        <ul class="hours">
-          @for (h of s.openingHours; track h.day) {
-            <li [class.is-today]="h.day === todayName"><span>{{ h.day }}</span><span>{{ h.opens }} – {{ h.closes }}</span></li>
+  <!-- Savings at this store -->
+  @if (savings().length) {
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section-head" appReveal>
+          <div>
+            <p class="eyebrow">Deals</p>
+            <h2>Savings at this store</h2>
+          </div>
+          <a class="section-head__link" routerLink="/shop">Shop all</a>
+        </div>
+        <ul class="savings">
+          @for (p of savings(); track p.id; let i = $index) {
+            <li class="savings__item" appReveal [revealDelay]="i * 60">
+              <a [routerLink]="['/shop', p.category, p.slug]">
+                <span class="savings__brand">{{ p.brand }}</span>
+                <strong>{{ p.name }}</strong>
+                <span class="savings__size">{{ p.size }}</span>
+                <span class="savings__price">
+                  <s>{{ p.price | currency }}</s> <b>{{ p.discountedPrice | currency }}</b>
+                </span>
+              </a>
+            </li>
           }
         </ul>
       </div>
+    </section>
+  }
+
+  <!-- About -->
+  <section class="section">
+    <div class="container sd-grid">
+      <div class="sd-about" appReveal>
+        <p class="eyebrow">About this store</p>
+        <h2>{{ s.name }}</h2>
+        <p>{{ s.description }}</p>
+        <p>Find us at {{ s.address.streetAddress }}, {{ s.address.addressLocality }}, {{ s.address.addressRegion }}. Parking and access details are on our directions link.</p>
+      </div>
 
       <div class="card sd-card" appReveal [revealDelay]="120">
-        <h3>Services</h3>
-        <ul class="services">
-          <li [class.is-on]="s.capabilities.recPickup">Recreational pickup</li>
-          <li [class.is-on]="s.capabilities.recDelivery">Recreational delivery</li>
-          <li [class.is-on]="s.capabilities.medPickup">Medical pickup</li>
-          <li [class.is-on]="s.capabilities.medDelivery">Medical delivery</li>
+        <h3>Store details</h3>
+        <ul class="bullets">
+          @for (b of detailBullets(); track b) {
+            <li>{{ b }}</li>
+          }
         </ul>
         @if (s.brands.length) {
           <h4>Brands in store</h4>
@@ -95,8 +160,42 @@
           </div>
         }
       </div>
+    </div>
+  </section>
+
+  <!-- Payments, discounts, rewards -->
+  <section class="section section--alt">
+    <div class="container sd-info">
+      <div class="card sd-card" appReveal>
+        <h3>Payments</h3>
+        <p class="sd-note">Pay online at checkout with any of these methods. Payment instructions appear for the method you pick.</p>
+        <div class="pay-tags">
+          @for (m of paymentMethods; track m.id) {
+            <span class="tag tag--outline">{{ m.label }}</span>
+          }
+        </div>
+      </div>
+
+      <div class="card sd-card" appReveal [revealDelay]="120">
+        <h3>Discounts</h3>
+        <ul class="bullets">
+          <li>Live sale prices appear on product cards and in the savings list above.</li>
+          <li>Discounts apply at checkout and are shown in your order summary.</li>
+        </ul>
+      </div>
 
       <div class="card sd-card" appReveal [revealDelay]="240">
+        <h3>Rewards</h3>
+        <p class="sd-note">Earn points on every order you place with DeLight and redeem them on future purchases.</p>
+        <a class="btn btn--primary btn--sm" routerLink="/rewards">See DeLight Rewards</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visit steps -->
+  <section class="section">
+    <div class="container">
+      <div class="card sd-card" appReveal>
         <h3>How a visit works</h3>
         <ol class="visit">
           @for (step of visitSteps; track step.n) {
@@ -108,7 +207,7 @@
   </section>
 
   @if (s.reviews.length) {
-    <section class="section">
+    <section class="section section--alt">
       <div class="container">
         <div class="section-head" appReveal>
           <div>

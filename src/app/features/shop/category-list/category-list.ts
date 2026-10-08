@@ -6,6 +6,7 @@ import { ProductService } from '../../../core/services/product.service';
 import { Product, ProductCategory } from '../../../core/models/product.model';
 import { FilterSection } from '../../../core/models/category-filter.model';
 import { ProductCard } from '../product-card/product-card';
+import { StoreContext } from '../store-context/store-context';
 import { Accordion } from '../../../shared/components/accordion/accordion';
 import { RangeSlider } from '../../../shared/components/range-slider/range-slider';
 import { SmartImage } from '../../../shared/smart-image/smart-image';
@@ -30,26 +31,11 @@ const CATEGORY_DISPLAY: Record<string, string> = {
 
 const ALL_CATEGORIES = Object.keys(CATEGORY_DISPLAY) as ProductCategory[];
 
-// Fallback for the 2 categories the prototype never built a shop page for (ingestibles,
-// troches) -- a minimal generic sidebar instead of no sidebar at all.
+// Fallback for the 2 categories with no filter definition (ingestibles, troches).
 const FALLBACK_SECTIONS: FilterSection[] = [
-  { title: 'Strain Type', type: 'pills', options: ['Sativa', 'Hybrid', 'Indica', 'CBD'] },
+  { title: 'Strain Type', type: 'pills', options: ['Sativa', 'Hybrid', 'Indica'] },
   { title: 'Price Range', type: 'range', unit: '$', unitPrefix: true, min: 0, max: 200 },
 ];
-
-type WireKind = 'strain' | 'brand' | 'size' | 'featured' | 'thc-range' | 'cbd-range' | 'price-range' | null;
-
-function wireKindFor(section: FilterSection): WireKind {
-  const t = section.title.toLowerCase();
-  if (section.type === 'pills' && t === 'strain type') return 'strain';
-  if (section.type === 'checkboxes' && t === 'brand') return 'brand';
-  if (section.type === 'checkboxes' && t === 'size') return 'size';
-  if (section.type === 'checkboxes' && t === 'featured') return 'featured';
-  if (section.type === 'range' && t.includes('thc')) return 'thc-range';
-  if (section.type === 'range' && t.includes('cbd')) return 'cbd-range';
-  if (section.type === 'range' && t === 'price range') return 'price-range';
-  return null;
-}
 
 function parseThc(product: Product): number {
   if (!product.thc) return 0;
@@ -57,9 +43,32 @@ function parseThc(product: Product): number {
   return Number.isFinite(n) ? n : 0;
 }
 
+/** Product values a pills/checkbox section filters on. */
+function valuesFor(product: Product, title: string): string[] {
+  switch (title) {
+    case 'Strain Type':
+      return product.strain ? [product.strain] : [];
+    case 'Brand':
+      return product.brand ? [product.brand] : [];
+    case 'Weight':
+      return product.size ? [product.size] : [];
+    default:
+      return product.filters?.[title] ?? [];
+  }
+}
+
+/** Numeric product value a range section filters on. */
+function numberFor(product: Product, title: string): number | null {
+  const t = title.toLowerCase();
+  if (t.includes('thc')) return parseThc(product);
+  if (t.includes('cbd')) return product.cbdRaw ?? 0;
+  if (t.includes('price')) return product.price;
+  return null;
+}
+
 @Component({
   selector: 'app-category-list',
-  imports: [ProductCard, RouterLink, Accordion, RangeSlider, SmartImage, Reveal],
+  imports: [ProductCard, RouterLink, Accordion, RangeSlider, SmartImage, Reveal, StoreContext],
   templateUrl: './category-list.html',
   styleUrl: './category-list.scss',
 })
@@ -73,19 +82,6 @@ export class CategoryList {
   protected readonly labelFor = (c: string) => CATEGORY_DISPLAY[c] ?? c;
   protected readonly heroImage = computed(() => categoryImage(this.category()));
   protected readonly sortMode = signal<'featured' | 'price-asc' | 'price-desc' | 'thc-desc'>('featured');
-  protected readonly sortedProducts = computed(() => {
-    const list = [...this.filteredProducts()];
-    switch (this.sortMode()) {
-      case 'price-asc':
-        return list.sort((a, b) => (a.discountedPrice ?? a.price) - (b.discountedPrice ?? b.price));
-      case 'price-desc':
-        return list.sort((a, b) => (b.discountedPrice ?? b.price) - (a.discountedPrice ?? a.price));
-      case 'thc-desc':
-        return list.sort((a, b) => parseThc(b) - parseThc(a));
-      default:
-        return list;
-    }
-  });
   protected readonly filtersOpen = signal(false);
 
   protected readonly productsResource = rxResource({
@@ -99,127 +95,95 @@ export class CategoryList {
     stream: ({ params }) => this.productService.getCategoryFilters(params.category),
   });
   protected readonly sections = computed(() => this.filtersResource.value()?.[0]?.sections ?? FALLBACK_SECTIONS);
-  protected readonly wireKindFor = wireKindFor;
 
-  private readonly strainSection = computed(() => this.sections().find((s) => wireKindFor(s) === 'strain'));
-  private readonly brandSection = computed(() => this.sections().find((s) => wireKindFor(s) === 'brand'));
-  private readonly sizeSection = computed(() => this.sections().find((s) => wireKindFor(s) === 'size'));
-  private readonly featuredSection = computed(() => this.sections().find((s) => wireKindFor(s) === 'featured'));
-  protected readonly thcSection = computed(() => this.sections().find((s) => wireKindFor(s) === 'thc-range'));
-  protected readonly cbdSection = computed(() => this.sections().find((s) => wireKindFor(s) === 'cbd-range'));
-  protected readonly priceSection = computed(() => this.sections().find((s) => wireKindFor(s) === 'price-range'));
+  /** Selected option values per pills/checkbox section, keyed by section title. Resets per category. */
+  protected readonly selected = linkedSignal<ProductCategory, Record<string, string[]>>({
+    source: this.category,
+    computation: () => ({}),
+  });
 
-  // the prototype's advertised min/max (e.g. flower "$0-$190") don't always cover every
-  // real product in our sample (a few flower products are actually up to $210) --
-  // widen the displayed/filterable bounds to the union of the advertised range and
-  // the real data, so the slider's default (untouched) position never hides a real
-  // product that simply falls outside the source's stated range.
-  protected readonly effectiveThcBounds = computed(() => this.widenBounds(this.thcSection(), this.products().map(parseThc).filter((v) => v > 0)));
-  protected readonly effectiveCbdBounds = computed(() =>
-    this.widenBounds(this.cbdSection(), this.products().map((p) => p.cbdRaw ?? 0).filter((v) => v > 0)),
-  );
-  protected readonly effectivePriceBounds = computed(() => this.widenBounds(this.priceSection(), this.products().map((p) => p.price)));
+  /** Chosen range per range section, keyed by title. Absent means the full range (no filtering). */
+  protected readonly rangeChoice = linkedSignal<ProductCategory, Record<string, { min: number; max: number }>>({
+    source: this.category,
+    computation: () => ({}),
+  });
 
-  private widenBounds(section: FilterSection | undefined, values: number[]): { min: number; max: number } | null {
-    if (!section) return null;
-    let min = section.min!;
-    let max = section.max!;
-    for (const v of values) {
+  /** Full bounds for a range section, widened to cover the real product data. */
+  protected boundsFor(section: FilterSection): { min: number; max: number } {
+    let min = section.min ?? 0;
+    let max = section.max ?? 0;
+    for (const p of this.products()) {
+      const v = numberFor(p, section.title);
+      if (v == null || v <= 0) continue;
       if (v < min) min = Math.floor(v);
       if (v > max) max = Math.ceil(v);
     }
     return { min, max };
   }
 
-  // Selection state -- resets per category (linkedSignal keyed on `category`), but
-  // stays locally writable while the user clicks around.
-  protected readonly selectedStrains = linkedSignal<ProductCategory, Set<string>>({
-    source: this.category,
-    computation: () => new Set<string>(),
-  });
-  protected readonly selectedBrands = linkedSignal<ProductCategory, Set<string>>({
-    source: this.category,
-    computation: () => new Set<string>(),
-  });
-  protected readonly selectedSizes = linkedSignal<ProductCategory, Set<string>>({
-    source: this.category,
-    computation: () => new Set<string>(),
-  });
-  protected readonly selectedFeatured = linkedSignal<ProductCategory, Set<string>>({
-    source: this.category,
-    computation: () => new Set<string>(),
-  });
-  protected readonly thcFilter = linkedSignal(() => this.effectiveThcBounds());
-  protected readonly cbdFilter = linkedSignal(() => this.effectiveCbdBounds());
-  protected readonly priceFilter = linkedSignal(() => this.effectivePriceBounds());
+  protected isOn(title: string, value: string): boolean {
+    return (this.selected()[title] ?? []).includes(value);
+  }
 
-  protected toggle(set: 'strains' | 'brands' | 'sizes' | 'featured', value: string): void {
-    const sig = { strains: this.selectedStrains, brands: this.selectedBrands, sizes: this.selectedSizes, featured: this.selectedFeatured }[set];
-    sig.update((current) => {
-      const next = new Set(current);
-      next.has(value) ? next.delete(value) : next.add(value);
+  protected toggle(title: string, value: string): void {
+    this.selected.update((current) => {
+      const list = current[title] ?? [];
+      const next = list.includes(value) ? list.filter((v) => v !== value) : [...list, value];
+      return { ...current, [title]: next };
+    });
+  }
+
+  protected setRange(title: string, range: { min: number; max: number }, bounds: { min: number; max: number }): void {
+    this.rangeChoice.update((current) => {
+      const full = range.min <= bounds.min && range.max >= bounds.max;
+      const next = { ...current };
+      if (full) delete next[title];
+      else next[title] = range;
       return next;
     });
   }
 
   protected readonly filteredProducts = computed(() => {
-    const strains = this.selectedStrains();
-    const brands = this.selectedBrands();
-    const sizes = this.selectedSizes();
-    const featured = this.selectedFeatured();
-    const thc = this.thcFilter();
-    const cbd = this.cbdFilter();
-    const price = this.priceFilter();
-
+    const selected = this.selected();
+    const ranges = this.rangeChoice();
+    const sections = this.sections();
     return this.products().filter((p) => {
-      if (strains.size > 0 && !(p.strain && strains.has(p.strain))) return false;
-      if (brands.size > 0 && !(p.brand && brands.has(p.brand))) return false;
-      if (sizes.size > 0 && !(p.size && sizes.has(p.size))) return false;
-      if (featured.size > 0) {
-        const onSale = !!p.badge;
-        const onlyHere = p.isExclusive;
-        const matches = [...featured].some((f) => (f.toLowerCase().includes('sale') ? onSale : onlyHere));
-        if (!matches) return false;
+      for (const s of sections) {
+        if (s.type === 'range') {
+          const r = ranges[s.title];
+          const v = numberFor(p, s.title);
+          if (r && v != null && (v < r.min || v > r.max)) return false;
+          continue;
+        }
+        const wanted = selected[s.title] ?? [];
+        if (wanted.length === 0) continue;
+        const have = valuesFor(p, s.title);
+        if (!wanted.some((w) => have.includes(w))) return false;
       }
-      if (thc) {
-        const v = parseThc(p);
-        if (v > 0 && (v < thc.min || v > thc.max)) return false;
-      }
-      if (cbd && p.cbdRaw != null && p.cbdRaw > 0 && (p.cbdRaw < cbd.min || p.cbdRaw > cbd.max)) return false;
-      if (price && (p.price < price.min || p.price > price.max)) return false;
       return true;
     });
   });
 
-  protected clearFilters(): void {
-    this.selectedStrains.set(new Set());
-    this.selectedBrands.set(new Set());
-    this.selectedSizes.set(new Set());
-    this.selectedFeatured.set(new Set());
-    this.thcFilter.set(this.effectiveThcBounds());
-    this.cbdFilter.set(this.effectiveCbdBounds());
-    this.priceFilter.set(this.effectivePriceBounds());
-  }
-
-  protected readonly hasActiveFilters = computed(() => {
-    const t = this.effectiveThcBounds();
-    const c = this.effectiveCbdBounds();
-    const pr = this.effectivePriceBounds();
-    const thc = this.thcFilter();
-    const cbd = this.cbdFilter();
-    const price = this.priceFilter();
-    return (
-      this.selectedStrains().size > 0 ||
-      this.selectedBrands().size > 0 ||
-      this.selectedSizes().size > 0 ||
-      this.selectedFeatured().size > 0 ||
-      (!!t && !!thc && (thc.min !== t.min || thc.max !== t.max)) ||
-      (!!c && !!cbd && (cbd.min !== c.min || cbd.max !== c.max)) ||
-      (!!pr && !!price && (price.min !== pr.min || price.max !== pr.max))
-    );
+  protected readonly sortedProducts = computed(() => {
+    const list = [...this.filteredProducts()];
+    switch (this.sortMode()) {
+      case 'price-asc':
+        return list.sort((a, b) => (a.discountedPrice ?? a.price) - (b.discountedPrice ?? b.price));
+      case 'price-desc':
+        return list.sort((a, b) => (b.discountedPrice ?? b.price) - (a.discountedPrice ?? a.price));
+      case 'thc-desc':
+        return list.sort((a, b) => parseThc(b) - parseThc(a));
+      default:
+        return list;
+    }
   });
 
-  protected isSelected(set: 'strains' | 'brands' | 'sizes' | 'featured', value: string): boolean {
-    return { strains: this.selectedStrains, brands: this.selectedBrands, sizes: this.selectedSizes, featured: this.selectedFeatured }[set]().has(value);
+  protected readonly hasActiveFilters = computed(
+    () => Object.values(this.selected()).some((v) => v.length > 0) || Object.keys(this.rangeChoice()).length > 0,
+  );
+
+  protected clearFilters(): void {
+    this.selected.set({});
+    this.rangeChoice.set({});
   }
 }

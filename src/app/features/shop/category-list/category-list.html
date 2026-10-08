@@ -14,6 +14,8 @@
   </div>
 </section>
 
+<app-store-context />
+
 <section class="section catalog">
   <div class="container catalog__layout">
     <aside class="filters" [class.is-open]="filtersOpen()" aria-label="Filters">
@@ -25,71 +27,34 @@
         <button type="button" class="link-btn filters__close" (click)="filtersOpen.set(false)">Close</button>
       </div>
 
-      @for (section of sections(); track section.title) {
-        @switch (wireKindFor(section)) {
-          @case ('strain') {
-            <app-accordion [title]="section.title" [startOpen]="true">
+      @for (section of sections(); track section.title; let first = $first) {
+        @switch (section.type) {
+          @case ('pills') {
+            <app-accordion [title]="section.title" [startOpen]="first">
               <div class="pill-row">
                 @for (opt of section.options ?? []; track opt) {
-                  <button type="button" class="chip" [attr.aria-pressed]="isSelected('strains', opt)"
-                    (click)="toggle('strains', opt)">{{ opt }}</button>
+                  <button type="button" class="chip" [attr.aria-pressed]="isOn(section.title, opt)"
+                    (click)="toggle(section.title, opt)">{{ opt }}</button>
                 }
               </div>
             </app-accordion>
           }
-          @case ('brand') {
-            <app-accordion [title]="section.title" [startOpen]="true">
+          @case ('checkboxes') {
+            <app-accordion [title]="section.title" [startOpen]="first">
               @for (opt of section.options ?? []; track opt) {
                 <label class="check">
-                  <input type="checkbox" [checked]="isSelected('brands', opt)" (change)="toggle('brands', opt)" />
+                  <input type="checkbox" [checked]="isOn(section.title, opt)" (change)="toggle(section.title, opt)" />
                   <span>{{ opt }}</span>
                 </label>
               }
             </app-accordion>
           }
-          @case ('size') {
-            <app-accordion [title]="section.title">
-              @for (opt of section.options ?? []; track opt) {
-                <label class="check">
-                  <input type="checkbox" [checked]="isSelected('sizes', opt)" (change)="toggle('sizes', opt)" />
-                  <span>{{ opt }}</span>
-                </label>
-              }
+          @case ('range') {
+            <app-accordion [title]="section.title" [startOpen]="first">
+              <app-range-slider [boundMin]="boundsFor(section).min" [boundMax]="boundsFor(section).max"
+                [unit]="section.unit ?? '%'" [unitPrefix]="!!section.unitPrefix" [note]="section.note ?? ''"
+                (rangeChange)="setRange(section.title, $event, boundsFor(section))" />
             </app-accordion>
-          }
-          @case ('featured') {
-            <app-accordion [title]="section.title" [startOpen]="true">
-              @for (opt of section.options ?? []; track opt) {
-                <label class="check">
-                  <input type="checkbox" [checked]="isSelected('featured', opt)" (change)="toggle('featured', opt)" />
-                  <span>{{ opt }}</span>
-                </label>
-              }
-            </app-accordion>
-          }
-          @case ('thc-range') {
-            @if (effectiveThcBounds(); as b) {
-              <app-accordion [title]="section.title">
-                <app-range-slider [boundMin]="b.min" [boundMax]="b.max" unit="%" [note]="section.note ?? ''"
-                  (rangeChange)="thcFilter.set($event)" />
-              </app-accordion>
-            }
-          }
-          @case ('cbd-range') {
-            @if (effectiveCbdBounds(); as b) {
-              <app-accordion [title]="section.title">
-                <app-range-slider [boundMin]="b.min" [boundMax]="b.max" unit="%" [note]="section.note ?? ''"
-                  (rangeChange)="cbdFilter.set($event)" />
-              </app-accordion>
-            }
-          }
-          @case ('price-range') {
-            @if (effectivePriceBounds(); as b) {
-              <app-accordion [title]="section.title" [startOpen]="true">
-                <app-range-slider [boundMin]="b.min" [boundMax]="b.max" unit="$" [unitPrefix]="true"
-                  (rangeChange)="priceFilter.set($event)" />
-              </app-accordion>
-            }
           }
         }
       }

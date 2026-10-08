@@ -40,6 +40,8 @@ export interface StoreLocation {
   lng: number | null;
   timezone: string | null;
   brands: string[];
+  /** Short store description, shown in the store's About section. */
+  description?: string;
   address: StoreAddress;
   openingHours: StoreHours[];
   capabilities: StoreCapabilities;

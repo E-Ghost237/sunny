@@ -24,7 +24,13 @@
     "images": [
       "/assets/img/products/amber-drift-flower-100001.jpg"
     ],
-    "category": "flower"
+    "category": "flower",
+    "filters": {
+      "Top Terpenes": [
+        "Myrcene",
+        "Terpinolene"
+      ]
+    }
   },
   {
     "id": 100002,
@@ -51,7 +57,13 @@
     "images": [
       "/assets/img/products/coastal-trail-flower-100002.jpg"
     ],
-    "category": "flower"
+    "category": "flower",
+    "filters": {
+      "Top Terpenes": [
+        "Caryophyllene",
+        "Pinene"
+      ]
+    }
   },
   {
     "id": 100003,
@@ -78,7 +90,13 @@
     "images": [
       "/assets/img/products/northern-pine-flower-100003.jpg"
     ],
-    "category": "flower"
+    "category": "flower",
+    "filters": {
+      "Top Terpenes": [
+        "Limonene",
+        "Terpinolene"
+      ]
+    }
   },
   {
     "id": 100004,
@@ -105,7 +123,13 @@
     "images": [
       "/assets/img/products/silver-harbor-flower-100004.jpg"
     ],
-    "category": "flower"
+    "category": "flower",
+    "filters": {
+      "Top Terpenes": [
+        "Caryophyllene",
+        "Linalool"
+      ]
+    }
   },
   {
     "id": 100005,
@@ -132,7 +156,13 @@
     "images": [
       "/assets/img/products/golden-trail-flower-100005.jpg"
     ],
-    "category": "flower"
+    "category": "flower",
+    "filters": {
+      "Top Terpenes": [
+        "Limonene",
+        "Pinene"
+      ]
+    }
   },
   {
     "id": 100006,
@@ -159,7 +189,13 @@
     "images": [
       "/assets/img/products/velvet-hollow-flower-100006.jpg"
     ],
-    "category": "flower"
+    "category": "flower",
+    "filters": {
+      "Top Terpenes": [
+        "Limonene",
+        "Linalool"
+      ]
+    }
   },
   {
     "id": 100007,
@@ -186,7 +222,12 @@
     "images": [
       "/assets/img/products/golden-orchard-flower-100007.jpg"
     ],
-    "category": "flower"
+    "category": "flower",
+    "filters": {
+      "Top Terpenes": [
+        "Limonene"
+      ]
+    }
   },
   {
     "id": 100008,
@@ -213,7 +254,13 @@
     "images": [
       "/assets/img/products/amber-haze-flower-100008.jpg"
     ],
-    "category": "flower"
+    "category": "flower",
+    "filters": {
+      "Top Terpenes": [
+        "Humulene",
+        "Myrcene"
+      ]
+    }
   },
   {
     "id": 100009,
@@ -240,7 +287,13 @@
     "images": [
       "/assets/img/products/hazel-tide-flower-100009.jpg"
     ],
-    "category": "flower"
+    "category": "flower",
+    "filters": {
+      "Top Terpenes": [
+        "Myrcene",
+        "Terpinolene"
+      ]
+    }
   },
   {
     "id": 100010,
@@ -267,7 +320,13 @@
     "images": [
       "/assets/img/products/frosted-ridge-flower-100010.jpg"
     ],
-    "category": "flower"
+    "category": "flower",
+    "filters": {
+      "Top Terpenes": [
+        "Humulene",
+        "Limonene"
+      ]
+    }
   },
   {
     "id": 100011,
@@ -294,7 +353,12 @@
     "images": [
       "/assets/img/products/cobalt-cascade-flower-100011.jpg"
     ],
-    "category": "flower"
+    "category": "flower",
+    "filters": {
+      "Top Terpenes": [
+        "Linalool"
+      ]
+    }
   },
   {
     "id": 100012,
@@ -321,7 +385,13 @@
     "images": [
       "/assets/img/products/northern-cascade-flower-100012.jpg"
     ],
-    "category": "flower"
+    "category": "flower",
+    "filters": {
+      "Top Terpenes": [
+        "Humulene",
+        "Limonene"
+      ]
+    }
   },
   {
     "id": 100013,
@@ -348,7 +418,13 @@
     "images": [
       "/assets/img/products/ember-hollow-flower-100013.jpg"
     ],
-    "category": "flower"
+    "category": "flower",
+    "filters": {
+      "Top Terpenes": [
+        "Pinene",
+        "Terpinolene"
+      ]
+    }
   },
   {
     "id": 100014,
@@ -375,7 +451,12 @@
     "images": [
       "/assets/img/products/golden-orchard-flower-100014.jpg"
     ],
-    "category": "flower"
+    "category": "flower",
+    "filters": {
+      "Top Terpenes": [
+        "Limonene"
+      ]
+    }
   },
   {
     "id": 100015,
@@ -402,7 +483,13 @@
     "images": [
       "/assets/img/products/silver-meadow-flower-100015.jpg"
     ],
-    "category": "flower"
+    "category": "flower",
+    "filters": {
+      "Top Terpenes": [
+        "Limonene",
+        "Linalool"
+      ]
+    }
   },
   {
     "id": 100016,
@@ -429,7 +516,13 @@
     "images": [
       "/assets/img/products/hazel-orchard-flower-100016.jpg"
     ],
-    "category": "flower"
+    "category": "flower",
+    "filters": {
+      "Top Terpenes": [
+        "Caryophyllene",
+        "Humulene"
+      ]
+    }
   },
   {
     "id": 100017,
@@ -456,7 +549,13 @@
     "images": [
       "/assets/img/products/cobalt-hollow-flower-100017.jpg"
     ],
-    "category": "flower"
+    "category": "flower",
+    "filters": {
+      "Top Terpenes": [
+        "Linalool",
+        "Pinene"
+      ]
+    }
   },
   {
     "id": 100018,
@@ -483,7 +582,13 @@
     "images": [
       "/assets/img/products/ember-tide-flower-100018.jpg"
     ],
-    "category": "flower"
+    "category": "flower",
+    "filters": {
+      "Top Terpenes": [
+        "Myrcene",
+        "Pinene"
+      ]
+    }
   },
   {
     "id": 100019,
@@ -510,7 +615,13 @@
     "images": [
       "/assets/img/products/midnight-tide-flower-100019.jpg"
     ],
-    "category": "flower"
+    "category": "flower",
+    "filters": {
+      "Top Terpenes": [
+        "Caryophyllene",
+        "Terpinolene"
+      ]
+    }
   },
   {
     "id": 100020,
@@ -537,7 +648,13 @@
     "images": [
       "/assets/img/products/golden-bloom-flower-100020.jpg"
     ],
-    "category": "flower"
+    "category": "flower",
+    "filters": {
+      "Top Terpenes": [
+        "Humulene",
+        "Terpinolene"
+      ]
+    }
   },
   {
     "id": 100021,
@@ -564,7 +681,13 @@
     "images": [
       "/assets/img/products/wandering-ridge-flower-100021.jpg"
     ],
-    "category": "flower"
+    "category": "flower",
+    "filters": {
+      "Top Terpenes": [
+        "Caryophyllene",
+        "Pinene"
+      ]
+    }
   },
   {
     "id": 100022,
@@ -591,7 +714,13 @@
     "images": [
       "/assets/img/products/coastal-pine-flower-100022.jpg"
     ],
-    "category": "flower"
+    "category": "flower",
+    "filters": {
+      "Top Terpenes": [
+        "Myrcene",
+        "Pinene"
+      ]
+    }
   },
   {
     "id": 100023,
@@ -618,7 +747,13 @@
     "images": [
       "/assets/img/products/coastal-tide-flower-100023.jpg"
     ],
-    "category": "flower"
+    "category": "flower",
+    "filters": {
+      "Top Terpenes": [
+        "Caryophyllene",
+        "Myrcene"
+      ]
+    }
   },
   {
     "id": 100024,
@@ -645,7 +780,13 @@
     "images": [
       "/assets/img/products/hazel-ridge-flower-100024.jpg"
     ],
-    "category": "flower"
+    "category": "flower",
+    "filters": {
+      "Top Terpenes": [
+        "Caryophyllene",
+        "Myrcene"
+      ]
+    }
   },
   {
     "id": 100025,
@@ -672,7 +813,13 @@
     "images": [
       "/assets/img/products/dusk-orchard-flower-100025.jpg"
     ],
-    "category": "flower"
+    "category": "flower",
+    "filters": {
+      "Top Terpenes": [
+        "Limonene",
+        "Linalool"
+      ]
+    }
   },
   {
     "id": 100026,
@@ -699,7 +846,13 @@
     "images": [
       "/assets/img/products/northern-trail-flower-100026.jpg"
     ],
-    "category": "flower"
+    "category": "flower",
+    "filters": {
+      "Top Terpenes": [
+        "Caryophyllene",
+        "Limonene"
+      ]
+    }
   },
   {
     "id": 100027,
@@ -726,7 +879,16 @@
     "images": [
       "/assets/img/products/midnight-pine-vapes-100027.jpg"
     ],
-    "category": "vapes"
+    "category": "vapes",
+    "filters": {
+      "Hardware": [
+        "510 Cartridge"
+      ],
+      "Extraction": [
+        "Distillate",
+        "Rosin"
+      ]
+    }
   },
   {
     "id": 100028,
@@ -753,7 +915,16 @@
     "images": [
       "/assets/img/products/wandering-pine-vapes-100028.jpg"
     ],
-    "category": "vapes"
+    "category": "vapes",
+    "filters": {
+      "Hardware": [
+        "All-in-One"
+      ],
+      "Extraction": [
+        "Live Resin",
+        "Rosin"
+      ]
+    }
   },
   {
     "id": 100029,
@@ -780,7 +951,15 @@
     "images": [
       "/assets/img/products/wandering-drift-vapes-100029.jpg"
     ],
-    "category": "vapes"
+    "category": "vapes",
+    "filters": {
+      "Hardware": [
+        "All-in-One"
+      ],
+      "Extraction": [
+        "Rosin"
+      ]
+    }
   },
   {
     "id": 100030,
@@ -807,7 +986,15 @@
     "images": [
       "/assets/img/products/hazel-haze-vapes-100030.jpg"
     ],
-    "category": "vapes"
+    "category": "vapes",
+    "filters": {
+      "Hardware": [
+        "Pod"
+      ],
+      "Extraction": [
+        "Live Resin"
+      ]
+    }
   },
   {
     "id": 100031,
@@ -834,7 +1021,16 @@
     "images": [
       "/assets/img/products/cobalt-bloom-vapes-100031.jpg"
     ],
-    "category": "vapes"
+    "category": "vapes",
+    "filters": {
+      "Hardware": [
+        "Pod"
+      ],
+      "Extraction": [
+        "Live Resin",
+        "Rosin"
+      ]
+    }
   },
   {
     "id": 100032,
@@ -861,7 +1057,16 @@
     "images": [
       "/assets/img/products/cobalt-grove-vapes-100032.jpg"
     ],
-    "category": "vapes"
+    "category": "vapes",
+    "filters": {
+      "Hardware": [
+        "510 Cartridge"
+      ],
+      "Extraction": [
+        "Live Resin",
+        "Rosin"
+      ]
+    }
   },
   {
     "id": 100033,
@@ -888,7 +1093,15 @@
     "images": [
       "/assets/img/products/coastal-drift-vapes-100033.jpg"
     ],
-    "category": "vapes"
+    "category": "vapes",
+    "filters": {
+      "Hardware": [
+        "Pod"
+      ],
+      "Extraction": [
+        "Distillate"
+      ]
+    }
   },
   {
     "id": 100034,
@@ -915,7 +1128,15 @@
     "images": [
       "/assets/img/products/crimson-tide-vapes-100034.jpg"
     ],
-    "category": "vapes"
+    "category": "vapes",
+    "filters": {
+      "Hardware": [
+        "510 Cartridge"
+      ],
+      "Extraction": [
+        "Rosin"
+      ]
+    }
   },
   {
     "id": 100035,
@@ -942,7 +1163,16 @@
     "images": [
       "/assets/img/products/amber-cascade-vapes-100035.jpg"
     ],
-    "category": "vapes"
+    "category": "vapes",
+    "filters": {
+      "Hardware": [
+        "Pod"
+      ],
+      "Extraction": [
+        "Live Resin",
+        "Rosin"
+      ]
+    }
   },
   {
     "id": 100036,
@@ -969,7 +1199,16 @@
     "images": [
       "/assets/img/products/coastal-ridge-vapes-100036.jpg"
     ],
-    "category": "vapes"
+    "category": "vapes",
+    "filters": {
+      "Hardware": [
+        "510 Cartridge"
+      ],
+      "Extraction": [
+        "Distillate",
+        "Live Resin"
+      ]
+    }
   },
   {
     "id": 100037,
@@ -996,7 +1235,16 @@
     "images": [
       "/assets/img/products/silver-pine-vapes-100037.jpg"
     ],
-    "category": "vapes"
+    "category": "vapes",
+    "filters": {
+      "Hardware": [
+        "All-in-One"
+      ],
+      "Extraction": [
+        "Distillate",
+        "Live Resin"
+      ]
+    }
   },
   {
     "id": 100038,
@@ -1023,7 +1271,16 @@
     "images": [
       "/assets/img/products/silver-harbor-vapes-100038.jpg"
     ],
-    "category": "vapes"
+    "category": "vapes",
+    "filters": {
+      "Hardware": [
+        "Pod"
+      ],
+      "Extraction": [
+        "Distillate",
+        "Rosin"
+      ]
+    }
   },
   {
     "id": 100039,
@@ -1050,7 +1307,16 @@
     "images": [
       "/assets/img/products/dusk-meadow-vapes-100039.jpg"
     ],
-    "category": "vapes"
+    "category": "vapes",
+    "filters": {
+      "Hardware": [
+        "Pod"
+      ],
+      "Extraction": [
+        "Live Resin",
+        "Rosin"
+      ]
+    }
   },
   {
     "id": 100040,
@@ -1077,7 +1343,16 @@
     "images": [
       "/assets/img/products/midnight-bloom-vapes-100040.jpg"
     ],
-    "category": "vapes"
+    "category": "vapes",
+    "filters": {
+      "Hardware": [
+        "510 Cartridge"
+      ],
+      "Extraction": [
+        "Live Resin",
+        "Rosin"
+      ]
+    }
   },
   {
     "id": 100041,
@@ -1104,7 +1379,16 @@
     "images": [
       "/assets/img/products/northern-ridge-vapes-100041.jpg"
     ],
-    "category": "vapes"
+    "category": "vapes",
+    "filters": {
+      "Hardware": [
+        "Pod"
+      ],
+      "Extraction": [
+        "Distillate",
+        "Live Resin"
+      ]
+    }
   },
   {
     "id": 100042,
@@ -1131,7 +1415,16 @@
     "images": [
       "/assets/img/products/frosted-lantern-vapes-100042.jpg"
     ],
-    "category": "vapes"
+    "category": "vapes",
+    "filters": {
+      "Hardware": [
+        "Pod"
+      ],
+      "Extraction": [
+        "Distillate",
+        "Live Resin"
+      ]
+    }
   },
   {
     "id": 100043,
@@ -1158,7 +1451,15 @@
     "images": [
       "/assets/img/products/cobalt-hollow-vapes-100043.jpg"
     ],
-    "category": "vapes"
+    "category": "vapes",
+    "filters": {
+      "Hardware": [
+        "510 Cartridge"
+      ],
+      "Extraction": [
+        "Rosin"
+      ]
+    }
   },
   {
     "id": 100044,
@@ -1185,7 +1486,16 @@
     "images": [
       "/assets/img/products/ember-haze-vapes-100044.jpg"
     ],
-    "category": "vapes"
+    "category": "vapes",
+    "filters": {
+      "Hardware": [
+        "All-in-One"
+      ],
+      "Extraction": [
+        "Live Resin",
+        "Rosin"
+      ]
+    }
   },
   {
     "id": 100045,
@@ -1212,7 +1522,15 @@
     "images": [
       "/assets/img/products/quiet-hollow-vapes-100045.jpg"
     ],
-    "category": "vapes"
+    "category": "vapes",
+    "filters": {
+      "Hardware": [
+        "510 Cartridge"
+      ],
+      "Extraction": [
+        "Live Resin"
+      ]
+    }
   },
   {
     "id": 100046,
@@ -1239,7 +1557,15 @@
     "images": [
       "/assets/img/products/sunlit-orchard-vapes-100046.jpg"
     ],
-    "category": "vapes"
+    "category": "vapes",
+    "filters": {
+      "Hardware": [
+        "510 Cartridge"
+      ],
+      "Extraction": [
+        "Live Resin"
+      ]
+    }
   },
   {
     "id": 100047,
@@ -1266,7 +1592,15 @@
     "images": [
       "/assets/img/products/dusk-current-vapes-100047.jpg"
     ],
-    "category": "vapes"
+    "category": "vapes",
+    "filters": {
+      "Hardware": [
+        "All-in-One"
+      ],
+      "Extraction": [
+        "Live Resin"
+      ]
+    }
   },
   {
     "id": 100048,
@@ -1293,7 +1627,16 @@
     "images": [
       "/assets/img/products/velvet-ridge-vapes-100048.jpg"
     ],
-    "category": "vapes"
+    "category": "vapes",
+    "filters": {
+      "Hardware": [
+        "Pod"
+      ],
+      "Extraction": [
+        "Live Resin",
+        "Rosin"
+      ]
+    }
   },
   {
     "id": 100049,
@@ -1320,7 +1663,15 @@
     "images": [
       "/assets/img/products/crimson-field-vapes-100049.jpg"
     ],
-    "category": "vapes"
+    "category": "vapes",
+    "filters": {
+      "Hardware": [
+        "510 Cartridge"
+      ],
+      "Extraction": [
+        "Live Resin"
+      ]
+    }
   },
   {
     "id": 100050,
@@ -1347,7 +1698,15 @@
     "images": [
       "/assets/img/products/ember-harbor-vapes-100050.jpg"
     ],
-    "category": "vapes"
+    "category": "vapes",
+    "filters": {
+      "Hardware": [
+        "510 Cartridge"
+      ],
+      "Extraction": [
+        "Live Resin"
+      ]
+    }
   },
   {
     "id": 100051,
@@ -1374,7 +1733,16 @@
     "images": [
       "/assets/img/products/crimson-trail-edibles-100051.jpg"
     ],
-    "category": "edibles"
+    "category": "edibles",
+    "filters": {
+      "Dose": [
+        "10mg"
+      ],
+      "Type": [
+        "Chews",
+        "Chocolate"
+      ]
+    }
   },
   {
     "id": 100052,
@@ -1401,7 +1769,15 @@
     "images": [
       "/assets/img/products/coastal-lantern-edibles-100052.jpg"
     ],
-    "category": "edibles"
+    "category": "edibles",
+    "filters": {
+      "Dose": [
+        "5mg"
+      ],
+      "Type": [
+        "Chocolate"
+      ]
+    }
   },
   {
     "id": 100053,
@@ -1428,7 +1804,16 @@
     "images": [
       "/assets/img/products/crimson-pine-edibles-100053.jpg"
     ],
-    "category": "edibles"
+    "category": "edibles",
+    "filters": {
+      "Dose": [
+        "5mg"
+      ],
+      "Type": [
+        "Chocolate",
+        "Gummies"
+      ]
+    }
   },
   {
     "id": 100054,
@@ -1455,7 +1840,16 @@
     "images": [
       "/assets/img/products/midnight-drift-edibles-100054.jpg"
     ],
-    "category": "edibles"
+    "category": "edibles",
+    "filters": {
+      "Dose": [
+        "25mg"
+      ],
+      "Type": [
+        "Chocolate",
+        "Mints"
+      ]
+    }
   },
   {
     "id": 100055,
@@ -1482,7 +1876,16 @@
     "images": [
       "/assets/img/products/cobalt-cascade-edibles-100055.jpg"
     ],
-    "category": "edibles"
+    "category": "edibles",
+    "filters": {
+      "Dose": [
+        "25mg"
+      ],
+      "Type": [
+        "Chocolate",
+        "Mints"
+      ]
+    }
   },
   {
     "id": 100056,
@@ -1509,7 +1912,16 @@
     "images": [
       "/assets/img/products/wandering-orchard-edibles-100056.jpg"
     ],
-    "category": "edibles"
+    "category": "edibles",
+    "filters": {
+      "Dose": [
+        "5mg"
+      ],
+      "Type": [
+        "Chocolate",
+        "Mints"
+      ]
+    }
   },
   {
     "id": 100057,
@@ -1536,7 +1948,16 @@
     "images": [
       "/assets/img/products/coastal-cascade-edibles-100057.jpg"
     ],
-    "category": "edibles"
+    "category": "edibles",
+    "filters": {
+      "Dose": [
+        "5mg"
+      ],
+      "Type": [
+        "Chocolate",
+        "Mints"
+      ]
+    }
   },
   {
     "id": 100058,
@@ -1563,7 +1984,16 @@
     "images": [
       "/assets/img/products/hazel-cascade-edibles-100058.jpg"
     ],
-    "category": "edibles"
+    "category": "edibles",
+    "filters": {
+      "Dose": [
+        "10mg"
+      ],
+      "Type": [
+        "Chocolate",
+        "Gummies"
+      ]
+    }
   },
   {
     "id": 100059,
@@ -1590,7 +2020,15 @@
     "images": [
       "/assets/img/products/golden-pine-edibles-100059.jpg"
     ],
-    "category": "edibles"
+    "category": "edibles",
+    "filters": {
+      "Dose": [
+        "10mg"
+      ],
+      "Type": [
+        "Mints"
+      ]
+    }
   },
   {
     "id": 100060,
@@ -1617,7 +2055,16 @@
     "images": [
       "/assets/img/products/sunlit-orchard-edibles-100060.jpg"
     ],
-    "category": "edibles"
+    "category": "edibles",
+    "filters": {
+      "Dose": [
+        "5mg"
+      ],
+      "Type": [
+        "Gummies",
+        "Mints"
+      ]
+    }
   },
   {
     "id": 100061,
@@ -1644,7 +2091,16 @@
     "images": [
       "/assets/img/products/cobalt-meadow-edibles-100061.jpg"
     ],
-    "category": "edibles"
+    "category": "edibles",
+    "filters": {
+      "Dose": [
+        "5mg"
+      ],
+      "Type": [
+        "Chocolate",
+        "Gummies"
+      ]
+    }
   },
   {
     "id": 100062,
@@ -1671,7 +2127,15 @@
     "images": [
       "/assets/img/products/frosted-trail-edibles-100062.jpg"
     ],
-    "category": "edibles"
+    "category": "edibles",
+    "filters": {
+      "Dose": [
+        "5mg"
+      ],
+      "Type": [
+        "Chews"
+      ]
+    }
   },
   {
     "id": 100063,
@@ -1698,7 +2162,16 @@
     "images": [
       "/assets/img/products/crimson-orchard-edibles-100063.jpg"
     ],
-    "category": "edibles"
+    "category": "edibles",
+    "filters": {
+      "Dose": [
+        "10mg"
+      ],
+      "Type": [
+        "Chews",
+        "Gummies"
+      ]
+    }
   },
   {
     "id": 100064,
@@ -1725,7 +2198,16 @@
     "images": [
       "/assets/img/products/velvet-pine-edibles-100064.jpg"
     ],
-    "category": "edibles"
+    "category": "edibles",
+    "filters": {
+      "Dose": [
+        "5mg"
+      ],
+      "Type": [
+        "Chocolate",
+        "Gummies"
+      ]
+    }
   },
   {
     "id": 100065,
@@ -1752,7 +2234,16 @@
     "images": [
       "/assets/img/products/northern-hollow-edibles-100065.jpg"
     ],
-    "category": "edibles"
+    "category": "edibles",
+    "filters": {
+      "Dose": [
+        "5mg"
+      ],
+      "Type": [
+        "Chews",
+        "Mints"
+      ]
+    }
   },
   {
     "id": 100066,
@@ -1779,7 +2270,16 @@
     "images": [
       "/assets/img/products/velvet-drift-edibles-100066.jpg"
     ],
-    "category": "edibles"
+    "category": "edibles",
+    "filters": {
+      "Dose": [
+        "25mg"
+      ],
+      "Type": [
+        "Chews",
+        "Mints"
+      ]
+    }
   },
   {
     "id": 100067,
@@ -1806,7 +2306,16 @@
     "images": [
       "/assets/img/products/wandering-meadow-edibles-100067.jpg"
     ],
-    "category": "edibles"
+    "category": "edibles",
+    "filters": {
+      "Dose": [
+        "5mg"
+      ],
+      "Type": [
+        "Chews",
+        "Chocolate"
+      ]
+    }
   },
   {
     "id": 100068,
@@ -1833,7 +2342,15 @@
     "images": [
       "/assets/img/products/silver-current-edibles-100068.jpg"
     ],
-    "category": "edibles"
+    "category": "edibles",
+    "filters": {
+      "Dose": [
+        "25mg"
+      ],
+      "Type": [
+        "Chocolate"
+      ]
+    }
   },
   {
     "id": 100069,
@@ -1860,7 +2377,16 @@
     "images": [
       "/assets/img/products/ember-meadow-edibles-100069.jpg"
     ],
-    "category": "edibles"
+    "category": "edibles",
+    "filters": {
+      "Dose": [
+        "10mg"
+      ],
+      "Type": [
+        "Gummies",
+        "Mints"
+      ]
+    }
   },
   {
     "id": 100070,
@@ -1887,7 +2413,16 @@
     "images": [
       "/assets/img/products/sunlit-bloom-edibles-100070.jpg"
     ],
-    "category": "edibles"
+    "category": "edibles",
+    "filters": {
+      "Dose": [
+        "5mg"
+      ],
+      "Type": [
+        "Chews",
+        "Mints"
+      ]
+    }
   },
   {
     "id": 100071,
@@ -1914,7 +2449,15 @@
     "images": [
       "/assets/img/products/quiet-hollow-edibles-100071.jpg"
     ],
-    "category": "edibles"
+    "category": "edibles",
+    "filters": {
+      "Dose": [
+        "25mg"
+      ],
+      "Type": [
+        "Chews"
+      ]
+    }
   },
   {
     "id": 100072,
@@ -1941,7 +2484,15 @@
     "images": [
       "/assets/img/products/quiet-hollow-edibles-100072.jpg"
     ],
-    "category": "edibles"
+    "category": "edibles",
+    "filters": {
+      "Dose": [
+        "5mg"
+      ],
+      "Type": [
+        "Mints"
+      ]
+    }
   },
   {
     "id": 100073,
@@ -1968,7 +2519,16 @@
     "images": [
       "/assets/img/products/northern-current-edibles-100073.jpg"
     ],
-    "category": "edibles"
+    "category": "edibles",
+    "filters": {
+      "Dose": [
+        "10mg"
+      ],
+      "Type": [
+        "Chews",
+        "Chocolate"
+      ]
+    }
   },
   {
     "id": 100074,
@@ -1995,7 +2555,16 @@
     "images": [
       "/assets/img/products/northern-trail-edibles-100074.jpg"
     ],
-    "category": "edibles"
+    "category": "edibles",
+    "filters": {
+      "Dose": [
+        "25mg"
+      ],
+      "Type": [
+        "Chocolate",
+        "Mints"
+      ]
+    }
   },
   {
     "id": 100075,
@@ -2022,7 +2591,12 @@
     "images": [
       "/assets/img/products/coastal-lantern-prerolls-100075.jpg"
     ],
-    "category": "prerolls"
+    "category": "prerolls",
+    "filters": {
+      "Pack Size": [
+        "5-Pack"
+      ]
+    }
   },
   {
     "id": 100076,
@@ -2049,7 +2623,12 @@
     "images": [
       "/assets/img/products/cobalt-hollow-prerolls-100076.jpg"
     ],
-    "category": "prerolls"
+    "category": "prerolls",
+    "filters": {
+      "Pack Size": [
+        "Infused"
+      ]
+    }
   },
   {
     "id": 100077,
@@ -2076,7 +2655,12 @@
     "images": [
       "/assets/img/products/amber-haze-prerolls-100077.jpg"
     ],
-    "category": "prerolls"
+    "category": "prerolls",
+    "filters": {
+      "Pack Size": [
+        "5-Pack"
+      ]
+    }
   },
   {
     "id": 100078,
@@ -2103,7 +2687,12 @@
     "images": [
       "/assets/img/products/ember-haze-prerolls-100078.jpg"
     ],
-    "category": "prerolls"
+    "category": "prerolls",
+    "filters": {
+      "Pack Size": [
+        "Single"
+      ]
+    }
   },
   {
     "id": 100079,
@@ -2130,7 +2719,12 @@
     "images": [
       "/assets/img/products/velvet-haze-prerolls-100079.jpg"
     ],
-    "category": "prerolls"
+    "category": "prerolls",
+    "filters": {
+      "Pack Size": [
+        "5-Pack"
+      ]
+    }
   },
   {
     "id": 100080,
@@ -2157,7 +2751,12 @@
     "images": [
       "/assets/img/products/frosted-lantern-prerolls-100080.jpg"
     ],
-    "category": "prerolls"
+    "category": "prerolls",
+    "filters": {
+      "Pack Size": [
+        "Single"
+      ]
+    }
   },
   {
     "id": 100081,
@@ -2184,7 +2783,12 @@
     "images": [
       "/assets/img/products/amber-field-prerolls-100081.jpg"
     ],
-    "category": "prerolls"
+    "category": "prerolls",
+    "filters": {
+      "Pack Size": [
+        "5-Pack"
+      ]
+    }
   },
   {
     "id": 100082,
@@ -2211,7 +2815,12 @@
     "images": [
       "/assets/img/products/midnight-pine-prerolls-100082.jpg"
     ],
-    "category": "prerolls"
+    "category": "prerolls",
+    "filters": {
+      "Pack Size": [
+        "Infused"
+      ]
+    }
   },
   {
     "id": 100083,
@@ -2238,7 +2847,12 @@
     "images": [
       "/assets/img/products/quiet-bloom-prerolls-100083.jpg"
     ],
-    "category": "prerolls"
+    "category": "prerolls",
+    "filters": {
+      "Pack Size": [
+        "Infused"
+      ]
+    }
   },
   {
     "id": 100084,
@@ -2265,7 +2879,12 @@
     "images": [
       "/assets/img/products/crimson-haze-prerolls-100084.jpg"
     ],
-    "category": "prerolls"
+    "category": "prerolls",
+    "filters": {
+      "Pack Size": [
+        "Infused"
+      ]
+    }
   },
   {
     "id": 100085,
@@ -2292,7 +2911,12 @@
     "images": [
       "/assets/img/products/amber-field-prerolls-100085.jpg"
     ],
-    "category": "prerolls"
+    "category": "prerolls",
+    "filters": {
+      "Pack Size": [
+        "Single"
+      ]
+    }
   },
   {
     "id": 100086,
@@ -2319,7 +2943,12 @@
     "images": [
       "/assets/img/products/quiet-pine-prerolls-100086.jpg"
     ],
-    "category": "prerolls"
+    "category": "prerolls",
+    "filters": {
+      "Pack Size": [
+        "Infused"
+      ]
+    }
   },
   {
     "id": 100087,
@@ -2346,7 +2975,12 @@
     "images": [
       "/assets/img/products/wandering-haze-prerolls-100087.jpg"
     ],
-    "category": "prerolls"
+    "category": "prerolls",
+    "filters": {
+      "Pack Size": [
+        "5-Pack"
+      ]
+    }
   },
   {
     "id": 100088,
@@ -2373,7 +3007,12 @@
     "images": [
       "/assets/img/products/northern-drift-prerolls-100088.jpg"
     ],
-    "category": "prerolls"
+    "category": "prerolls",
+    "filters": {
+      "Pack Size": [
+        "Infused"
+      ]
+    }
   },
   {
     "id": 100089,
@@ -2400,7 +3039,12 @@
     "images": [
       "/assets/img/products/coastal-current-prerolls-100089.jpg"
     ],
-    "category": "prerolls"
+    "category": "prerolls",
+    "filters": {
+      "Pack Size": [
+        "Single"
+      ]
+    }
   },
   {
     "id": 100090,
@@ -2427,7 +3071,12 @@
     "images": [
       "/assets/img/products/northern-harbor-prerolls-100090.jpg"
     ],
-    "category": "prerolls"
+    "category": "prerolls",
+    "filters": {
+      "Pack Size": [
+        "Single"
+      ]
+    }
   },
   {
     "id": 100091,
@@ -2454,7 +3103,12 @@
     "images": [
       "/assets/img/products/frosted-trail-prerolls-100091.jpg"
     ],
-    "category": "prerolls"
+    "category": "prerolls",
+    "filters": {
+      "Pack Size": [
+        "Single"
+      ]
+    }
   },
   {
     "id": 100092,
@@ -2481,7 +3135,12 @@
     "images": [
       "/assets/img/products/ember-drift-prerolls-100092.jpg"
     ],
-    "category": "prerolls"
+    "category": "prerolls",
+    "filters": {
+      "Pack Size": [
+        "Single"
+      ]
+    }
   },
   {
     "id": 100093,
@@ -2508,7 +3167,12 @@
     "images": [
       "/assets/img/products/silver-field-prerolls-100093.jpg"
     ],
-    "category": "prerolls"
+    "category": "prerolls",
+    "filters": {
+      "Pack Size": [
+        "Infused"
+      ]
+    }
   },
   {
     "id": 100094,
@@ -2535,7 +3199,12 @@
     "images": [
       "/assets/img/products/quiet-orchard-prerolls-100094.jpg"
     ],
-    "category": "prerolls"
+    "category": "prerolls",
+    "filters": {
+      "Pack Size": [
+        "5-Pack"
+      ]
+    }
   },
   {
     "id": 100095,
@@ -2562,7 +3231,12 @@
     "images": [
       "/assets/img/products/velvet-lantern-prerolls-100095.jpg"
     ],
-    "category": "prerolls"
+    "category": "prerolls",
+    "filters": {
+      "Pack Size": [
+        "5-Pack"
+      ]
+    }
   },
   {
     "id": 100096,
@@ -2589,7 +3263,12 @@
     "images": [
       "/assets/img/products/coastal-trail-prerolls-100096.jpg"
     ],
-    "category": "prerolls"
+    "category": "prerolls",
+    "filters": {
+      "Pack Size": [
+        "Infused"
+      ]
+    }
   },
   {
     "id": 100097,
@@ -2616,7 +3295,13 @@
     "images": [
       "/assets/img/products/crimson-drift-concentrates-100097.jpg"
     ],
-    "category": "concentrates"
+    "category": "concentrates",
+    "filters": {
+      "Consistency": [
+        "Rosin",
+        "Sugar"
+      ]
+    }
   },
   {
     "id": 100098,
@@ -2643,7 +3328,13 @@
     "images": [
       "/assets/img/products/coastal-trail-concentrates-100098.jpg"
     ],
-    "category": "concentrates"
+    "category": "concentrates",
+    "filters": {
+      "Consistency": [
+        "Badder",
+        "Rosin"
+      ]
+    }
   },
   {
     "id": 100099,
@@ -2670,7 +3361,13 @@
     "images": [
       "/assets/img/products/northern-tide-concentrates-100099.jpg"
     ],
-    "category": "concentrates"
+    "category": "concentrates",
+    "filters": {
+      "Consistency": [
+        "Live Resin",
+        "Rosin"
+      ]
+    }
   },
   {
     "id": 100100,
@@ -2697,7 +3394,13 @@
     "images": [
       "/assets/img/products/amber-ridge-concentrates-100100.jpg"
     ],
-    "category": "concentrates"
+    "category": "concentrates",
+    "filters": {
+      "Consistency": [
+        "Rosin",
+        "Sugar"
+      ]
+    }
   },
   {
     "id": 100101,
@@ -2724,7 +3427,13 @@
     "images": [
       "/assets/img/products/frosted-haze-concentrates-100101.jpg"
     ],
-    "category": "concentrates"
+    "category": "concentrates",
+    "filters": {
+      "Consistency": [
+        "Rosin",
+        "Sugar"
+      ]
+    }
   },
   {
     "id": 100102,
@@ -2751,7 +3460,12 @@
     "images": [
       "/assets/img/products/dusk-ridge-concentrates-100102.jpg"
     ],
-    "category": "concentrates"
+    "category": "concentrates",
+    "filters": {
+      "Consistency": [
+        "Badder"
+      ]
+    }
   },
   {
     "id": 100103,
@@ -2778,7 +3492,13 @@
     "images": [
       "/assets/img/products/wandering-pine-concentrates-100103.jpg"
     ],
-    "category": "concentrates"
+    "category": "concentrates",
+    "filters": {
+      "Consistency": [
+        "Sauce",
+        "Sugar"
+      ]
+    }
   },
   {
     "id": 100104,
@@ -2805,7 +3525,12 @@
     "images": [
       "/assets/img/products/amber-tide-concentrates-100104.jpg"
     ],
-    "category": "concentrates"
+    "category": "concentrates",
+    "filters": {
+      "Consistency": [
+        "Sugar"
+      ]
+    }
   },
   {
     "id": 100105,
@@ -2832,7 +3557,13 @@
     "images": [
       "/assets/img/products/crimson-current-concentrates-100105.jpg"
     ],
-    "category": "concentrates"
+    "category": "concentrates",
+    "filters": {
+      "Consistency": [
+        "Live Resin",
+        "Rosin"
+      ]
+    }
   },
   {
     "id": 100106,
@@ -2859,7 +3590,12 @@
     "images": [
       "/assets/img/products/cobalt-hollow-concentrates-100106.jpg"
     ],
-    "category": "concentrates"
+    "category": "concentrates",
+    "filters": {
+      "Consistency": [
+        "Sauce"
+      ]
+    }
   },
   {
     "id": 100107,
@@ -2886,7 +3622,13 @@
     "images": [
       "/assets/img/products/wandering-meadow-concentrates-100107.jpg"
     ],
-    "category": "concentrates"
+    "category": "concentrates",
+    "filters": {
+      "Consistency": [
+        "Live Resin",
+        "Sauce"
+      ]
+    }
   },
   {
     "id": 100108,
@@ -2913,7 +3655,13 @@
     "images": [
       "/assets/img/products/cobalt-cascade-concentrates-100108.jpg"
     ],
-    "category": "concentrates"
+    "category": "concentrates",
+    "filters": {
+      "Consistency": [
+        "Rosin",
+        "Sugar"
+      ]
+    }
   },
   {
     "id": 100109,
@@ -2940,7 +3688,13 @@
     "images": [
       "/assets/img/products/quiet-orchard-concentrates-100109.jpg"
     ],
-    "category": "concentrates"
+    "category": "concentrates",
+    "filters": {
+      "Consistency": [
+        "Badder",
+        "Live Resin"
+      ]
+    }
   },
   {
     "id": 100110,
@@ -2967,7 +3721,13 @@
     "images": [
       "/assets/img/products/cobalt-drift-concentrates-100110.jpg"
     ],
-    "category": "concentrates"
+    "category": "concentrates",
+    "filters": {
+      "Consistency": [
+        "Badder",
+        "Rosin"
+      ]
+    }
   },
   {
     "id": 100111,
@@ -2994,7 +3754,13 @@
     "images": [
       "/assets/img/products/velvet-haze-concentrates-100111.jpg"
     ],
-    "category": "concentrates"
+    "category": "concentrates",
+    "filters": {
+      "Consistency": [
+        "Live Resin",
+        "Rosin"
+      ]
+    }
   },
   {
     "id": 100112,
@@ -3021,7 +3787,12 @@
     "images": [
       "/assets/img/products/sunlit-cascade-concentrates-100112.jpg"
     ],
-    "category": "concentrates"
+    "category": "concentrates",
+    "filters": {
+      "Consistency": [
+        "Sauce"
+      ]
+    }
   },
   {
     "id": 100113,
@@ -3048,7 +3819,13 @@
     "images": [
       "/assets/img/products/amber-orchard-concentrates-100113.jpg"
     ],
-    "category": "concentrates"
+    "category": "concentrates",
+    "filters": {
+      "Consistency": [
+        "Live Resin",
+        "Sauce"
+      ]
+    }
   },
   {
     "id": 100114,
@@ -3075,7 +3852,12 @@
     "images": [
       "/assets/img/products/frosted-lantern-concentrates-100114.jpg"
     ],
-    "category": "concentrates"
+    "category": "concentrates",
+    "filters": {
+      "Consistency": [
+        "Rosin"
+      ]
+    }
   },
   {
     "id": 100115,
@@ -3102,7 +3884,13 @@
     "images": [
       "/assets/img/products/frosted-pine-concentrates-100115.jpg"
     ],
-    "category": "concentrates"
+    "category": "concentrates",
+    "filters": {
+      "Consistency": [
+        "Rosin",
+        "Sauce"
+      ]
+    }
   },
   {
     "id": 100116,
@@ -3129,7 +3917,13 @@
     "images": [
       "/assets/img/products/midnight-drift-concentrates-100116.jpg"
     ],
-    "category": "concentrates"
+    "category": "concentrates",
+    "filters": {
+      "Consistency": [
+        "Rosin",
+        "Sugar"
+      ]
+    }
   },
   {
     "id": 100117,
@@ -3156,7 +3950,12 @@
     "images": [
       "/assets/img/products/coastal-bloom-topicals-100117.jpg"
     ],
-    "category": "topicals"
+    "category": "topicals",
+    "filters": {
+      "Format": [
+        "Lotion"
+      ]
+    }
   },
   {
     "id": 100118,
@@ -3183,7 +3982,12 @@
     "images": [
       "/assets/img/products/silver-lantern-topicals-100118.jpg"
     ],
-    "category": "topicals"
+    "category": "topicals",
+    "filters": {
+      "Format": [
+        "Bath Soak"
+      ]
+    }
   },
   {
     "id": 100119,
@@ -3210,7 +4014,13 @@
     "images": [
       "/assets/img/products/coastal-grove-topicals-100119.jpg"
     ],
-    "category": "topicals"
+    "category": "topicals",
+    "filters": {
+      "Format": [
+        "Bath Soak",
+        "Lotion"
+      ]
+    }
   },
   {
     "id": 100120,
@@ -3237,7 +4047,13 @@
     "images": [
       "/assets/img/products/silver-current-topicals-100120.jpg"
     ],
-    "category": "topicals"
+    "category": "topicals",
+    "filters": {
+      "Format": [
+        "Balm",
+        "Bath Soak"
+      ]
+    }
   },
   {
     "id": 100121,
@@ -3264,7 +4080,12 @@
     "images": [
       "/assets/img/products/cobalt-field-topicals-100121.jpg"
     ],
-    "category": "topicals"
+    "category": "topicals",
+    "filters": {
+      "Format": [
+        "Balm"
+      ]
+    }
   },
   {
     "id": 100122,
@@ -3291,7 +4112,12 @@
     "images": [
       "/assets/img/products/wandering-drift-topicals-100122.jpg"
     ],
-    "category": "topicals"
+    "category": "topicals",
+    "filters": {
+      "Format": [
+        "Roll-On"
+      ]
+    }
   },
   {
     "id": 100123,
@@ -3318,7 +4144,12 @@
     "images": [
       "/assets/img/products/crimson-current-topicals-100123.jpg"
     ],
-    "category": "topicals"
+    "category": "topicals",
+    "filters": {
+      "Format": [
+        "Balm"
+      ]
+    }
   },
   {
     "id": 100124,
@@ -3345,7 +4176,13 @@
     "images": [
       "/assets/img/products/silver-current-topicals-100124.jpg"
     ],
-    "category": "topicals"
+    "category": "topicals",
+    "filters": {
+      "Format": [
+        "Balm",
+        "Bath Soak"
+      ]
+    }
   },
   {
     "id": 100125,
@@ -3372,7 +4209,13 @@
     "images": [
       "/assets/img/products/hazel-trail-topicals-100125.jpg"
     ],
-    "category": "topicals"
+    "category": "topicals",
+    "filters": {
+      "Format": [
+        "Balm",
+        "Roll-On"
+      ]
+    }
   },
   {
     "id": 100126,
@@ -3399,7 +4242,12 @@
     "images": [
       "/assets/img/products/velvet-orchard-topicals-100126.jpg"
     ],
-    "category": "topicals"
+    "category": "topicals",
+    "filters": {
+      "Format": [
+        "Roll-On"
+      ]
+    }
   },
   {
     "id": 100127,
@@ -3426,7 +4274,12 @@
     "images": [
       "/assets/img/products/northern-field-capsules-100127.jpg"
     ],
-    "category": "capsules"
+    "category": "capsules",
+    "filters": {
+      "Dose": [
+        "10mg"
+      ]
+    }
   },
   {
     "id": 100128,
@@ -3453,7 +4306,12 @@
     "images": [
       "/assets/img/products/quiet-drift-capsules-100128.jpg"
     ],
-    "category": "capsules"
+    "category": "capsules",
+    "filters": {
+      "Dose": [
+        "25mg"
+      ]
+    }
   },
   {
     "id": 100129,
@@ -3480,7 +4338,12 @@
     "images": [
       "/assets/img/products/dusk-lantern-capsules-100129.jpg"
     ],
-    "category": "capsules"
+    "category": "capsules",
+    "filters": {
+      "Dose": [
+        "10mg"
+      ]
+    }
   },
   {
     "id": 100130,
@@ -3507,7 +4370,12 @@
     "images": [
       "/assets/img/products/amber-harbor-capsules-100130.jpg"
     ],
-    "category": "capsules"
+    "category": "capsules",
+    "filters": {
+      "Dose": [
+        "10mg"
+      ]
+    }
   },
   {
     "id": 100131,
@@ -3534,7 +4402,12 @@
     "images": [
       "/assets/img/products/amber-grove-capsules-100131.jpg"
     ],
-    "category": "capsules"
+    "category": "capsules",
+    "filters": {
+      "Dose": [
+        "25mg"
+      ]
+    }
   },
   {
     "id": 100132,
@@ -3561,7 +4434,12 @@
     "images": [
       "/assets/img/products/ember-meadow-capsules-100132.jpg"
     ],
-    "category": "capsules"
+    "category": "capsules",
+    "filters": {
+      "Dose": [
+        "10mg"
+      ]
+    }
   },
   {
     "id": 100133,
@@ -3588,7 +4466,12 @@
     "images": [
       "/assets/img/products/dusk-tide-capsules-100133.jpg"
     ],
-    "category": "capsules"
+    "category": "capsules",
+    "filters": {
+      "Dose": [
+        "25mg"
+      ]
+    }
   },
   {
     "id": 100134,
@@ -3615,7 +4498,12 @@
     "images": [
       "/assets/img/products/dusk-tide-capsules-100134.jpg"
     ],
-    "category": "capsules"
+    "category": "capsules",
+    "filters": {
+      "Dose": [
+        "10mg"
+      ]
+    }
   },
   {
     "id": 100135,
@@ -3642,7 +4530,12 @@
     "images": [
       "/assets/img/products/coastal-trail-capsules-100135.jpg"
     ],
-    "category": "capsules"
+    "category": "capsules",
+    "filters": {
+      "Dose": [
+        "25mg"
+      ]
+    }
   },
   {
     "id": 100136,
@@ -3669,7 +4562,12 @@
     "images": [
       "/assets/img/products/wandering-field-capsules-100136.jpg"
     ],
-    "category": "capsules"
+    "category": "capsules",
+    "filters": {
+      "Dose": [
+        "10mg"
+      ]
+    }
   },
   {
     "id": 100137,
@@ -3696,7 +4594,12 @@
     "images": [
       "/assets/img/products/sunlit-pine-capsules-100137.jpg"
     ],
-    "category": "capsules"
+    "category": "capsules",
+    "filters": {
+      "Dose": [
+        "25mg"
+      ]
+    }
   },
   {
     "id": 100138,
@@ -3723,7 +4626,12 @@
     "images": [
       "/assets/img/products/dusk-tide-capsules-100138.jpg"
     ],
-    "category": "capsules"
+    "category": "capsules",
+    "filters": {
+      "Dose": [
+        "10mg"
+      ]
+    }
   },
   {
     "id": 100139,
@@ -3750,7 +4658,13 @@
     "images": [
       "/assets/img/products/dusk-haze-tinctures-100139.jpg"
     ],
-    "category": "tinctures"
+    "category": "tinctures",
+    "filters": {
+      "Ratio": [
+        "CBD-Dominant",
+        "THC-Dominant"
+      ]
+    }
   },
   {
     "id": 100140,
@@ -3777,7 +4691,12 @@
     "images": [
       "/assets/img/products/ember-tide-tinctures-100140.jpg"
     ],
-    "category": "tinctures"
+    "category": "tinctures",
+    "filters": {
+      "Ratio": [
+        "CBD-Dominant"
+      ]
+    }
   },
   {
     "id": 100141,
@@ -3804,7 +4723,12 @@
     "images": [
       "/assets/img/products/hazel-hollow-tinctures-100141.jpg"
     ],
-    "category": "tinctures"
+    "category": "tinctures",
+    "filters": {
+      "Ratio": [
+        "CBD-Dominant"
+      ]
+    }
   },
   {
     "id": 100142,
@@ -3831,7 +4755,12 @@
     "images": [
       "/assets/img/products/dusk-trail-tinctures-100142.jpg"
     ],
-    "category": "tinctures"
+    "category": "tinctures",
+    "filters": {
+      "Ratio": [
+        "1:1 THC:CBD"
+      ]
+    }
   },
   {
     "id": 100143,
@@ -3858,7 +4787,13 @@
     "images": [
       "/assets/img/products/midnight-harbor-tinctures-100143.jpg"
     ],
-    "category": "tinctures"
+    "category": "tinctures",
+    "filters": {
+      "Ratio": [
+        "CBD-Dominant",
+        "THC-Dominant"
+      ]
+    }
   },
   {
     "id": 100144,
@@ -3885,7 +4820,13 @@
     "images": [
       "/assets/img/products/wandering-grove-tinctures-100144.jpg"
     ],
-    "category": "tinctures"
+    "category": "tinctures",
+    "filters": {
+      "Ratio": [
+        "1:1 THC:CBD",
+        "CBD-Dominant"
+      ]
+    }
   },
   {
     "id": 100145,
@@ -3912,7 +4853,12 @@
     "images": [
       "/assets/img/products/midnight-haze-tinctures-100145.jpg"
     ],
-    "category": "tinctures"
+    "category": "tinctures",
+    "filters": {
+      "Ratio": [
+        "CBD-Dominant"
+      ]
+    }
   },
   {
     "id": 100146,
@@ -3939,7 +4885,13 @@
     "images": [
       "/assets/img/products/golden-bloom-tinctures-100146.jpg"
     ],
-    "category": "tinctures"
+    "category": "tinctures",
+    "filters": {
+      "Ratio": [
+        "1:1 THC:CBD",
+        "THC-Dominant"
+      ]
+    }
   },
   {
     "id": 100147,
@@ -3966,7 +4918,12 @@
     "images": [
       "/assets/img/products/sunlit-current-tinctures-100147.jpg"
     ],
-    "category": "tinctures"
+    "category": "tinctures",
+    "filters": {
+      "Ratio": [
+        "THC-Dominant"
+      ]
+    }
   },
   {
     "id": 100148,
@@ -3993,7 +4950,13 @@
     "images": [
       "/assets/img/products/dusk-drift-tinctures-100148.jpg"
     ],
-    "category": "tinctures"
+    "category": "tinctures",
+    "filters": {
+      "Ratio": [
+        "1:1 THC:CBD",
+        "THC-Dominant"
+      ]
+    }
   },
   {
     "id": 100149,
@@ -4020,7 +4983,12 @@
     "images": [
       "/assets/img/products/amber-orchard-beverages-100149.jpg"
     ],
-    "category": "beverages"
+    "category": "beverages",
+    "filters": {
+      "Format": [
+        "Tonic"
+      ]
+    }
   },
   {
     "id": 100150,
@@ -4047,7 +5015,12 @@
     "images": [
       "/assets/img/products/sunlit-pine-beverages-100150.jpg"
     ],
-    "category": "beverages"
+    "category": "beverages",
+    "filters": {
+      "Format": [
+        "Seltzer"
+      ]
+    }
   },
   {
     "id": 100151,
@@ -4074,7 +5047,13 @@
     "images": [
       "/assets/img/products/coastal-cascade-beverages-100151.jpg"
     ],
-    "category": "beverages"
+    "category": "beverages",
+    "filters": {
+      "Format": [
+        "Seltzer",
+        "Tonic"
+      ]
+    }
   },
   {
     "id": 100152,
@@ -4101,7 +5080,13 @@
     "images": [
       "/assets/img/products/sunlit-orchard-beverages-100152.jpg"
     ],
-    "category": "beverages"
+    "category": "beverages",
+    "filters": {
+      "Format": [
+        "Seltzer",
+        "Tonic"
+      ]
+    }
   },
   {
     "id": 100153,
@@ -4128,7 +5113,13 @@
     "images": [
       "/assets/img/products/northern-hollow-beverages-100153.jpg"
     ],
-    "category": "beverages"
+    "category": "beverages",
+    "filters": {
+      "Format": [
+        "Seltzer",
+        "Shot"
+      ]
+    }
   },
   {
     "id": 100154,
@@ -4155,7 +5146,13 @@
     "images": [
       "/assets/img/products/golden-haze-beverages-100154.jpg"
     ],
-    "category": "beverages"
+    "category": "beverages",
+    "filters": {
+      "Format": [
+        "Seltzer",
+        "Tea"
+      ]
+    }
   },
   {
     "id": 100155,
@@ -4182,7 +5179,13 @@
     "images": [
       "/assets/img/products/coastal-cascade-beverages-100155.jpg"
     ],
-    "category": "beverages"
+    "category": "beverages",
+    "filters": {
+      "Format": [
+        "Tea",
+        "Tonic"
+      ]
+    }
   },
   {
     "id": 100156,
@@ -4209,7 +5212,12 @@
     "images": [
       "/assets/img/products/golden-lantern-beverages-100156.jpg"
     ],
-    "category": "beverages"
+    "category": "beverages",
+    "filters": {
+      "Format": [
+        "Tonic"
+      ]
+    }
   },
   {
     "id": 100157,
@@ -4236,7 +5244,12 @@
     "images": [
       "/assets/img/products/crimson-pine-beverages-100157.jpg"
     ],
-    "category": "beverages"
+    "category": "beverages",
+    "filters": {
+      "Format": [
+        "Seltzer"
+      ]
+    }
   },
   {
     "id": 100158,
@@ -4263,7 +5276,13 @@
     "images": [
       "/assets/img/products/dusk-orchard-beverages-100158.jpg"
     ],
-    "category": "beverages"
+    "category": "beverages",
+    "filters": {
+      "Format": [
+        "Seltzer",
+        "Shot"
+      ]
+    }
   },
   {
     "id": 100159,
@@ -4290,7 +5309,13 @@
     "images": [
       "/assets/img/products/northern-grove-beverages-100159.jpg"
     ],
-    "category": "beverages"
+    "category": "beverages",
+    "filters": {
+      "Format": [
+        "Shot",
+        "Tea"
+      ]
+    }
   },
   {
     "id": 100160,
@@ -4317,7 +5342,12 @@
     "images": [
       "/assets/img/products/wandering-bloom-beverages-100160.jpg"
     ],
-    "category": "beverages"
+    "category": "beverages",
+    "filters": {
+      "Format": [
+        "Tonic"
+      ]
+    }
   },
   {
     "id": 100161,
@@ -4344,7 +5374,12 @@
     "images": [
       "/assets/img/products/hazel-bloom-beverages-100161.jpg"
     ],
-    "category": "beverages"
+    "category": "beverages",
+    "filters": {
+      "Format": [
+        "Tonic"
+      ]
+    }
   },
   {
     "id": 100162,
@@ -4371,7 +5406,13 @@
     "images": [
       "/assets/img/products/frosted-harbor-beverages-100162.jpg"
     ],
-    "category": "beverages"
+    "category": "beverages",
+    "filters": {
+      "Format": [
+        "Tea",
+        "Tonic"
+      ]
+    }
   },
   {
     "id": 100163,
@@ -4398,7 +5439,13 @@
     "images": [
       "/assets/img/products/bloomcraft-cleaning-kit-100163.jpg"
     ],
-    "category": "accessories"
+    "category": "accessories",
+    "filters": {
+      "Type": [
+        "Lighter Case",
+        "Rolling Tray"
+      ]
+    }
   },
   {
     "id": 100164,
@@ -4425,7 +5472,13 @@
     "images": [
       "/assets/img/products/half-light-lighter-case-100164.jpg"
     ],
-    "category": "accessories"
+    "category": "accessories",
+    "filters": {
+      "Type": [
+        "Cleaning Kit",
+        "Odor-Proof Bag"
+      ]
+    }
   },
   {
     "id": 100165,
@@ -4452,7 +5505,12 @@
     "images": [
       "/assets/img/products/terra-verde-ashtray-100165.jpg"
     ],
-    "category": "accessories"
+    "category": "accessories",
+    "filters": {
+      "Type": [
+        "Rolling Tray"
+      ]
+    }
   },
   {
     "id": 100166,
@@ -4479,7 +5537,13 @@
     "images": [
       "/assets/img/products/cloudline-ashtray-100166.jpg"
     ],
-    "category": "accessories"
+    "category": "accessories",
+    "filters": {
+      "Type": [
+        "Lighter Case",
+        "Rolling Tray"
+      ]
+    }
   },
   {
     "id": 100167,
@@ -4506,7 +5570,13 @@
     "images": [
       "/assets/img/products/bloomcraft-grinder-100167.jpg"
     ],
-    "category": "accessories"
+    "category": "accessories",
+    "filters": {
+      "Type": [
+        "Ashtray",
+        "Lighter Case"
+      ]
+    }
   },
   {
     "id": 100168,
@@ -4533,7 +5603,13 @@
     "images": [
       "/assets/img/products/evergreen-ashtray-100168.jpg"
     ],
-    "category": "accessories"
+    "category": "accessories",
+    "filters": {
+      "Type": [
+        "Ashtray",
+        "Glass Pipe"
+      ]
+    }
   },
   {
     "id": 100169,
@@ -4560,7 +5636,13 @@
     "images": [
       "/assets/img/products/terra-verde-glass-pipe-100169.jpg"
     ],
-    "category": "accessories"
+    "category": "accessories",
+    "filters": {
+      "Type": [
+        "Ashtray",
+        "Cleaning Kit"
+      ]
+    }
   },
   {
     "id": 100170,
@@ -4587,7 +5669,12 @@
     "images": [
       "/assets/img/products/evergreen-storage-jar-100170.jpg"
     ],
-    "category": "accessories"
+    "category": "accessories",
+    "filters": {
+      "Type": [
+        "Odor-Proof Bag"
+      ]
+    }
   },
   {
     "id": 100171,
@@ -4614,7 +5701,13 @@
     "images": [
       "/assets/img/products/lantern-leaf-ashtray-100171.jpg"
     ],
-    "category": "accessories"
+    "category": "accessories",
+    "filters": {
+      "Type": [
+        "Ashtray",
+        "Glass Pipe"
+      ]
+    }
   },
   {
     "id": 100172,
@@ -4641,7 +5734,12 @@
     "images": [
       "/assets/img/products/evergreen-grinder-100172.jpg"
     ],
-    "category": "accessories"
+    "category": "accessories",
+    "filters": {
+      "Type": [
+        "Cleaning Kit"
+      ]
+    }
   },
   {
     "id": 100173,
@@ -4668,7 +5766,12 @@
     "images": [
       "/assets/img/products/ninebark-storage-jar-100173.jpg"
     ],
-    "category": "accessories"
+    "category": "accessories",
+    "filters": {
+      "Type": [
+        "Ashtray"
+      ]
+    }
   },
   {
     "id": 100174,
@@ -4695,7 +5798,13 @@
     "images": [
       "/assets/img/products/evergreen-ashtray-100174.jpg"
     ],
-    "category": "accessories"
+    "category": "accessories",
+    "filters": {
+      "Type": [
+        "Cleaning Kit",
+        "Rolling Tray"
+      ]
+    }
   },
   {
     "id": 100175,
@@ -4722,7 +5831,13 @@
     "images": [
       "/assets/img/products/evergreen-storage-jar-100175.jpg"
     ],
-    "category": "accessories"
+    "category": "accessories",
+    "filters": {
+      "Type": [
+        "Glass Pipe",
+        "Storage Jar"
+      ]
+    }
   },
   {
     "id": 100176,
@@ -4749,7 +5864,13 @@
     "images": [
       "/assets/img/products/evergreen-lighter-case-100176.jpg"
     ],
-    "category": "accessories"
+    "category": "accessories",
+    "filters": {
+      "Type": [
+        "Cleaning Kit",
+        "Rolling Tray"
+      ]
+    }
   },
   {
     "id": 100177,
@@ -4776,7 +5897,13 @@
     "images": [
       "/assets/img/products/northwind-farms-storage-jar-100177.jpg"
     ],
-    "category": "accessories"
+    "category": "accessories",
+    "filters": {
+      "Type": [
+        "Ashtray",
+        "Odor-Proof Bag"
+      ]
+    }
   },
   {
     "id": 100178,
@@ -4803,6 +5930,12 @@
     "images": [
       "/assets/img/products/evergreen-grinder-100178.jpg"
     ],
-    "category": "accessories"
+    "category": "accessories",
+    "filters": {
+      "Type": [
+        "Rolling Tray",
+        "Storage Jar"
+      ]
+    }
   }
 ]
